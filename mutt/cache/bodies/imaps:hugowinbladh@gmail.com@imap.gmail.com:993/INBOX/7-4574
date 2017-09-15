@@ -1,0 +1,906 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.191.67 with SMTP id p64csp7008719iof;
+        Wed, 23 Aug 2017 09:28:57 -0700 (PDT)
+X-Received: by 10.31.115.3 with SMTP id o3mr2020047vkc.87.1503505737878;
+        Wed, 23 Aug 2017 09:28:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1503505737; cv=none;
+        d=google.com; s=arc-20160816;
+        b=q0IN+krjYirxfBAHv2iE3hRllYUWDRB3GAjBNJncXWQ2vg8K0PfHNcuP5+9Vqek/Gq
+         3XGcDqDNRAyRTlJN/HKMbRNqGmzw4HoCXPZA+9AM+mGZMgP57rbq2sbi5n4HFVgexJWx
+         gbS3j27IPIesnK+qvzqXkkD3qIAVlK79kPgfO408T0c2OZxwWKNZG068E46gYF53Q+Mu
+         xQoE0VH2BeOz2ox3qaKXMG+Id1PXHi6fKjfSrqMCPuSV3c1RKjgSbxMYKPvVu76+Uziu
+         j2MA6hpmvSXUpdEQNh8Tv2oRPajX8P77RbuWCZ4yv0WP+Mpb0XyfqCsVVC5TW/5wXsZF
+         YKOw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:date:message-id:to:from:feedback-id:reply-to
+         :list-unsubscribe:dkim-signature:arc-authentication-results;
+        bh=ouduZ1DJtOajiWoSyvthyVlcv1izsYZ2jweatgpNPTA=;
+        b=uyz0bNq8/JgoKRfKnbxcC1bw4GGVnD0fEv9lFXmGh3N2iqoYMTseUnIXOsbHll/DlY
+         CQaOn/TF2OZem0jQthpfkmkAojIvpUF1nF53Wgqmb+stCEB9UUy+66rkRLDOBXcPrDgC
+         f8VcCURS6bGnxLfJvLJiA3RwWmbiHe1QgdwUKXu8PvjwC+BHD1Z9D5c6iwQwITBIp09n
+         c4mL+6EB0YNv/XBwCOiHAOqh6u44iyUwSuz9tnYian+uDJiJUY6GHOCUg/h5OBpC14/Z
+         Oxlsg0Qovhl8oOymfFhanywAJigKH/Uwkt1Wf334my4JZep6nBPCPoL1qhbe3IoxHuaL
+         wmWg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@anpdm.com header.s=newsletter header.b=fyVLH2U3;
+       spf=pass (google.com: domain of 3fc.c.1008569642.j787833-19487131@mecenat.anpdm.com designates 91.227.208.35 as permitted sender) smtp.mailfrom=3fc.c.1008569642.J787833-19487131@mecenat.anpdm.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=mecenat.com
+Return-Path: <3fc.c.1008569642.J787833-19487131@mecenat.anpdm.com>
+Received: from rs-mta-35.anpdm.com (rs-mta-35.anpdm.com. [91.227.208.35])
+        by mx.google.com with ESMTPS id 200si3168422wmw.4.2017.08.23.09.28.57
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 23 Aug 2017 09:28:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3fc.c.1008569642.j787833-19487131@mecenat.anpdm.com designates 91.227.208.35 as permitted sender) client-ip=91.227.208.35;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@anpdm.com header.s=newsletter header.b=fyVLH2U3;
+       spf=pass (google.com: domain of 3fc.c.1008569642.j787833-19487131@mecenat.anpdm.com designates 91.227.208.35 as permitted sender) smtp.mailfrom=3fc.c.1008569642.J787833-19487131@mecenat.anpdm.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=mecenat.com
+DKIM-Signature: v=1; a=rsa-sha256; d=anpdm.com;i=@anpdm.com;s=newsletter;
+	c=relaxed/relaxed; q=dns/txt; t=1503505738;
+	h=list-unsubscribe:reply-to:feedback-id:from:to:message-id:date:subject:mime-version:content-type;
+	bh=ouduZ1DJtOajiWoSyvthyVlcv1izsYZ2jweatgpNPTA=;
+	b=fyVLH2U3UNjPeyYMQ1onQanJS2dhNLEiT5xPqpKfN+lbqlWM4eOGEVxfCOkV5CXn5x/vBqHk0XIHedyrbavcUa+ZUg3CXo5RiIubXZcVsF49Zyju7M6E0y3Uu8LoruelQurkKvsAlBtyC7xVDHfJA83pGS5mZr0qWUY9E8o3nL8=
+X-CSA-Complaints: whitelist-complaints@eco.de
+List-Unsubscribe: <http://www.anpdm.com/oa-auto/19487131/4246584A7040475A4A7548415A4771>,<mailto:delist@apsis.com?subject=UnReg:19487131::4246584A7040475A4A7548415A4771::2>
+X-Destination-ID: mail-se@mecenat.com
+Reply-To: mail-se@mecenat.com
+X-MailingID: 2::1::19487131::1008569642
+Feedback-ID: 19487131:43415D447141435943:2-1:apsis
+From: "Mecenat" <mail-se@mecenat.com>
+To: "Nils Hugo Winbladh" <hugowinbladh@gmail.com>
+Message-ID: <995C17EEFBFB4D028B33747F188EB12E@mecenat.com>
+Date: Wed, 23 Aug 2017 18:28:46 +0200
+Subject: =?utf-8?B?4pqhIFNwYXJhIHVwcCB0aWxsIDUgMDAwIGtyIGhvcyBIUCDimqE=?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----B2BDAD42F63448D9B87AA51AC08B8C6C"
+
+------B2BDAD42F63448D9B87AA51AC08B8C6C
+Content-type: text/plain; charset=utf-8
+
+Om du inte kan se HTML versionen av nyhetsbrevet, klicka på denna länk http://www.anpdm.com/newsletterweb/444B5F447240435E4378484459/4246584A7040475A4A7548415A4771
+ 
+För att avprenumerera från detta nyhetsbrev, klicka på denna länk http://www.anpdm.com/oa/19487131/4246584A7040475A4A7548415A4771
+------B2BDAD42F63448D9B87AA51AC08B8C6C
+Content-type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+<meta name="format-detection" content="telephone=no">
+
+<style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic,300italic,700italic|Montserrat:400,700|Lato:300,400,700,300italic,400italic,700italic);
+</style>
+
+
+<style type="text/css">
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	-webkit-text-size-adjust: 100% !important;
+	-ms-text-size-adjust: 100% !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+img {
+	border: 0 !important;
+	outline: none !important;
+}
+p {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+table {
+	border-collapse: collapse;
+	mso-table-lspace: 0px;
+	mso-table-rspace: 0px;
+}
+td, a, span {
+	border-collapse: collapse;
+	mso-line-height-rule: exactly;
+}
+.ExternalClass * {
+	line-height: 100%;
+}
+.em_white_link a {
+	text-decoration: none;
+	color: #ffffff;
+}
+.em_dark_grey_txt a {
+	text-decoration: none;
+	color: #333333;
+}
+.em_white_txt a {
+	text-decoration: none;
+	color: #ffffff;
+}
+.em_grey_txt a {
+	text-decoration: none;
+	color: #333333;
+}
+.em_blue_txt a {
+	text-decoration: none;
+	color: #10a5c5;
+}
+.em_green_txt a {
+	text-decoration: none;
+	color: #97BE25;
+}
+.em_white_txt a {
+	text-decoration: none;
+	color: #ffffff;
+}
+.em_orange_txt a {
+	text-decoration: none;
+	color: #EF6E00;
+}
+.em_blue_link a {
+	text-decoration: none;
+	color: #10a5c5;
+}
+.em_blue_link a {
+	font-family: 'Montserrat',Arial,sans-serif!important;
+}
+.em_golden_link a {
+	text-decoration: none;
+	color: #333333;
+}
+.em_footer a {
+	text-decoration: none;
+	color: #808080;
+}
+.em_br1 {
+	display: none;
+}
+
+.rounded-button-blue a {
+font-size: 14px;
+font-weight:bold;
+font-family:'Open Sans', Arial, sans-serif; 
+color: #ffffff; 
+text-decoration: none; 
+-webkit-border-radius: 4px; 
+-moz-border-radius: 4px; 
+border-radius: 4px; 
+padding: 10px 14px; 
+border:4px solid #10a5c5; 
+display: inline-block;
+}
+.rounded-button-green a {
+font-size: 14px;
+font-weight:bold;
+font-family:'Open Sans', Arial, sans-serif; 
+color: #ffffff; 
+text-decoration: none; 
+-webkit-border-radius: 4px; 
+-moz-border-radius: 4px; 
+border-radius: 4px; 
+padding: 10px 14px; 
+border:4px solid #97BE25; 
+display: inline-block;
+}
+.rounded-button-orange a {
+font-size: 14px;
+font-weight:bold;
+font-family:'Open Sans', Arial, sans-serif; 
+color: #ffffff; 
+text-decoration: none; 
+-webkit-border-radius: 4px; 
+-moz-border-radius: 4px; 
+border-radius: 4px; 
+padding: 10px 14px; 
+border:4px solid #EF6E00; 
+display: inline-block;
+}
+
+.rounded-button-inverted-blue a {
+font-size: 14px;
+font-weight:bold;
+font-family:'Open Sans', Arial, sans-serif;
+color: #10a5c5;
+text-decoration: none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+padding: 10px 14px;
+border:4px solid #ffffff;
+display: inline-block;
+}
+
+.rounded-button-inverted-green a {
+font-size: 14px;
+font-weight:bold;
+font-family:'Open Sans', Arial, sans-serif;
+color: #97BE25;
+text-decoration: none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+padding: 10px 14px;
+border:4px solid #ffffff;
+display: inline-block;
+}
+.rounded-button-inverted-orange a {
+font-size: 14px;
+font-weight:bold;
+font-family:'Open Sans', Arial, sans-serif;
+color: #EF6E00;
+text-decoration: none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+padding: 10px 14px;
+border:4px solid #ffffff;
+display: inline-block;
+}
+
+
+
+@media only screen and (max-width:480px) {
+table[class=em_main_table] {
+	width: 95% !important;
+}
+table[class=em_wrapper] {
+	width: 100% !important;
+}
+td[class=em_hide], br[class=em_hide] {
+	display: none !important;
+}
+td[class=em_align_center] {
+	text-align: center !important;
+}
+td[class=em_pad_top] {
+	padding-top: 20px !important;
+}
+td[class=em_side_space] {
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+td[class=em_bg_center] {
+	background-position: center !important;
+}
+td[class=em_height_80] {
+	height: 200px !important;
+}
+img[class=em_full_width] {
+	width: 100% !important;
+	height: auto !important;
+	max-width: 100% !important;
+}
+td[class=em_pad_btm] {
+	padding-bottom: 28px !important;
+}
+td[class=em_width_178] {
+	width: 178px !important;
+}
+.mobile-title {
+	font-size: 18px!important;
+	line-height: 28px!important;
+}
+.mobile-title-h1 {
+	font-size: 18px!important;
+	line-height: 28px!important;
+}
+.mobile-title-h4 {
+	font-size: 18px!important;
+	line-height: 28px!important;
+}
+
+a[class=mobile-link] {
+	font-size: 16px!important;
+	line-height: 24px!important;
+}
+div#align-wrapper img {
+	width:100%;
+}
+}
+
+@media only screen and (min-width:480px) and (max-width:650px) {
+table[class=em_main_table] {
+	width: 95% !important;
+}
+table[class=em_wrapper] {
+	width: 100% !important;
+}
+td[class=em_hide], br[class=em_hide] {
+	display: none !important;
+}
+td[class=em_align_center] {
+	text-align: center !important;
+}
+td[class=em_pad_top] {
+	padding-top: 20px !important;
+}
+td[class=em_side_space] {
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+td[class=em_bg_center] {
+	background-position: center !important;
+}
+img[class=em_full_width] {
+	width: 100% !important;
+	height: auto !important;
+	max-width: 100% !important;
+}
+td[class=em_pad_btm] {
+	padding-bottom: 28px !important;
+}
+.mobile-title {
+	font-size: 18px!important;
+	line-height: 28px!important;
+}
+.mobile-title-h1 {
+	font-size: 18px!important;
+	line-height: 28px!important;
+}
+.mobile-title-h4 {
+	font-size: 18px!important;
+	line-height: 28px!important;
+}
+a[class=mobile-link] {
+	font-size: 16px!important;
+	line-height: 24px!important;
+}
+div#align-wrapper img {
+	width:100%;
+}
+}
+</style>
+<!--[if gte mso 9]>
+    <style>
+       /* Target Outlook 2007 and 2010 */
+           html, body { font-family: Arial, sans-serif !important; } 
+           table { font-family: Arial, sans-serif !important; } 
+          td { font-family: Arial, sans-serif !important; }   
+    }
+    </style>
+    <![endif]-->
+</head>
+<body style="margin:0px; padding:0px; background-color:#eeeeee;"><table border="0" cellpadding="0" cellspacing="0" align="center"><tr><td height="1" width="1" style="line-height:1px; font-size:1px;"><img src="https://tr.anpdm.com/track?t=v&amp;mid=19487131&amp;uid=1008569642&amp;type=open" width="1" height="1" style="display:block;"></td></tr></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#eeeeee;">
+	<tr>
+		<td align="center" valign="top">
+
+		
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td bgcolor="#eeeeee">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td style="font-family:'Open Sans', Arial, sans-serif;font-size:8px;text-align:center;color:#eeeeee;line-height:10px;">
+<span style="color:#eeeeee;">
+							<span style="text-decoration:none;color:#eeeeee;" x-apple-data-detectors="false">Exklusiva skolstartsrabatter - fynda nu! Nyckeln till ett rikare studentliv.</span>
+							</span>
+</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="30" bgcolor="#ffffff">
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td bgcolor="#ffffff">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="30" class="em_hide">
+ </td>
+									<td class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td width="101" valign="top" align="center">
+<table width="101" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td height="1">
+																<img src="https://img.anpdm.com/Mecenat/mec-logo-366x62.png" alt="Logo" width="183" height="31" style="display:block;" border="0"></td>
+														</tr>
+													</table>
+</td>
+											</tr>
+										</table>
+</td>
+									<td width="30" class="em_hide">
+ </td>
+								</tr>
+							</table>
+</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+ 
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="25" bgcolor="#ffffff">
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+	
+	
+	
+	
+		
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="30" class="em_hide">
+&nbsp;</td>
+						<td height="1" class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td align="center" height="1">
+										<div id="align-wrapper" style="text-align:left;"><a class="notEditable" href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Fhp%3Fcompany_id%3D46%26uid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131">
+<img src="https://img2.anpdm.com/Mecenat/hp_20170822_edm.jpg" width="590" align="left" link="https://mecenat.com/se/hp?company_id=46&uid=1637583c-5ffe-4e5c-b256-59702845d8d3" style="display:block;max-width:590px;" title="Exklusivt skolstartserbjudande hos HP" alt="Exklusivt skolstartserbjudande hos HP" border="0" class="em_full_width"></a></div></td>
+								</tr>
+							</table>
+</td>
+						<td width="30" class="em_hide">
+&nbsp;</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="30" bgcolor="#ffffff">
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="30" class="em_hide">
+&nbsp;</td>
+						<td class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="em_dark_grey_txt" style="font-family:'Montserrat', Arial, sans-serif;font-size:28px;text-align:center;color:#333333;font-weight:400;line-height:40px;text-transform:none;">
+<span style="margin:0;padding:0;font-family:'Montserrat', Arial, sans-serif;font-size:28px;text-align:center;color:#333333;font-weight:400;line-height:40px;text-transform:none;" class="mobile-title-h1">Exklusiva skolstartsrabatter								</span>
+</td>
+								</tr>
+								<tr>
+									<td height="8" style="line-height:1px;font-size:1px;">
+&nbsp;</td>
+								</tr>
+							</table>
+</td>
+						<td width="30" class="em_hide" style="line-height:1px;font-size:1px;">
+&nbsp;</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="30" class="em_hide">
+&nbsp;</td>
+						<td class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="em_grey_txt" style="font-family:'Open Sans', Arial, sans-serif;font-size:16px;font-weight:400;text-align:center;color:#333333;line-height:26px;">
+<span style="margin:0;padding:0;font-family:'Open Sans', Arial, sans-serif;font-size:16px;font-weight:400;text-align:center;color:#333333;line-height:26px;">Spara upp till hela 5 000 kr på utvalda modeller hos HP. Fynda bland datorer, skrivare, skärmar och tillbehör!</span>
+</td>
+								</tr>
+							</table>
+</td>
+						<td width="30" class="em_hide" style="line-height:1px;font-size:1px;">
+&nbsp;</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="30" bgcolor="#ffffff">
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="30" class="em_hide">
+&nbsp;</td>
+						<td class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td align="center">
+									
+									
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" class="rounded-button-blue" style="-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;" bgcolor="#10a5c5">
+<font style="color:rgb(255, 255, 255);">
+<a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Fhp%3Fcompany_id%3D46%26uid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" name="" target="_blank" style="color:rgb(255, 255, 255); font-size: 14px; font-weight:bold; font-family:'Open Sans', Arial, sans-serif; color: #ffffff; text-decoration: none; text-decoration: none; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; padding: 10px 14px; border:4px solid #10a5c5; display: inline-block;" data-original-color="">Fynda nu hos HP</a></font></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+								
+									
+									
+									</td>
+								</tr>
+							</table>
+</td>
+						<td width="30" class="em_hide" style="line-height:1px;font-size:1px;">
+&nbsp;</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="15" bgcolor="#ffffff">
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="30" class="em_hide">
+&nbsp;</td>
+						<td class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="em_grey_txt" style="font-family:'Open Sans', Arial, sans-serif;font-size:12px;font-weight:400;text-align:center;color:#333333;line-height:22px;">
+<span style="margin:0;padding:0;font-family:'Open Sans', Arial, sans-serif;font-size:12px;font-weight:400;text-align:center;color:#333333;line-height:22px;">Gäller t.o.m. 31/8 eller så långt lagret räcker.									</span>
+</td>
+								</tr>
+							</table>
+</td>
+						<td width="30" class="em_hide" style="line-height:1px;font-size:1px;">
+&nbsp;</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td bgcolor="#ffffff">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="25" style="line-height:1px;font-size:1px;">
+ </td>
+					</tr>
+					<tr>
+						<td height="1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td height="1">
+ </td>
+									<td width="90" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td width="40">
+<a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fwww.instagram.com%2Fmecenatse%2F%3Fhl%3Dsv%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" target="_blank">
+<img src="https://img.anpdm.com/Mecenat/edm-2016-soc-instagram.png" alt="Instagram" width="40" height="40" style="display:block;" border="0"></a></td>
+												<td width="10" style="padding:0 2px;">
+ </td>
+												<td width="40">
+<a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fwww.facebook.com%2FMecenat%2F%3Futm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" target="_blank">
+<img src="https://img.anpdm.com/Mecenat/edm-2016-soc-facebook.png" alt="Facebook" width="40" height="40" style="display:block;" border="0"></a></td>
+	
+											</tr>
+										</table>
+</td>
+									<td height="1">
+ </td>
+								</tr>
+							</table>
+</td>
+					</tr>
+					<tr>
+						<td height="25" style="line-height:1px;font-size:1px;">
+ </td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td height="1">
+<table bgcolor="#333333" width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="1">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="30" class="em_hide">
+ </td>
+									<td class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td height="1">
+<table width="150" border="0" cellspacing="0" cellpadding="0" align="left" class="em_wrapper">
+														<tr>
+															<td height="1">
+<table width="150" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper">
+																	<tr>
+																		<td height="24">
+</td>
+																	</tr>
+																	<tr>
+																		<td class="em_dark_grey_txt" style="font-family:'Montserrat', Arial, sans-serif;font-size:16px;text-align:left;line-height:22px;color:#ffffff;font-weight:400;text-transform:none;">
+Kundservice</td>
+																	</tr>
+																	<tr>
+																		<td align="left">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+																				<tbody>
+																					<tr>
+																						<td align="center" style="color: #ffffff; font-weight: 400; font-size: 13px; font-family: 'Lato', sans-serif;  text-transform: none; text-align: left; line-height: 40px; border-bottom: 1px solid #888888;">
+<a href="
+https://mecenat.com/se/kundtjanst/var-ar-mitt-kort?uid=1637583c-5ffe-4e5c-b256-59702845d8d3" style="text-decoration: none; color: #ffffff;"> Var är mitt kort? </a></td>
+																					</tr>
+																					<tr>
+																						<td align="center" style="color: #ffffff; font-weight: 400; font-size: 13px; font-family: 'Lato', sans-serif;  text-transform: none; text-align: left; line-height: 40px; border-bottom: 1px solid #888888">
+<a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Freserabatt%3Fuid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" style="text-decoration: none; color: #ffffff;"> Frågor om reserabatt </a></td>
+																					</tr>
+																					<tr>
+																						<td align="center" style="color: #ffffff; font-weight: 400; font-size: 13px; font-family: 'Lato', sans-serif;  text-transform: none; text-align: left; line-height: 40px; border-bottom: 1px solid #888888;">
+<a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Fkundtjanst%2Fkontakta-kundtjanst%3Fuid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" style="text-decoration: none; color: #ffffff;"> Rapportera fel på rabatt </a></td>
+																					</tr>
+																					<tr>
+																						<td align="center" style="color: #ffffff; font-weight: 400; font-size: 13px; font-family: 'Lato', sans-serif;  text-transform: none; text-align: left; line-height: 40px; border-bottom: 1px solid #888888;">
+<a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Fkundtjanst%2Fkontakta-kundtjanst%3Fuid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" style="text-decoration: none; color: #ffffff;"> Övriga frågor </a></td>
+																					</tr>
+																				</tbody>
+																			</table>
+</td>
+																	</tr>
+																</table>
+</td>
+														</tr>
+													</table>
+													
+													<!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+													
+													<table width="24" border="0" cellspacing="0" cellpadding="0" align="left" class="em_hide">
+														<tr>
+															<td height="1" style="font-size:1px;line-height:1px;">
+ </td>
+														</tr>
+													</table>
+													
+													<!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+													
+													<table width="410" border="0" cellspacing="0" cellpadding="0" align="left" class="em_wrapper">
+														<tr>
+															<td height="1">
+<table width="410" border="0" cellspacing="0" cellpadding="0" align="center" class="em_wrapper">
+																	<tr>
+																		<td height="24">
+</td>
+																	</tr>
+																	<tr>
+																		<td class="em_dark_grey_txt" style="font-family:'Montserrat', Arial, sans-serif;font-size:16px;text-align:left;line-height:22px;color:#ffffff;font-weight:400;text-transform:none;">
+Har vi rätt info om dig?</td>
+																	</tr>
+																	<tr>
+																		<td height="12">
+</td>
+																	</tr>
+																	<tr>
+																		<td class="em_grey_txt" style="font-family:'Lato', Arial, sans-serif;font-size:12px;text-align:left;color:#ffffff;line-height:22px;">
+<a href="#" style="text-decoration:none;color:#ffffff;word-wrap:break-word;" x-apple-data-detectors="false"><span style="text-decoration:none;color:#ffffff;word-wrap:break-word;">Nils Hugo Winbladh</span>
+</a><br>
+																			<a href="#" style="text-decoration:none;color:#ffffff;word-wrap:break-word;" x-apple-data-detectors="false"><span style="text-decoration:none;color:#ffffff;word-wrap:break-word;">Nämndemansgatan 11 A</span>
+</a><br>
+																			<a href="#" style="text-decoration:none;color:#ffffff;word-wrap:break-word;" x-apple-data-detectors="false"><span style="text-decoration:none;color:#ffffff;word-wrap:break-word;">573 35 Tranås</span>
+</a><br>
+																			<a href="#" style="text-decoration:none;color:#ffffff;word-wrap:break-word;" x-apple-data-detectors="false"><span style="text-decoration:none;color:#ffffff;word-wrap:break-word;">hugowinbladh@gmail.com</span>
+</a><br>
+																			<a href="#" style="text-decoration:none;color:#ffffff;word-wrap:break-word;" x-apple-data-detectors="false"><span style="text-decoration:none;color:#ffffff;word-wrap:break-word;">0739438294</span>
+</a><br>
+																			<a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Fprofile.aspx%3Fuid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" style="text-decoration:underline;font-weight:bold;color:#ffffff;" x-apple-data-detectors="false"><span style="text-decoration:underline;font-weight:bold;color:#ffffff;">Uppdatera</span>
+</a></td>
+																	</tr>
+																</table>
+</td>
+														</tr>
+													</table>
+</td>
+											</tr>
+										</table>
+</td>
+									<td width="30" class="em_hide">
+ </td>
+								</tr>
+							</table>
+</td>
+					</tr>
+					<tr>
+						<td height="24">
+</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr>
+			<td class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15">
+</td>
+					</tr>
+					<tr>
+						<td class="em_dark_grey_txt" style="font-family:'Open Sans', Arial, sans-serif;font-size:12px;color:#808080;line-height:18px;text-align:center;">
+<a href="http://www.anpdm.com/newsletterweb/444B5F447240435E4378484459/4246584A7040475A4A7548415A4771" target="_blank" style="text-decoration:none;color:#333333;">Ser mailet konstigt ut?</a> | <a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Fallmanna-villkor%3Fuid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" target="_blank" style="text-decoration:none;color:#333333;">Integritet & Säkerhet</a> | <a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Fallmanna-villkor%3Fuid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" target="_blank" style="text-decoration:none;color:#333333;">Om Mecenat</a> | <a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%3Fuid%3D1637583c-5ffe-4e5c-b256-59702845d8d3%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" target="_blank" style="text-decoration:none;color:#333333;">Till mecenat.com</a></td>
+					</tr>
+					<tr>
+						<td height="15">
+</td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+<table align="center" class="em_main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+	<tbody>
+		<tr bgcolor="#eeeeee">
+			<td class="em_side_space">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td height="15" style="line-height:1px;font-size:1px;">
+ </td>
+					</tr>
+					<tr>
+						<td class="em_dark_grey_txt" style="font-family:'Open Sans', Arial, sans-serif;font-size:12px;color:#808080;line-height:18px;text-align:center;">
+<a href="http://tr.anpdm.com/track?t=c&amp;mid=19487131&amp;uid=1008569642&amp;&amp;&amp;https%3A%2F%2Fmecenat.com%2Fse%2Fandra-avsluta%2F%3Fm%3Dhugowinbladh@gmail.com%26utm_campaign%3Dhp_20170823%26utm_medium%3Demail%26utm_source%3Danp3%26pe_data%3DD4246584A7040475A4A7548415A4771%7C19487131" target="_blank" style="text-decoration:none;color:#333333;font-size:10px;">Ändra prenumeration</a></td>
+					</tr>
+				</table>
+</td>
+		</tr>
+	</tbody>
+</table>
+ 
+
+
+
+		
+		
+		</td>
+	</tr>
+	<tr bgcolor="#eeeeee">
+		<td height="30">
+</td>
+	</tr>
+</table>
+
+<div style="display:none; white-space:nowrap; font:20px courier; color:#ffffff; background-color:#ffffff;">- - - - - - - - - - - - - - - - - - - - - - -</div>
+</body>
+</html>
+------B2BDAD42F63448D9B87AA51AC08B8C6C--
+

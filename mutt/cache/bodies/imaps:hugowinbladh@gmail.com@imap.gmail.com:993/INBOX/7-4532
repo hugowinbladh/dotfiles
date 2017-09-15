@@ -1,0 +1,358 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.191.133 with SMTP id p127csp5713865iof;
+        Wed, 2 Aug 2017 01:29:36 -0700 (PDT)
+X-Received: by 10.107.176.11 with SMTP id z11mr24703430ioe.173.1501662576120;
+        Wed, 02 Aug 2017 01:29:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1501662576; cv=none;
+        d=google.com; s=arc-20160816;
+        b=FzO1u9+SXrgIl+YmoKDfMulj0a7j8wKgxda4XVcEQmT5imMEF9YcY6HyGuXciBf7tB
+         5QRcdMIQs1n4uWepPS3hDcH/Exjv71X/q58mKyG1+knMaMCIDfBq5H/BXk6fBfL9l4k7
+         lH8c6yvlVnLRfnGspknGugemjtbt9hNm7SscO3o76LSkrj/FSrMobUi8kHcMwWe0OpJR
+         fL2VqlBbG+ZBxx4gfcyWTtTLwdeQT5UPLJFMIlLdfwlLE3DtidKyzuT11HwYQgBjj6dS
+         k3rxsHKkkqhn4KcoJ4sZ2nrBvHClWAxRQNGOIqsyfOy6anTATt3NWfNC98m+JvFFJkEn
+         Splg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:to:subject:reply-to:mime-version:from:date
+         :dkim-signature:dkim-signature:arc-authentication-results;
+        bh=Ngm50D1j6iman7Put0iV06BQ+K58KePaZQHo9aBJvw8=;
+        b=NWFJVKZpN6t8aO1ALUVPEeXKf3MoAttHH8cL3+BoNI9MIQ/i0eTqETig/ovlLOpini
+         VyS0yyZytSgO8oBUiK0KC3Rd8rdFGJtVxnQ8LFdHNq4BSuTYCMBzDb25+lGdfS3f2zjH
+         qqEH9qdBS17yWnGJX2ou5Cym4uaiP+cC2MKFQ+DTt51ixY3QXiq9kw0gw9lLSikWIMZ1
+         M6RGcmDOSKM32LZZAeNCN/W3L+wjlLB/0hugixp0+ez0wojuLfc3cOss8Qzr5Vp3eKw7
+         C2S7k85ewgPz+iaw3+x+N4ycXYf1BpZ6JTSKkuvHlnWuLLZsRVYbn1cJOl51HpFfa8gg
+         D5LQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@spotify.com header.b=kiLPEnZ9;
+       dkim=pass header.i=@sendgrid.info header.b=OCy+6RBY;
+       spf=pass (google.com: domain of bounces+921839-02bd-hugowinbladh=gmail.com@em.spotify.com designates 208.117.51.103 as permitted sender) smtp.mailfrom=bounces+921839-02bd-hugowinbladh=gmail.com@em.spotify.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=spotify.com
+Return-Path: <bounces+921839-02bd-hugowinbladh=gmail.com@em.spotify.com>
+Received: from o14.em.spotify.com (o14.em.spotify.com. [208.117.51.103])
+        by mx.google.com with ESMTPS id i134si4687222ioa.404.2017.08.02.01.29.35
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 02 Aug 2017 01:29:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+921839-02bd-hugowinbladh=gmail.com@em.spotify.com designates 208.117.51.103 as permitted sender) client-ip=208.117.51.103;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@spotify.com header.b=kiLPEnZ9;
+       dkim=pass header.i=@sendgrid.info header.b=OCy+6RBY;
+       spf=pass (google.com: domain of bounces+921839-02bd-hugowinbladh=gmail.com@em.spotify.com designates 208.117.51.103 as permitted sender) smtp.mailfrom=bounces+921839-02bd-hugowinbladh=gmail.com@em.spotify.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=spotify.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=spotify.com; 
+	h=content-type:from:mime-version:reply-to:subject:to; s=s1; 
+	bh=YLXiEw+CD8p9m1JhMgKAhEapmKc=; b=kiLPEnZ9HA63KyzwK6guHtL5smgXv
+	7W7khG1CRU+U2TdgYtEkJSh136gNuLf7K+Ay4VlQ+BjC6Yz0UIHW5vdp9Ip6aR9K
+	FaweuEwF6NerVmuRCC0BmSoyXsPFkylSo/Dr+zcpsaGrWswYilZY8Qz/ojgPH/4N
+	Aao3xVEvaEfrj0=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=content-type:from:mime-version:reply-to:subject:to:x-feedback-id; 
+	s=smtpapi; bh=YLXiEw+CD8p9m1JhMgKAhEapmKc=; b=OCy+6RBYSnZ+jgCYgS
+	pFt9/iXufO5U0cKC+/yWQ/Th4kdV+VuKLQnp1LrdkD83juvNr1i/5/cRfU1BlonS
+	o14P0yvamAogAdPdAdcyeXRU6bbxPeAKR5O0xBg3c6B7EZX4DgpRHk2lX52zHdjB
+	BYhlxcXxVFQC76CEz0U2SWTUI=
+Received: by filter0917p1mdw1.sendgrid.net with SMTP id filter0917p1mdw1-31865-59818D6F-10
+        2017-08-02 08:29:35.219804401 +0000 UTC
+Received: from OTIxODM5 (253.38.155.104.bc.googleusercontent.com [104.155.38.253])
+	by ismtpd0003p1lon1.sendgrid.net (SG) with HTTP id -lXBd__IRZmhb3-5yVwhmA
+	for <hugowinbladh@gmail.com>; Wed, 02 Aug 2017 08:29:35.061 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=fe6748ab215882e1c25fed7588db1e9128c7d0d255619bcccb63a47e4f49
+Date: Wed, 02 Aug 2017 08:29:35 +0000 (UTC)
+From: "Spotify" <no-reply@spotify.com>
+Mime-Version: 1.0
+Reply-To: no-reply@spotify.com
+Subject: =?UTF-8?Q?L=C3=B6senord_f=C3=B6r_din_Spotify-enhet?=
+To: hugowinbladh@gmail.com
+Message-ID: <-lXBd__IRZmhb3-5yVwhmA@ismtpd0003p1lon1.sendgrid.net>
+X-SG-EID: S//Ry5OXTs+fnFmc2RX2rT4OXqZRzimEYxN63NeFGyavGIVLuL5iy1IYOGPL0VWccnH14MCiBZAFfp
+ BVrrtQ0tktovTzq1NDmpKGTaHxKCg9PZHEnnv8nPls6TcGwtfmLRpBk9g8r9fhsdwQ0fR8QINTG3oJ
+ zNg5Bs43Q7cdvkEgbmk47eUAXObZgQml1H2OiPFQMymEBNcO7TbkHtwtmO3UD9Le8ENa0yW0CFjDLZ
+ U=
+X-Feedback-ID: 921839:LUlkSpmtFOTuaBl7rwH1CFRva/KlTbz+ELzRznR0DoY=:LUlkSpmtFOTuaBl7rwH1CFRva/KlTbz+ELzRznR0DoY=:SG
+
+--fe6748ab215882e1c25fed7588db1e9128c7d0d255619bcccb63a47e4f49
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+Hej!
+
+
+F=C3=B6r att st=C3=A4lla in ett l=C3=B6senord f=C3=B6r Spotify p=C3=A5 dina=
+ enheter ska du f=C3=B6lja l=C3=A4nken nedan:
+
+https://www.spotify.com/se/account/set-device-password/add/?token=3D6367406=
+ae499ab1d016e8647c5fef05e72edf41f
+
+Anv=C3=A4ndarnamnet f=C3=B6r din enhet =C3=A4r:1183061879
+
+Om du inte har beg=C3=A4rt ett l=C3=B6senord f=C3=B6r din enhet kan du bort=
+se fr=C3=A5n det h=C3=A4r meddelandet och forts=C3=A4tta njuta av musiken!
+
+V=C3=A4nliga h=C3=A4lsningar,=20
+Spotify-teamet
+
+
+--fe6748ab215882e1c25fed7588db1e9128c7d0d255619bcccb63a47e4f49
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" style=3D"margin=
+: 0; padding: 0"><head><meta charset=3D"utf-8" /><meta name=3D"viewport" co=
+ntent=3D"width=3Ddevice-width, initial-scale=3D1" /><title>L=C3=B6senord f=
+=C3=B6r din Spotify-enhet</title><style type=3D"text/css">@media only scree=
+n and (min-device-width: 481px) {div[id=3D"main"] {width: 480px !important;=
+}}</style><!--[if mso]><style>body, table, tr, td, h1, h2, h3, h4, h5, h6, =
+center p, a, span, table.MsoNormalTable {font-family: "Helvetica Neue", "He=
+lvetica", "Arial", sans-serif !important}</style><![endif]--></head><body t=
+opmargin=3D"0" leftmargin=3D"0" rightmargin=3D"0" bottommargin=3D"0" margin=
+height=3D"0" marginwidth=3D"0" style=3D"-webkit-font-smoothing: antialiased=
+; width: 100% !important; -webkit-text-size-adjust: none; margin: 0; paddin=
+g: 0"><!--TEST-FORM--><!--[if (mso) | (IE)]><table cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" valign=3D"top" width=3D"480" align=3D"center"><tr>=
+<td valign=3D"top" align=3D"left" style=3D" word-break:normal; border-colla=
+pse:collapse; font-family:'Circular', 'Helvetica Neue', Helvetica, Arial, s=
+ans-serif; font-size:12px; line-height:18px; color:#555555;"><![endif]--><t=
+able cellpadding=3D"0" cellspacing=3D"0" border=3D"0" valign=3D"top" width=
+=3D"100%" align=3D"center" style=3D" width:100%; max-width:480px;"><tr><td =
+valign=3D"top" align=3D"left" style=3D" word-break:normal; border-collapse:=
+collapse; font-family:'Circular', 'Helvetica Neue', Helvetica, Arial, sans-=
+serif; font-size:12px; line-height:18px; color:#555555;"><center><div id=3D=
+"main"><table class=3D"header-root" width=3D"100%" height=3D"50" cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"border: none; margin: 0px; border-collap=
+se: collapse; padding: 0px; width: 100%; height: 50px;"><tbody valign=3D"mi=
+ddle" style=3D"border: none; margin: 0px; padding: 0px;"><tr height=3D"20" =
+valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; height:=
+ 20px;"><td colspan=3D"3" height=3D"20" valign=3D"middle" style=3D"border: =
+none; margin: 0px; padding: 0px; height: 20px;"></td></tr><tr valign=3D"mid=
+dle" style=3D"border: none; margin: 0px; padding: 0px;"><td width=3D"6.25%"=
+ valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; width:=
+ 6.25%;"></td><td valign=3D"middle" style=3D"border: none; margin: 0px; pad=
+ding: 0px;"><a href=3D"http://www.spotify.com/" style=3D"border: none; marg=
+in: 0px; padding: 0px; text-decoration: none;"><img class=3D"logo" src=3D"h=
+ttp://aro.scdn.co/newsletters/b220713a2d4ac7a75ebe1f9ee0c78549.png" width=
+=3D"122" height=3D"37" alt=3D"" style=3D"border: none; margin: 0px; padding=
+: 0px; display: block; max-width: 100%; width: 122px; height: 37px;"></a></=
+td><td width=3D"6.25%" valign=3D"middle" style=3D"border: none; margin: 0px=
+; padding: 0px; width: 6.25%;"></td></tr><tr height=3D"20" valign=3D"middle=
+" style=3D"border: none; margin: 0px; padding: 0px; height: 20px;"><td cols=
+pan=3D"3" height=3D"20" valign=3D"middle" style=3D"border: none; margin: 0p=
+x; padding: 0px; height: 20px;"></td></tr></tbody></table><table class=3D"t=
+itle-subtitle-root" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"border: none; margin: 0px; border-collapse: collapse; padding: 0px; wi=
+dth: 100%;"><tbody valign=3D"middle" style=3D"border: none; margin: 0px; pa=
+dding: 0px;"><tr height=3D"28" valign=3D"middle" style=3D"border: none; mar=
+gin: 0px; padding: 0px; height: 28px;"><td colspan=3D"3" height=3D"28" vali=
+gn=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; height: 28p=
+x;"></td></tr><tr valign=3D"middle" style=3D"border: none; margin: 0px; pad=
+ding: 0px;"><td width=3D"6.25%" valign=3D"middle" style=3D"border: none; ma=
+rgin: 0px; padding: 0px; width: 6.25%;"></td><td valign=3D"middle" style=3D=
+"border: none; margin: 0px; padding: 0px;"><h1 class=3D"font title-subtitle=
+-title" align=3D"center" style=3D"border: none; margin: 0px; padding: 0px; =
+font-family: Circular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-s=
+erif; text-decoration: none; color: rgb(85, 85, 85); font-size: 40px; font-=
+weight: bold; line-height: 45px; letter-spacing: -0.04em; text-align: cente=
+r;">Hej!</h1><h2 class=3D"font title-subtitle-subtitle" align=3D"center" st=
+yle=3D"border: none; margin: 0px; padding: 7px 0px 0px; font-family: Circul=
+ar, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: =
+200; text-decoration: none; color: rgb(97, 100, 103); font-size: 17px; line=
+-height: 23px; text-align: center;"></h2></td><td width=3D"6.25%" valign=3D=
+"middle" style=3D"border: none; margin: 0px; padding: 0px; width: 6.25%;"><=
+/td></tr><tr height=3D"16" valign=3D"middle" style=3D"border: none; margin:=
+ 0px; padding: 0px; height: 16px;"><td colspan=3D"3" height=3D"16" valign=
+=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; height: 16px;=
+"></td></tr></tbody></table><table class=3D"text-root" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" style=3D"border: none; margin: 0px; border-c=
+ollapse: collapse; padding: 0px; width: 100%;"><tbody valign=3D"middle" sty=
+le=3D"border: none; margin: 0px; padding: 0px;"><tr valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px;"><td class=3D"table-separator"=
+ width=3D"6.25%" valign=3D"middle" style=3D"width: 6.25%; border: none; mar=
+gin: 0px; padding: 0px;"></td><td valign=3D"middle" style=3D"border: none; =
+margin: 0px; padding: 0px;"><table cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"100%" style=3D"margin: 0px; padding: 0px"><tbody><tr><td =
+class=3D"font text-paragraph" align=3D"left" style=3D"border: none; margin:=
+ 0px; padding: 0px 0px 5px; font-family: Circular, &quot;Helvetica Neue&quo=
+t;, Helvetica, Arial, sans-serif; font-weight: 200; text-align: left; text-=
+decoration: none; color: rgb(97, 100, 103); font-size: 14px; line-height: 2=
+0px;"> F=C3=B6r att st=C3=A4lla in ett l=C3=B6senord f=C3=B6r Spotify p=C3=
+=A5 dina enheter ska du f=C3=B6lja l=C3=A4nken nedan: </td></tr></tbody></t=
+able><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%"=
+ style=3D"margin: 0px; padding: 0px"><tbody><tr><td class=3D"font text-para=
+graph" align=3D"left" style=3D"border: none; margin: 0px; padding: 0px 0px =
+5px; font-family: Circular, &quot;Helvetica Neue&quot;, Helvetica, Arial, s=
+ans-serif; font-weight: 200; text-align: left; text-decoration: none; color=
+: rgb(97, 100, 103); font-size: 14px; line-height: 20px;"> https://www.spot=
+ify.com/se/account/set-device-password/add/?token=3D6367406ae499ab1d016e864=
+7c5fef05e72edf41f </td></tr></tbody></table><table cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" width=3D"100%" style=3D"margin: 0px; padding: 0px"=
+><tbody><tr><td class=3D"font text-paragraph" align=3D"left" style=3D"borde=
+r: none; margin: 0px; padding: 0px 0px 5px; font-family: Circular, &quot;He=
+lvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 200; text-al=
+ign: left; text-decoration: none; color: rgb(97, 100, 103); font-size: 14px=
+; line-height: 20px;"> Anv=C3=A4ndarnamnet f=C3=B6r din enhet =C3=A4r:11830=
+61879 </td></tr></tbody></table><table cellspacing=3D"0" cellpadding=3D"0" =
+border=3D"0" width=3D"100%" style=3D"margin: 0px; padding: 0px"><tbody><tr>=
+<td class=3D"font text-paragraph" align=3D"left" style=3D"border: none; mar=
+gin: 0px; padding: 0px 0px 5px; font-family: Circular, &quot;Helvetica Neue=
+&quot;, Helvetica, Arial, sans-serif; font-weight: 200; text-align: left; t=
+ext-decoration: none; color: rgb(97, 100, 103); font-size: 14px; line-heigh=
+t: 20px;"> Om du inte har beg=C3=A4rt ett l=C3=B6senord f=C3=B6r din enhet =
+kan du bortse fr=C3=A5n det h=C3=A4r meddelandet och forts=C3=A4tta njuta a=
+v musiken! </td></tr></tbody></table><table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"margin: 0px; padding: 0px"><tbo=
+dy><tr><td class=3D"font text-paragraph" align=3D"left" style=3D"border: no=
+ne; margin: 0px; padding: 0px 0px 5px; font-family: Circular, &quot;Helveti=
+ca Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 200; text-align: =
+left; text-decoration: none; color: rgb(97, 100, 103); font-size: 14px; lin=
+e-height: 20px;"> V=C3=A4nliga h=C3=A4lsningar, <br style=3D"border: none; =
+margin: 0px; padding: 0px;"> Spotify-teamet </td></tr></tbody></table></td>=
+<td class=3D"table-separator" width=3D"6.25%" valign=3D"middle" style=3D"wi=
+dth: 6.25%; border: none; margin: 0px; padding: 0px;"></td></tr><tr valign=
+=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td colspan=
+=3D"3" class=3D"text-padding" height=3D"20" valign=3D"middle" style=3D"bord=
+er: none; margin: 0px; padding: 0px; height: 20px;"></td></tr></tbody></tab=
+le><style style=3D"border: none; margin: 0px; padding: 0px;"> .footer-root =
+a.footer-link { color: #6D6D6D; text-decoration: none; font-weight: bold; }=
+ </style><table class=3D"footer-padding-root" width=3D"100%" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"border: none; margin: 0px; border-collapse: =
+collapse; padding: 0px; width: 100%;"><tbody valign=3D"middle" style=3D"bor=
+der: none; margin: 0px; padding: 0px;"><tr class=3D"footer-padding" height=
+=3D"22" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;=
+ height: 22px;"><td colspan=3D"3" class=3D"footer-padding" height=3D"22" va=
+lign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; height: 2=
+2px;"></td></tr></tbody></table><table class=3D"footer-root" width=3D"100%"=
+ cellpadding=3D"0" cellspacing=3D"0" bgcolor=3D"#F7F7F7" style=3D"border: n=
+one; margin: 0px; border-collapse: collapse; padding: 0px; background-color=
+: rgb(247, 247, 247); width: 100%;"><tbody valign=3D"middle" style=3D"borde=
+r: none; margin: 0px; padding: 0px;"><tr class=3D"footer-bottom-padding" he=
+ight=3D"25" valign=3D"middle" style=3D"border: none; margin: 0px; padding: =
+0px; height: 25px;"><td colspan=3D"3" class=3D"footer-bottom-padding" heigh=
+t=3D"25" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px=
+; height: 25px;"></td></tr><tr valign=3D"middle" style=3D"border: none; mar=
+gin: 0px; padding: 0px;"><td width=3D"6.25%" valign=3D"middle" style=3D"bor=
+der: none; margin: 0px; padding: 0px; width: 6.25%;"></td><td valign=3D"mid=
+dle" style=3D"border: none; margin: 0px; padding: 0px;"><img class=3D"foote=
+r-logo" src=3D"http://aro.spotify.s3.amazonaws.com/newsletter/images/logo_f=
+ooter.png" width=3D"77" height=3D"23" alt=3D"" style=3D"border: none; margi=
+n: 0px; padding: 0px; display: block; max-width: 100%; width: 77px; height:=
+ 23px;"></td><td width=3D"6.25%" valign=3D"middle" style=3D"border: none; m=
+argin: 0px; padding: 0px; width: 6.25%;"></td></tr><tr class=3D"footer-bott=
+om-padding" height=3D"25" valign=3D"middle" style=3D"border: none; margin: =
+0px; padding: 0px; height: 25px;"><td colspan=3D"3" class=3D"footer-bottom-=
+padding" height=3D"25" valign=3D"middle" style=3D"border: none; margin: 0px=
+; padding: 0px; height: 25px;"></td></tr><tr valign=3D"middle" style=3D"bor=
+der: none; margin: 0px; padding: 0px;"><td width=3D"6.25%" valign=3D"middle=
+" style=3D"border: none; margin: 0px; padding: 0px; width: 6.25%;"></td><td=
+ valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><hr b=
+gcolor=3D"#D1D5D9" style=3D"border: none; margin: 0px; padding: 0px; backgr=
+ound-color: rgb(209, 213, 217); height: 1px;"></td><td width=3D"6.25%" vali=
+gn=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; width: 6.25=
+%;"></td></tr><tr class=3D"footer-top-padding" height=3D"12" valign=3D"midd=
+le" style=3D"border: none; margin: 0px; padding: 0px; height: 12px;"><td co=
+lspan=3D"3" class=3D"footer-top-padding" height=3D"12" valign=3D"middle" st=
+yle=3D"border: none; margin: 0px; padding: 0px; height: 12px;"></td></tr><t=
+r valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td =
+width=3D"6.25%" valign=3D"middle" style=3D"border: none; margin: 0px; paddi=
+ng: 0px; width: 6.25%;"></td><td class=3D"font" valign=3D"middle" align=3D"=
+left" style=3D"border: none; margin: 0px; padding: 0px; font-family: Circul=
+ar, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: =
+200; text-align: left; text-decoration: none; color: rgb(136, 137, 140); fo=
+nt-size: 11px; line-height: 1.65em;"> Skaffa Spotify f=C3=B6r: &nbsp; <a cl=
+ass=3D"footer-separated-text" href=3D"https://itunes.apple.com/app/spotify-=
+music/id324684580" style=3D"border-top: none; border-bottom: none; border-i=
+mage: initial; margin: 0px; text-decoration: none; border-right: 1px solid =
+rgb(195, 195, 195); display: inline-block; padding: 0px 7px 0px 0px; border=
+-left: none; color: rgb(109, 109, 109); font-weight: bold;">iPhone</a><a cl=
+ass=3D"footer-separated-text" href=3D"https://itunes.apple.com/app/spotify-=
+music/id324684580" style=3D"border-top: none; border-bottom: none; border-i=
+mage: initial; margin: 0px; text-decoration: none; border-right: 1px solid =
+rgb(195, 195, 195); border-left: 1px solid transparent; display: inline-blo=
+ck; padding: 0px 7px; color: rgb(109, 109, 109); font-weight: bold;">iPad</=
+a><a class=3D"footer-separated-text" href=3D"https://play.google.com/store/=
+apps/details?id=3Dcom.spotify.music" style=3D"border-top: none; border-bott=
+om: none; border-image: initial; margin: 0px; text-decoration: none; border=
+-right: 1px solid rgb(195, 195, 195); border-left: 1px solid transparent; d=
+isplay: inline-block; padding: 0px 7px; color: rgb(109, 109, 109); font-wei=
+ght: bold;">Android</a><a class=3D"footer-separated-text" href=3D"https://w=
+ww.spotify.com/download/" style=3D"border-top: none; border-bottom: none; b=
+order-image: initial; margin: 0px; text-decoration: none; border-left: 1px =
+solid transparent; display: inline-block; padding: 0px 0px 0px 7px; border-=
+right: none; color: rgb(109, 109, 109); font-weight: bold;">Annat</a></td><=
+td width=3D"6.25%" valign=3D"middle" style=3D"border: none; margin: 0px; pa=
+dding: 0px; width: 6.25%;"></td></tr><tr class=3D"footer-top-padding" heigh=
+t=3D"12" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px=
+; height: 12px;"><td colspan=3D"3" class=3D"footer-top-padding" height=3D"1=
+2" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; heig=
+ht: 12px;"></td></tr><tr valign=3D"middle" style=3D"border: none; margin: 0=
+px; padding: 0px;"><td width=3D"6.25%" valign=3D"middle" style=3D"border: n=
+one; margin: 0px; padding: 0px; width: 6.25%;"></td><td valign=3D"middle" s=
+tyle=3D"border: none; margin: 0px; padding: 0px;"><hr bgcolor=3D"#D1D5D9" s=
+tyle=3D"border: none; margin: 0px; padding: 0px; background-color: rgb(209,=
+ 213, 217); height: 1px;"></td><td width=3D"6.25%" valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px; width: 6.25%;"></td></tr><tr c=
+lass=3D"footer-bottom-padding" height=3D"25" valign=3D"middle" style=3D"bor=
+der: none; margin: 0px; padding: 0px; height: 25px;"><td colspan=3D"3" clas=
+s=3D"footer-bottom-padding" height=3D"25" valign=3D"middle" style=3D"border=
+: none; margin: 0px; padding: 0px; height: 25px;"></td></tr><tr valign=3D"m=
+iddle" style=3D"border: none; margin: 0px; padding: 0px;"><td width=3D"6.25=
+%" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; widt=
+h: 6.25%;"></td><td class=3D"font" valign=3D"middle" align=3D"left" style=
+=3D"border: none; margin: 0px; padding: 0px; font-family: Circular, &quot;H=
+elvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 200; text-a=
+lign: left; text-decoration: none; color: rgb(136, 137, 140); font-size: 11=
+px; line-height: 1.65em;"> Meddelandet har skickats till hugowinbladh@gmail=
+.com.  Om du har n=C3=A5gra fr=C3=A5gor eller klagom=C3=A5l =C3=A4r det bar=
+a att <a class=3D"footer-link" href=3D"https://www.spotify.com/about-us/con=
+tact/" style=3D"border: none; margin: 0px; padding: 0px; font-family: Circu=
+lar, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; text-align: =
+left; color: rgb(109, 109, 109); text-decoration: none; font-weight: bold;"=
+ align=3D"left">kontakta oss</a>. </td><td width=3D"6.25%" valign=3D"middle=
+" style=3D"border: none; margin: 0px; padding: 0px; width: 6.25%;"></td></t=
+r><tr class=3D"footer-middle-padding" height=3D"33" valign=3D"middle" style=
+=3D"border: none; margin: 0px; padding: 0px; height: 33px;"><td colspan=3D"=
+3" class=3D"footer-middle-padding" height=3D"33" valign=3D"middle" style=3D=
+"border: none; margin: 0px; padding: 0px; height: 33px;"></td></tr><tr vali=
+gn=3D"middle" style=3D"border: none; margin: 0px; padding: 0px;"><td width=
+=3D"6.25%" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0=
+px; width: 6.25%;"></td><td class=3D"font font-small" valign=3D"middle" ali=
+gn=3D"left" style=3D"border: none; margin: 0px; padding: 0px; font-family: =
+Circular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-we=
+ight: 200; text-align: left; text-decoration: none; color: rgb(136, 137, 14=
+0); line-height: 1.65em; font-size: 11px;"><a class=3D"footer-separated-tex=
+t" href=3D"https://www.spotify.com/legal/end-user-agreement/" style=3D"bord=
+er-top: none; border-bottom: none; border-image: initial; margin: 0px; text=
+-decoration: none; border-right: 1px solid rgb(195, 195, 195); display: inl=
+ine-block; padding: 0px 7px 0px 0px; border-left: none; color: rgb(109, 109=
+, 109); font-weight: bold;">Anv=C3=A4ndarvillkor</a><a class=3D"footer-sepa=
+rated-text" href=3D"https://support.spotify.com/learn-more/guides/#!/articl=
+e/spotify-system-requirements" style=3D"border-top: none; border-bottom: no=
+ne; border-image: initial; margin: 0px; text-decoration: none; border-right=
+: 1px solid rgb(195, 195, 195); border-left: 1px solid transparent; display=
+: inline-block; padding: 0px 7px; color: rgb(109, 109, 109); font-weight: b=
+old;">Tekniska krav</a><a class=3D"footer-separated-text" href=3D"https://w=
+ww.spotify.com/about-us/contact/" style=3D"border-top: none; border-bottom:=
+ none; border-image: initial; margin: 0px; text-decoration: none; border-le=
+ft: 1px solid transparent; display: inline-block; padding: 0px 0px 0px 7px;=
+ border-right: none; color: rgb(109, 109, 109); font-weight: bold;">Kontakt=
+a oss</a></td><td width=3D"6.25%" valign=3D"middle" style=3D"border: none; =
+margin: 0px; padding: 0px; width: 6.25%;"></td></tr><tr valign=3D"middle" s=
+tyle=3D"border: none; margin: 0px; padding: 0px;"><td colspan=3D"3" class=
+=3D"footer-top-padding" height=3D"12" valign=3D"middle" style=3D"border: no=
+ne; margin: 0px; padding: 0px; height: 12px;"></td></tr><tr valign=3D"middl=
+e" style=3D"border: none; margin: 0px; padding: 0px;"><td width=3D"6.25%" v=
+align=3D"middle" style=3D"border: none; margin: 0px; padding: 0px; width: 6=
+.25%;"></td><td class=3D"font font-small" valign=3D"middle" align=3D"left" =
+style=3D"border: none; margin: 0px; padding: 0px; font-family: Circular, &q=
+uot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 200; t=
+ext-align: left; text-decoration: none; color: rgb(136, 137, 140); line-hei=
+ght: 1.65em; font-size: 11px;">Spotify AB, Birger Jarlsgatan 61, 4tr, 113 5=
+6 Stockholm, Sweden, Reg no: 556703-7485, office@spotify.com</td><td width=
+=3D"6.25%" valign=3D"middle" style=3D"border: none; margin: 0px; padding: 0=
+px; width: 6.25%;"></td></tr><tr height=3D"20" valign=3D"middle" style=3D"b=
+order: none; margin: 0px; padding: 0px; height: 20px;"><td colspan=3D"3" cl=
+ass=3D"footer-bottom-padding" height=3D"25" valign=3D"middle" style=3D"bord=
+er: none; margin: 0px; padding: 0px; height: 25px;"></td></tr></tbody></tab=
+le></div></center></td></tr></table><!--[if (mso) | (IE)]></td></tr></table=
+><![endif]--></body></html>=
+
+--fe6748ab215882e1c25fed7588db1e9128c7d0d255619bcccb63a47e4f49--

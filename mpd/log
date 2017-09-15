@@ -1,0 +1,23 @@
+Aug 02 10:16 : exception: Failed to open /home/hugo/.config/mpd/state: No such file or directory
+Aug 02 10:16 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 10:20 : client: [0] opened from [::1]:41140
+Aug 02 10:20 : client: [0] closed
+Aug 02 10:37 : client: [1] opened from [::1]:41752
+Aug 02 10:37 : client: [1] closed
+Aug 02 10:38 : client: [2] opened from [::1]:41754
+Aug 02 10:39 : client: [2] closed
+Aug 02 21:18 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 21:20 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 21:20 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 21:22 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 21:23 : client: [0] opened from [::1]:42610
+Aug 02 21:23 : client: [0] closed
+Aug 02 21:23 : client: [1] opened from [::1]:42614
+Aug 02 21:23 : client: [1] closed
+Aug 02 21:30 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 21:39 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 21:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 21:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 22:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 22:10 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Aug 02 22:15 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted

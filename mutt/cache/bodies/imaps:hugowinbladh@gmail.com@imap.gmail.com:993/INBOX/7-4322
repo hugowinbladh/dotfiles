@@ -1,0 +1,939 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.6 with SMTP id o6csp124154ioe;
+        Thu, 18 May 2017 21:08:34 -0700 (PDT)
+X-Received: by 10.98.20.76 with SMTP id 73mr8094712pfu.70.1495166914165;
+        Thu, 18 May 2017 21:08:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495166914; cv=none;
+        d=google.com; s=arc-20160816;
+        b=T7k8DRBtzKFIQspdnfYTsGUvziO9MrTXpYDdBc7D7thxfc6NNiD00N3eT21w+Y1MIW
+         UIiD0Y1NwTEOWEqWkfLNRi+gYJMSlfcqF7oXkRyu/QS7U4IHI/Vbj8PlL3IoedaLH1vt
+         b9FAMLm3JYg4pjrvowqTRwGfbfDawaLcz/QhBT5iWRLjUsiqxa0m+Ipwfo8J83NaZlVp
+         jVF779k2WIhG9DAo/YAx24vbYzhEUqCWCQctWCUMc2PVgE929jscOTMMZRv83APoXDHT
+         zW4pssFV0WJ+h/qAMWJsyRReOKRK2ohsYE9sKf9zoPKK6R0zHx4yWsFeAxVajun2UCO9
+         ACEA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:mime-version:subject:to:reply-to:from
+         :dkim-signature:dkim-signature:arc-authentication-results;
+        bh=yMY+4jiQfvBrrFU+pcsJ5uxsflOEA6A9+M/NY0eEuiM=;
+        b=coki4X2QfNjb7Esb5HsxaeUBy+wVtHtgwqoK4P4cntwOPVa1QXTqQ92w2hpvZtELae
+         5YpDzW1gfcbMZXPLH4ZhWKZtKmsyu2qfu4KPaJtBUF7AKj1B7z5AdCYLInxLNc83nnLL
+         PYesjtgKw5juRXRgcicOSKCxWqw59fwQAtQRkwWr4ORB4eCeE3ezppIAyuw+UiI6Sqer
+         bJQKen6pvnOlEFcWeePWKJtA8aCzECPgXFxXTDbWql10HeK5+kv9VGqhLaO1tUkdEMW8
+         X2P8uK20hBewZWwX92T4p+AfhYuFhHPFfYsrRlaGMepy6/3G0g74u8XMDbt7zrZLjxDb
+         8tOg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@codeanywhere.com;
+       dkim=pass header.i=@amazonses.com;
+       spf=pass (google.com: domain of 0101015c1ee48846-81f4e96e-58a1-43ab-bd49-68f869f90b97-000000@us-west-2.amazonses.com designates 54.240.27.75 as permitted sender) smtp.mailfrom=0101015c1ee48846-81f4e96e-58a1-43ab-bd49-68f869f90b97-000000@us-west-2.amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=codeanywhere.com
+Return-Path: <0101015c1ee48846-81f4e96e-58a1-43ab-bd49-68f869f90b97-000000@us-west-2.amazonses.com>
+Received: from a27-75.smtp-out.us-west-2.amazonses.com (a27-75.smtp-out.us-west-2.amazonses.com. [54.240.27.75])
+        by mx.google.com with ESMTPS id e10si7188185pfk.123.2017.05.18.21.08.33
+        for <hugowinbladh@gmail.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 18 May 2017 21:08:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0101015c1ee48846-81f4e96e-58a1-43ab-bd49-68f869f90b97-000000@us-west-2.amazonses.com designates 54.240.27.75 as permitted sender) client-ip=54.240.27.75;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@codeanywhere.com;
+       dkim=pass header.i=@amazonses.com;
+       spf=pass (google.com: domain of 0101015c1ee48846-81f4e96e-58a1-43ab-bd49-68f869f90b97-000000@us-west-2.amazonses.com designates 54.240.27.75 as permitted sender) smtp.mailfrom=0101015c1ee48846-81f4e96e-58a1-43ab-bd49-68f869f90b97-000000@us-west-2.amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=codeanywhere.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=is3zrbospqmjmhowmbey5g7vsbavid3l; d=codeanywhere.com;
+	t=1495166913;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=55VkGko4J5qVkFtq51bivJkYQ9UBw/7/BMCgKw2JGoI=;
+	b=Bapcju+YQL2j+VO7limWHnfDsXGrIowMx1EZkM1nBRnmBLhO83C/+G1w2l/FAaqr
+	xM+LTKMgdik5MWJ3iLsS0omnGZIE8bW2p0MRKOBg1TEUD1BaQOZC6PXzEkJoVFI0qgF
+	Um2N59D5C1/XJpplygY02lB4x7n6I8pmxwM5yFX4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1495166913;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=55VkGko4J5qVkFtq51bivJkYQ9UBw/7/BMCgKw2JGoI=;
+	b=Z009xsC934Umde5ZNr3XNVHG9QqLK83B1aaTjXPT99V/ClBFq18KN+3s6YYi9iY1
+	HBeqoHUVxc7ELILMDGyRe0iWuyojZMduv9hfpbAlW9zmo+lNyfN84UK1eOjgD+BwV7K
+	7fHIB55urkfRGD4I9jyXswBr4kANcouYwdVteE7I=
+From: Codeanywhere Team <support@codeanywhere.com>
+Reply-To: Codeanywhere Team <no-reply@codeanywhere.net>
+To: hugowinbladh@gmail.com
+Subject: Codeanywhere Annual Conference: DigitalOcean, Heroku, Amazon,
+ Microsoft and many more
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1392512_625456019.1495166912584"
+Message-ID: <0101015c1ee48846-81f4e96e-58a1-43ab-bd49-68f869f90b97-000000@us-west-2.amazonses.com>
+Date: Fri, 19 May 2017 04:08:32 +0000
+X-SES-Outgoing: 2017.05.19-54.240.27.75
+Feedback-ID: 1.us-west-2.R+hyQ+6XHJ+/9O/llTwGWI9B20ko633NrWvK98W+FYQ=:AmazonSES
+
+------=_Part_1392512_625456019.1495166912584
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+    <title>Codeanywhere Annual Conference: DigitalOcean, Heroku, Amazon, Mi=
+crosoft and many more</title>
+    <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type=
+">=20
+  </head>
+
+  <body style=3D"margin: 0; padding: 0;">
+
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" height=3D"100%" width=3D"100%" style=3D"border-collapse:collapse;height:1=
+00%;margin:0;padding:0;width:100%;background-color:#fafafa">
+      <tbody><tr>
+        <td align=3D"center" valign=3D"top" style=3D"height:100%;margin:0;p=
+adding:10px;width:100%;border-top:0">
+
+
+          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"border-collapse:collapse;border:0;max-width:600px!important"=
+>
+            <tbody><tr>
+              <td valign=3D"top" style=3D"background-color:#fafafa;border-t=
+op:0;border-bottom:0;padding-top:9px;padding-bottom:9px"><table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100=
+%;border-collapse:collapse">
+                <tbody>
+                  <tr>
+                    <td valign=3D"top">
+                      <table align=3D"left" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"366" style=3D"border-collapse:collapse">
+                        <tbody><tr>
+
+                          <td valign=3D"top" style=3D"padding-top:9px;paddi=
+ng-left:18px;padding-bottom:9px;padding-right:0;word-break:break-word;color=
+:#656565;font-family:Helvetica;font-size:12px;line-height:150%;text-align:l=
+eft">
+                            Shift Developer Conference 2017 Sessions Announ=
+ced
+                          </td>
+                          </tr>
+                        </tbody></table>
+                    </td>
+                  </tr>
+                </tbody>
+                </table></td>
+              </tr>
+              <tr>
+                <td valign=3D"top" style=3D"background-color:#ffffff;border=
+-top:0;border-bottom:0;padding-top:9px;padding-bottom:0"><table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100=
+%;border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td valign=3D"top" style=3D"padding:9px">
+                        <table align=3D"left" width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"min-width:100%;border-collapse:=
+collapse">
+                          <tbody><tr>
+                            <td valign=3D"top" style=3D"padding-right:9px;p=
+adding-left:9px;padding-top:0;padding-bottom:0;text-align:center">
+                              <img align=3D"center" alt=3D"" src=3D"https:/=
+/s3-us-west-2.amazonaws.com/capublic/SHIFT/Newsletter/2017/002/header2.png"=
+ width=3D"564" style=3D"max-width:1400px;padding-bottom:0;display:inline!im=
+portant;vertical-align:bottom;border:0;min-height:auto;outline:none;text-de=
+coration:none" class=3D"CToWUd a6T" tabindex=3D"0"><div class=3D"a6S" dir=
+=3D"ltr" style=3D"opacity: 0.01; left: 544px; top: 406px;"><div id=3D":ar" =
+class=3D"T-I J-J5-Ji aQv T-I-ax7 L3 a5q" role=3D"button" tabindex=3D"0" ari=
+a-label=3D"Download attachment " data-tooltip-class=3D"a1V" data-tooltip=3D=
+"Download"><div class=3D"aSK J-J5-Ji aYr"></div></div></div>
+                            </td>
+                            </tr>
+                          </tbody></table>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td valign=3D"top" style=3D"background-color:#ffffff;border=
+-top:0;border-bottom:2px solid #eaeaea;padding-top:0;padding-bottom:9px"><t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"min-width:100%;border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td valign=3D"top">
+
+                        <table align=3D"left" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:=
+collapse">
+                          <tbody><tr>
+
+                            <td valign=3D"top" style=3D"padding-top:9px;pad=
+ding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;=
+color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-al=
+ign:left">
+
+<!--                               <h1 style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:26px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left">
+                                Announcing our First Speakers
+                              </h1> -->
+                              <br>
+                              <p style=3D"margin:10px 0;padding:0;color:#20=
+2020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left"=
+>
+                                Dear Codeanywher User,
+                                <br>
+                                Join us on June 1st and 2nd in Split, Croat=
+ia for our annual Shift Developer Conference 2017. From Javascript to Cassa=
+ndra to Docker, Shift is the place where developers from Europe come to mee=
+t, network and learn. With over 20 speakers and 2 stages there will be some=
+thing for everyone, including:
+                              </p>
+                             =20
+                              <ul>
+                                <li>The Joy of Optimizing CSS by Una Kravet=
+s (DigitalOcean)</li>
+                                <li>Building a Collaboration Service for th=
+e Hololens by Cyrille Fauvel (Autodesk)</li>
+                                <li>The Soul in The Machine - Developing fo=
+r Humans by Christian Heilmann (Microsoft)</li>
+                                <li> Automated Devops and Delivery for the =
+Product Win; How to Structure Your Teams' Work Toward Product, not Plumbing=
+ by Ike DeLorenzo (Heroku)</li>
+                              </ul>
+                             =20
+                             =20
+                              <p>
+                                <a href=3D"http://shift.codeanywhere.com/#s=
+chedule" style=3D"color:#2baadf;font-weight:bold;text-decoration:underline;=
+" target=3D"_blank">View the full schedule and lineup of speakers here</a>
+                              </p>
+                              <br>
+                             =20
+                              <p style=3D"text-align: center;">
+                                <a href=3D"http://shift.codeanywhere.com/#r=
+egister" style=3D"padding: 10px 20px; background: #7e3f98; color: white; bo=
+rder: none; outline: none; text-decoration: none;">Register Now</a>
+                              </p>
+                              <br>
+                              <p>
+                                As a Codeanywhere user, we have prepared a =
+special 25% discount. Just use the promo code: <strong>CA25off</strong>
+                              </p>
+                              <br>
+                              <p>
+                                We hope to see you there!
+                              </p>
+                             =20
+                              <p>
+                                Codeanywhere Team
+                              </p>
+                              <br>
+                              <br>
+                            </td>
+                            </tr>
+                          </tbody></table>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td valign=3D"top" style=3D"background-color:#fafafa;border=
+-top:0;border-bottom:0;padding-top:9px;padding-bottom:9px"><table border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width:1=
+00%;border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td align=3D"center" valign=3D"top" style=3D"padding:=
+9px">
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:collapse">
+                          <tbody><tr>
+                            <td align=3D"center" style=3D"padding-left:9px;=
+padding-right:9px">
+                              <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:collapse"=
+>
+                                <tbody><tr>
+                                  <td align=3D"center" valign=3D"top" style=
+=3D"padding-top:9px;padding-right:9px;padding-left:9px">
+                                    <table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse:collapse">
+                                      <tbody><tr>
+                                        <td align=3D"center" valign=3D"top"=
+>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:10px;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"http=
+://www.twitter.com/shiftsplit" target=3D"_blank"><img src=3D"https://ci5.go=
+ogleusercontent.com/proxy/7Mkp5x7vnjoGT2ynGuzF3bII8G8nN9AZ8P94lSQK9u1YI3mtO=
+9W7FJ47IvEXf-miKSuDyVsogoi3lN_ByGUbmgjPGjx-metceXGhlGdxbwFiNbGKmwGCzURgcLUO=
+D4kCIw=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/social-block-v2/=
+color-twitter-48.png" style=3D"display:block;border:0;min-height:auto;outli=
+ne:none;text-decoration:none" height=3D"24" width=3D"24" class=3D"CToWUd"><=
+/a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:10px;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"http=
+://www.facebook.com/shiftsplit" target=3D"_blank"><img src=3D"https://ci5.g=
+oogleusercontent.com/proxy/THEfQ-zOr2AaMLVp_TKYp66Poy4XIPQHLLPvp3JqaDTShBZ9=
+oZafDmhUm7hfcJbSG9vWeV4d9Esrao80PBgUGiMiifS3Dl-CqVUBIY1Qj6oJicgM-Vrdv4BVqtr=
+98zDVKOE=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/social-block-v=
+2/color-facebook-48.png" style=3D"display:block;border:0;min-height:auto;ou=
+tline:none;text-decoration:none" height=3D"24" width=3D"24" class=3D"CToWUd=
+"></a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:10px;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"http=
+://shift.codeanywhere.com/" target=3D"_blank"><img src=3D"https://ci4.googl=
+eusercontent.com/proxy/XGenZrmUcdiVbGsrNYCRgHNYNfacIjhuLbFebzTFb_97r7SkYv7o=
+gFxlEPf2hCuN5Kk9p8x-3_ifj6nSGicK0tVj4vtdS4rtGr6b05PDLfKpkMu-ZN-ze73H72HWQg=
+=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/social-block-v2/color-=
+link-48.png" style=3D"display:block;border:0;min-height:auto;outline:none;t=
+ext-decoration:none" height=3D"24" width=3D"24" class=3D"CToWUd"></a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:10px;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"mail=
+to:info@shiftsplit.com" target=3D"_blank"><img src=3D"https://ci5.googleuse=
+rcontent.com/proxy/7qzpyVB6GsqI5yyevmVjGxT5eaoFOIhp5YUoxjUOyOGmq4G4GtelUrXl=
+riffPbBB6IELkO_hU8xqN33CegBw2Edkn6SMFI76PRbVjeNB0UwdjNg4r3Y9r1ubmWo1oNsjk2v=
+qbL5O5ZZD=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/social-block-=
+v2/color-forwardtofriend-48.png" style=3D"display:block;border:0;min-height=
+:auto;outline:none;text-decoration:none" height=3D"24" width=3D"24" class=
+=3D"CToWUd"></a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:0;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"http=
+s://www.youtube.com/user/TheShiftConference" target=3D"_blank"><img src=3D"=
+https://ci3.googleusercontent.com/proxy/ZrKpOnoghpkSFtaZ3RiP66CmMtgW6kGSBeq=
+l6bIwSTVd1mQd_Ys_1vE5eyMRS23Xw7o3aZixbWwf8jFPUHnuv-cgI-1i7JEtD1oSW3MqIfmNPj=
+5n4xqkUpBkiVdfAynPvQ=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/so=
+cial-block-v2/color-youtube-48.png" style=3D"display:block;border:0;min-hei=
+ght:auto;outline:none;text-decoration:none" height=3D"24" width=3D"24" clas=
+s=3D"CToWUd"></a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                        </td>
+                                        </tr>
+                                      </tbody></table>
+                                  </td>
+                                  </tr>
+                                </tbody></table>
+                            </td>
+                            </tr>
+                          </tbody></table>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:collapse;tabl=
+e-layout:fixed!important">
+                  <tbody>
+                    <tr>
+                      <td style=3D"min-width:100%;padding:10px 18px 25px">
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"min-width:100%;border-top-width:2px;border-t=
+op-style:solid;border-top-color:#eeeeee;border-collapse:collapse">
+                          <tbody><tr>
+                            <td>
+                              <span></span>
+                            </td>
+                            </tr>
+                          </tbody></table>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td valign=3D"top">
+                        <table align=3D"left" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:=
+collapse">
+                          <tbody><tr>
+                            <td style=3D"vertical-align: top; padding-top: =
+6px; padding-bottom: 30px; text-align: center; color: #555156; font-size: 1=
+2px;" align=3D"center" valign=3D"top">
+                              If you don=E2=80=99t wish to receive more ema=
+ils by Codeanywhere, please take a few seconds to <a href=3D"https://codean=
+ywhere.com/account/unsubscribe/?code=3DUhBTgZQvyxDDeoCl1cGZqk7aoJ3ALPZ" sty=
+le=3D"color: #000000;">unsubscribe</a>.
+                            </td>
+                            </tr>
+                          </tbody></table>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table></td>
+              </tr>
+            </tbody></table>
+        </td>
+        </tr>
+      </tbody></table>
+  </body>
+</html>
+
+------=_Part_1392512_625456019.1495166912584
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <head>
+    <title>Codeanywhere Annual Conference: DigitalOcean, Heroku, Amazon, Mi=
+crosoft and many more</title>
+    <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type=
+">=20
+  </head>
+
+  <body style=3D"margin: 0; padding: 0;">
+
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" height=3D"100%" width=3D"100%" style=3D"border-collapse:collapse;height:1=
+00%;margin:0;padding:0;width:100%;background-color:#fafafa">
+      <tbody><tr>
+        <td align=3D"center" valign=3D"top" style=3D"height:100%;margin:0;p=
+adding:10px;width:100%;border-top:0">
+
+
+          <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"border-collapse:collapse;border:0;max-width:600px!important"=
+>
+            <tbody><tr>
+              <td valign=3D"top" style=3D"background-color:#fafafa;border-t=
+op:0;border-bottom:0;padding-top:9px;padding-bottom:9px"><table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100=
+%;border-collapse:collapse">
+                <tbody>
+                  <tr>
+                    <td valign=3D"top">
+                      <table align=3D"left" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"366" style=3D"border-collapse:collapse">
+                        <tbody><tr>
+
+                          <td valign=3D"top" style=3D"padding-top:9px;paddi=
+ng-left:18px;padding-bottom:9px;padding-right:0;word-break:break-word;color=
+:#656565;font-family:Helvetica;font-size:12px;line-height:150%;text-align:l=
+eft">
+                            Shift Developer Conference 2017 Sessions Announ=
+ced
+                          </td>
+                          </tr>
+                        </tbody></table>
+                    </td>
+                  </tr>
+                </tbody>
+                </table></td>
+              </tr>
+              <tr>
+                <td valign=3D"top" style=3D"background-color:#ffffff;border=
+-top:0;border-bottom:0;padding-top:9px;padding-bottom:0"><table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100=
+%;border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td valign=3D"top" style=3D"padding:9px">
+                        <table align=3D"left" width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"min-width:100%;border-collapse:=
+collapse">
+                          <tbody><tr>
+                            <td valign=3D"top" style=3D"padding-right:9px;p=
+adding-left:9px;padding-top:0;padding-bottom:0;text-align:center">
+                              <img align=3D"center" alt=3D"" src=3D"https:/=
+/s3-us-west-2.amazonaws.com/capublic/SHIFT/Newsletter/2017/002/header2.png"=
+ width=3D"564" style=3D"max-width:1400px;padding-bottom:0;display:inline!im=
+portant;vertical-align:bottom;border:0;min-height:auto;outline:none;text-de=
+coration:none" class=3D"CToWUd a6T" tabindex=3D"0"><div class=3D"a6S" dir=
+=3D"ltr" style=3D"opacity: 0.01; left: 544px; top: 406px;"><div id=3D":ar" =
+class=3D"T-I J-J5-Ji aQv T-I-ax7 L3 a5q" role=3D"button" tabindex=3D"0" ari=
+a-label=3D"Download attachment " data-tooltip-class=3D"a1V" data-tooltip=3D=
+"Download"><div class=3D"aSK J-J5-Ji aYr"></div></div></div>
+                            </td>
+                            </tr>
+                          </tbody></table>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td valign=3D"top" style=3D"background-color:#ffffff;border=
+-top:0;border-bottom:2px solid #eaeaea;padding-top:0;padding-bottom:9px"><t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"min-width:100%;border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td valign=3D"top">
+
+                        <table align=3D"left" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:=
+collapse">
+                          <tbody><tr>
+
+                            <td valign=3D"top" style=3D"padding-top:9px;pad=
+ding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;=
+color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-al=
+ign:left">
+
+<!--                               <h1 style=3D"display:block;margin:0;padd=
+ing:0;color:#202020;font-family:Helvetica;font-size:26px;font-style:normal;=
+font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left">
+                                Announcing our First Speakers
+                              </h1> -->
+                              <br>
+                              <p style=3D"margin:10px 0;padding:0;color:#20=
+2020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left"=
+>
+                                Dear Codeanywher User,
+                                <br>
+                                Join us on June 1st and 2nd in Split, Croat=
+ia for our annual Shift Developer Conference 2017. From Javascript to Cassa=
+ndra to Docker, Shift is the place where developers from Europe come to mee=
+t, network and learn. With over 20 speakers and 2 stages there will be some=
+thing for everyone, including:
+                              </p>
+                             =20
+                              <ul>
+                                <li>The Joy of Optimizing CSS by Una Kravet=
+s (DigitalOcean)</li>
+                                <li>Building a Collaboration Service for th=
+e Hololens by Cyrille Fauvel (Autodesk)</li>
+                                <li>The Soul in The Machine - Developing fo=
+r Humans by Christian Heilmann (Microsoft)</li>
+                                <li> Automated Devops and Delivery for the =
+Product Win; How to Structure Your Teams' Work Toward Product, not Plumbing=
+ by Ike DeLorenzo (Heroku)</li>
+                              </ul>
+                             =20
+                             =20
+                              <p>
+                                <a href=3D"http://shift.codeanywhere.com/#s=
+chedule" style=3D"color:#2baadf;font-weight:bold;text-decoration:underline;=
+" target=3D"_blank">View the full schedule and lineup of speakers here</a>
+                              </p>
+                              <br>
+                             =20
+                              <p style=3D"text-align: center;">
+                                <a href=3D"http://shift.codeanywhere.com/#r=
+egister" style=3D"padding: 10px 20px; background: #7e3f98; color: white; bo=
+rder: none; outline: none; text-decoration: none;">Register Now</a>
+                              </p>
+                              <br>
+                              <p>
+                                As a Codeanywhere user, we have prepared a =
+special 25% discount. Just use the promo code: <strong>CA25off</strong>
+                              </p>
+                              <br>
+                              <p>
+                                We hope to see you there!
+                              </p>
+                             =20
+                              <p>
+                                Codeanywhere Team
+                              </p>
+                              <br>
+                              <br>
+                            </td>
+                            </tr>
+                          </tbody></table>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td valign=3D"top" style=3D"background-color:#fafafa;border=
+-top:0;border-bottom:0;padding-top:9px;padding-bottom:9px"><table border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width:1=
+00%;border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td align=3D"center" valign=3D"top" style=3D"padding:=
+9px">
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:collapse">
+                          <tbody><tr>
+                            <td align=3D"center" style=3D"padding-left:9px;=
+padding-right:9px">
+                              <table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:collapse"=
+>
+                                <tbody><tr>
+                                  <td align=3D"center" valign=3D"top" style=
+=3D"padding-top:9px;padding-right:9px;padding-left:9px">
+                                    <table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse:collapse">
+                                      <tbody><tr>
+                                        <td align=3D"center" valign=3D"top"=
+>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:10px;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"http=
+://www.twitter.com/shiftsplit" target=3D"_blank"><img src=3D"https://ci5.go=
+ogleusercontent.com/proxy/7Mkp5x7vnjoGT2ynGuzF3bII8G8nN9AZ8P94lSQK9u1YI3mtO=
+9W7FJ47IvEXf-miKSuDyVsogoi3lN_ByGUbmgjPGjx-metceXGhlGdxbwFiNbGKmwGCzURgcLUO=
+D4kCIw=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/social-block-v2/=
+color-twitter-48.png" style=3D"display:block;border:0;min-height:auto;outli=
+ne:none;text-decoration:none" height=3D"24" width=3D"24" class=3D"CToWUd"><=
+/a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:10px;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"http=
+://www.facebook.com/shiftsplit" target=3D"_blank"><img src=3D"https://ci5.g=
+oogleusercontent.com/proxy/THEfQ-zOr2AaMLVp_TKYp66Poy4XIPQHLLPvp3JqaDTShBZ9=
+oZafDmhUm7hfcJbSG9vWeV4d9Esrao80PBgUGiMiifS3Dl-CqVUBIY1Qj6oJicgM-Vrdv4BVqtr=
+98zDVKOE=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/social-block-v=
+2/color-facebook-48.png" style=3D"display:block;border:0;min-height:auto;ou=
+tline:none;text-decoration:none" height=3D"24" width=3D"24" class=3D"CToWUd=
+"></a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:10px;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"http=
+://shift.codeanywhere.com/" target=3D"_blank"><img src=3D"https://ci4.googl=
+eusercontent.com/proxy/XGenZrmUcdiVbGsrNYCRgHNYNfacIjhuLbFebzTFb_97r7SkYv7o=
+gFxlEPf2hCuN5Kk9p8x-3_ifj6nSGicK0tVj4vtdS4rtGr6b05PDLfKpkMu-ZN-ze73H72HWQg=
+=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/social-block-v2/color-=
+link-48.png" style=3D"display:block;border:0;min-height:auto;outline:none;t=
+ext-decoration:none" height=3D"24" width=3D"24" class=3D"CToWUd"></a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:10px;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"mail=
+to:info@shiftsplit.com" target=3D"_blank"><img src=3D"https://ci5.googleuse=
+rcontent.com/proxy/7qzpyVB6GsqI5yyevmVjGxT5eaoFOIhp5YUoxjUOyOGmq4G4GtelUrXl=
+riffPbBB6IELkO_hU8xqN33CegBw2Edkn6SMFI76PRbVjeNB0UwdjNg4r3Y9r1ubmWo1oNsjk2v=
+qbL5O5ZZD=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/social-block-=
+v2/color-forwardtofriend-48.png" style=3D"display:block;border:0;min-height=
+:auto;outline:none;text-decoration:none" height=3D"24" width=3D"24" class=
+=3D"CToWUd"></a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                          <table align=3D"left" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;border-collap=
+se:collapse">
+                                            <tbody><tr>
+                                              <td valign=3D"top" style=3D"p=
+adding-right:0;padding-bottom:9px">
+                                                <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-collapse:collap=
+se">
+                                                  <tbody><tr>
+                                                    <td align=3D"left" vali=
+gn=3D"middle" style=3D"padding-top:5px;padding-right:10px;padding-bottom:5p=
+x;padding-left:9px">
+                                                      <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"borde=
+r-collapse:collapse">
+                                                        <tbody><tr>
+                                                          <td align=3D"cent=
+er" valign=3D"middle" width=3D"24">
+                                                            <a href=3D"http=
+s://www.youtube.com/user/TheShiftConference" target=3D"_blank"><img src=3D"=
+https://ci3.googleusercontent.com/proxy/ZrKpOnoghpkSFtaZ3RiP66CmMtgW6kGSBeq=
+l6bIwSTVd1mQd_Ys_1vE5eyMRS23Xw7o3aZixbWwf8jFPUHnuv-cgI-1i7JEtD1oSW3MqIfmNPj=
+5n4xqkUpBkiVdfAynPvQ=3Ds0-d-e1-ft#https://cdn-images.mailchimp.com/icons/so=
+cial-block-v2/color-youtube-48.png" style=3D"display:block;border:0;min-hei=
+ght:auto;outline:none;text-decoration:none" height=3D"24" width=3D"24" clas=
+s=3D"CToWUd"></a>
+                                                          </td>
+                                                          </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                    </tr>
+                                                  </tbody></table>
+                                              </td>
+                                              </tr>
+                                            </tbody></table>
+                                        </td>
+                                        </tr>
+                                      </tbody></table>
+                                  </td>
+                                  </tr>
+                                </tbody></table>
+                            </td>
+                            </tr>
+                          </tbody></table>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:collapse;tabl=
+e-layout:fixed!important">
+                  <tbody>
+                    <tr>
+                      <td style=3D"min-width:100%;padding:10px 18px 25px">
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"min-width:100%;border-top-width:2px;border-t=
+op-style:solid;border-top-color:#eeeeee;border-collapse:collapse">
+                          <tbody><tr>
+                            <td>
+                              <span></span>
+                            </td>
+                            </tr>
+                          </tbody></table>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td valign=3D"top">
+                        <table align=3D"left" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%" style=3D"min-width:100%;border-collapse:=
+collapse">
+                          <tbody><tr>
+                            <td style=3D"vertical-align: top; padding-top: =
+6px; padding-bottom: 30px; text-align: center; color: #555156; font-size: 1=
+2px;" align=3D"center" valign=3D"top">
+                              If you don=E2=80=99t wish to receive more ema=
+ils by Codeanywhere, please take a few seconds to <a href=3D"https://codean=
+ywhere.com/account/unsubscribe/?code=3DUhBTgZQvyxDDeoCl1cGZqk7aoJ3ALPZ" sty=
+le=3D"color: #000000;">unsubscribe</a>.
+                            </td>
+                            </tr>
+                          </tbody></table>
+                      </td>
+                    </tr>
+                  </tbody>
+                  </table></td>
+              </tr>
+            </tbody></table>
+        </td>
+        </tr>
+      </tbody></table>
+  </body>
+</html>
+
+------=_Part_1392512_625456019.1495166912584--

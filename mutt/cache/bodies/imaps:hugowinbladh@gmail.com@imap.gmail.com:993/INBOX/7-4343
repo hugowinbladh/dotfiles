@@ -1,0 +1,847 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.15 with SMTP id o15csp743990ioe;
+        Sat, 27 May 2017 05:33:29 -0700 (PDT)
+X-Received: by 10.107.128.216 with SMTP id k85mr5932299ioi.115.1495888409602;
+        Sat, 27 May 2017 05:33:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495888409; cv=none;
+        d=google.com; s=arc-20160816;
+        b=c47ns4KGZXw35Lutnx3xSeOblVsAbuXloX+hcQWXlKTJpfy1JT9ZKUyDAUffGd9c6p
+         CwRF88L/Auf+JzFmIW1id4gUYBkf3gzTVSMXwq5lLCEDF7Am5eeMO5DhMzEZofCfRArL
+         fpBdwLDEBcWnkT3q5gZkxn9ieuQcttXdPfDcZu6wDAV6gBfXa8f74AIQZ+rcplfiafm3
+         aPGPSVlqlPpUXXyAU5GExpBYfK2yyRrN4UPG4rnWE9OOS2zGtFa/4W4KKyCW+tKT1Tq2
+         kDp3qLv70Y20m2voSp8M1UogeaQHcsidfFq0zzJ5ZofTOq9sC4E3P40qFh4OaFPf03z+
+         9dZw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:to:subject:mime-version:from:date:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=/pGAZ4Eq2Iv3by/M4zczorcOrsYVYwJo+/ZogCwkzRg=;
+        b=Wb9orSGQk7ZpJA/0lux2gZE5HJ6M8xGnmNVHrxoWCiBkcuguriCP8z9ApfybEMMnOQ
+         kZVMt0wSJaQQxN3YWut/ppMCe3haXoN79lFubFyN8Zn0m5O4KFeR89iDZlt9fRhj5M+P
+         uBmFw5ZLR9bmhzEAAHW59fwCkcUvGxpwaX2bevak6EpPn/JPGO3pKg0WavKDYQYsXpft
+         qVX0+rVyknynGayz7WnLEr62Mjf+hGZnSHd634X/+FDxErqHJS2CsYPVPnHZn9gPP94Q
+         JbQX5n+HNGIHvouw4OTe9EAkS2f7Yddv4Y3XsU4+OuOyJbl3kbSDezDkYX5LAX1UPIY2
+         BBvg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@khanacademy.org;
+       dkim=pass header.i=@sendgrid.info;
+       spf=pass (google.com: domain of bounces+1404078-a140-hugowinbladh=gmail.com@sendgrid.khanacademy.org designates 167.89.39.239 as permitted sender) smtp.mailfrom=bounces+1404078-a140-hugowinbladh=gmail.com@sendgrid.khanacademy.org
+Return-Path: <bounces+1404078-a140-hugowinbladh=gmail.com@sendgrid.khanacademy.org>
+Received: from o2.sendgrid.khanacademy.org (o2.sendgrid.khanacademy.org. [167.89.39.239])
+        by mx.google.com with ESMTPS id k71si3893479iod.191.2017.05.27.05.33.28
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 27 May 2017 05:33:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+1404078-a140-hugowinbladh=gmail.com@sendgrid.khanacademy.org designates 167.89.39.239 as permitted sender) client-ip=167.89.39.239;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@khanacademy.org;
+       dkim=pass header.i=@sendgrid.info;
+       spf=pass (google.com: domain of bounces+1404078-a140-hugowinbladh=gmail.com@sendgrid.khanacademy.org designates 167.89.39.239 as permitted sender) smtp.mailfrom=bounces+1404078-a140-hugowinbladh=gmail.com@sendgrid.khanacademy.org
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; 
+	d=khanacademy.org; h=content-type:from:mime-version:subject:to; 
+	s=smtpapi; bh=RYyFQkr0wuGcD9PMQusr1qqW3RA=; b=QrYA/QuaWNMl9myYj/
+	robGMS8vtnVElNlSheUGY5iYpvueVaeXt57aHo8jndGhN6pvTvY0xpXttdLHogod
+	PqJsbTOiGYb5swRKa0u0vAkrhz6l1rrEp/ljkM/szapRt9HpQo3oagaODNLxeBOT
+	fAY9WdP3XkxFkHa1w8/9lZz1A=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=sendgrid.info; 
+	h=content-type:from:mime-version:subject:to:x-feedback-id; 
+	s=smtpapi; bh=RYyFQkr0wuGcD9PMQusr1qqW3RA=; b=izOV0UxzK3cPVSeUP6
+	f9lSrrm+Jkm83pDU1cUPxXj4JYMeaIKpTK9sjQAHSRgK5KBl0/vm1lxmdbT/2r8+
+	fctnJ5QVgWRmMhvaRxh2W3C3OHGcuAhCS1o6Wq3aYQFQhtJwO1aQg4W/q7ZHQaR+
+	mZI1BEWK/zBsaqDg+zrfSHl+I=
+Received: by filter0424p1mdw1.sendgrid.net with SMTP id filter0424p1mdw1-8419-59297217-1D
+        2017-05-27 12:33:27.288978823 +0000 UTC
+Received: from MTQwNDA3OA (19.194.178.107.gae.googleusercontent.com [107.178.194.19])
+	by ismtpd0005p1iad1.sendgrid.net (SG) with HTTP id Dmmd5KouTsyYD0614N_GQQ
+	for <Hugowinbladh@gmail.com>; Sat, 27 May 2017 12:33:27.138 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=74064ad6174ccacc2b6f4a43e678a522aa9df9c6ef0ca3183ac2fda25876
+Date: Sat, 27 May 2017 12:33:27 +0000
+From: "Khan Academy" <no-reply@khanacademy.org>
+Mime-Version: 1.0
+Subject: Your weekly progress summary on Khan Academy
+To: Hugowinbladh@gmail.com
+Message-ID: <Dmmd5KouTsyYD0614N_GQQ@ismtpd0005p1iad1.sendgrid.net>
+X-SG-EID: S//Ry5OXTs+fnFmc2RX2rT4OXqZRzimEYxN63NeFGyaYMtGWXdnffeWMmGNGDWI0gfzThKYOwnaCMw
+ VFcGhAA90uqhI+5OVCIo1k+DexTqdTz4CIyjWIjfojKeiwRi4z8DOXW5ySmHwvlRO41qVLWdXb1dfG
+ LQ3SGmQfg8/9BX9EIrSKhOtAz5OS9I4+aJfIEXO4bNYeXYF0DRd2gqCXWwdZtzfJ4bzw3C82ENMBTB
+ I=
+X-Feedback-ID: 1404078:+6yFQKnekm8m0OzSVG6JWNPklKXSjj+fUNsCPpYiSBY=:+6yFQKnekm8m0OzSVG6JWNPklKXSjj+fUNsCPpYiSBY=:SG
+
+--74064ad6174ccacc2b6f4a43e678a522aa9df9c6ef0ca3183ac2fda25876
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+Hugowinbladh,
+Here's a look at what you achieved this week. Check it out, and keep learni=
+ng!
+
+
+Recent Accomplishments
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Points: 3164
+Badges earned:=20
+Total minutes on Khan Academy: 35
+Mastered exercises: 0
+
+
+
+
+Learn more today:
+
+https://www.khanacademy.org/linkt?c=3Dhttps%3A%2F%2Fwww.khanacademy.org%2F&=
+bp=3Dd2Vla2x5X3VzZXJfc3VtbWFyeV9lbWFpbF9vcGVu&bi=3DX2dhZV9iaW5nb19yYW5kb206=
+WXpZUTZVcTY3aUVvdmNCSnBmTUFNNG5iaGNJRXg4Ynhzd3FlZ1R6bg%3D%3D
+
+If clicking doesn't seem to work, you can copy and paste the link into your=
+ browser's address bar.
+
+
+Onward!
+Sal and the Khan Academy Team
+
+P.S. You can unsubscribe from these emails at any time by following this li=
+nk: https://www.khanacademy.org/settings/email?t1c=3DXQfk8ffGx-ByCk8s7qF2dq=
+cV7c1NU6przrG91r-C05Wmnhyuj80LbpSc5jZvyR2CCwx5VkFKj3uJa9SBkjJWNg.ImFnNXpmbX=
+RvWVc0dFlXTmhaR1Z0ZVhKeUN4SVZWWE5sY2tWdFlXbHNVM1ZpYzJOeWFYQjBhVzl1SWxkbGJXR=
+nBiRjl6ZFdJNmQyVmxhMng1WDNOMWJXMWhjbms2YVdRNmFIUjBjRG92TDJsa0xtdG9ZVzVoWTJG=
+a1pXMTVMbTl5Wnk4ME16a3haR1ExTkRka056UTBNRFUwT0RFMllXTXdNems0WTJSbE56SmhZem9=
+NIg.AAAAAFkpchY
+
+https://www.khanacademy.org/about/privacy-policy=
+
+--74064ad6174ccacc2b6f4a43e678a522aa9df9c6ef0ca3183ac2fda25876
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang=3D"en">
+<head>
+    <title>
+Your weekly summary
+</title>
+    <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"content-type=
+">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+=20=20=20=20
+</head>
+<body>
+=20=20=20=20
+=20=20=20=20
+=20=20=20=20
+=20=20=20=20
+
+=20=20=20=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgco=
+lor=3D"#2c3747" style=3D"background-color: #e2e2e2; font-size: 12px;font-fa=
+mily: Helvetica, Arial, Geneva, sans-serif;">
+
+<!-- HEADER -->
+
+<tr>
+  <td>
+    <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600" a=
+lign=3D"center" bgcolor=3D"#e2e2e2">
+
+<!-- HEADER CONTENT CONTAINER -->
+<tr>
+  <td>
+    <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600" a=
+lign=3D"center">
+
+<!-- INSIDE CONTENT WRAP-->
+<tr>
+  <td>
+    <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600" a=
+lign=3D"center">
+
+<!-- Logo/Date Container -->
+      <tr>
+        <td>
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+600" align=3D"center" bgcolor=3D"#2c3747" style=3D"margin-top: 20px">
+
+<!--LOGO -->
+            <tr>
+              <td>
+                <table cellpadding=3D"10" cellspacing=3D"0" border=3D"0" wi=
+dth=3D"600" align=3D"center">
+                  <tr>
+                  <td align=3D"center" width=3D"175" valign=3D"middle">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+<a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=3DlfaeuH9m9A8i85itV=
+0eWFkUZRDnIl7NLBd6Jm3OVcGhG3EQWldKZqMTMZjSXEy-2FV_9Vpxqe3IxGW-2BXCkfhNohceF=
+vvM3eiy4sV7iSLrBH8RGsRGESMTQFKmBUVW3G1T7hf31GoLWxVekTeXnXvHwfSyJW0nVG5aH3ff=
+eHQ-2FioqeD0g1GFCNFFJaZwfVuyi6QwYLsSHvcWyCmGGC6YFSJmfurU2bz-2FmYOrYE-2FOKP1=
+H3EktziXzHpBKK-2Fn0L9TCJCM4rHodHwhhWsmiHUDCUzXzorpSrq2ra9J85mSgklVfRnM-3D">
+    <img
+        src=3D"https://www.khanacademy.org/imaget/ka-email-banner-logo.png?=
+code=3Dd2Vla2x5X3VzZXJfc3VtbWFyeV9lbWFpbF9vcGVuCl9nYWVfYmluZ29fcmFuZG9tOll6=
+WVE2VXE2N2lFb3ZjQkpwZk1BTTRuYmhjSUV4OGJ4c3dxZWdUem4%3D"
+        width=3D"194"
+        border=3D"0"
+        height=3D"20"
+        alt=3D"Khan Academy">
+</a>
+
+                  </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+<!-- END Logo/Date Container -->
+
+    </table>
+   </td>
+ </tr>
+<!-- END INSIDE CONTENT WRAP -->
+
+    </table>
+  </td>
+</tr>
+<!-- END HEADER -->
+
+   </table>
+  </td>
+</tr>
+<!-- END HEADER CONTENT CONTAINER -->
+
+
+<!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D CONTENT =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D -->
+
+
+<!-- CONTENT CONTAINER -->
+<tr>
+  <td>
+    <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"600" a=
+lign=3D"center">
+
+<!-- CONTENT -->
+<tr>
+  <td>
+    <table cellpadding=3D"0" cellspacing=3D"0" width=3D"600" align=3D"cente=
+r" style=3D"border-width: 1px; border-spacing: 0px; border-style: solid; bo=
+rder-color: #cccccc; border-collapse: collapse; background-color: #ffffff;">
+
+<!-- INSIDE CONTENT WRAP-->
+<tr>
+    <td style=3D"background-color: #f7f7f7; font-family: 'Helvetica Neue', =
+Calibri, Helvetica, Arial, sans-serif; font-size: 15px; color: black; borde=
+r-bottom: 1px solid #ddd">
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"50=
+0" align=3D"center" style=3D"margin: 28px 50px; font-size: 15px; line-heigh=
+t: 24px; ">
+            <tbody>
+                <tr>
+                    <td>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+<p>
+    <strong>Hugowinbladh,</strong>
+    <br>
+=20=20=20=20
+        Here&#39;s a look at what you achieved this week. Check it out, and=
+ keep learning!
+=20=20=20=20
+</p>
+
+<p>
+    <span style=3D"font-style: italic; color: #444;">The harder you try the=
+ better you get!</span>
+</p>
+
+<p style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, Arial, sans-=
+serif; font-size: 16px; line-height: 24px; color: #666; margin: 0 0 10px; m=
+argin: 5px 0 0 0; text-align: center;">
+=20=20=20=20
+    <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=3DlfaeuH9m9A8i8=
+5itV0eWFkUZRDnIl7NLBd6Jm3OVcGi-2BoTCKgSqs-2FHaOqS8mM-2BWw-2FyZEj7Rfn1eun3xM=
+0PW-2FMW2qny-2Bm6M4FNpeKHNhYgJYHv5THKcRrOUp6NqNt0q3opzk75Ywpt-2BcGn9ADyUz1w=
+8RR3pJRd2rl1AQ-2FKlBTMFj6kLoTCMkEvgsd3Czvg6n2DPLJSDRHN3xKRlK9JifRG7b7NtrZyE=
+oMd7FYYVbmNsd2S6cBV-2Ffdeze0VpBSNggUUu6djyYtIEhWIWrsS3slWsBY8TnCM5dYh0xiRXi=
+lLGo-3D_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7iSLrBH8RGsRGESMTQFKmBUVW3G1T7h0=
+z8hfIs-2FbeYhPIqe8Ix2lIsVODKUU3fTTzI4HYKI6693Qe6dK-2FXnV6Tbo2-2FdoKlR-2FaHZ=
+juTbMj2uIZChpiQeaphtp0-2BYNubY-2BKVWeIaz4AGAtDO2uDoj0jg-2Ff-2BD2QkosLOr-2F2=
+G8PHodmQh81e-2BsrT7d1GurW8ZLS4Kr9FQJF82M-3D" style=3D"font-family: 'Helveti=
+ca Neue', Calibri, Helvetica, Arial, sans-serif; border: 1px solid #76a015;=
+ background-color: #7fac05; color: white; display: inline-block; padding: 0=
+ 32px; margin: 0; border-radius: 5px; font-size: 16px; line-height: 40px; t=
+ext-decoration: none; cursor: pointer;width: 436px">Learn more today</a>
+
+</p>
+
+
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<tr>
+    <td>
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"50=
+0" align=3D"center" style=3D"margin: 10px 50px">
+            <tbody>
+                <tr>
+                    <td>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+
+
+<table style=3D"margin: 0 auto;">
+  <tr>
+=20=20=20=20
+    <td style=3D"text-align: center; padding: 0 20px;">
+=20=20=20=20=20=20
+        <span style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, A=
+rial, sans-serif; font-weight: bold; font-size: 16px; color: #333; margin: =
+40px 0 10px; text-transform: uppercase; display: block; margin-top: 10px;">
+    Last Week
+</span >
+=20=20=20=20=20=20
+      <span style=3D"font-size: 52px; background: #0c6d92; color: #fff; lin=
+e-height: 90px; border-radius: 10px; padding: 5px 10px;">
+        <span style=3D"font-size: 30px; vertical-align: top">+ </span>
+        3,164
+      </span>
+      <div style=3D"font-size: 14px; text-transform: uppercase; color: #888=
+; text-align: center">
+          energy points
+      </div>
+    <td>
+=20=20=20=20
+  </tr>
+</table>
+
+
+<table width=3D"500" cellspacing=3D"0" cellpadding=3D"5" border=3D"0" style=
+=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, Arial, sans-serif; f=
+ont-size: 14px;">
+    <tr>
+        <td style=3D"text-align: center;">
+        <table cellspacing=3D"0" cellpadding=3D"5" border=3D"0" style=3D"ma=
+rgin: 0 auto; width: 100%">
+=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+            <tr>
+              <td width=3D"50%" style=3D"text-align: center; padding-bottom=
+: 5px;" valign=3D"top">
+                  <img src=3D"https://cdn.kastatic.org/images/badges/meteor=
+ite/great-listener-512x512.png" style=3D"vertical-align: middle; width: 100=
+px; height: 100px;">
+                  <div style=3D"color: #444; width: 180px; margin: 5px auto=
+;">Nice Listener</div>
+              </td>
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+              <td width=3D"50%" style=3D"text-align: center; padding-bottom=
+: 5px;" valign=3D"top">
+                  <img src=3D"https://cdn.kastatic.org/images/badges/meteor=
+ite/great-listener-512x512.png" style=3D"vertical-align: middle; width: 100=
+px; height: 100px;">
+                  <div style=3D"color: #444; width: 180px; margin: 5px auto=
+;">Great Listener</div>
+              </td>
+            </tr>
+=20=20=20=20=20=20=20=20
+        </table>
+        </td>
+    </tr>
+</table>
+
+
+
+  <table width=3D"500" cellspacing=3D"0" cellpadding=3D"5" border=3D"0" sty=
+le=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, Arial, sans-serif;=
+ border-top: 1px solid #eee; font-size: 14px; padding-top: 20px; margin-top=
+: 20px;">
+      <tr>
+          <td style=3D"text-align: center;" colspan=3D"6">
+            <span style=3D"font-family: 'Helvetica Neue', Calibri, Helvetic=
+a, Arial, sans-serif; font-weight: bold; font-size: 16px; color: #333; marg=
+in: 40px 0 10px; text-transform: uppercase;">
+    You&#39;re close to earning
+</span >
+          </td>
+      </tr>
+      <tr>
+          <td>
+          <table cellspacing=3D"0" cellpadding=3D"5" border=3D"0" style=3D"=
+margin: 0 auto; width: 362px">
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+              <tr>
+                <td width=3D"105" style=3D"text-align: center; padding-bott=
+om: 5px;" valign=3D"top">
+                  <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=
+=3DlfaeuH9m9A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGhkOswe-2FAtRZFAZmFei6n-2BxphVr=
+Qx8jcEwys0ruq9qnA-2Fzd1su76gdy2CXFnekSd2mfFDLtLxA2RkeezQ5hgfTCQteA4bKHMgi4v=
+qa-2BpKCFehEM6N3lzcoN2cjCwM4doKZm0c1K8hrZW9LZe9joAl0UQtoyFU-2BgSC4rfM6S9hUJ=
+f0WVFQliiSGS2XMVGzYN4MfMOkzT1sa7XJizKdFahitBsyw1-2FAN0VrV14D02ftAjf28wvmtmt=
+gF1HeKdXLcv6woKuBafdvlsUK95RJkQUSk-2F_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7i=
+SLrBH8RGsRGESMTQFKmBUVW3G1T7hL47MOjwqbA459w1kdC2WW7vQ4MBzngmNNJdUO0Ub8WMBqP=
+dC5Oi4zcPYfLerppnRw6mV8Pn5R97F-2F9YsDcb5Kkf5PiPbrTiozXarqTeVEvdZuZnGBY2tt9t=
+BpX-2FcR0EoAaFmTn0AAU9ihOu8ani9v8zotrFsgogG16bD5KWuCEo-3D">
+                    <img src=3D"https://cdn.kastatic.org/images/badges/mete=
+orite/fingers-or-toes-512x512.png" style=3D"vertical-align: middle; width: =
+100px; height: 100px; opacity: 0.6">
+                  </a>
+                </td>
+                <td style=3D"padding-bottom: 5px; padding-left: 10px;">
+                  <div style=3D"line-height: 24px;">
+                    <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=
+=3DlfaeuH9m9A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGhkOswe-2FAtRZFAZmFei6n-2BxphVr=
+Qx8jcEwys0ruq9qnA-2Fzd1su76gdy2CXFnekSd2mfFDLtLxA2RkeezQ5hgfTCQteA4bKHMgi4v=
+qa-2BpKCFehEM6N3lzcoN2cjCwM4doKZm0c1K8hrZW9LZe9joAl0UQtoyFU-2BgSC4rfM6S9hUJ=
+f0WVFQliiSGS2XMVGzYN4MfMOkzT1sa7XJizKdFahitBsyw1-2FAN0VrV14D02ftAjf28wvmtmt=
+gF1HeKdXLcv6woKuBafdvlsUK95RJkQUSk-2F_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7i=
+SLrBH8RGsRGESMTQFKmBUVW3G1T7hz62O6ZoQlP-2F3fUdvSfOByDPeDLcBv3Ngr-2FhFi0S10Q=
+E-2FROpO48nj-2FzwItoKHx9Z2hdt7aOErS3pCiFhi2nVsZxDYiNXKZ-2Fh-2BXY1dSnU-2BpPk=
+t-2FQWA3wBtWZA-2BTSjlqZ8BQkDj5EDCkMVYGocmk-2BXiErJlRnOufsxzA0MVK0J4E1w-3D" =
+style=3D"color: #444; text-decoration: none">Fingers or Toes</a>
+                  </div>
+                  <div style=3D"font-style: italic; font-size: 14px; font-w=
+eight: bold;">
+                    <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=
+=3DlfaeuH9m9A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGhkOswe-2FAtRZFAZmFei6n-2BxphVr=
+Qx8jcEwys0ruq9qnA-2Fzd1su76gdy2CXFnekSd2mfFDLtLxA2RkeezQ5hgfTCQteA4bKHMgi4v=
+qa-2BpKCFehEM6N3lzcoN2cjCwM4doKZm0c1K8hrZW9LZe9joAl0UQtoyFU-2BgSC4rfM6S9hUJ=
+f0WVFQliiSGS2XMVGzYN4MfMOkzT1sa7XJizKdFahitBsyw1-2FAN0VrV14D02ftAjf28wvmtmt=
+gF1HeKdXLcv6woKuBafdvlsUK95RJkQUSk-2F_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7i=
+SLrBH8RGsRGESMTQFKmBUVW3G1T7h-2BLYjhMslTJws5X8gIYi-2FlHJ3V4AC1W7eSPuVJHm4uu=
+OWn4i89RoXYxz2GNhaUSe2-2F29fG561iiqIQBlV8F0IK6Vc-2B1ea-2BJmz6VbXHjLS5pJZvFm=
+OFq6WRZ3nHdnbcICNiXLLjVn-2BMzzr4vAwxzsy5lqLBiidnxf5YBfPZnvOCn8-3D" style=3D=
+"color: #444; text-decoration: none">Finish one more practice task</a>
+                  </div>
+                </td>
+              </tr>
+=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+              <tr>
+                <td width=3D"105" style=3D"text-align: center; padding-bott=
+om: 5px;" valign=3D"top">
+                  <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=
+=3DlfaeuH9m9A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGhkOswe-2FAtRZFAZmFei6n-2Bx18Db=
+0CBUswS9AkHQNLymm6-2BtRQYCbRU4NEm4IAzc2fTKnqbSE6IMwKSQdOHfQ8ElQ8hXxQpN4PLP8=
+fF9uBlYOWJILsRkpetI68FMexqW2hagg2BeIxd5GU7gmvemIGQNyWWcHmxR4pDMqi5OSCczLMyA=
+-2BCgWaU9hYqqklMxnMokMWck1DEjRHV7zGvZeRo4yfUJn0Ebzbch5N7ydbKMyaf1CanxUjGuqb=
+xKULCxnedtZ1IvLQhzF9NJC2FKCJH-2FF_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7iSLrB=
+H8RGsRGESMTQFKmBUVW3G1T7hJHpPBRGWrufSVpgfIPw7HkMgicoCZi2Tay1UXvgTkBwVXZB1Hj=
+gfI0cwt5GOFdGQV6nqcB00Q2YY0lvkQREoSdWXvg-2FfeDTIE5ViLo6b9H0uSkBDugOEWgP8bR3=
+7vMFNogZMVfAuIiix8r8QC94Girl51xaxaXXNfkQu9P8kzuQ-3D">
+                    <img src=3D"https://cdn.kastatic.org/images/badges/mete=
+orite/benjamin-franklin-512x512.png" style=3D"vertical-align: middle; width=
+: 100px; height: 100px; opacity: 0.6">
+                  </a>
+                </td>
+                <td style=3D"padding-bottom: 5px; padding-left: 10px;">
+                  <div style=3D"line-height: 24px;">
+                    <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=
+=3DlfaeuH9m9A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGhkOswe-2FAtRZFAZmFei6n-2Bx18Db=
+0CBUswS9AkHQNLymm6-2BtRQYCbRU4NEm4IAzc2fTKnqbSE6IMwKSQdOHfQ8ElQ8hXxQpN4PLP8=
+fF9uBlYOWJILsRkpetI68FMexqW2hagg2BeIxd5GU7gmvemIGQNyWWcHmxR4pDMqi5OSCczLMyA=
+-2BCgWaU9hYqqklMxnMokMWck1DEjRHV7zGvZeRo4yfUJn0Ebzbch5N7ydbKMyaf1CanxUjGuqb=
+xKULCxnedtZ1IvLQhzF9NJC2FKCJH-2FF_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7iSLrB=
+H8RGsRGESMTQFKmBUVW3G1T7hi9gKxfBOKE6U8djjBldlSDRTPeJqT1yG4B23KJlpTDyGBQX1j8=
+qBWFapSJBj-2BrJyp43VSc-2Bb-2FtMw9lKXXA5P1xi5uYdHY-2FQewpyAIwtNZDNDrfNPw3pBr=
+odgX-2B7rZ8IHQ0UT9vmKvMJnpvMuV591kmWXaQp9SKM07iMMaRAqnUo-3D" style=3D"color=
+: #444; text-decoration: none">Benjamin Franklin</a>
+                  </div>
+                  <div style=3D"font-style: italic; font-size: 14px; font-w=
+eight: bold;">
+                    <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=
+=3DlfaeuH9m9A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGhkOswe-2FAtRZFAZmFei6n-2Bx18Db=
+0CBUswS9AkHQNLymm6-2BtRQYCbRU4NEm4IAzc2fTKnqbSE6IMwKSQdOHfQ8ElQ8hXxQpN4PLP8=
+fF9uBlYOWJILsRkpetI68FMexqW2hagg2BeIxd5GU7gmvemIGQNyWWcHmxR4pDMqi5OSCczLMyA=
+-2BCgWaU9hYqqklMxnMokMWck1DEjRHV7zGvZeRo4yfUJn0Ebzbch5N7ydbKMyaf1CanxUjGuqb=
+xKULCxnedtZ1IvLQhzF9NJC2FKCJH-2FF_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7iSLrB=
+H8RGsRGESMTQFKmBUVW3G1T7hE4xaPe8Nqu36BY-2BO63MrzX6VpzFicNgPFCJxZ16s9GBQmqes=
+RPwX8KbfLflnL5-2BAZ5hj6AgSY4NMqeDfrwgpZEYnFYalD33-2BuXMGE-2Fr0qBjddiOBRGTxZ=
+cQPC883Hx1zBykT6wHwsjQJu-2Bmsz3ot-2FjHh22ei4ChQ5Dv-2Be5QQB0c-3D" style=3D"c=
+olor: #444; text-decoration: none">Earn 3231 more points</a>
+                  </div>
+                </td>
+              </tr>
+=20=20=20=20=20=20=20=20=20=20
+          </table>
+          </td>
+      </tr>
+  </table>
+
+=20=20
+=20=20=20=20
+    <p style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, Arial, s=
+ans-serif; font-size: 16px; line-height: 24px; color: #666; margin: 0 0 10p=
+x; margin: 5px 0 0 0; text-align: center;">
+=20=20=20=20
+        <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=3DlfaeuH9m9=
+A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGi-2BoTCKgSqs-2FHaOqS8mM-2BWw-2FyZEj7Rfn1eu=
+n3xM0PW-2FMW2qny-2Bm6M4FNpeKHNhYgJYHv5THKcRrOUp6NqNt0q3opzk75Ywpt-2BcGn9ADy=
+Uz1w8RR3pJRd2rl1AQ-2FKlBTMFj6kLoTCMkEvgsd3Czvg6n2DPLJSDRHN3xKRlK9JifRG7b7Nt=
+rZyEoMd7FYYVbmNsd2S6cBV-2Ffdeze0VpBSNggUUu6djyYtIEhWIWrsS3slWsBY8TnCM5dYh0x=
+iRXilLGo-3D_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7iSLrBH8RGsRGESMTQFKmBUVW3G1=
+T7hn4jaleux8plDq2K25bJXq4aKnql1NXqr7H-2F-2ByfYXcWLhBGZEjoRuBm-2BAgkzenH5qdb=
+ksxdqurw3tbsKe-2BtrUJSYIs1oL7uWFd-2Ba7kozPgGtkaIgMht-2BYdYB-2FpqCNLKo7MYlrQ=
+1bI4d-2ByVo0c7ZfJjfEgeaxQ4-2BMWXo9FbzFNIRU-3D" style=3D"font-family: 'Helve=
+tica Neue', Calibri, Helvetica, Arial, sans-serif; border: 1px solid #76a01=
+5; background-color: #7fac05; color: white; display: inline-block; padding:=
+ 0 32px; margin: 0; border-radius: 5px; font-size: 16px; line-height: 40px;=
+ text-decoration: none; cursor: pointer;width: 362px; padding: 0">Earn thes=
+e badges now</a>
+=20=20=20=20
+</p>
+=20=20
+
+
+
+<p style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, Arial, sans-=
+serif; font-size: 16px; line-height: 24px; color: #666; margin: 0 0 10px; m=
+argin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; text-align:=
+ center;">
+=20=20=20=20
+=20=20=20=20
+        <span style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, A=
+rial, sans-serif; font-weight: bold; font-size: 16px; color: #333; margin: =
+40px 0 10px; text-transform: uppercase">
+    Recent activity
+</span >
+=20=20=20=20
+
+</p>
+
+<table width=3D"500" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=
+=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, Arial, sans-serif; t=
+able-layout: fixed; font-size: 14px; margin-top: 20px; margin-bottom: 20px;=
+">
+    <tr valign=3D"top">
+        <td style=3D"border-top: 1px solid #ddd; padding: 8px;">
+            <table cellspacing=3D"0" cellpadding=3D"0" style=3D"color: #333=
+333; font-size: 12px;">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+    <tr>
+=20=20=20=20=20=20=20=20
+        <td width=3D"15" style=3D"border-bottom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+    <span style=3D"margin: 2px; color: #888">=E2=96=B6</span>
+
+        </td>
+
+=20=20=20=20=20=20=20=20
+        <td width=3D"255" style=3D"padding: 10px; border-bottom: 1px solid =
+#DDDDDD;">
+            <span style=3D"color: #333333; text-decoration: none;">
+                Work example problems
+            </span>
+
+=20=20=20=20=20=20=20=20
+        <td align=3D"right" width=3D"170" style=3D"padding: 10px; border-bo=
+ttom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+              3
+              minutes
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+        </td>
+    </tr>
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+    <tr>
+=20=20=20=20=20=20=20=20
+        <td width=3D"15" style=3D"border-bottom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+    <span style=3D"margin: 2px; color: #888">=E2=96=B6</span>
+
+        </td>
+
+=20=20=20=20=20=20=20=20
+        <td width=3D"255" style=3D"padding: 10px; border-bottom: 1px solid =
+#DDDDDD;">
+            <span style=3D"color: #333333; text-decoration: none;">
+                Work and the work-energy principle
+            </span>
+
+=20=20=20=20=20=20=20=20
+        <td align=3D"right" width=3D"170" style=3D"padding: 10px; border-bo=
+ttom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+              6
+              minutes
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+        </td>
+    </tr>
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+    <tr>
+=20=20=20=20=20=20=20=20
+        <td width=3D"15" style=3D"border-bottom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+    <span style=3D"margin: 2px; color: #888">=E2=96=B6</span>
+
+        </td>
+
+=20=20=20=20=20=20=20=20
+        <td width=3D"255" style=3D"padding: 10px; border-bottom: 1px solid =
+#DDDDDD;">
+            <span style=3D"color: #333333; text-decoration: none;">
+                Work example problems
+            </span>
+
+=20=20=20=20=20=20=20=20
+        <td align=3D"right" width=3D"170" style=3D"padding: 10px; border-bo=
+ttom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+              3
+              minutes
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+        </td>
+    </tr>
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+    <tr>
+=20=20=20=20=20=20=20=20
+        <td width=3D"15" style=3D"border-bottom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+    <span style=3D"margin: 2px; color: #888">=E2=96=B6</span>
+
+        </td>
+
+=20=20=20=20=20=20=20=20
+        <td width=3D"255" style=3D"padding: 10px; border-bottom: 1px solid =
+#DDDDDD;">
+            <span style=3D"color: #333333; text-decoration: none;">
+                Thermal energy from friction
+            </span>
+
+=20=20=20=20=20=20=20=20
+        <td align=3D"right" width=3D"170" style=3D"padding: 10px; border-bo=
+ttom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+              13
+              minutes
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+        </td>
+    </tr>
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+    <tr>
+=20=20=20=20=20=20=20=20
+        <td width=3D"15" style=3D"border-bottom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+    <span style=3D"margin: 2px; color: #888">=E2=96=B6</span>
+
+        </td>
+
+=20=20=20=20=20=20=20=20
+        <td width=3D"255" style=3D"padding: 10px; border-bottom: 1px solid =
+#DDDDDD;">
+            <span style=3D"color: #333333; text-decoration: none;">
+                Work as area under curve
+            </span>
+
+=20=20=20=20=20=20=20=20
+        <td align=3D"right" width=3D"170" style=3D"padding: 10px; border-bo=
+ttom: 1px solid #DDDDDD;">
+=20=20=20=20=20=20=20=20=20=20=20=20
+              13
+              minutes
+=20=20=20=20=20=20=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20=20=20=20=20
+        </td>
+    </tr>
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+            </table>
+            <table cellspacing=3D"0" cellpadding=3D"10" width=3D"100%">
+                <tr>
+                    <td valign=3D"middle" align=3D"center" style=3D"font-si=
+ze: 13px; text-align: center">
+                          <a style=3D"color: #333333" href=3D"http://sendgr=
+id.khanacademy.org/wf/click?upn=3DlfaeuH9m9A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVc=
+Gi-2BoTCKgSqs-2FHaOqS8mM-2BWw-2FyZEj7Rfn1eun3xM0PW-2FMW2qny-2Bm6M4FNpeKHNhY=
+gJYkE-2B8SkkVjVNRwccLl-2F0YJBKrjxkjGOPh3bqldWBM0gdT8-2BOdBYK3eduo3ds5iutMJy=
+N56VJoVgnQlu-2Fp7gHE54CAeU04JPk5JBtNzfIda2jVc-2FoMhtOX7xp8cau8XqWh7lOLKJfe6=
+Om9SovT3thu5Fbbnlz57VGkuQ7X5GbzAuXlIJX2WHd8OQVJD0uhJprwYFNcdcp4pimizbPhWdBV=
+-2F-2BqTDGzdvhm5ztRnPP-2BKCz3oPovVccqVssNJr4wINHYE-3D_9Vpxqe3IxGW-2BXCkfhNo=
+hceFvvM3eiy4sV7iSLrBH8RGsRGESMTQFKmBUVW3G1T7htYQpH8gYgsBaUO2f0RgaQHpwGmTp5B=
+FNeAIYwUXy3txGzlRV9BkReXybqDU5tp1vbTC7x4vS5y-2BbiPimgR689NJdQ1NADwiXtLmauiW=
+8Jp0w1EJl-2BrJ4cfM348dZaMy1JAL-2FgBSXbTLwpNgdsfaADlf27Esn9byASCqXwtSk5nE-3D=
+">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20
+                                  View all 5 activities
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20
+                          </a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<tr>
+    <td style=3D"background-color: #f7f7f7; font-family: 'Helvetica Neue', =
+Calibri, Helvetica, Arial, sans-serif; font-size: 15px; color: black; borde=
+r-top: 1px solid #ddd">
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"50=
+0" align=3D"center" style=3D"margin: 28px 50px; font-size: 15px; line-heigh=
+t: 24px; ">
+            <tbody>
+                <tr>
+                    <td>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+<a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=3DlfaeuH9m9A8i85itV=
+0eWFkUZRDnIl7NLBd6Jm3OVcGi-2BoTCKgSqs-2FHaOqS8mM-2BWw-2FyZEj7Rfn1eun3xM0PW-=
+2FMW2qny-2Bm6M4FNpeKHNhYgJYHv5THKcRrOUp6NqNt0q3opzk75Ywpt-2BcGn9ADyUz1w8RR3=
+pJRd2rl1AQ-2FKlBTMFj6kLoTCMkEvgsd3Czvg6n2DPLJSDRHN3xKRlK9JifRG7b7NtrZyEoMd7=
+FYYVbmNsd2S6cBV-2Ffdeze0VpBSNggUUu6djyYtIEhWIWrsS3slWsBY8TnCM5dYh0xiRXilLGo=
+-3D_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7iSLrBH8RGsRGESMTQFKmBUVW3G1T7h0z8hf=
+Is-2FbeYhPIqe8Ix2lM-2BfN-2FsqMCH5ogDlWDjIh-2F4YeuPql6eJDycirU77Wvoj6AQ43u7y=
+JJfS8tvi-2F9onpXqAPgouUTg9sVllK1zSrAWTs2Wcn6bisLdpGSSi9v-2FJHqFjyIWiKNjClxf=
+9d-2FomRV-2FgSlGnz2m3M-2FqxaZjy8XM-3D" style=3D"font-family: 'Helvetica Neu=
+e', Calibri, Helvetica, Arial, sans-serif; border: 1px solid #76a015; backg=
+round-color: #7fac05; color: white; display: inline-block; padding: 0 32px;=
+ margin: 0; border-radius: 5px; font-size: 16px; line-height: 40px; text-de=
+coration: none; cursor: pointer;width: 436px; text-align: center">Learn mor=
+e today</a>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+<!-- END INSIDE CONTENT WRAP -->
+
+    </table>
+  </td>
+</tr>
+<!-- END CONTENT -->
+
+    </table>
+  </td>
+</tr>
+<!-- END CONTENT CONTAINER -->
+
+<!-- BEGIN FOOTER CONTENT CONTAINER -->
+<tr>
+  <td>
+    <table cellpadding=3D"10" cellspacing=3D"0" border=3D"0" width=3D"600" =
+align=3D"center" bgcolor=3D"#e2e2e2" style=3D"font-size: 12px;font-family: =
+Helvetica, Arial, Geneva, sans-serif;">
+        <tr>
+            <td>
+              <table cellpadding=3D"0" cellspacing=3D"5" border=3D"0" width=
+=3D"580" align=3D"center">
+
+                <tr>
+                  <td align=3D"center">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+<p style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, Arial, sans-=
+serif; font-weight: normal; font-size: 10px; color: #666;">
+=20=20=20=20
+    This message was sent to <a href=3D"mailto:Hugowinbladh@gmail.com" targ=
+et=3D"_blank" style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, A=
+rial, sans-serif; font-size: 10px; font-weight: normal; color: #678d00; tex=
+t-decoration: none; ">Hugowinbladh@gmail.com</a>.
+    You may <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=3Dlfaeu=
+H9m9A8i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGjtFythGYHfrcYgQONrRlLnwlib8NVN4-2FLm2g=
+d4Uq09kdA8bTfHk-2B2DKdpXE1qkhaQSpdNSUypk7Di-2FG-2Bl95L8EhAyVYFDPsmASE-2B1mC=
+GjfIq-2BVpaDDya-2BUah1dg9htauDA-2FoXODaRUBmqzHgECWcfWFeSPlKOPWRfJ997Jn4aY8q=
+0NR0m7jSI1g5y1ZYqlVOSZ2AIm0bH8iGbC9Yw0IsUDiApfCwoUxJ-2Fl575dHoSNydTyDxi2V5c=
+jaIBbNjVaqXaf6ZwK66hMp5qHZqmKb3zzX94HBLyIXr7oG8-2BbgfATp9A5NjqGibepJ5FRQuO7=
+sUD0cB7czfkiVQn-2BSPUOmYsf26XATigTMpo-2Fyo-2FcidhJ-2B1SZUaFewaDL5vMf86DksnG=
+1EfCJz5KaLLNc5inCpc0OjXZCG4bmmfDRULeLdgLbzAPJt0L4Bg2JzF-2BJg4EdqIFuARb1aGRj=
+ZwAmQv2jmeaRw6HY6MMtKFrUYrqOI8g1uA-3D-3D_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4s=
+V7iSLrBH8RGsRGESMTQFKmBUVW3G1T7h0z8hfIs-2FbeYhPIqe8Ix2lAGI59C8BPQ6FPnHRNfgW=
+cG1m9ndkNSeYHC4a-2B3NrRyRFze5YkwX55vAmZ4HK-2FA49yniQi2RgrM1a-2BwXDtpA8R7Fzs=
+Qy1WIpziH-2BGQYUO1Gtaj6kBnBjXl41HI0Hj-2FWke9opM44a-2By5NCQG5fjChtEs-3D" tar=
+get=3D"_blank" style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, =
+Arial, sans-serif; font-size: 10px; font-weight: normal; color: #678d00; te=
+xt-decoration: none; ">unsubscribe from these emails</a>
+    at any time.
+
+</p>
+<p style=3D"font-family: 'Helvetica Neue', Calibri, Helvetica, Arial, sans-=
+serif; font-weight: normal; font-size: 10px; color: #666;">
+=20=20=20=20
+    <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=3DlfaeuH9m9A8i8=
+5itV0eWFkUZRDnIl7NLBd6Jm3OVcGiYO9c093lKzYJi63TvAFtJzqP6INs9uGcZeQmx-2FDATVw=
+-3D-3D_9Vpxqe3IxGW-2BXCkfhNohceFvvM3eiy4sV7iSLrBH8RGsRGESMTQFKmBUVW3G1T7h0z=
+8hfIs-2FbeYhPIqe8Ix2lKEZ7v-2Fth2w7D7-2FxKw-2BJWTob-2BhZ-2FzaIB1-2FsaWPVDmj7=
+Q-2ByL66ynK58gnNImvi6K5vLAjass3-2FoQbq86doC0tlbxUQhHGGer78MnptmbAjOgbTppJ1d=
+BBzPca9XQiR7LhvFSpTischza-2Fv4u7K-2Bfi8ZQ-3D" target=3D"_blank" style=3D"fo=
+nt-family: 'Helvetica Neue', Calibri, Helvetica, Arial, sans-serif; font-si=
+ze: 10px; font-weight: normal; color: #678d00; text-decoration: none; ">Pri=
+vacy Policy</a>
+    | <a href=3D"http://sendgrid.khanacademy.org/wf/click?upn=3DlfaeuH9m9A8=
+i85itV0eWFkUZRDnIl7NLBd6Jm3OVcGjsajmOSMwF-2FvSGQR6s-2B5Yo_9Vpxqe3IxGW-2BXCk=
+fhNohceFvvM3eiy4sV7iSLrBH8RGsRGESMTQFKmBUVW3G1T7h0z8hfIs-2FbeYhPIqe8Ix2lK8m=
+NmcE1b0W9tAqIFzjWULIGLw8RK9IgRAuP3-2BTqueFXwk395apLcXEXgv-2FKSl5aBeBt5rUFe0=
+kSmDrmmoxC2I30cCX-2BDFNe8DW2Pz7RO8zXwK-2FuHXv1lF-2FmRe5fffZOy0gMpwylt5teGPQ=
+3QdgeaE-3D" target=3D"_blank" style=3D"font-family: 'Helvetica Neue', Calib=
+ri, Helvetica, Arial, sans-serif; font-size: 10px; font-weight: normal; col=
+or: #678d00; text-decoration: none; ">Terms of Service</a>
+
+</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <!-- COMPANY ADDRESS -->
+                  <td align=3D"center" style=3D"font-weight:normal; vertica=
+l-align:middle; color:#6a6a6a; font-size: 10px"><br />
+                      P.O. Box 1630, Mountain View, CA 94042
+                  </td>
+                </tr>
+      </table>
+    </td>
+  </tr>
+<!-- END FOOTER CONTENT CONTAINER -->
+
+</table><!--END WRAPPER-->
+
+
+<img src=3D"http://sendgrid.khanacademy.org/wf/open?upn=3D9Vpxqe3IxGW-2BXCk=
+fhNohceFvvM3eiy4sV7iSLrBH8RGsRGESMTQFKmBUVW3G1T7hdM0x-2B3TSsGgedHkHgCwYaV0U=
+OK5FdwdDIWVhG6WgGOs6UAsa77j4aKNJRSNIuraSGcG-2FM5-2BQ5QbDrP9N9Cv-2Fz7Qths4Vx=
+-2FBLX3fOKWJ-2BGwZSHlsDwfBAwH4fdjJc5YRUqToSSiY7dkul5jSvddoDgdb76isOTo-2FUp3=
+etiaGDiLE-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"heigh=
+t:1px !important;width:1px !important;border-width:0 !important;margin-top:=
+0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-le=
+ft:0 !important;padding-top:0 !important;padding-bottom:0 !important;paddin=
+g-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+--74064ad6174ccacc2b6f4a43e678a522aa9df9c6ef0ca3183ac2fda25876--

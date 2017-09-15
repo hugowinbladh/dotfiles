@@ -1,0 +1,1410 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.191.133 with SMTP id p127csp6363516iof;
+        Wed, 2 Aug 2017 12:18:32 -0700 (PDT)
+X-Received: by 10.84.167.2 with SMTP id c2mr26683578plb.370.1501701512220;
+        Wed, 02 Aug 2017 12:18:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1501701512; cv=none;
+        d=google.com; s=arc-20160816;
+        b=HeXUNyCWvEDQIcel+TE5/Pbda92I/dl1gpdQU3VdjoOJt5Cegvq9TuoVqu9DGQHkG7
+         +gKnhnWD7d9xz2AqvPorz5S/sWQf0ddu6GgTjf30H30TStXXH+NTOW45RWRPwS/HkuYX
+         keZl7mXoVteEW5pylyT78SHpU/9CdQi+J2ixzmZ2YaXEoKsggt1+QuRvTHM9era2TkuX
+         YygMNoPn/HgLxGpUdbPAHGFriEfAGlhf+I1ci0vgZF9fqH/Tzhy518UvdUMGIF3UX24G
+         CJIe1/mxyHMl+cf5tjN4huENBAbV+WG09ZB3+UXYO7Pp2Lsx2d6VM0ASzb6C2wVzRZE1
+         +guQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:mime-version:subject:to:reply-to:from
+         :dkim-signature:dkim-signature:arc-authentication-results;
+        bh=tkRGDtTWKZD6DVMko7/gV7Tg71poRzqV7laUyXnIfik=;
+        b=gCq5jwuPkVKWEIEXEv81qMYMjn7LSe+i6pLhJfMhSj8d/sp8AlpBFWn0NFdxndx0R0
+         RC5wBDMAFH7CwIV1ywRWY2PNtKDyjYrHq+FzSPnMp5o5ScTCzRC25KXaQDcf8LUpOiGs
+         8K8BGSmEb1n0vHHccFsEcEgdCKfSZjMiOfnYC4Y87p9gVD/ivh3mNIhi0EF5PdHk7m9n
+         GJEYP40YGzzXt2ZYIWOXECPzjd1uy6Jc3i+GEM0j+Vr+M+icvbcuVMzseMsHx5aTBB6N
+         zs74OiDvZ1lXh0/y74ry/A+lToFhvyEnVuCmnyEtag5350aRBWtGWFdjKas6IWpgkbhS
+         Vdkw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@codeanywhere.com header.b=gN+9y9ck;
+       dkim=pass header.i=@amazonses.com header.b=KUSWnqCE;
+       spf=pass (google.com: domain of 0101015da4629a10-a823a12f-d216-4295-9ea5-8cbae47d19e5-000000@us-west-2.amazonses.com designates 54.240.27.17 as permitted sender) smtp.mailfrom=0101015da4629a10-a823a12f-d216-4295-9ea5-8cbae47d19e5-000000@us-west-2.amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=codeanywhere.com
+Return-Path: <0101015da4629a10-a823a12f-d216-4295-9ea5-8cbae47d19e5-000000@us-west-2.amazonses.com>
+Received: from a27-17.smtp-out.us-west-2.amazonses.com (a27-17.smtp-out.us-west-2.amazonses.com. [54.240.27.17])
+        by mx.google.com with ESMTPS id j10si21784553plg.201.2017.08.02.12.18.32
+        for <hugowinbladh@gmail.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Wed, 02 Aug 2017 12:18:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0101015da4629a10-a823a12f-d216-4295-9ea5-8cbae47d19e5-000000@us-west-2.amazonses.com designates 54.240.27.17 as permitted sender) client-ip=54.240.27.17;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@codeanywhere.com header.b=gN+9y9ck;
+       dkim=pass header.i=@amazonses.com header.b=KUSWnqCE;
+       spf=pass (google.com: domain of 0101015da4629a10-a823a12f-d216-4295-9ea5-8cbae47d19e5-000000@us-west-2.amazonses.com designates 54.240.27.17 as permitted sender) smtp.mailfrom=0101015da4629a10-a823a12f-d216-4295-9ea5-8cbae47d19e5-000000@us-west-2.amazonses.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=codeanywhere.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=is3zrbospqmjmhowmbey5g7vsbavid3l; d=codeanywhere.com;
+	t=1501701511;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=tkRGDtTWKZD6DVMko7/gV7Tg71poRzqV7laUyXnIfik=;
+	b=gN+9y9ckfD8qXRt890cFq5OGmimLG/VbRi12pcXEfwwAjLLPAOv7WaYvYHEUNm97
+	2w7pulPmQHo0XPtINXllEaER0301EQK0Mw6jbO8ETGRwJrjWpbjATV6jG/djkrym80Y
+	WHygPPq4V0VMKBASeCuvloyoXlLVvOzgHUkxHVME=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=hsbnp7p3ensaochzwyq5wwmceodymuwv; d=amazonses.com; t=1501701511;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=tkRGDtTWKZD6DVMko7/gV7Tg71poRzqV7laUyXnIfik=;
+	b=KUSWnqCEPTlxur4yUANjRXtSV20dI1NCabLZ7g0HQJ0YMVsu6pIww5i9ie4gFvE4
+	+i6m2kTl+AroOwq/r59iAx6vgPYZ1oIBUgGpctE3MFtbFW0YCddTGEuMJfaI5iHf7Rm
+	uSayp8tz1tNO2kkFzH0nR9nmkUlJEq+4lJNJ3o3A=
+From: Codeanywhere Team <support@codeanywhere.com>
+Reply-To: no-reply@codeanywhere.com
+To: hugowinbladh@gmail.com
+Subject: =?UTF-8?Q?=F0=9F=9A=80_Codeanywhere_Releases_All-New_Android_App?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2365829_835539671.1501701511698"
+Message-ID: <0101015da4629a10-a823a12f-d216-4295-9ea5-8cbae47d19e5-000000@us-west-2.amazonses.com>
+Date: Wed, 2 Aug 2017 19:18:31 +0000
+X-SES-Outgoing: 2017.08.02-54.240.27.17
+Feedback-ID: 1.us-west-2.R+hyQ+6XHJ+/9O/llTwGWI9B20ko633NrWvK98W+FYQ=:AmazonSES
+
+------=_Part_2365829_835539671.1501701511698
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+
+=09<head>
+=09=09<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Ty=
+pe">
+=09=09<title>Codeanywhere Releases All-New Android App</title>
+=09</head>
+
+=09<body bgcolor=3D"#ffffff" style=3D"font-family: Tahoma, 'Trebuchet MS', =
+Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; li=
+ne-height: 21px; margin: 0; padding: 0;">
+=09=09<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">
+=09=09=09<tr>
+=09=09=09=09<td style=3D"padding-top: 30px; padding-bottom: 30px; vertical-=
+align: top;" valign=3D"top">
+=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"700">
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td style=3D"vertical-align: top;" valign=3D"top">
+=09=09=09=09=09=09=09=09<table bgcolor=3D"#6e4885" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"700" style=3D"color: white;">
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top;" valign=3D"top=
+">
+=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top;" vali=
+gn=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"700">
+<!-- =09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: t=
+op; padding-top: 10px; padding-bottom: 10px; background-color: #000" valign=
+=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"newsletter head=
+er" width=3D"700" height=3D"70" src=3D"https://s3-us-west-2.amazonaws.com/c=
+apublic/newsletter/054/00.jpg" style=3D"vertical-align: middle;">=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr> -->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: t=
+op;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical=
+-align: top; padding-top: 10px; padding-bottom: 10px; padding-left: 40px; b=
+ackground: #000;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"Welcom=
+e" width=3D"600" height=3D"70" src=3D"https://s3-us-west-2.amazonaws.com/ca=
+public/newsletter/056/00.jpg" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical=
+-align: top; background: #000;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img align=3D"righ=
+t" alt=3D"corner" height=3D"27" src=3D"https://s3-us-west-2.amazonaws.com/c=
+apublic/newsletter/corner.jpg" width=3D"27" style=3D"vertical-align: middle=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top;" vali=
+gn=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top; paddi=
+ng-top: 0; padding-bottom: 0; background-color: #231f1f;" bgcolor=3D"#231f1=
+f" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align: cente=
+r; vertical-align: top; padding-bottom: 40px; padding-left: 0px;" align=3D"=
+center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http://www.codea=
+nywhere.com/" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img height=3D"350" src=
+=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/056/01.jpg" widt=
+h=3D"700" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align: cente=
+r; vertical-align: top; padding-left: 80px; padding-right: 80px;" align=3D"=
+center" valign=3D"top">
+ =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h2 style=3D"color: #fffff=
+f; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; margin-top: 0px; margin-bottom: 0px; font-size: 30px; =
+font-weight: normal; line-height: normal;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Codeanywhere Releases <b=
+r>All-New Android App
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h2>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; f=
+ont-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80=
+px; padding-bottom: 50px; padding-top: 50px;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0;" width=3D"100%" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Codeanywhere=E2=
+=80=99s Mobile Apps have been a long time coming. The team has been working=
+ tirelessly for more than a year to bring you an App that really does enabl=
+e you to =E2=80=9CCode-Anywhere=E2=80=9D.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px; padding-top: 20px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Now we are fina=
+lly releasing it today and we can proudly say that it is, in our view, the =
+first ever real Mobile IDE.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0; padding-top: 30px; text-align: center;" width=
+=3D"100%" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https:/=
+/play.google.com/store/apps/details?id=3Dcom.codeanywhere.mobile"><img alt=
+=3D"Google play" width=3D"214" height=3D"63" src=3D"https://s3-us-west-2.am=
+azonaws.com/capublic/newsletter/056/google-play.png" style=3D"vertical-alig=
+n: middle;"></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+<!-- =09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align: cente=
+r; vertical-align: top; padding-bottom: 0; padding-top: 0; padding-left: 0p=
+x;" align=3D"center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://codeanyw=
+here.com/editor" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img height=3D"364" src=
+=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/40/NL_01_2.jpg" =
+width=3D"700" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr> -->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"background-color:=
+#352f2f ;color: #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; vertical-align: top; padding-lef=
+t: 80px; padding-right: 80px; padding-bottom: 0px; padding-top: 50px; text-=
+align: center;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h3 style=3D"font-=
+size: 24px; font-weight: 400;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Code Editor
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h3>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0;" width=3D"100%" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 20px; font-weight=
+: normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09No matter the s=
+creen size, the code editor will never let you down. Either in portrait or =
+landscape mode, it will syntax highlight more than 100 languages and autoco=
+mplete HTML, XML, CSS, JavaScript, Python and PHP.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding-=
+top: 20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"Code E=
+ditor" width=3D"300" height=3D"300" src=3D"https://s3-us-west-2.amazonaws.c=
+om/capublic/newsletter/056/code-editor.jpg" style=3D"vertical-align: middle=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+ =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; f=
+ont-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80=
+px; padding-bottom: 0px; padding-top: 50px; text-align: center;" valign=3D"=
+top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h3 style=3D"font-=
+size: 24px; font-weight: 400;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09SSH Terminal
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h3>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0; padding-top: 0;" width=3D"100%" valign=3D"top=
+">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Connect to any =
+machine and use our SSH Terminal as if it was your local. From Bash to Nano=
+ to Vi, take your pick.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding-=
+top: 20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"SSH Te=
+rminal" width=3D"300" height=3D"300" src=3D"https://s3-us-west-2.amazonaws.=
+com/capublic/newsletter/056/ssh.jpg" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"background-color:=
+#352f2f ;color: #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; vertical-align: top; padding-lef=
+t: 80px; padding-right: 80px; padding-bottom: 0px; padding-top: 50px; text-=
+align: center;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h3 style=3D"font-=
+size: 24px; font-weight: 400;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09All Resources
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h3>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0;" width=3D"100%" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 20px; font-weight=
+: normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09The core featur=
+e of Codeanywhere, no matter what device you are using it on is that it is =
+platform agnostic - Connect to any VM from any vendor with any protocol; SS=
+H, SFTP or even FTPS. On top of that you can easily get your cloud hosted f=
+iles on Dropbox, Google Drive, S3 or OneDrive. Lastly and most importantly,=
+ you can pull your repositories from GitHub or Bitbucket in single click.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding-=
+top: 20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"All Re=
+sources" width=3D"300" height=3D"300" src=3D"https://s3-us-west-2.amazonaws=
+.com/capublic/newsletter/056/resources.jpg" style=3D"vertical-align: middle=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+ =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; f=
+ont-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80=
+px; padding-bottom: 0px; padding-top: 50px; text-align: center;" valign=3D"=
+top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h3 style=3D"font-=
+size: 24px; font-weight: 400;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Spin up a Serve=
+r
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h3>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0; padding-top: 0;" width=3D"100%" valign=3D"top=
+">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Don't have a se=
+rver? Just want to start coding? No problem. Codeanywhere can spin up a ser=
+ver in less than 30 seconds!
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding-=
+top: 20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"Spin u=
+p a Server" width=3D"300" height=3D"300" src=3D"https://s3-us-west-2.amazon=
+aws.com/capublic/newsletter/056/fast-creation.jpg" style=3D"vertical-align:=
+ middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"background-color:=
+#352f2f ;color: #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; vertical-align: top; padding-lef=
+t: 80px; padding-right: 80px; padding-bottom: 50px; padding-top: 50px; " va=
+lign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color: #ffffff;=
+ font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, =
+Arial, sans-serif; margin-top: 0; margin-bottom: 40px; font-weight: normal;=
+ font-size: 15px;" align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09So what are you waiting =
+for, download it today!
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" text-align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"50%" sty=
+le=3D"text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https:/=
+/play.google.com/store/apps/details?id=3Dcom.codeanywhere.mobile"><img alt=
+=3D"Google play" width=3D"214" height=3D"63" src=3D"https://s3-us-west-2.am=
+azonaws.com/capublic/newsletter/056/google-play.png" style=3D"vertical-alig=
+n: middle;"></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color: #ffffff;=
+ font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, =
+Arial, sans-serif; margin-top: 0; margin-bottom: 40px; font-weight: normal;=
+ font-size: 15px; padding-top: 50px;" align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Or login to Codeanywhere=
+ Web Editor
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" text-align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"50%" sty=
+le=3D"text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https:/=
+/codeanywhere.com/editor/" style=3D"display: block; width: 140px; height: 3=
+5px; background: #7E3F98; margin: auto; color: #fff; line-height: 34px; tex=
+t-decoration: none; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Login
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+<!-- =09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; f=
+ont-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80=
+px; padding-bottom: 50px; padding-top: 50px; " valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=3D"width: 100%=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0; padding-top: 0;" width=3D"100%" valign=3D"top=
+">
+ =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px;" align=3D"left">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09For more inform=
+ation on Bitbucket and Atlassian, check out their web page <a href=3D"https=
+://www.atlassian.com/" style=3D"color: #9149af;">Atlassian.com</a>.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09For those of yo=
+u who have their Bitbucket already connected, just Login and keep coding.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br/>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br/>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" text-align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D=
+"50%" style=3D"text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=
+=3D"https://codeanywhere.com/editor/" style=3D"display: block; width: 140px=
+; height: 35px; background: #7E3F98; margin: auto; color: #fff; line-height=
+: 34px; text-decoration: none; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Login
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09 -->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; font-fa=
+mily: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, s=
+ans-serif;vertical-align: top; text-align: center; background-color: #00000=
+0;" align=3D"center" bgcolor=3D"#000000" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 29px;" align=3D"center=
+" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"logo" height=
+=3D"37" src=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/image=
+s/logo.jpg" width=3D"180" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 29px; line-height: 20p=
+x;" align=3D"center" valign=3D"top">Thanks for signing up, and we hope you =
+enjoy our service.</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 38px;" align=3D"center=
+" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"signature" h=
+eight=3D"19" src=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/=
+images/signature.jpg" width=3D"163" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 38px;" align=3D"center=
+" valign=3D"top">Follow us on Facebook and Twitter</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 26px; padding-bottom: =
+30px;" align=3D"center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color=
+: #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', H=
+elvetica, Arial, sans-serif;vertical-align: top; padding-left: 14px; paddin=
+g-right: 14px;" align=3D"center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http=
+s://www.facebook.com/Codeanywhere" style=3D"color: #ffffff; font-family: Ta=
+homa, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-seri=
+f;text-decoration: none;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"=
+Facebook" height=3D"46" size=3D"47x47" src=3D"https://s3-us-west-2.amazonaw=
+s.com/capublic/newsletter/images/facebook.jpg" width=3D"46" style=3D"vertic=
+al-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color=
+: #ffffff; vertical-align: top; padding-left: 14px; padding-right: 14px;" a=
+lign=3D"center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http=
+s://twitter.com/codeanywhere" style=3D"font-family: Tahoma, 'Trebuchet MS',=
+ Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;text-decoration: no=
+ne;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"=
+Twitter" height=3D"46" size=3D"47x47" src=3D"https://s3-us-west-2.amazonaws=
+.com/capublic/newsletter/images/twitter.jpg" width=3D"46" style=3D"vertical=
+-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td bgcolor=3D"#cfcac9" style=3D"font-family: Tahoma, =
+'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;vert=
+ical-align: top;" valign=3D"top">
+=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09<td style=3D"font-family: Tahoma, 'Trebuchet =
+MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;vertical-align:=
+ top; padding-top: 37px;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0">
+=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"font-family: Tahoma, 'T=
+rebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;vertic=
+al-align: top; padding-left: 26px; padding-right: 26px;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://itunes.apple.c=
+om/us/app/codeanywhere/id436736239" style=3D"text-decoration: none;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"App Store" height=
+=3D"60" src=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/image=
+s/app-store.jpg" width=3D"171" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"font-family: Tahoma, 'T=
+rebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;vertic=
+al-align: top; padding-left: 26px; padding-right: 26px;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://play.google.co=
+m/store/apps/details?id=3Dcom.codeanywhere.mobile" style=3D"text-decoration=
+: none;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"Google Play" heigh=
+t=3D"60" src=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/imag=
+es/google-play.jpg" width=3D"171" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; font-family: Tah=
+oma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif=
+;vertical-align: top; padding-top: 36px; padding-bottom: 32px; color: #5551=
+56; text-align: center; font-size: 12px;" align=3D"center" valign=3D"top">C=
+opyright =C2=A9 2017 Codeanywhere, Inc. All rights reserved.</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; font-family: Tah=
+oma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif=
+;vertical-align: top; padding-right: 100px; padding-bottom: 30px; padding-l=
+eft: 100px; text-align: center; line-height: 20px; color: #555156; font-siz=
+e: 12px;"
+=09=09=09=09=09=09=09=09=09=09=09=09align=3D"center" valign=3D"top">You are=
+ receiving this email because an account was created on Codeanywhere with t=
+his email address. If you are the owner of this email address and did not c=
+reate the account, just ignore this message and the account will remain ina=
+ctive.</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top; padding-top=
+: 6px; padding-bottom: 30px; text-align: center; color: #555156; font-size:=
+ 12px;" align=3D"center" valign=3D"top">If you don=E2=80=99t wish to receiv=
+e more emails by Codeanywhere, please take a few seconds to <a href=3D"http=
+s://codeanywhere.com/account/unsubscribe/?code=3DUhBTgZQvyxDDeoCl1cGZqk7aoJ=
+3ALPZ" style=3D"color: #000000;">unsubscribe</a>.
+=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09</table>
+=09=09=09=09</td>
+=09=09=09</tr>
+=09=09</table>
+=09</body>
+</html>
+
+------=_Part_2365829_835539671.1501701511698
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+
+=09<head>
+=09=09<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Ty=
+pe">
+=09=09<title>Codeanywhere Releases All-New Android App</title>
+=09</head>
+
+=09<body bgcolor=3D"#ffffff" style=3D"font-family: Tahoma, 'Trebuchet MS', =
+Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; li=
+ne-height: 21px; margin: 0; padding: 0;">
+=09=09<table bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">
+=09=09=09<tr>
+=09=09=09=09<td style=3D"padding-top: 30px; padding-bottom: 30px; vertical-=
+align: top;" valign=3D"top">
+=09=09=09=09=09<table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"700">
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td style=3D"vertical-align: top;" valign=3D"top">
+=09=09=09=09=09=09=09=09<table bgcolor=3D"#6e4885" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"700" style=3D"color: white;">
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top;" valign=3D"top=
+">
+=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top;" vali=
+gn=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"700">
+<!-- =09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: t=
+op; padding-top: 10px; padding-bottom: 10px; background-color: #000" valign=
+=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"newsletter head=
+er" width=3D"700" height=3D"70" src=3D"https://s3-us-west-2.amazonaws.com/c=
+apublic/newsletter/054/00.jpg" style=3D"vertical-align: middle;">=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr> -->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: t=
+op;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tbody><tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical=
+-align: top; padding-top: 10px; padding-bottom: 10px; padding-left: 40px; b=
+ackground: #000;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"Welcom=
+e" width=3D"600" height=3D"70" src=3D"https://s3-us-west-2.amazonaws.com/ca=
+public/newsletter/056/00.jpg" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical=
+-align: top; background: #000;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img align=3D"righ=
+t" alt=3D"corner" height=3D"27" src=3D"https://s3-us-west-2.amazonaws.com/c=
+apublic/newsletter/corner.jpg" width=3D"27" style=3D"vertical-align: middle=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tbody></table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top;" vali=
+gn=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top; paddi=
+ng-top: 0; padding-bottom: 0; background-color: #231f1f;" bgcolor=3D"#231f1=
+f" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align: cente=
+r; vertical-align: top; padding-bottom: 40px; padding-left: 0px;" align=3D"=
+center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http://www.codea=
+nywhere.com/" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img height=3D"350" src=
+=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/056/01.jpg" widt=
+h=3D"700" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align: cente=
+r; vertical-align: top; padding-left: 80px; padding-right: 80px;" align=3D"=
+center" valign=3D"top">
+ =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h2 style=3D"color: #fffff=
+f; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica=
+, Arial, sans-serif; margin-top: 0px; margin-bottom: 0px; font-size: 30px; =
+font-weight: normal; line-height: normal;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Codeanywhere Releases <b=
+r>All-New Android App
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h2>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; f=
+ont-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80=
+px; padding-bottom: 50px; padding-top: 50px;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0;" width=3D"100%" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Codeanywhere=E2=
+=80=99s Mobile Apps have been a long time coming. The team has been working=
+ tirelessly for more than a year to bring you an App that really does enabl=
+e you to =E2=80=9CCode-Anywhere=E2=80=9D.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px; padding-top: 20px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Now we are fina=
+lly releasing it today and we can proudly say that it is, in our view, the =
+first ever real Mobile IDE.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0; padding-top: 30px; text-align: center;" width=
+=3D"100%" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https:/=
+/play.google.com/store/apps/details?id=3Dcom.codeanywhere.mobile"><img alt=
+=3D"Google play" width=3D"214" height=3D"63" src=3D"https://s3-us-west-2.am=
+azonaws.com/capublic/newsletter/056/google-play.png" style=3D"vertical-alig=
+n: middle;"></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+<!-- =09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"text-align: cente=
+r; vertical-align: top; padding-bottom: 0; padding-top: 0; padding-left: 0p=
+x;" align=3D"center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://codeanyw=
+here.com/editor" target=3D"_blank">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img height=3D"364" src=
+=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/40/NL_01_2.jpg" =
+width=3D"700" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr> -->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"background-color:=
+#352f2f ;color: #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; vertical-align: top; padding-lef=
+t: 80px; padding-right: 80px; padding-bottom: 0px; padding-top: 50px; text-=
+align: center;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h3 style=3D"font-=
+size: 24px; font-weight: 400;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Code Editor
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h3>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0;" width=3D"100%" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 20px; font-weight=
+: normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09No matter the s=
+creen size, the code editor will never let you down. Either in portrait or =
+landscape mode, it will syntax highlight more than 100 languages and autoco=
+mplete HTML, XML, CSS, JavaScript, Python and PHP.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding-=
+top: 20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"Code E=
+ditor" width=3D"300" height=3D"300" src=3D"https://s3-us-west-2.amazonaws.c=
+om/capublic/newsletter/056/code-editor.jpg" style=3D"vertical-align: middle=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+ =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; f=
+ont-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80=
+px; padding-bottom: 0px; padding-top: 50px; text-align: center;" valign=3D"=
+top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h3 style=3D"font-=
+size: 24px; font-weight: 400;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09SSH Terminal
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h3>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0; padding-top: 0;" width=3D"100%" valign=3D"top=
+">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Connect to any =
+machine and use our SSH Terminal as if it was your local. From Bash to Nano=
+ to Vi, take your pick.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding-=
+top: 20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"SSH Te=
+rminal" width=3D"300" height=3D"300" src=3D"https://s3-us-west-2.amazonaws.=
+com/capublic/newsletter/056/ssh.jpg" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"background-color:=
+#352f2f ;color: #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; vertical-align: top; padding-lef=
+t: 80px; padding-right: 80px; padding-bottom: 0px; padding-top: 50px; text-=
+align: center;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h3 style=3D"font-=
+size: 24px; font-weight: 400;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09All Resources
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h3>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0;" width=3D"100%" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 20px; font-weight=
+: normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09The core featur=
+e of Codeanywhere, no matter what device you are using it on is that it is =
+platform agnostic - Connect to any VM from any vendor with any protocol; SS=
+H, SFTP or even FTPS. On top of that you can easily get your cloud hosted f=
+iles on Dropbox, Google Drive, S3 or OneDrive. Lastly and most importantly,=
+ you can pull your repositories from GitHub or Bitbucket in single click.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding-=
+top: 20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"All Re=
+sources" width=3D"300" height=3D"300" src=3D"https://s3-us-west-2.amazonaws=
+.com/capublic/newsletter/056/resources.jpg" style=3D"vertical-align: middle=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+ =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; f=
+ont-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80=
+px; padding-bottom: 0px; padding-top: 50px; text-align: center;" valign=3D"=
+top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<h3 style=3D"font-=
+size: 24px; font-weight: 400;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Spin up a Serve=
+r
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</h3>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0; padding-top: 0;" width=3D"100%" valign=3D"top=
+">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px;" align=3D"justify">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Don't have a se=
+rver? Just want to start coding? No problem. Codeanywhere can spin up a ser=
+ver in less than 30 seconds!
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"padding-=
+top: 20px;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"Spin u=
+p a Server" width=3D"300" height=3D"300" src=3D"https://s3-us-west-2.amazon=
+aws.com/capublic/newsletter/056/fast-creation.jpg" style=3D"vertical-align:=
+ middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"background-color:=
+#352f2f ;color: #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helv=
+etica Neue', Helvetica, Arial, sans-serif; vertical-align: top; padding-lef=
+t: 80px; padding-right: 80px; padding-bottom: 50px; padding-top: 50px; " va=
+lign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color: #ffffff;=
+ font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, =
+Arial, sans-serif; margin-top: 0; margin-bottom: 40px; font-weight: normal;=
+ font-size: 15px;" align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09So what are you waiting =
+for, download it today!
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" text-align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"50%" sty=
+le=3D"text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https:/=
+/play.google.com/store/apps/details?id=3Dcom.codeanywhere.mobile"><img alt=
+=3D"Google play" width=3D"214" height=3D"63" src=3D"https://s3-us-west-2.am=
+azonaws.com/capublic/newsletter/056/google-play.png" style=3D"vertical-alig=
+n: middle;"></a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color: #ffffff;=
+ font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, =
+Arial, sans-serif; margin-top: 0; margin-bottom: 40px; font-weight: normal;=
+ font-size: 15px; padding-top: 50px;" align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Or login to Codeanywhere=
+ Web Editor
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" text-align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D"50%" sty=
+le=3D"text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https:/=
+/codeanywhere.com/editor/" style=3D"display: block; width: 140px; height: 3=
+5px; background: #7E3F98; margin: auto; color: #fff; line-height: 34px; tex=
+t-decoration: none; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Login
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+<!-- =09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; f=
+ont-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif; vertical-align: top; padding-left: 80px; padding-right: 80=
+px; padding-bottom: 50px; padding-top: 50px; " valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table style=3D"width: 100%=
+;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #=
+ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helv=
+etica, Arial, sans-serif; vertical-align: top; padding-left: 0px; padding-r=
+ight: 0px; padding-bottom: 0; padding-top: 0;" width=3D"100%" valign=3D"top=
+">
+ =09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<p style=3D"color:=
+ #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', He=
+lvetica, Arial, sans-serif; margin-top: 0; margin-bottom: 0px; font-weight:=
+ normal; font-size: 15px;" align=3D"left">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09For more inform=
+ation on Bitbucket and Atlassian, check out their web page <a href=3D"https=
+://www.atlassian.com/" style=3D"color: #9149af;">Atlassian.com</a>.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09For those of yo=
+u who have their Bitbucket already connected, just Login and keep coding.
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br/>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<br/>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</p>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" text-align=3D"center">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td width=3D=
+"50%" style=3D"text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=
+=3D"https://codeanywhere.com/editor/" style=3D"display: block; width: 140px=
+; height: 35px; background: #7E3F98; margin: auto; color: #fff; line-height=
+: 34px; text-decoration: none; text-align: center;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09Login
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09 -->
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09
+=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; font-fa=
+mily: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, s=
+ans-serif;vertical-align: top; text-align: center; background-color: #00000=
+0;" align=3D"center" bgcolor=3D"#000000" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 29px;" align=3D"center=
+" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"logo" height=
+=3D"37" src=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/image=
+s/logo.jpg" width=3D"180" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 29px; line-height: 20p=
+x;" align=3D"center" valign=3D"top">Thanks for signing up, and we hope you =
+enjoy our service.</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 38px;" align=3D"center=
+" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"signature" h=
+eight=3D"19" src=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/=
+images/signature.jpg" width=3D"163" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 38px;" align=3D"center=
+" valign=3D"top">Follow us on Facebook and Twitter</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff=
+; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;vertical-align: top; padding-top: 26px; padding-bottom: =
+30px;" align=3D"center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color=
+: #ffffff; font-family: Tahoma, 'Trebuchet MS', Geneva, 'Helvetica Neue', H=
+elvetica, Arial, sans-serif;vertical-align: top; padding-left: 14px; paddin=
+g-right: 14px;" align=3D"center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http=
+s://www.facebook.com/Codeanywhere" style=3D"color: #ffffff; font-family: Ta=
+homa, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-seri=
+f;text-decoration: none;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"=
+Facebook" height=3D"46" size=3D"47x47" src=3D"https://s3-us-west-2.amazonaw=
+s.com/capublic/newsletter/images/facebook.jpg" width=3D"46" style=3D"vertic=
+al-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"color=
+: #ffffff; vertical-align: top; padding-left: 14px; padding-right: 14px;" a=
+lign=3D"center" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"http=
+s://twitter.com/codeanywhere" style=3D"font-family: Tahoma, 'Trebuchet MS',=
+ Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;text-decoration: no=
+ne;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"=
+Twitter" height=3D"46" size=3D"47x47" src=3D"https://s3-us-west-2.amazonaws=
+.com/capublic/newsletter/images/twitter.jpg" width=3D"46" style=3D"vertical=
+-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09<td bgcolor=3D"#cfcac9" style=3D"font-family: Tahoma, =
+'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;vert=
+ical-align: top;" valign=3D"top">
+=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"700">
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09<td style=3D"font-family: Tahoma, 'Trebuchet =
+MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;vertical-align:=
+ top; padding-top: 37px;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09<table align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0">
+=09=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"font-family: Tahoma, 'T=
+rebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;vertic=
+al-align: top; padding-left: 26px; padding-right: 26px;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://itunes.apple.c=
+om/us/app/codeanywhere/id436736239" style=3D"text-decoration: none;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"App Store" height=
+=3D"60" src=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/image=
+s/app-store.jpg" width=3D"171" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09=09<td style=3D"font-family: Tahoma, 'T=
+rebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;vertic=
+al-align: top; padding-left: 26px; padding-right: 26px;" valign=3D"top">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<a href=3D"https://play.google.co=
+m/store/apps/details?id=3Dcom.codeanywhere.mobile" style=3D"text-decoration=
+: none;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09=09<img alt=3D"Google Play" heigh=
+t=3D"60" src=3D"https://s3-us-west-2.amazonaws.com/capublic/newsletter/imag=
+es/google-play.jpg" width=3D"171" style=3D"vertical-align: middle;">
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09</a>
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; font-family: Tah=
+oma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif=
+;vertical-align: top; padding-top: 36px; padding-bottom: 32px; color: #5551=
+56; text-align: center; font-size: 12px;" align=3D"center" valign=3D"top">C=
+opyright =C2=A9 2017 Codeanywhere, Inc. All rights reserved.</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09<td style=3D"color: #ffffff; font-family: Tah=
+oma, 'Trebuchet MS', Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif=
+;vertical-align: top; padding-right: 100px; padding-bottom: 30px; padding-l=
+eft: 100px; text-align: center; line-height: 20px; color: #555156; font-siz=
+e: 12px;"
+=09=09=09=09=09=09=09=09=09=09=09=09align=3D"center" valign=3D"top">You are=
+ receiving this email because an account was created on Codeanywhere with t=
+his email address. If you are the owner of this email address and did not c=
+reate the account, just ignore this message and the account will remain ina=
+ctive.</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09<td style=3D"vertical-align: top; padding-top=
+: 6px; padding-bottom: 30px; text-align: center; color: #555156; font-size:=
+ 12px;" align=3D"center" valign=3D"top">If you don=E2=80=99t wish to receiv=
+e more emails by Codeanywhere, please take a few seconds to <a href=3D"http=
+s://codeanywhere.com/account/unsubscribe/?code=3DUhBTgZQvyxDDeoCl1cGZqk7aoJ=
+3ALPZ" style=3D"color: #000000;">unsubscribe</a>.
+=09=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09</tr>
+=09=09=09=09=09</table>
+=09=09=09=09</td>
+=09=09=09</tr>
+=09=09</table>
+=09</body>
+</html>
+
+------=_Part_2365829_835539671.1501701511698--

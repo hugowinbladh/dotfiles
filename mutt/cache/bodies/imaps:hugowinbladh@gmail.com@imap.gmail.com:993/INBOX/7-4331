@@ -1,0 +1,204 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.15 with SMTP id o15csp555616ioe;
+        Tue, 23 May 2017 01:45:40 -0700 (PDT)
+X-Received: by 10.46.20.14 with SMTP id u14mr8086177ljd.101.1495529140844;
+        Tue, 23 May 2017 01:45:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495529140; cv=none;
+        d=google.com; s=arc-20160816;
+        b=X7jzGbTSlZ8D+Vc0d79iJbqsqNSFUhwdYBTS9VRiatxJW0xxjo6k5BTlAjQxZ4/cSV
+         C44QHKQD0RdVmpE/qQiuO05ri72Bg74t7cJPpfG16XrJRfSTion3v2EiS+X6fS5QhJgk
+         WnTOMYZu5FrAEFv+QcC5tdzJ4hD++LNdxNssC2e0Jjv2ufASECPEk60kf0kRI3TNTi1n
+         BGuE30hylMdh0haN/nfNKqI12SbXoNoVPIVgE4Iu6lOnPVGAOoWZLrDRG0R7gxQ5XKGB
+         IgLwaVaAwL0CRNIR8VN5s2vtiQlUzJQ3GgTuhQtjNVo5cOfp3ABxQwYJQRi8u0vSh/o9
+         hP+w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from
+         :arc-authentication-results;
+        bh=itcPgqvRN2SWBwdFa+kQrGqIb/j0CNuFVJpUjb3lipI=;
+        b=TLYJCq0gbKbDg3L2DjOJvlX9OWDC0wNXvtfFsZJpC+RSkwCwHzAmfrmZioyeyKy48b
+         /073gf5LpfL7z5LCXimvmJ1cKADFeL0tl2Aw6wlUkqCWXafIZkMLO3JY98xiIe5wJmej
+         FnYLTUnPNjV6yJAl+5v0+HSwVznjr7YHUkp5mqsOeCkNuwcrPz5ZQvWsRAaOPXHB5D9x
+         wfYwWXkdR81PiQBnmVG1+W+0RXgnb1IpkjZ8TllG7saKxRGTSzcYh6Oduc/8byxmQ0p5
+         qzDB78Wr3bbH1tshHasP7Apr84kErtPdhJIZK3zUMhP7pL0YbQ7Y/Q0EYTqEd2NpTwuO
+         oFrQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of linda.ekstrom-lind@linkoping.se designates 148.136.157.76 as permitted sender) smtp.mailfrom=Linda.Ekstrom-Lind@linkoping.se
+Return-Path: <Linda.Ekstrom-Lind@linkoping.se>
+Received: from smtp2.linkoping.se (smtp6.linkoping.se. [148.136.157.76])
+        by mx.google.com with ESMTPS id f78si9111681lff.147.2017.05.23.01.45.40
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Tue, 23 May 2017 01:45:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of linda.ekstrom-lind@linkoping.se designates 148.136.157.76 as permitted sender) client-ip=148.136.157.76;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of linda.ekstrom-lind@linkoping.se designates 148.136.157.76 as permitted sender) smtp.mailfrom=Linda.Ekstrom-Lind@linkoping.se
+Received: from SB-MBOX209.adm.linkoping.se (148.136.17.226) by
+ sv-edge08.adm.linkoping.se (148.136.157.76) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.1.845.34; Tue, 23 May 2017 10:45:39 +0200
+Received: from SB-MBOX207.adm.linkoping.se (148.136.17.200) by
+ SB-MBOX209.adm.linkoping.se (148.136.17.226) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P256) id
+ 15.1.845.34; Tue, 23 May 2017 10:45:39 +0200
+Received: from SB-MBOX207.adm.linkoping.se ([fe80::a408:6203:8ad6:c546]) by
+ SB-MBOX207.adm.linkoping.se ([fe80::a408:6203:8ad6:c546%20]) with mapi id
+ 15.01.0845.034; Tue, 23 May 2017 10:45:39 +0200
+From: =?iso-8859-1?Q?Ekstr=F6m_Lind_Linda?= <Linda.Ekstrom-Lind@linkoping.se>
+To: =?iso-8859-1?Q?Gustaf_Wahll=F6f?= <gustaf@polego.se>, Andreas Larsson
+	<larsson.a.138@gmail.com>, Amelie Samuelsson <amelie.samuelsson@gmail.com>,
+	susanne johansson <su.johansson46@gmail.com>, "Olsson Erik (Elev,
+ Berzeliusskolan Gy)" <eriols274@edu.linkoping.se>, Magnus Ragnemalm
+	<musse.ragnemalm@gmail.com>, Emil Forslund <emil.i.skog@gmail.com>, "Patrik
+ Korkis" <patkor0062000@gmail.com>, mohammed almawed <almawed3000@gmail.com>,
+	"Jeppsson Fred (Elev, Berzeliusskolan Gy)" <frejep372@edu.linkoping.se>,
+	=?iso-8859-1?Q?david_=E5hgren?= <david.ahgren@gmail.com>, Hugo Winbladh
+	<hugowinbladh@gmail.com>
+Subject: =?iso-8859-1?Q?sista_anm=E4lningsdag_imorgon?=
+Thread-Topic: =?iso-8859-1?Q?sista_anm=E4lningsdag_imorgon?=
+Thread-Index: AdLToJrItJRlq9qQRReCFmlXODEK9g==
+Date: Tue, 23 May 2017 08:45:39 +0000
+Message-ID: <2bfe5d1c49d040848d5a18a44942862e@linkoping.se>
+Accept-Language: sv-SE, en-US
+Content-Language: sv-SE
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+x-originating-ip: [148.136.20.222]
+Content-Type: multipart/alternative;
+	boundary="_000_2bfe5d1c49d040848d5a18a44942862elinkopingse_"
+MIME-Version: 1.0
+Return-Path: Linda.Ekstrom-Lind@linkoping.se
+X-GFI-SMTP-Submission: 1
+X-GFI-SMTP-HelloDomain: SB-MBOX209.adm.linkoping.se
+X-GFI-SMTP-RemoteIP: 148.136.17.226
+
+--_000_2bfe5d1c49d040848d5a18a44942862elinkopingse_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hej,
+
+Skickar ut till n=E5gra av er s=E5 att ni kan sprida till klassen:
+
+https://classroom.google.com/c/OTk3NTc1MzQw/p/MjA0MjQ1MTQwM1pa/details
+
+Sista anm=E4lningsdag till kursprovet i historia f=F6r er som ska skriva =
+=E4r imorgon innan kl. 14. Vi m=E5ste f=F6rbereda, kopiera etc. p=E5 m=F6te=
+stiden imorgon, kl. 16 och m=E5ste d=E5 veta hur m=E5nga som ska delta.
+
+Gl=F6m inte heller att utv=E4rdera kurserna svenska och historia i UTV5, so=
+m ni hittar via skolans hemsida.
+
+H=E4lsningar
+
+Linda Ekstr=F6m Lind
+Berzeliusskolan, Link=F6ping
+Gymnasiet
+L=E4rare i svenska, historia
+
+
+
+--_000_2bfe5d1c49d040848d5a18a44942862elinkopingse_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:"Monotype Corsiva";
+	panose-1:3 1 1 1 1 2 1 1 1 1;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.E-postmall17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"SV" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Hej,<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Skickar ut till n=E5gra av er s=E5 att ni kan sprida=
+ till klassen:<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><a href=3D"https://classroom.google.com/c/OTk3NTc1Mz=
+Qw/p/MjA0MjQ1MTQwM1pa/details">https://classroom.google.com/c/OTk3NTc1MzQw/=
+p/MjA0MjQ1MTQwM1pa/details</a><o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Sista anm=E4lningsdag till kursprovet i historia f=
+=F6r er som ska skriva =E4r imorgon innan kl. 14. Vi m=E5ste f=F6rbereda, k=
+opiera etc. p=E5 m=F6testiden imorgon, kl. 16 och m=E5ste d=E5 veta hur m=
+=E5nga som ska delta.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Gl=F6m inte heller att utv=E4rdera kurserna svenska =
+och historia i UTV5, som ni hittar via skolans hemsida.<o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:16.0pt;font-family:&quot;Mo=
+notype Corsiva&quot;;mso-fareast-language:SV"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ga=
+ramond&quot;,serif;mso-fareast-language:SV">H=E4lsningar<o:p></o:p></span><=
+/p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ga=
+ramond&quot;,serif;mso-fareast-language:SV"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:16.0pt;font-family:&quot;Mo=
+notype Corsiva&quot;;mso-fareast-language:SV">Linda Ekstr=F6m Lind<o:p></o:=
+p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ga=
+ramond&quot;,serif;mso-fareast-language:SV">Berzeliusskolan, Link=F6ping<o:=
+p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ga=
+ramond&quot;,serif;mso-fareast-language:SV">Gymnasiet<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ga=
+ramond&quot;,serif;mso-fareast-language:SV">L=E4rare i svenska, historia<o:=
+p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;font-family:&quot;Ga=
+ramond&quot;,serif;mso-fareast-language:SV"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_2bfe5d1c49d040848d5a18a44942862elinkopingse_--

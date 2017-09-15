@@ -1,0 +1,1155 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.15 with SMTP id o15csp19019ioe;
+        Fri, 9 Jun 2017 16:39:52 -0700 (PDT)
+X-Received: by 10.25.221.136 with SMTP id w8mr1904980lfi.14.1497051592283;
+        Fri, 09 Jun 2017 16:39:52 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1497051592; cv=none;
+        d=google.com; s=arc-20160816;
+        b=D+ygq/3qiEdeLOrnO0xp60l1H8ttOMsoGCLcpCP9Vt1yanY3tWnd3ScXekfGSAscvA
+         ZfpkeS1RFHEJWyRXKmct15DT1t16kjIuvGrwCvHiHyVvjbkZRf47pXAHFm+aptHt8mXt
+         +k0u6LZKCwkh++6TY3OfWFzLXN8e50ebjKly1NnWEr2c7TtlkBJJUZf/t0AW/KlWFwa1
+         2o9oY7s7zxPPpsj3W903akGnaBoKsrL1d8F6Au4TR8r9ZI1ZPkNBQ9RDAPUHCDE69AVm
+         MHHEfcPw/vqbMgn9RfxcKPZSj8qai4uZqhIZLULdYC8qrwcsZYSSva4nH1ODyoVrGnFo
+         NsnQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe:sender:feedback-id:message-id:subject
+         :reply-to:from:to:date:dkim-signature:arc-authentication-results;
+        bh=rbmtDMd/YYTLvEId+VgsDbl/4WrVhoMYiLXVMvb8vKc=;
+        b=cP+1gosgH5mCEC8P6N9e1EJ2EdETyA8FO1mKQlViqqKhs52GcP2usRVTE3iVIHFAot
+         /GIE2q0ZlXJ6hBRK26nCi65hMYdKV2Dps8epFCmfm4mP6aCzf+86iH9Dc4Yzklr6uweB
+         aLv9fJV5daq+S1gaaWwpiJXmzl2J0gYVufw8UE4TMz8AIMLjQphMlP01iUIemi+XjRVc
+         o887C38GQpVCLtYNkmOAxRZbQfMK/iKVkRxpSABUR2xidw5DdaaU2K8YdhjX84pFk81j
+         3wBj/vgVmUMoHB9iU9vEcB3irMrB6XEx4YHFUkPYJlAW7HnUMBKu7M9EhaUDpN+N43JU
+         i7mQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mlsend3.com;
+       spf=pass (google.com: domain of bounce-m1r5-510909@mlsend3.com designates 185.79.247.89 as permitted sender) smtp.mailfrom=bounce-m1r5-510909@mlsend3.com
+Return-Path: <bounce-m1r5-510909@mlsend3.com>
+Received: from mail26.mlsend3.com (mail26.mlsend3.com. [185.79.247.89])
+        by mx.google.com with ESMTPS id o20si1275496lfk.301.2017.06.09.16.39.52
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 09 Jun 2017 16:39:52 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-m1r5-510909@mlsend3.com designates 185.79.247.89 as permitted sender) client-ip=185.79.247.89;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mlsend3.com;
+       spf=pass (google.com: domain of bounce-m1r5-510909@mlsend3.com designates 185.79.247.89 as permitted sender) smtp.mailfrom=bounce-m1r5-510909@mlsend3.com
+Received: from mail26.mlsend3.com (mail26.mlsend3.com [185.79.247.89])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(Client CN "ml.mailersend.com", Issuer "ml.mailersend.com" (verified OK))
+	by mail26.mlsend3.com (Postfix) with ESMTPS id 60DD1E103E
+	for <hugowinbladh@gmail.com>; Sat, 10 Jun 2017 02:35:23 +0300 (EEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mlsend3.com; s=ml;
+	t=1497051323; bh=rbmtDMd/YYTLvEId+VgsDbl/4WrVhoMYiLXVMvb8vKc=;
+	h=Date:To:From:Subject:Sender:Sender:From:To:Subject:Date;
+	b=DDqZb59qDhZvUbupdaek5r6M5I3B7OePz7SODwSTt8mVCCY3wr51kCkE+lJtHkSen
+	 Ru2PRGF2ec1WEN8JolFLHfqZBE4kEzK14ldEy4wd5INb6LDcBlCjRajjMEyKez4fSo
+	 0gxSkUluh6TyUr+s4eQdab889tJpeiJcySYtq3+s=
+Date: Sat, 10 Jun 2017 02:31:34 +0300
+To: hugowinbladh@gmail.com
+From: Codewars <info@codewars.com>
+Reply-To: Codewars <info@codewars.com>
+Subject: =?utf-8?Q?Weekly_Coding_Challenges=C2=A0?=
+Message-ID: <064a60e49084168b625fbd733804849d@mlsend3.com>
+X-Priority: 3
+X-Mailer-SubscriberID: 645791071745347322;m1r5;7f1b91993307d75ecdd9162b20604380
+X-Mailru-Msgtype: 7f1b91993307d75ecdd9162b20604380
+Feedback-ID: k1a1e7:7f1b91993307d75ecdd9162b20604380:1803674367:MailerLite
+Sender: =?utf-8?Q?"Codewars"?=<info=codewars.com@mlsend3.com>
+List-Unsubscribe: <mailto:unsubscribe-645791071745347322-m1r5-7f1b91993307d75ecdd9162b20604380@mlsend3.com?body=unsubscribe>, <http://track.mlsend3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjkwMSZkPW83bzFsMWQ=.4MEdm-KWXLk8Gz9TmpXKtam9RRqod9ShsPClaLZxWQY>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_064a60e49084168b625fbd733804849d"
+
+
+--b1_064a60e49084168b625fbd733804849d
+Content-Type: text/plain; charset = "utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+You have received a newsletter from Codewars.
+
+However, your email software can't display HTML emails. You can view the =
+newsletter by clicking here:
+
+http://track.mlsend3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9M=
+TkyOCZiPTEwNTcxNjg5NyZkPWswZzJwN20=3D.EJPo7wc8cFzbVMphOapFlZeuNrgWKyg3Myg=
+aCZx1olk
+
+
+
+You're receiving this newsletter because you have shown interest in Codew=
+ars.
+Not interested anymore? Click here to unsubscribe:
+http://track.mlsend3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9M=
+TkyOCZiPTEwNTcxNjkwMyZkPWYwdDRiMGc=3D.WbrjLyq-FcVoA3jA0XIhIxsHwmawV4ozgBS=
+JWKx56AE
+
+
+--b1_064a60e49084168b625fbd733804849d
+Content-Type: text/html; charset = "utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micro=
+soft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+ =20
+  <head>
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width" initial-scal=
+e=3D"1.0" user-scalable=3D"yes" />
+    <meta name=3D"format-detection" content=3D"telephone=3Dno" />
+    <meta name=3D"format-detection" content=3D"date=3Dno" />
+    <meta name=3D"format-detection" content=3D"address=3Dno" />
+    <meta name=3D"format-detection" content=3D"email=3Dno" />
+    <title>Weekly Coding Challenges=C2=A0</title>
+    <style type=3D"text/css">
+      .ReadMsgBody{ width: 100%; }
+      .ExternalClass{ width: 100%; }
+      .ExternalClass *{ line-height: 100%; }
+      .ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass di=
+v,.ExternalClass span,.ExternalClass font{
+      line-height:100%;
+      }
+      body{
+      margin: 0;
+      padding: 0;
+      }
+      body,table,td,p,a,li{
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      }
+      table td{ border-collapse: collapse; }
+      table{
+      border-spacing: 0;
+      border-collapse: collapse;
+      }
+      p,a,li,td,blockquote{
+      mso-line-height-rule: exactly;
+      }
+      p,a,li,td,body,table,blockquote{
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      }
+      img,a img{
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      }
+      img{
+      -ms-interpolation-mode: bicubic;
+      }
+      a[href^=3Dtel],a[href^=3Dsms]{
+      color: inherit;
+      cursor: default;
+      text-decoration: none;
+      }
+      a[x-apple-data-detectors]{
+      color: inherit!important;
+      text-decoration: none!important;
+      font-size: inherit!important;
+      font-family: inherit!important;
+      font-weight: inherit!important;
+      line-height: inherit!important;
+      }
+      .mlEmailContainer{
+      max-width: 640px!important;
+      }
+      @media only screen and (min-width:768px){
+      .mlEmailContainer{
+      width: 640px!important;
+      }
+      }
+      @media only screen and (max-width: 640px) {
+      .mlTemplateContainer{
+      padding: 10px 10px 0 10px;
+      }
+      .mlContentTable{
+      width: 100%!important;
+      min-width: 200px!important;
+      }
+      /* -- */
+      .mlContentBlock{
+      float: none!important;
+      width: 100%!important;
+      }
+      /* -- */
+      .mlContentOuter{
+      padding-bottom: 0px!important;
+      padding-left: 25px!important;
+      padding-right: 25px!important;
+      padding-top: 25px!important;
+      }
+      /* -- */
+      .mlBottomContentOuter{
+      padding-bottom: 25px !important;
+      }
+      .mlLeftRightContentOuter {
+      padding-left: 5px!important;
+      padding-right: 5px!important;
+      }
+      .mlContentContainerOuter{
+      padding-left: 0px!important;
+      padding-right: 0px!important;
+      }
+      /* -- */
+      .mlContentContainer{
+      padding-left: 25px!important;
+      padding-right: 25px!important;
+      }
+      /* -- */
+      .mlContentButton a,
+      .mlContentButton span{
+      width: auto!important;
+      }
+      /* -- */
+      .mlContentImage img,
+      .mlContentRSS img{
+      height: auto!important;
+      width: 100%!important;
+      }
+      .mlContentImage{
+      height: 100%!important;
+      width: auto!important;
+      }
+      .mlContentLogo img{
+      height: auto!important;
+      width: 100%!important;
+      }
+      /* -- */
+      .mlContentContainer h1{
+      font-size: 24px!important;
+      line-height:125%!important;
+      margin-bottom: 0px!important;
+      }
+      /* -- */
+      .mlContentContainer h2{
+      font-size: 18px!important;
+      line-height:125%!important;
+      margin-bottom: 0px!important;
+      }
+      /* -- */
+      .mlContentContainer h3{
+      font-size: 16px!important;
+      line-height:125%!important;
+      margin-bottom: 0px!important;
+      }
+      /* -- */
+      .mlContentContainer p,
+      .mlContentContainer .mlContentRSS{
+      font-size: 16px!important;
+      line-height:150%!important;
+      }
+      /* -- */
+      .mobileHide{
+      display: none!important;
+      }
+      /* -- */
+      .alignCenter{
+      height: auto!important;
+      text-align: center!important
+      }
+      /* -- */
+      .marginBottom{
+      margin-bottom: 25px!important;
+      }
+      /* -- */
+      .mlContentHeight{
+      height: auto!important;
+      }
+      .mlContentGap{
+      height: 25px!important;
+      }
+      .mlDisplayInline {
+      display: inline-block!important;
+      float: none!important;
+      }
+      body{
+      margin: 0px!important;
+      padding: 0px!important;
+      }
+      body,table,td,p,a,li,blockquote{
+      -webkit-text-size-adjust: none!important;
+      }
+      }
+    </style>
+  </head>
+ =20
+  <body leftmargin=3D"0" marginwidth=3D"0" topmargin=3D"0" marginheight=3D=
+"0" dir=3D"ltr" style=3D"padding: 0; margin: 0; -webkit-font-smoothing:an=
+tialiased; -webkit-text-size-adjust:none; background: #ebebeb;" bgcolor=3D=
+"#ebebeb">
+    <style>
+      div.OutlookMessageHeader, table.moz-email-headers-table, blockquote=
+ #_t, #MailContainerBody #_t {background-image:url("http://track.mlsend3.=
+com/link/f/cnM9NjQ1NzkxMDcxNzQ1MzQ3MzIyJmNvZGU9bTFyNSZyPTY5NzEwNjE=3D.Fj0=
+Csf5wDYz_74sHJ9zj9vMpl5MIiY3oI8rEg-_5ktc")}
+    </style>
+    <img src=3D"http://track.mlsend3.com/link/o/YT02NDU3OTEwNzE3NDUzNDczM=
+jImYz1tMXI1JmU9MTkyOA=3D=3D.AV7DqkH5J-4z5OBxSzovt02iJfL9gjL0tYT17-rbUNY" =
+class=3D"open_img" style=3D"display:block; height:0px; width:0px; max-wid=
+th:0px; max-height:0px; overflow:hidden;" width=3D"1" height=3D"1" border=
+=3D"0" alt=3D"" />
+    <!--[if !mso]>
+      <!-- -->
+      <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" bgcolor=3D"#ebebeb" style=3D"border-collapse: collapse;mso-table-lspa=
+ce: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%">
+        <tr>
+          <td class=3D"mlTemplateContainer" align=3D"center">
+            <table align=3D"center" border=3D"0" class=3D"mlEmailContaine=
+r" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-col=
+lapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%">
+              <tr>
+                <td align=3D"center">
+                <!--<![endif]-->
+                <!-- Content starts here -->
+                <table width=3D"540" class=3D"mobileHide" align=3D"center=
+" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"width: 540px;=
+">
+                  <tr>
+                    <td align=3D"left" class=3D"preheader-text" width=3D"=
+420" style=3D"padding: 15px 0px; font-family: Helvetica; font-size: 11px;=
+ line-height: 17px; color: #95A5A6">Challenge yourself on your weekly kat=
+a</td>
+                    <td class=3D"preheader-gap" width=3D"20"></td>
+                    <td class=3D"preheader-link" align=3D"right" width=3D=
+"200" style=3D"padding: 15px 0px; font-family: Helvetica; font-size: 11px=
+; line-height: 17px; color: #95A5A6">Can't see images?
+                      <a style=3D"color: #95A5A6;" href=3D"http://track.m=
+lsend3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTc=
+xNjg1NSZkPXgweDZiNGE=3D.Ela4TvVQLZZ8KYRHtOm9A6HqS12zUCTuu5PMnvX5sVQ" data=
+-link-id=3D"105716855" target=3D"_blank">Click here...</a>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" width=3D"640" class=3D"mlContentT=
+able" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"min-width=
+: 640px; width: 640px;">
+                  <tr>
+                    <td class=3D"mlContentTable">
+                      <table width=3D"640" class=3D"mlContentTable" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#f5f2e6" align=3D"=
+center" style=3D"width: 640px;">
+                        <tr>
+                          <td class=3D"mlContentImage">
+                            <img border=3D"0" src=3D"http://static2.mlsen=
+d3.com/data/builder/5259091/20161010100919658_640_107_1_0.png" width=3D"6=
+40" height=3D"" alt=3D"" style=3D"display: block;" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; width: 640px;" width=3D"640">
+                  <tr>
+                    <td class=3D"mlContentTable" height=3D"20"></td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881185">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 0px 50px 0px 50px; font-family: Helvetica; font-size: =
+14px; color: #7F8C8D; line-height: 23px;">
+                            <table class=3D"mlContentBlock marginBottom" =
+align=3D"left" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 6pt;">
+                              <tr>
+                                <td class=3D"mlContentImage" height=3D"11=
+8" width=3D"">
+                                  <img style=3D"display: block;margin: 0p=
+x;" border=3D"0" src=3D"http://static2.mlsend3.com/data/builder/5259091/2=
+0161010012738275_300_300_1_0.png" width=3D"" height=3D"118" alt=3D"" alig=
+n=3D"left">
+                                </td>
+                                <td class=3D"mobileHide" height=3D"118" w=
+idth=3D"30"></td>
+                              </tr>
+                              <tr>
+                                <td height=3D"10" class=3D"mobileHide" co=
+lspan=3D"2"></td>
+                              </tr>
+                            </table>
+                            <p style=3D"margin: 0px 0px 10px 0px;        =
+line-height: 23px;text-align: left;"><span style=3D"color: #000000;"><str=
+ong><span style=3D"font-size: 20px;">Codewars &amp; Coffee</span></strong=
+></span></p>
+                            <p style=3D"margin: 0px 0px 10px 0px;        =
+line-height: 23px;text-align: left;"><span style=3D"color: #000000;">Take=
+ a kata break, while you caffeinate</span></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881189">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 10px 50px 0px 50px; font-family: Helvetica; font-size:=
+ 14px; color: #7F8C8D; line-height: 23px;">
+                            <p style=3D"margin: 0px 0px 10px 0px;        =
+line-height: 23px;text-align: center;"><span style=3D"color: #adacac;">Th=
+is week's edition, sponsored by:</span></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881193">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"center" class=3D"mlContentContaine=
+r mlContentImage mlContentHeight" style=3D"padding: 0px 50px 0px 50px;">
+                            <a style=3D"border: none; display: block;" hr=
+ef=3D"http://track.mlsend3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI=
+1JmU9MTkyOCZiPTEwNTcxNjg1NyZkPXExbzd3OGI=3D.efWtefeVjHgD32PZkwfzZCEQSNkR1=
+u44bObPtrBdbEs" data-link-id=3D"105716857" target=3D"_blank">            =
+    <img border=3D"0" src=3D"https://bucket.mlcdn.com/a/510/510909/images=
+/bdc04ced469835375c236736313a19f2a263004b.png/f7b44d61a19cf0cecd908e69383=
+31a57eec7ebac.png" width=3D"350" height=3D"93"  class=3D"mlContentImage" =
+style=3D"display: block;max-width: 350px;" />              </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881195">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 15px 50px 25px 50px; font-family: Helvetica; font-size=
+: 14px; color: #000000; line-height: 23px;">
+                            <p style=3D"margin: 0px 0px 10px 0px;        =
+line-height: 23px;text-align: center;"><span style=3D"font-size: 18px; co=
+lor: #27ae60;"><a style=3D"color: #2C3E50;        text-decoration: underl=
+ine;color: #27ae60;" href=3D"http://track.mlsend3.com/link/c/YT02NDU3OTEw=
+NzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg1OSZkPXQ4azlyNnA=3D.9slRm6=
+65a_6ldGyeUYsr6dITMzhSGigra_3BMszdSK8" data-link-id=3D"105716859" target=3D=
+"_blank">The Most Effective Way to Assess Engineers</a></span></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881197">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 15px 50px 5px 50px; font-family: Helvetica; font-size:=
+ 14px; color: #3f464d; line-height: 23px;">
+                            <p style=3D"margin: 0px 0px 10px 0px;        =
+line-height: 23px;text-align: left;"><span style=3D"color: #000000;"><str=
+ong><span style=3D"font-size: 20px;">This Weeks Challenges</span></strong=
+></span></p>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td width=3D"60">
+                                    <img src=3D"http://images.codewars.co=
+m/assets/icons/8_kyu.png" width=3D"50" height=3D"26" align=3D"none" />=C2=
+=A0</td>
+                                  <td>
+                                    <h3><a style=3D"color: #bb432c;      =
+  text-decoration: none;color: #cb3d2b; font-weight: normal; text-decorat=
+ion: none; word-wrap: break-word !important;" href=3D"http://track.mlsend=
+3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg2=
+MSZkPWM5djhzMGM=3D.ZEdjI7Bvi1bnO91rWU_FVutxnbhi1q3UlEXlXBCUsvk" data-link=
+-id=3D"105716861" target=3D"_blank">Duck Duck Goose</a></h3>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/ruby.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/javascript.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/crystal.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/python.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/php.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/coffeescript.png" width=3D"20" height=3D"20" align=3D"none" =
+/>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <p style=3D"margin: 0px 0px 10px 0px;=
+        line-height: 23px;"><strong>Task</strong>: Given an array of Play=
+er objects (an array of associative arrays in PHP) and an index (<strong>=
+1-based</strong>), return the name of the chosen Player.</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a style=3D"color: #bb432c;        te=
+xt-decoration: none;color: #cb3d2b; font-weight: normal; text-decoration:=
+ none; word-wrap: break-word !important;" href=3D"http://track.mlsend3.co=
+m/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg2MyZk=
+PXY4bTd6NWM=3D.uXHsJWBTi_izMwVM7nRY0PwDRxJQQ2eOEaIjZbrX_R0" data-link-id=3D=
+"105716863" target=3D"_blank">10XL</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881199">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 15px 50px 5px 50px; font-family: Helvetica; font-size:=
+ 14px; color: #3f464d; line-height: 23px;">
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td width=3D"60">
+                                    <img src=3D"http://images.codewars.co=
+m/assets/icons/7_kyu.png" width=3D"50" height=3D"26" align=3D"none" />=C2=
+=A0</td>
+                                  <td>
+                                    <h3><a style=3D"color: #bb432c;      =
+  text-decoration: none;color: #cb3d2b; font-weight: normal; text-decorat=
+ion: none; word-wrap: break-word !important;" href=3D"http://track.mlsend=
+3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg2=
+NSZkPXYzcDZpNGM=3D.zmIkz7WQtew6tRE1ng3NmhvOYKbUsnZ6xHcT9i26NWI" data-link=
+-id=3D"105716865" target=3D"_blank">Robotic Tattoo Removal</a></h3>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/javascript.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/java.png" width=3D"20" height=3D"20" align=3D"none" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <p style=3D"margin: 0px 0px 10px 0px;=
+        line-height: 23px;">Your task is to create a function for the <co=
+de>robot</code> function that will zap away the <code>X</code>s and repla=
+ce them with <code>*</code>s.</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a style=3D"color: #bb432c;        te=
+xt-decoration: none;color: #cb3d2b; font-weight: normal; text-decoration:=
+ none; word-wrap: break-word !important;" href=3D"http://track.mlsend3.co=
+m/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg2NyZk=
+PXQ5azl0Nmc=3D.bxN2uql2JA0KaVR22-GXolsS69OAzmSNKtFMpLBy4T4" data-link-id=3D=
+"105716867" target=3D"_blank">Peter Rhodes</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881201">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 15px 50px 5px 50px; font-family: Helvetica; font-size:=
+ 14px; color: #3f464d; line-height: 23px;">
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td width=3D"60">
+                                    <img src=3D"http://images.codewars.co=
+m/assets/icons/6_kyu.png" width=3D"50" height=3D"26" align=3D"none" />=C2=
+=A0</td>
+                                  <td>
+                                    <h3><a style=3D"color: #bb432c;      =
+  text-decoration: none;color: #cb3d2b; font-weight: normal; text-decorat=
+ion: none; word-wrap: break-word !important;" href=3D"http://track.mlsend=
+3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg2=
+OSZkPXA0bzltMWI=3D.-47nMUK9pxLTlaCV8-bGYyl0uYsyrlinZ4zIcbXlWRg" data-link=
+-id=3D"105716869" target=3D"_blank">Help Mrs Jefferson</a></h3>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/python.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/javascript.png" width=3D"20" height=3D"20" align=3D"none" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <p style=3D"margin: 0px 0px 10px 0px;=
+        line-height: 23px;">She needs to create the arrangement with <str=
+ong>the minimum amount of groups that have consecutive sizes</strong>.</p=
+>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a style=3D"color: #bb432c;        te=
+xt-decoration: none;color: #cb3d2b; font-weight: normal; text-decoration:=
+ none; word-wrap: break-word !important;" href=3D"http://track.mlsend3.co=
+m/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg3MSZk=
+PWk1ZjZjM2g=3D.R6atlxg2S4QlMiDOXB0JM_uRl-WyIWfcVFRswh_kPaQ" data-link-id=3D=
+"105716871" target=3D"_blank">raulbc777</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881203">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 15px 50px 0px 50px; font-family: Helvetica; font-size:=
+ 14px; color: #3f464d; line-height: 23px;">
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td width=3D"60">
+                                    <img src=3D"http://images.codewars.co=
+m/assets/icons/5_kyu.png" width=3D"50" height=3D"26" align=3D"none" />=C2=
+=A0</td>
+                                  <td>
+                                    <h3><a style=3D"color: #bb432c;      =
+  text-decoration: none;color: #cb3d2b; font-weight: normal; text-decorat=
+ion: none; word-wrap: break-word !important;" href=3D"http://track.mlsend=
+3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg3=
+MyZkPWszdjJ0MnI=3D.x1Siv2cwaXJw3m3x3KdCE_UO3AG9f5_F__RbrzXXc5E" data-link=
+-id=3D"105716873" target=3D"_blank">Simultaneous Equations - Three Variab=
+les</a></h3>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/javascript.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/php.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/python.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/ruby.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/cpp.png" width=3D"20" height=3D"20" align=3D"none" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <p style=3D"margin: 0px 0px 10px 0px;=
+        line-height: 23px;">We have 3 equations with 3 unknowns <code>x, =
+y, and z</code> and we are to solve for these unknowns.</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a style=3D"color: #bb432c;        te=
+xt-decoration: none;color: #cb3d2b; font-weight: normal; text-decoration:=
+ none; word-wrap: break-word !important;" href=3D"http://track.mlsend3.co=
+m/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg3NSZk=
+PWs0dDVuMmw=3D.95k-WIJ4mz8K26vkFpASuj-PdFXox7dQRoInUqw2zcA" data-link-id=3D=
+"105716875" target=3D"_blank">osofem</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881205">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 15px 50px 0px 50px; font-family: Helvetica; font-size:=
+ 14px; color: #3f464d; line-height: 23px;">
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td width=3D"60">
+                                    <img src=3D"http://images.codewars.co=
+m/assets/icons/3_kyu.png" width=3D"50" height=3D"26" align=3D"none" />=C2=
+=A0</td>
+                                  <td>
+                                    <h3><a style=3D"color: #bb432c;      =
+  text-decoration: none;color: #cb3d2b; font-weight: normal; text-decorat=
+ion: none; word-wrap: break-word !important;" href=3D"http://track.mlsend=
+3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg3=
+NyZkPXU5bzVpNXk=3D.quyG7r6IJh_VuVNgQayEDwQMoo3t9uc6Yh0c3oD8hjs" data-link=
+-id=3D"105716877" target=3D"_blank">Church Numbers - Add, Multiply, Expon=
+ents</a></h3>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/javascript.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/python.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/haskell.png" width=3D"20" height=3D"20" align=3D"none" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <p style=3D"margin: 0px 0px 10px 0px;=
+        line-height: 23px;">Implement some basic arithmetic for Church Nu=
+mbers, namely adding, multiplying, and exponentiation.=C2=A0</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a style=3D"color: #bb432c;        te=
+xt-decoration: none;color: #cb3d2b; font-weight: normal; text-decoration:=
+ none; word-wrap: break-word !important;" href=3D"http://track.mlsend3.co=
+m/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg3OSZk=
+PXk4czl3NGk=3D.fyhYzGpD2SFXYlCrUJdW05DzBtEg59Dy85CGxrhIcEU" data-link-id=3D=
+"105716879" target=3D"_blank">Azuaron</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; min-width: 640px; width: 640px;" width=3D"640" id=3D"ml=
+-block-53881207">
+                  <tr>
+                    <td>
+                      <table width=3D"640" class=3D"mlContentTable" bgcol=
+or=3D"#f5f2e6" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center" style=3D"background: #f5f2e6; width: 640px;">
+                        <tr>
+                          <td align=3D"left" class=3D"mlContentContainer"=
+ style=3D"padding: 15px 50px 0px 50px; font-family: Helvetica; font-size:=
+ 14px; color: #3f464d; line-height: 23px;">
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td width=3D"60">
+                                    <img src=3D"http://images.codewars.co=
+m/assets/icons/2_kyu.png" width=3D"50" height=3D"26" align=3D"none" />=C2=
+=A0</td>
+                                  <td>
+                                    <h3><a style=3D"color: #bb432c;      =
+  text-decoration: none;color: #cb3d2b; font-weight: normal; text-decorat=
+ion: none; word-wrap: break-word !important;" href=3D"http://track.mlsend=
+3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg4=
+MSZkPXA0ZjRtNXA=3D.jVsZBw0w69Y45l24kuvI_2L4voOWf3OnsyaS8n-L_xs" data-link=
+-id=3D"105716881" target=3D"_blank">Binary Genetic Algorithms</a></h3>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/javascript.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/coffeescript.png" width=3D"20" height=3D"20" align=3D"none" =
+/>
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/ruby.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/java.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/csharp.png" width=3D"20" height=3D"20" align=3D"none" />
+                                    <img src=3D"https://www.codewars.com/=
+assets/icons/typescript.png" width=3D"20" height=3D"20" align=3D"none" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <p style=3D"margin: 0px 0px 10px 0px;=
+        line-height: 23px;">=C2=A0You will be given an outline of a Genet=
+icAlgorithm class with a few methods.</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a style=3D"color: #bb432c;        te=
+xt-decoration: none;color: #cb3d2b; font-weight: normal; text-decoration:=
+ none; word-wrap: break-word !important;" href=3D"http://track.mlsend3.co=
+m/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg4MyZk=
+PWs5ZjhwMmw=3D.AvojPRxO_hM3Mhp3lidQcukSWiYoFEr4MIxb9988Puo" data-link-id=3D=
+"105716883" target=3D"_blank">eugene-bulkin</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <table align=3D"center" border=3D"0" bgcolor=3D"#f5f2e6" =
+class=3D"mlContentTable" cellspacing=3D"0" cellpadding=3D"0" style=3D"bac=
+kground: #f5f2e6; width: 640px;" width=3D"640">
+                  <tr>
+                    <td style=3D"min-width: 640px; width: 640px;" class=3D=
+"mlContentTable" height=3D"35" width=3D"640"></td>
+                  </tr>
+                </table>
+                <table align=3D"center" width=3D"640" class=3D"mlContentT=
+able" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"min-width=
+: 640px; width: 640px;">
+                  <tr>
+                    <td class=3D"mlContentTable">
+                      <table width=3D"640" class=3D"mlContentTable" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center" style=3D"wid=
+th: 640px;">
+                        <tr>
+                          <td class=3D"mlContentOuter mlBottomContentOute=
+r" style=3D"padding: 30px 50px 30px 50px; width: 540px;">
+                            <table width=3D"240" class=3D"mlContentBlock =
+marginBottom" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"l=
+eft" style=3D"width: 240px;">
+                              <tr>
+                                <td align=3D"left" class=3D"alignCenter" =
+style=3D"padding: 0px 0px 0px 0px; vertical-align: middle; font-family: H=
+elvetica; font-size: 11px; color: #95A5A6;">
+                                  <p style=3D"margin: 0px 0px 5px 0px;   =
+     padding: 0px;        line-height: 150%;font-family: Helvetica; font-=
+weight: bold; font-size: 13px; color: #95A5A6;">Codewars</p>
+                                  <p style=3D"margin: 0px 0px 5px 0px;   =
+     padding: 0px;        line-height: 150%;">1601 Cloverfield Blvd.=C2=A0=
+</p>
+                                  <p style=3D"margin: 0px 0px 5px 0px;   =
+     padding: 0px;        line-height: 150%;">Santa Monica, CA 90401</p>
+                                  <p style=3D"margin: 0px 0px 5px 0px;   =
+     padding: 0px;        line-height: 150%;">www.codewars.com</p>
+                                  <p style=3D"margin: 0px 0px 5px 0px;   =
+     padding: 0px;        line-height: 150%;">=C2=A0</p>
+                                </td>
+                              </tr>
+                            </table>
+                            <table width=3D"280" class=3D"mlContentBlock"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"right" style=3D=
+"width: 280px;">
+                              <tr>
+                                <td class=3D"alignCenter" style=3D"text-a=
+lign: right; padding: 0px 0px 15px 0px; font-family: Helvetica; font-size=
+: 11px; color: #95A5A6;">
+                                  <table align=3D"right" class=3D"mlDispl=
+ayInline" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                    <tr>
+                                      <td class=3D"" width=3D"10"></td>
+                                      <td class=3D"">
+                                        <!--[if !mso]>
+                                          <!-- -->
+                                          <a style=3D"color: #95A5A6;bord=
+er: none; display: inline-block; text-decoration: none; background-image:=
+ url('https://bucket.mlcdn.com/images/icons/share-icons/like.png'); backg=
+round-color: #95A5A6; padding: 0px 10px 0px 25px; vertical-align: middle;=
+ height: 28px; line-height: 28px; border-radius: 6px; font-size: 11px; co=
+lor: #FFFFFF;" href=3D"http://track.mlsend3.com/link/c/YT02NDU3OTEwNzE3ND=
+UzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg4NSZkPWc4ZDlnMXE=3D.UEN37r9UKkYI=
+4XgxeX3_P4_qv05ZsMPa050YXPLA9AY" data-link-id=3D"105716885" target=3D"_bl=
+ank" rel=3D"">SHARE</a>
+                                        <!--<![endif]-->
+                                        <!--[if mso]>
+                                          <v:roundrect xmlns:v=3D"urn:sch=
+emas-microsoft-com:vml" href=3D"http://track.mlsend3.com/link/c/YT02NDU3O=
+TEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg4NyZkPWk0ZDZkNmk=3D.tCr=
+wdzZGB57U0ZqMl0w4gp6-7dgHpSLH73Jn4AL6nUE" data-link-id=3D"105716887" styl=
+e=3D"width:63px; height: 28px;" arcsize=3D"13%" fill=3D"t" strokecolor=3D=
+"#95A5A6" strokeweight=3D"1px">
+                                            <v:fill type=3D"tile" src=3D"=
+https://bucket.mlcdn.com/images/icons/share-icons/like.png" color=3D"#95A=
+5A6"></v:fill>
+                                            <v:shadow on=3D"f"></v:shadow=
+>
+                                            <v:textbox style=3D"mso-fit-s=
+hape-to-text:t" inset=3D"20px,2px,0px,2px">
+                                              <center style=3D"font-size:=
+11px;line-height:20px;color:#FFFFFF;font-family:Arial;mso-line-height-rul=
+e:exactly;mso-text-raise:3px">SHARE</center>
+                                            </v:textbox>
+                                          </v:roundrect>
+                                        <![endif]-->
+                                      </td>
+                                      <td class=3D"" width=3D"10"></td>
+                                      <td class=3D"">
+                                        <!--[if !mso]>
+                                          <!-- -->
+                                          <a style=3D"color: #95A5A6;bord=
+er: none; display: inline-block; text-decoration: none; background-image:=
+ url('https://bucket.mlcdn.com/images/icons/share-icons/tweet.png'); back=
+ground-color: #95A5A6; padding: 0px 10px 0px 32px; vertical-align: middle=
+; height: 28px; line-height: 28px; border-radius: 6px; font-size: 11px; c=
+olor: #FFFFFF;" href=3D"http://track.mlsend3.com/link/c/YT02NDU3OTEwNzE3N=
+DUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg4OSZkPW82aTB1MW0=3D.TgKsoZk4nDq=
+JKl3CpMamHf1wcOFtikNExlb8aVrSYs4" data-link-id=3D"105716889" target=3D"_b=
+lank" rel=3D"">TWEET</a>
+                                        <!--<![endif]-->
+                                        <!--[if mso]>
+                                          <v:roundrect xmlns:v=3D"urn:sch=
+emas-microsoft-com:vml" href=3D"http://track.mlsend3.com/link/c/YT02NDU3O=
+TEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg5MSZkPXAxcjRqM2s=3D.CXM=
+bUJ9UaMJk03Nma2gyyAeHuykroRdGXZyIl24pxRQ" data-link-id=3D"105716891" styl=
+e=3D"width:85px; height: 28px;" arcsize=3D"13%" fill=3D"t" strokecolor=3D=
+"#95A5A6" strokeweight=3D"1px">
+                                            <v:fill type=3D"tile" src=3D"=
+https://bucket.mlcdn.com/images/icons/share-icons/tweet.png" color=3D"#95=
+A5A6"></v:fill>
+                                            <v:shadow on=3D"f"></v:shadow=
+>
+                                            <v:textbox style=3D"mso-fit-s=
+hape-to-text:t" inset=3D"14px,2px,0px,2px">
+                                              <center style=3D"font-size:=
+11px;line-height:20px;color:#FFFFFF;font-family:Arial;mso-line-height-rul=
+e:exactly;mso-text-raise:3px">TWEET</center>
+                                            </v:textbox>
+                                          </v:roundrect>
+                                        <![endif]-->
+                                      </td>
+                                      <td class=3D"" width=3D"10"></td>
+                                      <td class=3D"">
+                                        <!--[if !mso]>
+                                          <!-- -->
+                                          <a style=3D"color: #95A5A6;bord=
+er: none; display: inline-block; text-decoration: none; background-image:=
+ url('https://bucket.mlcdn.com/images/icons/share-icons/forward.png'); ba=
+ckground-color: #95A5A6; padding: 0px 10px 0px 32px; vertical-align: midd=
+le; height: 28px; line-height: 28px; border-radius: 6px; font-size: 11px;=
+ color: #FFFFFF;" href=3D"http://track.mlsend3.com/link/c/YT02NDU3OTEwNzE=
+3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg5MyZkPWU1azFvNXA=3D.2q8vJ9iuU=
+949lWdP1mNbQnLmROb14JtK2hidBbel-Fk" data-link-id=3D"105716893" target=3D"=
+_blank" rel=3D"">FORWARD</a>
+                                        <!--<![endif]-->
+                                        <!--[if mso]>
+                                          <v:roundrect xmlns:v=3D"urn:sch=
+emas-microsoft-com:vml" href=3D"http://track.mlsend3.com/link/c/YT02NDU3O=
+TEwNzE3NDUzNDczMjImYz1tMXI1JmU9MTkyOCZiPTEwNTcxNjg5NSZkPW4wcjJjM3Y=3D.A28=
+Eh8CKCZrNd3xpYSq7E0KSohTE8yhdyaL-ukMVZoI" data-link-id=3D"105716895" styl=
+e=3D"width:85px; height: 28px;" arcsize=3D"13%" fill=3D"t" strokecolor=3D=
+"#95A5A6" strokeweight=3D"1px">
+                                            <v:fill type=3D"tile" src=3D"=
+https://bucket.mlcdn.com/images/icons/share-icons/forward.png" color=3D"#=
+95A5A6"></v:fill>
+                                            <v:shadow on=3D"f"></v:shadow=
+>
+                                            <v:textbox style=3D"mso-fit-s=
+hape-to-text:t" inset=3D"14px,2px,0px,2px">
+                                              <center style=3D"font-size:=
+11px;line-height:20px;color:#FFFFFF;font-family:Arial;mso-line-height-rul=
+e:exactly;mso-text-raise:3px">FORWARD</center>
+                                            </v:textbox>
+                                          </v:roundrect>
+                                        <![endif]-->
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align=3D"right" class=3D"alignCenter"=
+ style=3D"padding: 0px 0px 0px 0px; font-family: Helvetica; font-size: 11=
+px; color: #95A5A6;">
+                                  <p style=3D"margin: 0px 0px 5px 0px;   =
+     padding: 0px;        line-height: 150%;">You received this email bec=
+ause you signed up on=C2=A0Codewars.com</p>
+                                  <p style=3D"margin: 0px 0px 5px 0px;   =
+     padding: 0px;        line-height: 150%;padding: 0px; margin: 0px;"><=
+a style=3D"color: #95A5A6;text-decoration: underline; color: #95A5A6;" hr=
+ef=3D"http://track.mlsend3.com/link/c/YT02NDU3OTEwNzE3NDUzNDczMjImYz1tMXI=
+1JmU9MTkyOCZiPTEwNTcxNjg5OSZkPXEzdTVoNmQ=3D.wnCwW-DJgjYGzWMKQ5ezm0EF-mXpu=
+2e0MZNTfy1aGmA"><strong>Unsubscribe</strong></a></p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- Content ends here -->
+                <!--[if !mso]>
+                  <!-- -->
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    <!--<![endif]-->
+  </body>
+
+</html>
+
+
+
+--b1_064a60e49084168b625fbd733804849d--
+
+

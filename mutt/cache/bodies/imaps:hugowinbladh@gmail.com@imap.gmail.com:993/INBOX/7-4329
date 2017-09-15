@@ -1,0 +1,461 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.15 with SMTP id o15csp175087ioe;
+        Mon, 22 May 2017 07:57:43 -0700 (PDT)
+X-Received: by 10.37.221.197 with SMTP id u188mr18301202ybg.51.1495465063469;
+        Mon, 22 May 2017 07:57:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495465063; cv=none;
+        d=google.com; s=arc-20160816;
+        b=frmNPPM2/Qr+bhTO5JZtHBkCmIFfxvqMGKunoUD/+WfJtzMTUW6tlLu5Voiba6m5bO
+         w1S0gWpcSvwnij4Bp00uPRq3G0jf25EkOJ79BtjbSfmf1PqVIURXXWqOcgA1BBQH/DQX
+         BlYwgFznU17LlCrxyPubDaKcR8mv9Zw7OBMRvMfzKksbYNIRWenGggnQv2GiPacq7M5A
+         U6rZjbXucbzg0b3VzuMYofFAzvsYIQTUPjkk/cQTZdxfjEpINEZsxFIhre577noABsyV
+         lLQgHvo27loNrpeSYdD8/IbxkDbK1xQK2IKsKwLSVE/ZptRpddXClbY32WFJpp0OQwYO
+         Po0A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=TI++jfZRvq24iTAwmdvzroI76QztumlsQil4hAz1i10=;
+        b=tCRZDHyV/2/Y6KWrEU/FMWxgOiMcYl1n0LDRLO20ItoTHs0ID6+rtZDAucCD9R9fkL
+         iHiDTHPLmLAhdpGiTgsNp59nSUTMuFmE7yNagXmx78/WE0wasenewFSAcfiBS1ook3//
+         Nk+vFOtEHYhrs6V5TpOjC6uBUUQcVCpRSPBtw7CNubkfRvQJXjlcKggUtSqGdugfN1ea
+         J2Pc/xAePZJxPJC93bNiYV7vPQbS1mdav4pw/XodccInuXO0E1dwvlhejMxvlA/rafqY
+         WMIXsPw2zNPDbHQWauotBj1KwV+vomreF5n+OszQcR3cu8GIxW2NXAjBCdRSQNdOCZBH
+         Ajjg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com;
+       dkim=pass header.i=@gmail.mcsv.net;
+       spf=pass (google.com: domain of bounce-mc.us11_46716125.903601-hugowinbladh=gmail.com@mcmail.github.com designates 198.2.131.14 as permitted sender) smtp.mailfrom=bounce-mc.us11_46716125.903601-hugowinbladh=gmail.com@mcmail.github.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=github.com
+Return-Path: <bounce-mc.us11_46716125.903601-hugowinbladh=gmail.com@mcmail.github.com>
+Received: from mcmail.github.com (mail14.atl111.rsgsv.net. [198.2.131.14])
+        by mx.google.com with ESMTPS id t16si5995784ywe.65.2017.05.22.07.57.43
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 22 May 2017 07:57:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-mc.us11_46716125.903601-hugowinbladh=gmail.com@mcmail.github.com designates 198.2.131.14 as permitted sender) client-ip=198.2.131.14;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com;
+       dkim=pass header.i=@gmail.mcsv.net;
+       spf=pass (google.com: domain of bounce-mc.us11_46716125.903601-hugowinbladh=gmail.com@mcmail.github.com designates 198.2.131.14 as permitted sender) smtp.mailfrom=bounce-mc.us11_46716125.903601-hugowinbladh=gmail.com@mcmail.github.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=github.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k1; d=github.com;
+ h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:
+ Content-Type:MIME-Version; i=no-reply@github.com;
+ bh=GHk/V763/visVD8uAJYD0hZegrU=;
+ b=VjdXhNc9as33HZNwMtyqS40dpY+NFk9fEQqBzXVlSYkLopSCMteAc9GryRa0uOVWrhkpFJPv59SM
+   6HGwXcjaoZMSZzh/Z6QJClJJSz0lg0VijPAaRefhW6ATYTocMOmH+yTJuZUxnT7YQVigaYUDdBxa
+   sbM7t+t0+N0sUkOG+qc=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k1; d=gmail.mcsv.net;
+ h=Subject:From:Reply-To:To:Date:Message-ID:Feedback-ID:List-ID:
+ List-Unsubscribe:Content-Type:MIME-Version;
+ bh=GHk/V763/visVD8uAJYD0hZegrU=;
+ b=IcMpAoZDLqS7thSJBMtj+FK27LLIZKXjRU285l59cdTiWyDLvWHtCNHj5QBpSOJpWykQvOS8tUH3
+   DsZg5VtHo2Wue5FZ6SOtuBIFk+wZUdTLMac3roQWPkHghNyWlMFahxqKMQJPfVT/StCkGxNCa8dR
+   DvALyDlHs6UvMtR180E=
+Received: from (127.0.0.1) by mcmail.github.com id h4bu6e2akecm for <hugowinbladh@gmail.com>; Mon, 22 May 2017 13:46:52 +0000 (envelope-from <bounce-mc.us11_46716125.903601-hugowinbladh=gmail.com@mcmail.github.com>)
+Subject: =?utf-8?Q?New=20tools=20to=20extend=20your=20workflow?=
+From: =?utf-8?Q?GitHub?= <no-reply@github.com>
+Reply-To: =?utf-8?Q?GitHub?= <no-reply@github.com>
+To: <hugowinbladh@gmail.com>
+Date: Mon, 22 May 2017 13:46:52 +0000
+Message-ID: <9d7ced8c4bbd6c2f238673f0f.329ddc4753.20170522134622.c628d00b5c.cbb81216@mcmail.github.com>
+X-Mailer: MailChimp Mailer - **CIDc628d00b5c329ddc4753**
+X-Campaign: mailchimp9d7ced8c4bbd6c2f238673f0f.c628d00b5c
+X-campaignid: mailchimp9d7ced8c4bbd6c2f238673f0f.c628d00b5c
+X-Report-Abuse: Please report abuse for this campaign here: http://www.mailchimp.com/abuse/abuse.phtml?u=9d7ced8c4bbd6c2f238673f0f&id=c628d00b5c&e=329ddc4753
+X-MC-User: 9d7ced8c4bbd6c2f238673f0f
+Feedback-ID: 46716125:46716125.903601:us11:mc
+List-ID: 9d7ced8c4bbd6c2f238673f0fmc list <9d7ced8c4bbd6c2f238673f0f.364325.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <http://github.us11.list-manage1.com/unsubscribe?u=9d7ced8c4bbd6c2f238673f0f&id=056c036db9&e=329ddc4753&c=c628d00b5c>, <mailto:unsubscribe-mc.us11_9d7ced8c4bbd6c2f238673f0f.c628d00b5c-329ddc4753@mailin1.us2.mcsv.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+x-mcda: FALSE
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_1905723166"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_1905723166
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+** Extend your workflow with GitHub
+------------------------------------------------------------
+
+Today=2C we=E2=80=99re introducing GitHub Marketplace and a new API powere=
+d by GraphQL=2C making it easier than ever to customize your workflow.
+------------------------------------------------------------
+Marketplace
+
+** GitHub Marketplace
+------------------------------------------------------------
+Find and buy apps for every step of the development process without settin=
+g up multiple accounts or payment methods.
+Browse Marketplace (https://github.com/marketplace?utm_source=3Dannounceme=
+nt&utm_medium=3Demail&utm_campaign=3Dww-mktplace-20170522&utm_content=3Dus=
+ers)
+------------------------------------------------------------
+
+** GitHub GraphQL API
+------------------------------------------------------------
+
+Create your own tools with greater access to data than ever before using t=
+he same API that we use to build GitHub.
+
+Explore the API (https://github.com/updates?utm_source=3Dannouncement&utm_=
+medium=3Demail&utm_campaign=3Dww-mktplace-20170522&utm_content=3Dusers#api=
+)
+------------------------------------------------------------
+
+** GitHub Apps
+------------------------------------------------------------
+
+GitHub Apps are a new way to integrate with GitHub. With granular API perm=
+issions and built-in webhooks=2C you have more control over what you build=
+=2E
+Learn more (https://github.com/updates?utm_source=3Dannouncement&utm_mediu=
+m=3Demail&utm_campaign=3Dww-mktplace-20170522&utm_content=3Dusers#apps)
+------------------------------------------------------------
+
+See all recent releases (https://github.com/updates?utm_source=3Dannouncem=
+ent&utm_medium=3Demail&utm_campaign=3Dww-mktplace-20170522&utm_content=3Du=
+sers)
+------------------------------------------------------------
+
+Unsubscribe (http://github.us11.list-manage1.com/unsubscribe?u=3D9d7ced8c4=
+bbd6c2f238673f0f&id=3D056c036db9&e=3D329ddc4753&c=3Dc628d00b5c) =C2=B7 Email=
+ preferences (https://github.com/settings/emails?utm_source=3Dannouncement=
+&utm_medium=3Demail&utm_campaign=3Dww-mktplace-20170522&utm_content=3Duser=
+s) =C2=B7 Terms (https://help.github.com/articles/github-terms-of-service/=
+?utm_source=3Dannouncement&utm_medium=3Demail&utm_campaign=3Dww-mktplace-2=
+0170522&utm_content=3Dusers) =C2=B7 Privacy (https://help.github.com/artic=
+les/github-privacy-statement/?utm_source=3Dannouncement&utm_medium=3Demail=
+&utm_campaign=3Dww-mktplace-20170522&utm_content=3Dusers) =C2=B7 Sign into=
+ GitHub (https://github.com/login?utm_source=3Dannouncement&utm_medium=3De=
+mail&utm_campaign=3Dww-mktplace-20170522&utm_content=3Dusers)
+
+GitHub=2C Inc.
+88 Colin P Kelly Jr St.
+San Francisco=2C CA 94107
+--_----------=_MCPart_1905723166
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-=
+8">
+    <title>Extend your workflow with GitHub</title>
+
+  <style type=3D"text/css">
+=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] h1=2Ctable[class=3Dbody] h2=2Ctable[class=3Db=
+ody] h3=2Ctable[class=3Dbody] h4{
+=09=09=09font-weight:600 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] h1{
+=09=09=09font-size:24px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] h2{
+=09=09=09font-size:20px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] h3{
+=09=09=09font-size:16px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] .lead{
+=09=09=09font-size:16px !important;
+=09=09=09line-height:24px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] .container{
+=09=09=09padding:20px !important;
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] .btn table{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] .btn a{
+=09=09=09display:block !important;
+=09=09}
+
+}=09@media only screen and (max-width: 620px){
+=09=09table[class=3Dbody] .header-padded=2Ctable[class=3Dbody] .body-pad=
+ded{
+=09=09=09padding-left:0 !important;
+=09=09=09padding-right:0 !important;
+=09=09}
+
+}</style></head>
+  <body style=3D"font-family: -apple-system=2C BlinkMacSystemFont=2C 'Sego=
+e UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color Emoji'=2C 'Segoe=
+ UI Emoji'=2C 'Segoe UI Symbol'; font-size: 16px; height: 100% !important;=
+ line-height: 1.6em; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -w=
+ebkit-text-size-adjust: 100%; width: 100% !important; background-color: #f=
+ff;">
+    <table class=3D"body" style=3D"border-collapse:separate !important;wid=
+th:100%;background-color:#fff;" width=3D"100%" bgcolor=3D"#ffffff">
+      <tr>
+        <td style=3D"font-family:'-apple-system'=2C BlinkMacSystemFont=2C=
+ 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color Emoji'=2C=
+ 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;vertical-align:top;"=
+ valign=3D"top">
+        </td>
+        <td class=3D"container" style=3D"font-family:'-apple-system'=2C Bl=
+inkMacSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'App=
+le Color Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;ve=
+rtical-align:top;display:block;margin:0 auto !important;max-width:580px;pa=
+dding:30px;width:580px;" width=3D"580" valign=3D"top">
+          <div class=3D"content" style=3D"display:block;margin:0 auto;max-=
+width:580px;">
+            <span class=3D"preheader" style=3D"color: transparent; display=
+: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidd=
+en; mso-hide: all; visibility: hidden; width: 0;">Today=2C we=E2=80=99re i=
+ntroducing GitHub Marketplace and a new API powered by GraphQL=2C making i=
+t easier than ever to customize your workflow.</span>
+            <a href=3D"http://github.us11.list-manage1.com/track/click?u=
+=3D9d7ced8c4bbd6c2f238673f0f&id=3Dde699eeb24&e=3D329ddc4753" style=3D"col=
+or:#0366d6;text-decoration:underline;">
+              <img src=3D"https://gallery.mailchimp.com/9d7ced8c4bbd6c2f23=
+8673f0f/images/7ea14be3-b833-446c-9b38-9b8903663f4c.png" width=3D"580" alt=
+=3D"Extend your workflow with GitHub" class=3D"hero-img rounded" style=3D"=
+-ms-interpolation-mode: bicubic; max-width: 100%; display: block; height:=
+ auto; margin-bottom: 20px; border-radius: 4px;"></a>
+              <h1 style=3D"color:#111111 !important;font-family:'-apple-sy=
+stem'=2C BlinkMacSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-se=
+rif=2C 'Apple Color Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-w=
+eight:500;line-height:1.25;margin:0 0 10px;font-size:30px;">Extend your wo=
+rkflow with=C2=A0GitHub</h1>
+              <p class=3D"lead" style=3D"font-family:'-apple-system'=2C Bl=
+inkMacSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'App=
+le Color Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-weight:norma=
+l;margin:0;margin-bottom:15px;font-size:20px;line-height:30px;">
+                Today=2C we=E2=80=99re introducing GitHub Marketplace and=
+ a new API powered by GraphQL=2C making it easier than ever to customize y=
+our=C2=A0workflow.
+              </p>
+              <hr style=3D"height:0;overflow:visible;margin-top:30px;margi=
+n-bottom:30px;border:0;border-top:1px solid #eee;"><img src=3D"https://gal=
+lery.mailchimp.com/9d7ced8c4bbd6c2f238673f0f/images/86548912-8f02-4d41-9be=
+a-a7af5895d5d1.png" alt=3D"Marketplace" class=3D"section-icon" style=3D"-m=
+s-interpolation-mode: bicubic; max-width: 100%; height: 48px; margin: 10px=
+ 0 5px;">
+              <h2 style=3D"color:#111111 !important;font-family:'-apple-sy=
+stem'=2C BlinkMacSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-se=
+rif=2C 'Apple Color Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-w=
+eight:500;line-height:1.25;margin:0 0 10px;font-size:24px;">GitHub Marketp=
+lace</h2>
+              <p style=3D"font-family:'-apple-system'=2C BlinkMacSystemFon=
+t=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color Emoji'=
+=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;font-weight:norma=
+l;margin:0;margin-bottom:15px;">
+                Find and buy apps for every step of the development proces=
+s without setting up multiple accounts or payment methods.
+              </p>
+              <table class=3D"btn btn-primary" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"border-collapse:separate !important;width:100%;" width=
+=3D"100%">
+                <tr>
+                  <td style=3D"font-family:'-apple-system'=2C BlinkMacSyst=
+emFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color E=
+moji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;vertical-ali=
+gn:top;" valign=3D"top">
+                    <table cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse:separate !important;width:auto;">
+                      <tr>
+                        <td style=3D"font-family:'-apple-system'=2C BlinkM=
+acSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple C=
+olor Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;vertic=
+al-align:top;background-color:#0366d6;border-radius:5px;text-align:center;=
+" valign=3D"top" bgcolor=3D"#0366d6" align=3D"center">
+                          <a href=3D"http://github.us11.list-manage2.com/t=
+rack/click?u=3D9d7ced8c4bbd6c2f238673f0f&id=3D79a96d26ea&e=3D329ddc4753"=
+ style=3D"border-color:#0366d6;text-decoration:none;background-color:#0366=
+d6;border:solid 1px #0366d6;border-radius:5px;color:#ffffff;display:inline=
+-block;font-size:16px;font-weight:bold;margin:0;padding:10px 20px;">Browse=
+ Marketplace</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <hr style=3D"height:0;overflow:visible;margin-top:30px;margi=
+n-bottom:30px;border:0;border-top:1px solid #eee;"><img src=3D"https://gal=
+lery.mailchimp.com/9d7ced8c4bbd6c2f238673f0f/images/22bff28c-c869-4239-9a1=
+e-eff727887a2d.png" alt=3D"Marketplace" class=3D"section-icon" style=3D"-m=
+s-interpolation-mode: bicubic; max-width: 100%; height: 48px; margin: 10px=
+ 0 5px;">
+              <h2 style=3D"color:#111111 !important;font-family:'-apple-sy=
+stem'=2C BlinkMacSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-se=
+rif=2C 'Apple Color Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-w=
+eight:500;line-height:1.25;margin:0 0 10px;font-size:24px;">GitHub GraphQL=
+ API</h2>
+              <p style=3D"font-family:'-apple-system'=2C BlinkMacSystemFon=
+t=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color Emoji'=
+=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;font-weight:norma=
+l;margin:0;margin-bottom:15px;">
+                Create your own tools with greater access to data than eve=
+r before using the same API that we use to build GitHub.
+              </p>
+              <p style=3D"font-family:'-apple-system'=2C BlinkMacSystemFon=
+t=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color Emoji'=
+=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;font-weight:norma=
+l;margin:0;margin-bottom:15px;">
+              </p>
+              <table class=3D"btn btn-secondary" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse:separate !important;width:100%;" width=
+=3D"100%">
+                <tr>
+                  <td style=3D"font-family:'-apple-system'=2C BlinkMacSyst=
+emFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color E=
+moji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;vertical-ali=
+gn:top;" valign=3D"top">
+                    <table cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse:separate !important;width:auto;">
+                      <tr>
+                        <td style=3D"font-family:'-apple-system'=2C BlinkM=
+acSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple C=
+olor Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;vertic=
+al-align:top;background-color:#fff;border-radius:5px;text-align:center;" v=
+align=3D"top" bgcolor=3D"#ffffff" align=3D"center">
+                          <a href=3D"http://github.us11.list-manage1.com/t=
+rack/click?u=3D9d7ced8c4bbd6c2f238673f0f&id=3D354b1bfa30&e=3D329ddc4753"=
+ style=3D"border-color:#ddd;text-decoration:none;background-color:#fff;bor=
+der:solid 1px #0366d6;border-radius:5px;color:#0366d6;display:inline-block=
+;font-size:16px;font-weight:bold;margin:0;padding:10px 20px;">Explore the=
+ API</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <hr style=3D"height:0;overflow:visible;margin-top:30px;margi=
+n-bottom:30px;border:0;border-top:1px solid #eee;"><img src=3D"https://gal=
+lery.mailchimp.com/9d7ced8c4bbd6c2f238673f0f/images/b22f1770-b8a2-4b10-a15=
+b-6dbb430d3f8a.png" alt=3D"Marketplace" class=3D"section-icon" style=3D"-m=
+s-interpolation-mode: bicubic; max-width: 100%; height: 48px; margin: 10px=
+ 0 5px;">
+              <h2 style=3D"color:#111111 !important;font-family:'-apple-sy=
+stem'=2C BlinkMacSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-se=
+rif=2C 'Apple Color Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-w=
+eight:500;line-height:1.25;margin:0 0 10px;font-size:24px;">GitHub Apps</h=
+2>
+              <p style=3D"font-family:'-apple-system'=2C BlinkMacSystemFon=
+t=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color Emoji'=
+=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;font-weight:norma=
+l;margin:0;margin-bottom:15px;">
+                GitHub Apps are a new way to integrate with GitHub. With g=
+ranular API permissions and built-in webhooks=2C you have more control ove=
+r what you build.
+              </p>
+              <table class=3D"btn btn-secondary" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border-collapse:separate !important;width:100%;" width=
+=3D"100%">
+                <tr>
+                  <td style=3D"font-family:'-apple-system'=2C BlinkMacSyst=
+emFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color E=
+moji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;vertical-ali=
+gn:top;" valign=3D"top">
+                    <table cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse:separate !important;width:auto;">
+                      <tr>
+                        <td style=3D"font-family:'-apple-system'=2C BlinkM=
+acSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple C=
+olor Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;vertic=
+al-align:top;background-color:#fff;border-radius:5px;text-align:center;" v=
+align=3D"top" bgcolor=3D"#ffffff" align=3D"center">
+                          <a href=3D"http://github.us11.list-manage1.com/t=
+rack/click?u=3D9d7ced8c4bbd6c2f238673f0f&id=3D49be361cf1&e=3D329ddc4753"=
+ style=3D"border-color:#ddd;text-decoration:none;background-color:#fff;bor=
+der:solid 1px #0366d6;border-radius:5px;color:#0366d6;display:inline-block=
+;font-size:16px;font-weight:bold;margin:0;padding:10px 20px;">Learn more</=
+a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <hr style=3D"height:0;overflow:visible;margin-top:30px;margi=
+n-bottom:30px;border:0;border-top:1px solid #eee;">
+              <p style=3D"font-family:'-apple-system'=2C BlinkMacSystemFon=
+t=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color Emoji'=
+=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;font-weight:norma=
+l;margin:0;margin-bottom:15px;">
+                <a href=3D"http://github.us11.list-manage.com/track/click?=
+u=3D9d7ced8c4bbd6c2f238673f0f&id=3Dfc45aa126c&e=3D329ddc4753" style=3D"co=
+lor:#0366d6;text-decoration:underline;">See all recent releases</a>
+              </p>
+              <div class=3D"footer" style=3D"clear:both;width:100%;">
+                <hr class=3D"footer-hr" style=3D"height:0;overflow:visible=
+;margin-top:30px;border:0;border-top:1px solid #eee;color:#999999;font-siz=
+e:12px;line-height:18px;margin-bottom:30px;">
+                <div class=3D"footer-links" style=3D"color:#999999;font-si=
+ze:12px;line-height:18px;">
+                  <p class=3D"footer-text" style=3D"font-family:'-apple-sy=
+stem'=2C BlinkMacSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-se=
+rif=2C 'Apple Color Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-w=
+eight:normal;margin:0;margin-bottom:15px;color:#999999;font-size:12px;line=
+-height:18px;">
+                    <a href=3D"http://github.us11.list-manage1.com/unsubsc=
+ribe?u=3D9d7ced8c4bbd6c2f238673f0f&id=3D056c036db9&e=3D329ddc4753&c=3Dc628d0=
+0b5c" style=3D"color:#999999;font-size:12px;line-height:18px;text-decorati=
+on:none;">Unsubscribe</a> =C2=B7
+                      <a href=3D"http://github.us11.list-manage1.com/track=
+/click?u=3D9d7ced8c4bbd6c2f238673f0f&id=3Deb33751865&e=3D329ddc4753" styl=
+e=3D"color:#999999;font-size:12px;line-height:18px;text-decoration:none;">=
+Email preferences</a> =C2=B7
+                        <a href=3D"http://github.us11.list-manage1.com/tra=
+ck/click?u=3D9d7ced8c4bbd6c2f238673f0f&id=3D0d8e4facf5&e=3D329ddc4753" st=
+yle=3D"color:#999999;font-size:12px;line-height:18px;text-decoration:none;=
+">Terms</a> =C2=B7
+                          <a href=3D"http://github.us11.list-manage.com/tr=
+ack/click?u=3D9d7ced8c4bbd6c2f238673f0f&id=3Dcd420be20d&e=3D329ddc4753" s=
+tyle=3D"color:#999999;font-size:12px;line-height:18px;text-decoration:none=
+;">Privacy</a> =C2=B7
+                            <a href=3D"http://github.us11.list-manage.com/=
+track/click?u=3D9d7ced8c4bbd6c2f238673f0f&id=3D24b9929971&e=3D329ddc4753"=
+ style=3D"color:#999999;font-size:12px;line-height:18px;text-decoration:no=
+ne;">Sign into GitHub</a>
+                          </p>
+                        </div>
+                        <p class=3D"footer-text" style=3D"font-family:'-ap=
+ple-system'=2C BlinkMacSystemFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C s=
+ans-serif=2C 'Apple Color Emoji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';=
+font-weight:normal;margin:0;margin-bottom:15px;color:#999999;font-size:12p=
+x;line-height:18px;">GitHub=2C Inc.<br style=3D"color:#999999;font-size:12=
+px;line-height:18px;"> 88 Colin P Kelly Jr St.<br style=3D"color:#999999;f=
+ont-size:12px;line-height:18px;"> San Francisco=2C CA 94107</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td style=3D"font-family:'-apple-system'=2C BlinkMacSyst=
+emFont=2C 'Segoe UI'=2C Helvetica=2C Arial=2C sans-serif=2C 'Apple Color E=
+moji'=2C 'Segoe UI Emoji'=2C 'Segoe UI Symbol';font-size:16px;vertical-ali=
+gn:top;" valign=3D"top">
+                  </td>
+                </tr>
+              </table>
+            <img src=3D"http://github.us11.list-manage.com/track/open.php?=
+u=3D9d7ced8c4bbd6c2f238673f0f&id=3Dc628d00b5c&e=3D329ddc4753" height=3D"1=
+" width=3D"1"></body>
+</html>
+--_----------=_MCPart_1905723166--

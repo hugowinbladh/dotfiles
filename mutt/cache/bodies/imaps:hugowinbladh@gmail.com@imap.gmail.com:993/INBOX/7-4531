@@ -1,0 +1,653 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.191.133 with SMTP id p127csp4805152iof;
+        Tue, 1 Aug 2017 07:27:27 -0700 (PDT)
+X-Received: by 10.99.9.69 with SMTP id 66mr18856403pgj.178.1501597647901;
+        Tue, 01 Aug 2017 07:27:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1501597647; cv=none;
+        d=google.com; s=arc-20160816;
+        b=y9D+auVsrriaR6Avjh2ktKnqWW0nhAVDeKA1RAEazGBKJpD+Gfk9R0UcPiG7t5bFjo
+         G81ZH7U9yJ4YLOQYtxj0kx04ArG0afGwG0K8xTaWgHgznD8qDKkGuPZBn8aa82sq78Dp
+         jEpGdyfJHlhhhf2+FspoZ/GUwazPxO9P2dvhjFsdFG77b0TMKjKwnCyMUjJYOjSyrv5H
+         8PC19qaacsy24G/TJ4y63z8aO9O60zAgWHTPTj8xLLJvQ6oABzjARD3unW6cuTBFfuCN
+         /qLxIxjmQZEHPRgbE9doPFllGle4JONE2NfJcLAGN5ZIY+1PvsmcAnzGMqZLWDP73REz
+         0y1g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature:arc-authentication-results;
+        bh=4kzssLJh1rylSBZ1S8F+O5ABkzHpp8D2jPCbDxydrcg=;
+        b=vtDeWHgF68CIiN3k7lqKev/38u0GT+zr1z8vzGhNEG54kVHBWvkWbSrZTU9lnadba4
+         qi0p9leEom75gUlqyBznJLUaQGJXPpxZGfsDvZJIR83Ke75LUBhg94L0A2fkE9gG+43x
+         enHfFf/Z00QdnKKWSUaXMzEB+drr0xditSdH5c0fZxdBHoDVZdna6qZALsK1L7P2+M8Y
+         PXjlWdxlz3ixR5XRNzqoWgewmE/61a3/VyAdNAo9h0qBZqYKnbtTrgTZytloXxxrRXOp
+         OALayUzH6VNK3iVtvN9PgK+QJMct/dE/hXaQR7K1IXYVzHA2vhUocLt9wtE+l7YEYQcA
+         Od8A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nginx.com header.b=iA3zt8kU;
+       dkim=pass header.i=@mktomail.com header.b=GWeGocMx;
+       spf=pass (google.com: domain of 990-fxf-735.0.28849.0.0.7943.9.10559878-3@potomac1050.mktomail.com designates 192.28.150.226 as permitted sender) smtp.mailfrom=990-FXF-735.0.28849.0.0.7943.9.10559878-3@potomac1050.mktomail.com
+Return-Path: <990-FXF-735.0.28849.0.0.7943.9.10559878-3@potomac1050.mktomail.com>
+Received: from potomac1226.mktomail.com (potomac1226.mktomail.com. [192.28.150.226])
+        by mx.google.com with ESMTPS id e184si8411232pfa.152.2017.08.01.07.27.27
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 01 Aug 2017 07:27:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 990-fxf-735.0.28849.0.0.7943.9.10559878-3@potomac1050.mktomail.com designates 192.28.150.226 as permitted sender) client-ip=192.28.150.226;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nginx.com header.b=iA3zt8kU;
+       dkim=pass header.i=@mktomail.com header.b=GWeGocMx;
+       spf=pass (google.com: domain of 990-fxf-735.0.28849.0.0.7943.9.10559878-3@potomac1050.mktomail.com designates 192.28.150.226 as permitted sender) smtp.mailfrom=990-FXF-735.0.28849.0.0.7943.9.10559878-3@potomac1050.mktomail.com
+Return-Path: <emily.turner@nginx.com>
+X-MSFBL: aHVnb3dpbmJsYWRoQGdtYWlsLmNvbUBkdnAtMTkyLTI4LTE1MC0yMjZAYmctYWIt
+	MDFAOTkwLUZYRi03MzU6NjczNzo3MjUyOjI3MjQzOjA6Nzk0Mzo5OjI4ODQ5OjEw
+	NTU5ODc4LTM=
+Received: from [10.1.87.249] ([10.1.87.249:54764] helo=abmas02.marketo.org)
+	by abmta11.marketo.org (envelope-from <emily.turner@nginx.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 88/12-21039-7CF80895; Tue, 01 Aug 2017 09:27:19 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1501597639;
+	s=m1; d=nginx.com; i=@nginx.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=4kzssLJh1rylSBZ1S8F+O5ABkzHpp8D2jPCbDxydrcg=;
+	b=iA3zt8kUVYviDjtAI3Ev5Ld9XwQq5trrlPRh6qxfq/09laYDQ3VTTFXo0CBbBhZE
+	gpJ5UCv11KY4Lt9ho6IF1OxX5NWHhDK7rYkmcIEuoxOywT1MVO+rLjTYT1Z1HE0hwML
+	PwtfCQet5p9MtVwtQQSOk0nm/Hyoda8sIDOBs2mY=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1501597639;
+	s=m1; d=mktomail.com; i=@mktomail.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=4kzssLJh1rylSBZ1S8F+O5ABkzHpp8D2jPCbDxydrcg=;
+	b=GWeGocMx2si8Ny6QgbFiz1ulfRwstPHtuEgdlpl4kGdALHZmloMckmy0mXIZ3IFu
+	VYO3ZXGy/OPvn2vsCxuXThwNQ1U2iC8lhlgNzhNs+E71S1L+gelFgBb9NTJwVjeBLZL
+	+cuOfA3TYt40he/0sOFbbyvf+tllUHwdWWwDvQFM=
+Date: Tue, 1 Aug 2017 09:27:19 -0500 (CDT)
+From: Emily Turner <emily.turner@nginx.com>
+Reply-To: emily.turner@nginx.com
+To: hugowinbladh@gmail.com
+Message-ID: <2039925626.1112489346.1501597639887.JavaMail.root@abmas02.marketo.org>
+Subject: [Webinar] Adapting the 12-Factor App for Microservices
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1112489344_2075779383.1501597639887"
+X-Binding: bg-ab-01
+X-MarketoID: 990-FXF-735:6737:7252:27243:0:7943:9:28849:10559878-3
+X-MktArchive: false
+List-Unsubscribe: <mailto:OAWUQTKPNBUE4SZXOJEGYRDCNJYFCUKTLBIT2PI.28849.7943.9@unsub-ab.mktomail.com>
+X-Mailfrom: 990-FXF-735.0.28849.0.0.7943.9.10559878-3@potomac1050.mktomail.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_1112489344_2075779383.1501597639887
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+For years, the 12-Factor App has guided our efforts to build scalable and m=
+aintainable applications. But, as we move to microservice-based application=
+s, are the 12 factors still relevant? In this upcoming webinar, we'll discu=
+ss the original 12-Factor App, the changes that NGINX recommends for micros=
+ervices use, and microservices app design.=20
+
+Join us in this webinar to learn:
+
+-   The history of the 12-factor app and the problems it solves =20
+-   About the industry changes that have happened since the 12-factor app w=
+as introduced =20
+-   What each of the current 12 factors are =20
+-   How each of the 12 factors needs to be updated to fit microservice need=
+s
+
+REGISTER NOW: nginx.com/resources/webinars/12-factor-microservices
+
+We hope you can join us!
+
+Emily Turner
+NGINX, Inc.=20
+
+
+<http://email.nginx.com/t9FC4j0kF60Bi00JXI0008j>
+
+
+Contact us
+nginx-inquiries@nginx.com <http://email.nginx.com/V6Xg0009k80F400FBIjChJ0>
++353 21 7355700
+
+
+=C2=A9 2017 NGINX, Inc. =E2=8B=85 5 Lapps Quay, Cork, Ireland T12 RW7D
+Manage your subscription preferences: pages.nginx.com/email-subscription-ce=
+nter.html.
+
+------=_Part_1112489344_2075779383.1501597639887
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html xmlns=3D"=E2=80=9Chttp://www.w3.org/1999/xhtml=E2=80=9D" xmlns:v=3D"=
+=E2=80=9Curn:schemas-microsoft-com:vml=E2=80=9D" xmlns:o=3D"=E2=80=9Curn:sc=
+hemas-microsoft-com:office:office=E2=80=9D">
+<head>=20
+<meta charset=3D"utf-8">=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=20
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->=20
+<!--Variables-->               =20
+<title>NGINX | High Performance Load Balancer, Web Server, &amp; Reverse Pr=
+oxy</title>=20
+<style>
+      /* CLIENT-SPECIFIC STYLES */
+      img{-ms-interpolation-mode: bicubic;}=20
+      /* Force IE to smoothly render resized images. */
+      #outlook a{padding:0;}=20
+      /* Force Outlook 2007 and up to provide a "view in browser" message. =
+*/
+      table{mso-table-lspace:0pt;mso-table-rspace:0pt;}=20
+      /* Remove spacing between tables in Outlook 2007 and up. */
+      .ReadMsgBody{width:100%;}=20
+      .ExternalClass{width:100%;}=20
+      /* Force Outlook.com to display emails at full width. */
+      p, a, li, td, blockquote{mso-line-height-rule:exactly;}=20
+      /* Force Outlook to render line heights as they're originally set. */
+      a[href^=3D"tel"], a[href^=3D"sms"]{color:inherit;cursor:default; text=
+-decoration:none;}=20
+      /* Force mobile devices to inherit declared link styles. */
+      p, a, li, td, body, table, blockquote{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;}=20
+      /* Prevent Windows- and Webkit-based mobile platforms from changing d=
+eclared text sizes. */
+      .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass d=
+iv, .ExternalClass span, .ExternalClass font{line-height:100%;}
+      /* Force Outlook.com to display line heights normally. */
+
+      a {
+        color:#269d4f;
+      }
+      @media only screen and (max-width:650px){
+        table#bodyTable{
+          width:100%;
+        }
+        img{
+          max-width:100%;
+          height:auto;
+        }
+        .stack{
+          padding-top:25px !important;
+          padding-right:5% !important;
+          padding-bottom:20px !important;
+          padding-left:5% !important;
+        }
+        .tableStack{
+          width:100% !important;
+        }
+        .desktopPad{
+          display: none !important;
+        }
+        .centerImage img{
+          margin-left:auto !important;
+          margin-right:auto !important;
+          display:block !important;
+        }
+        .mobileTopPad{
+          padding-top:20px !important;
+        }
+        #mobileTopPad{
+          padding-top:20px !important;
+        }
+        .centerContent{
+          text-align:center !important;
+        }
+        .centerContent img{
+
+          margin-left:auto !important;
+          margin-right:auto !important;
+        }
+        .centerContent2{
+          padding-top:20px !important;
+          text-align:center !important;
+        }
+        #noBorder{
+          border-left:none !important;
+          border-right:none !important;
+          padding-top:20px !important;
+        }
+        .tableGrow{
+          width:70% !important;
+        }
+        .mobileBottomPad{
+          padding-bottom:20px !important;
+        }
+        .tableShrink{
+          width:70% !important;
+        }
+
+      }
+    </style>=20
+<!--[if gte mso 9]>
+<style type=3D"text/css">
+table#outlookPadColumn{
+width:35% !important;
+padding-right:2% !important;
+}
+td{
+font-family:Arial, Helvetica, sans-serif !important;
+}
+</style>
+<![endif]-->=20
+</head>=20
+<body bgcolor=3D"#242121" style=3D"background:#242121;margin:0;padding:0;ms=
+o-padding-alt: 0px 0px 0px 0px;" valign=3D"top" background=3D"http://pages.=
+nginx.com/rs/990-FXF-735/images/bkgdSmallSlice.jpg">=20
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">=20
+<tbody>
+<tr>=20
+<td>=20
+<div>=20
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"mso-padding-alt: 0px 0px 0px 0px;">=20
+<tbody>
+<tr>=20
+<td>=20
+<table height=3D"100%" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0">=20
+<tbody>
+<tr>=20
+<td valign=3D"top" align=3D"left" background=3D"http://pages.nginx.com/rs/9=
+90-FXF-735/images/bkgdSmallSlice.jpg">=20
+<!--Body Table-->=20
+<table id=3D"bodyTable" width=3D"650" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center" style=3D"margin-left:auto;margin-right:auto;">=
+=20
+<tbody>
+<tr>=20
+<td id=3D"container" class=3D"mktoContainer">
+<table class=3D"mktoModule" id=3D"spacerModule" width=3D"100%" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"desktopPad" style=3D"background-color:transparent; line-height=
+:15px; font-size:0px;padding-top:15px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"logo" width=3D"100%" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td align=3D"center" class=3D"stack" style=3D"background-color:transparent;=
+ padding-left:35px; padding-right:35px;">=20
+<div class=3D"mktoSnippet" id=3D"logoSnippet">=20
+<img src=3D"http://pages.nginx.com/rs/990-FXF-735/images/logoHeader.png" al=
+t=3D"" border=3D"0" width=3D"200" height=3D"49" style=3D"display:block; mar=
+gin-left:auto; margin-right:auto;">=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"spacerModule86208a94-ff9f-4578-bdf1-6700d=
+c7a6717" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"desktopPad" style=3D"background-color:transparent; line-height=
+:20px; font-size:0px;padding-top:20px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"spacerModulea0a7fa21-3da7-417b-9f04-0bedc=
+7e6b787" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"desktopPad" style=3D"background-color:#ffffff; line-height:20p=
+x; font-size:0px;padding-top:20px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"headerImagePad0ecb414e-15bb-4858-a9b8-cad=
+b55d39bcb" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"stack" align=3D"center" style=3D"background-color:#ffffff; pad=
+ding-left:35px; padding-right:35px;">=20
+<div class=3D"mktoText" id=3D"bannerImageWithPad0ecb414e-15bb-4858-a9b8-cad=
+b55d39bcb">=20
+<a href=3D
+"http://email.nginx.com/dc/XNosKPQwQpzEvJmlj8fAG0F_Eho0oq44OIBE9HMtml5Fgkqm=
+U2w8lmfY-DfuIu1EpXOjoDzlHaxDkhjGB9tN2w=3D=3D/f00k90B069008X4jFJF8C0I" targe=
+t=3D"_blank"
+><img src=3D"http://pages.nginx.com/rs/990-FXF-735/images/Email Header - 12=
+ Factor App Webinar v2 580x323.png" border=3D"0" height=3D"324" width=3D"58=
+1" style=3D"display: block; margin-left: auto; margin-right: auto;" constra=
+in=3D"true" imagepreview=3D"false"></a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"fullWidthTextb9107413-6491-4258-85b2-9d3c=
+375e9a04" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"stack" style=3D"background-color:#ffffff; padding-left:35px; p=
+adding-right:35px; font-family: Arial, Helvetica, sans-serif; font-size:16p=
+x; line-height:20px; color:#333333; text-align:center;">=20
+<div class=3D"mktoText" id=3D"bodyCopyb9107413-6491-4258-85b2-9d3c375e9a04"=
+>=20
+<p style=3D"text-align: left;">For years, the 12-Factor App has guided our =
+efforts to build scalable and maintainable applications. But, as we move to=
+ microservice-based applications, are the 12 factors still relevant? In thi=
+s upcoming webinar, we'll discuss the original 12-Factor App, the changes t=
+hat NGINX recommends for microservices use, and microservices app design.</=
+p>=20
+<div style=3D"text-align: left;">=20
+<span style=3D"color: #333333; font-family: Arial, Helvetica, sans-serif; f=
+ont-size: 18px; font-style: normal; font-variant-ligatures: normal; font-va=
+riant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2=
+; text-align: left; text-indent: 0px; text-transform: none; white-space: no=
+rmal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; backgro=
+und-color: #ffffff; display: inline !important; float: none;"><a href=3D "h=
+ttp://email.nginx.com/CXC00j0kB0kF0J964j08F0I" target=3D"_blank" id=3D"" >J=
+oin us</a> in this webinar to learn:</span>=20
+<br>=20
+</div>=20
+<ul>=20
+<li style=3D"text-align: left;">=20
+<div>
+ The history of the 12-factor app and the problems it solves=20
+</div> </li>=20
+<li style=3D"text-align: left;">=20
+<div>
+ About the industry changes that have happened since the 12-factor app was =
+introduced=20
+</div> </li>=20
+<li style=3D"text-align: left;">=20
+<div>
+ What each of the current 12 factors are=20
+</div> </li>=20
+<li>=20
+<div style=3D"text-align: left;">
+ How each of the 12 factors needs to be updated to fit microservice needs=
+=20
+</div> </li>=20
+</ul>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"fullWidthText" width=3D"100%" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"stack" style=3D"background-color:#ffffff; padding-left:35px; p=
+adding-right:35px; font-family: Arial, Helvetica, sans-serif; font-size:16p=
+x; line-height:20px; color:#333333; text-align:left;">=20
+<div class=3D"mktoText" id=3D"bodyCopy">=20
+<div style=3D"text-align: center;">=20
+<strong><span style=3D"font-size: 16px;">Wednesday, Aug. 9 =E2=80=A2 10:00A=
+M PT | 1:00PM ET</span></strong>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"spacerModuleSmallafe589a7-17c5-4ab6-af02-=
+559fea138948" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"desktopPad" style=3D"background-color:#ffffff; line-height:10p=
+x; font-size:0px;padding-top:10px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"buttonModule211675686-b5bb-4d1c-963f-df11=
+3521c0e1" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"stack" style=3D"background-color:#ffffff; padding-left:35px; p=
+adding-right:35px;">=20
+<!--Button-->=20
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bg=
+color=3D"#f6a704" style=3D"border-top-right-radius:5px; border-bottom-right=
+-radius:5px; border-bottom-left-radius:5px; border-top-left-radius:5px; bor=
+der:1px solid #f6a704">=20
+<tbody>=20
+<tr>=20
+<td style=3D"padding-top:10px; padding-right:22px; padding-bottom:10px; pad=
+ding-left:22px; font-family:Arial, Helvetica, sans-serif; font-size:14px; c=
+olor:#ffffff;">=20
+<div class=3D"mktoText" id=3D"buttonLink211675686-b5bb-4d1c-963f-df113521c0=
+e1">=20
+<a href=3D
+"http://email.nginx.com/dc/XNosKPQwQpzEvJmlj8fAG0F_Eho0oq44OIBE9HMtml5Fgkqm=
+U2w8lmfY-DfuIu1EpXOjoDzlHaxDkhjGB9tN2w=3D=3D/f00k90B069008X4jFJF8C0I" title=
+=3D"" style=3D"text-decoration: none; color: #ffffff;"
+>REGISTER NOW</a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--/Button--> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"spacerModuleSmalld2f4117e-6855-4c13-a605-=
+258e238c5f5e" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"desktopPad" style=3D"background-color:#ffffff; line-height:10p=
+x; font-size:0px;padding-top:10px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"fullWidthTextb985fccb-d854-4a18-bc74-f86b=
+1e9e4183" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"stack" style=3D"background-color:#ffffff; padding-left:35px; p=
+adding-right:35px; font-family: Arial, Helvetica, sans-serif; font-size:16p=
+x; line-height:20px; color:#333333; text-align:left;">=20
+<div class=3D"mktoText" id=3D"bodyCopyb985fccb-d854-4a18-bc74-f86b1e9e4183"=
+>
+ We hope you can=20
+<a href=3D
+"http://email.nginx.com/dc/XNosKPQwQpzEvJmlj8fAG0F_Eho0oq44OIBE9HMtml5Fgkqm=
+U2w8lmfY-DfuIu1EpXOjoDzlHaxDkhjGB9tN2w=3D=3D/f00k90B069008X4jFJF8C0I" targe=
+t=3D"_blank" id=3D""
+>join us</a>!=20
+<br>=20
+<br> Best,=20
+<br>=20
+<br> Emily Turner=20
+<br>NGINX, Inc.=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"spacerModulef3f3fbb5-6195-4113-ac67-48057=
+6010b31" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"desktopPad" style=3D"background-color:#ffffff; line-height:20p=
+x; font-size:0px;padding-top:20px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"headerImagePadc750a9cf-7df6-49dd-ad7b-eeb=
+8968bedf2" width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"stack" align=3D"center" style=3D"background-color:#ffffff; pad=
+ding-left:35px; padding-right:35px;">=20
+<div class=3D"mktoText" id=3D"bannerImageWithPadc750a9cf-7df6-49dd-ad7b-eeb=
+8968bedf2">=20
+<div>=20
+<a href=3D
+"http://email.nginx.com/CXC0090aB0kF0J964j08F0I" target=3D"_blank"
+><img src=3D"http://pages.nginx.com/rs/990-FXF-735/images/Email Footer - ng=
+inx.conf17 580x100.png" alt=3D"Email Footer - nginx.conf17 580x100.png" hei=
+ght=3D"100" width=3D"580" style=3D"display: block; margin-left: auto; margi=
+n-right: auto;"></a>=20
+</div>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"spacerModulef3f3fbb5-6195-4113-ac67-48057=
+6010b310007e78a-65e5-4b87-bb02-66fb209029e6" width=3D"100%" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"desktopPad" style=3D"background-color:#ffffff; line-height:20p=
+x; font-size:0px;padding-top:20px;">&nbsp; </td>=20
+</tr>=20
+</tbody>=20
+</table>
+<table class=3D"mktoModule" id=3D"footerModule" width=3D"100%" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"min-width:100%;">=20
+<tbody>=20
+<tr>=20
+<td class=3D"stack" style=3D"padding-left:35px; padding-right:35px;  paddin=
+g-top:20px; padding-bottom:20px; background-color:transparent;">=20
+<div class=3D"mktoSnippet" id=3D"footerSnippet">
+ <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td><!--Table 1-->
+<table class=3D"tableStack" id=3D"outlookPadColumn" align=3D"left" width=3D=
+"31%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"margin-righ=
+t: 3%;">
+<tbody>
+<tr>
+<td style=3D"padding-top: 25px;">
+<table align=3D"center" class=3D"tableGrow" width=3D"180" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td class=3D"centerImage"><a href=3D
+"http://email.nginx.com/V6Xc0009k80F400FBIjCdJ0" target=3D"_blank"
+><img src=3D"http://pages.nginx.com/rs/990-FXF-735/images/twitterIcon.png" =
+alt=3D"" border=3D"0" width=3D"28" height=3D"29" style=3D"display: block; m=
+argin-left: auto; margin-right: auto;" /></a></td>
+<td><a href=3D
+"http://email.nginx.com/ZXJIC08d90000j06e40BFFk" target=3D"_blank"
+><img src=3D"http://pages.nginx.com/rs/990-FXF-735/images/youtubeIcon.png" =
+alt=3D"" border=3D"0" width=3D"28" height=3D"23" style=3D"display: block; m=
+argin-left: auto; margin-right: auto;" /></a></td>
+<td><a href=3D
+"http://email.nginx.com/Ak0e0IFX40J98Cj00B0f06F" target=3D"_blank"
+><img src=3D"http://pages.nginx.com/rs/990-FXF-735/images/linkedinIcon.png"=
+ alt=3D"" border=3D"0" width=3D"28" height=3D"28" style=3D"display: block; =
+margin-left: auto; margin-right: auto;" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--/Table 1--> <!--Table 2-->
+<table class=3D"tableStack" align=3D"left" width=3D"31%" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td class=3D"mobileTopPad" id=3D"noBorder" style=3D"border-left: 2px solid =
+#a19e9d; border-right: 2px solid #a19e9d;">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"centerImage"><a href=3D
+"http://email.nginx.com/y8kF6jCJ090BFXg0If00040" target=3D"_blank"
+><img src=3D"http://pages.nginx.com/rs/990-FXF-735/images/footerLogo.png" a=
+lt=3D"" border=3D"0" width=3D"70" height=3D"88" style=3D"display: block; ma=
+rgin-left: auto; margin-right: auto;" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--/Table 2--> <!--Table 3-->
+<table class=3D"tableStack" align=3D"right" width=3D"31%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td class=3D"mobileTopPad">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding-top: 15px; font-family: Arial, Helvetica, sans-serif; =
+font-size: 14px; line-height: 22px; color: #bfbfbf; text-align: center; fon=
+t-weight: 400;">Contact us<br /> <a href=3D
+"http://email.nginx.com/V6Xg0009k80F400FBIjChJ0"
+>nginx-inquiries@nginx.com</a><br /> +353 21 7355700</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!--/Table 3--></td>
+</tr>
+<tr>
+<td class=3D"stack" style=3D"padding-left: ${leftPadding}; padding-right: $=
+{rightPadding}; padding-bottom: 20px;">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding-top: 15px; font-family: Arial, Helvetica, sans-serif; =
+font-size: 14px; line-height: 22px; color: #bfbfbf; text-align: center;">&c=
+opy; 2017 NGINX, Inc. &sdot; 5 Lapps Quay, Cork, Ireland T12 RW7D<br /><a h=
+ref=3D
+"http://email.nginx.com/jjhX084BF00I60CJF9i0k00" style=3D"text-decoration: =
+none; color: #009639;"
+>Manage your subscription preferences</a> or <a href=3D"http://pages.nginx.=
+com/UnsubscribePage.html?mkt_unsubscribe=3D1&mkt_tok=3DeyJpIjoiWkRBelkyTTVN=
+VFkzTUdVeiIsInQiOiJ2WFJmamFlTzY5M1V4bExnckVwUm1VRHg3TC9JUFhMQXpwbktJMldDbGN=
+5cUdFcFA1NDdaUzBVR09DY2Vxa3d6Q0tCZEhJeWczT2FXSGNZYmprSlloQ2FTN1d0bVpob242TX=
+o5dWV4bVR4bDU0Q2ZuSmcrekZtTlpId0FzYnF3SyJ9" style=3D"text-decoration: none;=
+ color: #009639;">unsubscribe</a>.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table></td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--End Body Table--> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+</div> </td>=20
+</tr>=20
+</tbody>
+</table>   =20
+<a href=3D
+"http://email.nginx.com/iakF0JX8CbB0090006j4F0I"
+></a>
+<img src=3D"http://email.nginx.com/trk?t=3D1&mid=3DOTkwLUZYRi03MzU6NjczNzo3=
+MjUyOjI3MjQzOjA6Nzk0Mzo5OjI4ODQ5OjEwNTU5ODc4LTM6aHVnb3dpbmJsYWRoQGdtYWlsLmN=
+vbQ%3D%3D" width=3D"1" height=3D"1" style=3D"display:none !important;" alt=
+=3D"" />
+</body>
+</html>
+------=_Part_1112489344_2075779383.1501597639887--

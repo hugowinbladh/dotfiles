@@ -1,0 +1,3052 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.15 with SMTP id o15csp205426ioe;
+        Wed, 24 May 2017 01:04:08 -0700 (PDT)
+X-Received: by 10.13.226.69 with SMTP id l66mr27308143ywe.319.1495613048484;
+        Wed, 24 May 2017 01:04:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495613048; cv=none;
+        d=google.com; s=arc-20160816;
+        b=MLGpi7ej+7jdLJ5ie7NZHIVo9BJWzgfWC//fMGY7Xqa7ZTkOMOYsBfsOOQg8W2oDuS
+         CGR9/2ez248i2RmXUBdu/VVdsqvzyfH5LHelLHY9Sw2aIvsjkDIl2KawDPs1Ty0qfOf8
+         rAED0MSb21G+v4lgJdWIPJ3mR4AU1xQ2sFRuQnOdP5CuIm51YHLIVSfQD8oVbcnxGF3h
+         kHliRzmFs79REMEf50dpXvVq2XFYQ0bvXEN+Fh3oD7sWVI81hNRMbX1uD5RC6rqNuJz4
+         irYYlkQP4FK7WA/T6ek8HErp6tWBGeg6JryZvM4qYhaJPx/HKBOPm9/J1A6j8x8S0Aft
+         +Rdg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature:arc-authentication-results;
+        bh=VxHPzXRcYOf4Y4Rak4gGlSYW7TL4/GPJSWsGShp/nmA=;
+        b=V0CgIpsvFX42WdIh3zig8fWdbsRmDhWfgBpVJ4RkJCUkiS/iQmEE+FxvVE1o/+J7qW
+         JwP2J7ffcinFxYtj18AK98T88xlyEys/pEJG1XRLj5UHB0ddm+t/r8QKia7014kcPP0f
+         GaxqwrOV21YeRgws8AJZETY0TO19ttM7H0ufUS0osZNoheeoly0H2WcqC80AsggpXmO4
+         tyeX5fr+3ZCU+0PDxQIv4soBJh9dMJx1Gf0dQESb/eTvepBHdVRasP5Xhm5fPOdb6BDB
+         zRAo/aZz8w0MvJGHTfNe4RiWKAbFAPMwzOBFLNF3RMVVHNPDY470dKenJeBwZqpPMmXT
+         6LFw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@yogobe.com;
+       dkim=pass header.i=@gmail.mcsv.net;
+       spf=pass (google.com: domain of bounce-mc.us7_17902131.388653-hugowinbladh=gmail.com@mail17.suw13.rsgsv.net designates 198.2.183.17 as permitted sender) smtp.mailfrom=bounce-mc.us7_17902131.388653-hugowinbladh=gmail.com@mail17.suw13.rsgsv.net
+Return-Path: <bounce-mc.us7_17902131.388653-hugowinbladh=gmail.com@mail17.suw13.rsgsv.net>
+Received: from mail17.suw13.rsgsv.net (mail17.suw13.rsgsv.net. [198.2.183.17])
+        by mx.google.com with ESMTPS id k17si8079049ybj.200.2017.05.24.01.04.08
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 24 May 2017 01:04:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-mc.us7_17902131.388653-hugowinbladh=gmail.com@mail17.suw13.rsgsv.net designates 198.2.183.17 as permitted sender) client-ip=198.2.183.17;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@yogobe.com;
+       dkim=pass header.i=@gmail.mcsv.net;
+       spf=pass (google.com: domain of bounce-mc.us7_17902131.388653-hugowinbladh=gmail.com@mail17.suw13.rsgsv.net designates 198.2.183.17 as permitted sender) smtp.mailfrom=bounce-mc.us7_17902131.388653-hugowinbladh=gmail.com@mail17.suw13.rsgsv.net
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k1; d=yogobe.com;
+ h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:
+ Content-Type:MIME-Version; i=info@yogobe.com;
+ bh=SCLzPb9DPEchy2aazoS/h9uTJiQ=;
+ b=DMf0CwflaY9uIC1FefE1UU2eIhPL1ypVtlZZYDivn3LwBZ1jPMS5jZhehKARBgWMLFYxmf3wGs2A
+   XvK7rR1XNuCBlWVbA0IH++hRdvQzToGsYQRODSiHWnYYdyleAg4gOUZGWY37as9Yzs3rXF7BlkYu
+   BaaiHF2hrQmCshrsWY4=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k1; d=gmail.mcsv.net;
+ h=Subject:From:Reply-To:To:Date:Message-ID:Feedback-ID:List-ID:
+ List-Unsubscribe:Content-Type:MIME-Version;
+ bh=SCLzPb9DPEchy2aazoS/h9uTJiQ=;
+ b=J6EBbQdHzK4FEAgXi4uKlZDVGcyt/dW1L3T4BNjdCClHOR5XqaqxJRFkSPlMS7NqjP+02bMNmoBk
+   cKPs1RPj3WwzeyXjSMxKtaedjqAIgSNtZtX8FfDY6NV/cVB6jsy8jDFiQACbHISsV9nIS59x05V6
+   785O6gZyXje3xv4usHs=
+Received: from (127.0.0.1) by mail17.suw13.rsgsv.net id h4kv7g2akecn for <hugowinbladh@gmail.com>; Wed, 24 May 2017 08:01:54 +0000 (envelope-from <bounce-mc.us7_17902131.388653-hugowinbladh=gmail.com@mail17.suw13.rsgsv.net>)
+Subject: =?utf-8?Q?Sista=20chansen.=20F=C3=A5=20en=20yogamatta?=
+From: =?utf-8?Q?YOGOBE?= <info@yogobe.com>
+Reply-To: =?utf-8?Q?YOGOBE?= <info@yogobe.com>
+To: <hugowinbladh@gmail.com>
+Date: Wed, 24 May 2017 08:01:54 +0000
+Message-ID: <b8e441aa3092d5bb894f88808.bac7c839f0.20170524080118.cb07b4d1a8.c886da6f@mail17.suw13.rsgsv.net>
+X-Mailer: MailChimp Mailer - **CIDcb07b4d1a8bac7c839f0**
+X-Campaign: mailchimpb8e441aa3092d5bb894f88808.cb07b4d1a8
+X-campaignid: mailchimpb8e441aa3092d5bb894f88808.cb07b4d1a8
+X-Report-Abuse: Please report abuse for this campaign here: http://www.mailchimp.com/abuse/abuse.phtml?u=b8e441aa3092d5bb894f88808&id=cb07b4d1a8&e=bac7c839f0
+X-MC-User: b8e441aa3092d5bb894f88808
+Feedback-ID: 17902131:17902131.388653:us7:mc
+List-ID: b8e441aa3092d5bb894f88808mc list <b8e441aa3092d5bb894f88808.157785.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <http://yogobe.us7.list-manage1.com/unsubscribe?u=b8e441aa3092d5bb894f88808&id=bf6eed9f81&e=bac7c839f0&c=cb07b4d1a8>, <mailto:unsubscribe-mc.us7_b8e441aa3092d5bb894f88808.cb07b4d1a8-bac7c839f0@mailin1.us2.mcsv.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+x-mcda: FALSE
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_1999748599"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_1999748599
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+Nya tights och toppar fr=C3=A5n OGNX=2C tips f=C3=B6r att komma ig=C3=A5ng=
+ med yoga och tr=C3=A4ning=2C rekommenderade playlists & program och annan=
+ matnyttig l=C3=A4sning.
+View this email in your browser (http://mailchi.mp/yogobe/f-en-gratis-yoga=
+matta-388653?e=3Dbac7c839f0)
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+INTERNATIONELLA YOGADAGEN 2017 - en dag att fira
+
+F=C3=B6r tredje =C3=A5ret i rad arrangeras International Day of Yoga=2C ID=
+Y=2C runt om i v=C3=A4rlden. Yogobe och Epicenter Stockholm bjuder in till=
+ en h=C3=A4rlig kv=C3=A4ll den 21 juni. P=C3=A5 Epicenters h=C3=A4rliga in=
+omhusterass samlas vi f=C3=B6r en sk=C3=B6n yogastund och klass tillsamman=
+s med Josefine Bengtsson=2C Anna Gordh Humlesj=C3=B6 och Sara Str=C3=B6m f=
+r=C3=A5n Team Yogobe. ** L=C3=A4s mer om eventet och hur du anm=C3=A4ler d=
+ig h=C3=A4r! (https://yogobe.com/se/blog/internationella-yogadagen-2017)
+OBS! Det finns bara 100 platser till detta exklusiva event i =C3=A5r. F=C3=
+=B6rst till kvarn g=C3=A4ller! Kom och sprid din k=C3=A4rlek f=C3=B6r yoga=
+n. Alla kan vara med!
+
+WEBSHOPSNYTT - Tights och toppar fr=C3=A5n OGNX
+
+Sommaren n=C3=A4rmar sig och vi har passat p=C3=A5 att fylla p=C3=A5 webbs=
+hoppen med n=C3=A5gra nya toppar och tights fr=C3=A5n
+varum=C3=A4rket OGNX! Vi =C3=A4r glada att kunna erbjuda ett kl=C3=A4dm=C3=
+=A4rke som erbjuder snygga och funktionella yogakl=C3=A4der som samtidigt=
+ =C3=A4r producerade p=C3=A5 ett s=C3=A4tt som tar hand om milj=C3=B6n. **=
+ L=C3=A4s mer och spana in nyheterna h=C3=A4r. (https://store.yogobe.com/s=
+e/varumarken/ognx/)
+
+Nya videor och rekommenderade program i biblioteket
+
+** (https://yogobe.com/se/playlists/2kzpdbfw3)
+REKOMMENDERAD PLAYLIST
+- Bli stark inifr=C3=A5n och ut -
+5 Videor - 28 min
+
+** (https://yogobe.com/se/program/core-program-fysio-terapi)
+
+REKOMMENDERAT PROGRAM
+- St=C3=A4rk din core fr=C3=A5n grunden -
+10 videor - 2-3 veckor
+
+** (https://yogobe.com/se/videos/9a8u)
+BODYCHECK: HEART
+Josefine Bengtsson - 60 min
+
+** (https://yogobe.com/se/videos/5p9t)
+
+V=C3=84CK KROPPEN - SUN CELEBRATIONS
+Elaine De Souza -  20 min
+
+
+TIPS: S=C3=A5 kommer du ig=C3=A5ng med yoga & tr=C3=A4ning i sommar!
+
+Visst vore det sk=C3=B6nt att komma ig=C3=A5ng med yoga och tr=C3=A4ning h=
+emma nu n=C3=A4r sommaren n=C3=A4rmar sig? Det beh=C3=B6ver inte vara myck=
+et - att prioritera dig sj=C3=A4lv och ditt v=C3=A4lm=C3=A5ende en kvart o=
+m dagen ger dig 91 timmar=2C och s=C3=A5 mycket mer=2C p=C3=A5 ett =C3=A5r=
+=2E En bra investering tycker Yogobe! ** H=C3=A4r delar vi tips f=C3=B6r att=
+ du ska komma ig=C3=A5ng. (https://yogobe.com/se/blog/5-saker-som-hjalper-=
+mig-att-yoga-hemma)
+
+SISTA CHANSEN: Vill du ocks=C3=A5 f=C3=A5 en Yogobematta?
+
+PASSA P=C3=85: F=C3=A5 v=C3=A5r nya Yogobe Studio Mat (v=C3=A4rde 449 kr i=
+nk. frakt) n=C3=A4r du inleder en =C3=A5rsprenumeration innan den 31 maj (=
+p=C3=A5 efterfr=C3=A5gan fr=C3=A5n v=C3=A5ra medlemmar f=C3=B6rl=C3=A4nger=
+ vi erbjudandet m=C3=A5naden ut). Detta =C3=A4r ett erbjudande f=C3=B6r b=
+=C3=A5de nya och befintliga medlemmar och g=C3=A4ller n=C3=A4r du inleder=
+ en =C3=A5rsprenumeration hos Yogobe till ord. pris 1899 kr f=C3=B6re midn=
+att den 31 maj. ** L=C3=A4s mer om erbjudandet och hur du kan ta del av de=
+t h=C3=A4r. (https://yogobe.com/se/arsprenumeration-yogobe-studio-mat)
+
+VIDEONYTT: Chakrayogavideor med Josephine Selander
+
+=C3=84r du nyfiken p=C3=A5 chakran och hur du kan arbeta med dessa i din p=
+raktik? Med hela sju nya videor guidar Josephine Selander dig genom chakra=
+ f=C3=B6r chakra - utforska hur olika positioner kan hj=C3=A4lpa dig att s=
+t=C3=A5 stadigare=2C eller andas lugnare. ** Ta del av alla Josephines cha=
+krayogavideor h=C3=A4r. (https://yogobe.com/se/videos/chakra+josephine-sel=
+ander)
+
+L=C3=A4sv=C3=A4rda och uppskattade nyheter i bloggen
+
+** (https://yogobe.com/se/blog/its-all-about-love)
+FORSKNING - Varf=C3=B6r du =C3=A4r som du =C3=A4r
+N=C3=A4r Pia Wallberg l=C3=A4rde sig hur anknytningsteorin fungerar=2C att=
+ mycket av v=C3=A5rt beteende formas redan som ett=C3=A5ring=2C kunde hon=
+ med insikt och f=C3=B6rst=C3=A5else f=C3=B6r=C3=A4ndra o=C3=B6nskade bete=
+enden hos sig sj=C3=A4lv.
+
+** (https://yogobe.com/se/blog/auberginecurry-chapati)
+RECEPT =E2=80=93 en helt fantastisk indisk curry
+Vegansk=2C m=C3=A4ttande och smarrig. Perfekt som vardagsr=C3=A4tt och s=
+=C3=A5 god och vacker att den =C3=A4ven funkar som bjudr=C3=A4tt :) Recept=
+et =C3=A4r fr=C3=A5n Nilla's Kitchen och du hittar det i bloggen. Smaklig=
+ spis!
+
+** (https://yogobe.com/se/blog/blomma-ut-personligt-utveckling-sivertsdott=
+er)
+Att v=C3=A4lja ljuset - V=C3=A5ga blomma ut
+"Att g=C3=B6ra val h=C3=B6r livet till=2C men ibland kan det k=C3=A4nnas s=
+v=C3=A5rt. N=C3=A4r m=C3=B6rkret ligger tungt i och runt oss. Men ljuset f=
+inns d=C3=A4r=2C ibland beh=C3=B6ver vi bara lite hj=C3=A4lp att se det=2C=
+ att kunna v=C3=A4lja det ljusa." - Sofia Sivertsdotter.
+
+** (https://yogobe.com/se/blog/skapa-utrymme-for-andning-pa-jobbet)
+Yoga p=C3=A5 och utanf=C3=B6r mattan
+Att f=C3=A5 in sm=C3=A5 pauser i form av andnings=C3=B6vningar eller avsla=
+ppning kan hj=C3=A4lpa b=C3=A5de kropp och sinne till =C3=A5terh=C3=A4mtni=
+ng och nytt fokus. H=C3=A4r ber=C3=A4ttar Yogobe om hur du kan f=C3=A5 til=
+l det som en del av din vardag.
+
+PRANA FESTIVAL: Yoga- & musikmagi mitt i G=C3=B6teborg
+
+Den 9-10 september =C3=A4r Prana Festival tillbaks efter den lyckade premi=
+=C3=A4ren f=C3=B6rra =C3=A5ret! I dagarna tv=C3=A5 f=C3=A5r du m=C3=B6jlig=
+het att njuta av yoga och musik med internationella=2C nationella och loka=
+la yogal=C3=A4rare och artister i yogat=C3=A4lt och fr=C3=A5n musikscener.=
+ K=C3=B6p din biljett redan nu f=C3=B6r att vara s=C3=A4ker p=C3=A5 att du=
+ f=C3=A5r g=C3=A5 p=C3=A5 de klasser du =C3=B6nskar! Uppge koden "YOGOBE"=
+ och f=C3=A5 200 kr i rabatt n=C3=A4r du bokar b=C3=A5de l=C3=B6rdag och s=
+=C3=B6ndag. Dansa och yoga loss tillsammans med oss p=C3=A5 =C3=A5rets h=
+=C3=A4rligaste kalas! ** L=C3=A4s mer h=C3=A4r. (https://yogobe.com/se/eve=
+nts/prana-festival-yoga-musik)
+
+Yogobe =C3=A4r en m=C3=B6tesplats mellan instrukt=C3=B6rer och ut=C3=B6var=
+e=2C l=C3=A4rare och elever. Det =C3=A4r en community & destination f=C3=
+=B6r den nyfikna och kunskapst=C3=B6rstiga=2C f=C3=B6r tr=C3=A4ningsfreaks=
+=2C yogan=C3=B6rdar=2C livsnjutare och alla d=C3=A4remellan. Vi finns till=
+ f=C3=B6r alla=2C f=C3=B6r de balanserade=2C obalanserade=2C glada=2C stab=
+ila=2C vilsna och varma. Yogobe =C3=A4r ett verktyg=2C en guide och en sam=
+lingspunkt f=C3=B6r alla som vill leva fysiskt=2C mentalt och sj=C3=A4lsli=
+gt balanserade liv. Sprid yoga och livsgl=C3=A4dje med oss!
+
+TACK F=C3=96R ATT DU =C3=84R EN DEL AV YOGOBE!
+
+Varma h=C3=A4lsningar=2C
+Yogobe Crew
+** (http://us7.forward-to-friend.com/forward?u=3Db8e441aa3092d5bb894f88808=
+&id=3Dcb07b4d1a8&e=3Dbac7c839f0)
+** Forward to Friend (http://us7.forward-to-friend.com/forward?u=3Db8e441a=
+a3092d5bb894f88808&id=3Dcb07b4d1a8&e=3Dbac7c839f0)
+** (http://www.facebook.com/sharer/sharer.php?u=3D&t=3D)
+** Share (http://www.facebook.com/sharer/sharer.php?u=3D&t=3D)
+** (https://plus.google.com/share?url=3D)
+** +1 (https://plus.google.com/share?url=3D)
+** (https://www.facebook.com/YOGOBEcom)
+** (http://instagram.com/yogobe)
+** (http://www.yogobe.com)
+** (http://www.youtube.com/yogobeofficial)
+Copyright =C2=A9 2016 YOGOBE AB=2C All rights reserved.
+
+Tveka inte att skriva till oss p=C3=A5:
+info@yogobe.com
+
+** Jag vill inte f=C3=A5 fler nyhetsbrev fr=C3=A5n Yogobe (http://yogobe.u=
+s7.list-manage1.com/unsubscribe?u=3Db8e441aa3092d5bb894f88808&id=3Dbf6eed9=
+f81&e=3Dbac7c839f0&c=3Dcb07b4d1a8)
+** Uppdatera dina nyhetsbrevsregler (http://yogobe.us7.list-manage.com/pro=
+file?u=3Db8e441aa3092d5bb894f88808&id=3Dbf6eed9f81&e=3Dbac7c839f0)
+--_----------=_MCPart_1999748599
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3D=
+UTF-8">
+        <title>Sista chansen. F=C3=A5 en yogamatta</title>
+
+        <!--[if gte mso 6]>
+        <style>
+            table.mcnFollowContent {width:100% !important;}
+            table.mcnShareContent {width:100% !important;}
+        </style>
+        <![endif]-->
+    <style type=3D"text/css">
+=09=09#outlook a{
+=09=09=09padding:0;
+=09=09}
+=09=09.ReadMsgBody{
+=09=09=09width:100%;
+=09=09}
+=09=09.ExternalClass{
+=09=09=09width:100%;
+=09=09}
+=09=09body{
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09}
+=09=09a{
+=09=09=09word-wrap:break-word !important;
+=09=09}
+=09=09img{
+=09=09=09border:0;
+=09=09=09height:auto !important;
+=09=09=09line-height:100%;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09table=2Ctd{
+=09=09=09border-collapse:collapse;
+=09=09=09mso-table-lspace:0pt;
+=09=09=09mso-table-rspace:0pt;
+=09=09}
+=09=09#bodyTable=2C#bodyCell{
+=09=09=09height:100% !important;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09width:100% !important;
+=09=09}
+=09=09#bodyCell{
+=09=09=09padding:20px;
+=09=09=09border-top:0;
+=09=09}
+=09=09.mcnImage{
+=09=09=09vertical-align:bottom;
+=09=09}
+=09=09.mcnTextContent img{
+=09=09=09height:auto !important;
+=09=09}
+=09=09body=2C#bodyTable{
+=09=09=09background-color:#f2f1f1;
+=09=09}
+=09=09#bodyCell{
+=09=09=09border-top:0;
+=09=09}
+=09=09#templateContainer{
+=09=09=09border:0;
+=09=09}
+=09=09h1{
+=09=09=09color:#606060 !important;
+=09=09=09display:block;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:40px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:-1px;
+=09=09=09margin:0;
+=09=09=09text-align:left;
+=09=09}
+=09=09h2{
+=09=09=09color:#404040 !important;
+=09=09=09display:block;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:22px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:-.75px;
+=09=09=09margin:0;
+=09=09=09text-align:left;
+=09=09}
+=09=09h3{
+=09=09=09color:#404040 !important;
+=09=09=09display:block;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:18px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:-.5px;
+=09=09=09margin:0;
+=09=09=09text-align:left;
+=09=09}
+=09=09h4{
+=09=09=09color:#808080 !important;
+=09=09=09display:block;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:16px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:normal;
+=09=09=09margin:0;
+=09=09=09text-align:left;
+=09=09}
+=09=09h1 a=2Ch2 a=2Ch3 a=2Ch4 a{
+=09=09=09color:#6DC6DD;
+=09=09=09font-weight:bold;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09#templatePreheader{
+=09=09=09background-color:#FFFFFF;
+=09=09=09border-top:0;
+=09=09=09border-bottom:2px solid #F2F2F2;
+=09=09}
+=09=09.preheaderContainer .mcnTextContent=2C.preheaderContainer .mcnTextCo=
+ntent p{
+=09=09=09color:#606060;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:11px;
+=09=09=09line-height:125%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.preheaderContainer .mcnTextContent a{
+=09=09=09color:#606060;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateHeader{
+=09=09=09background-color:#FFFFFF;
+=09=09=09border-top:0;
+=09=09=09border-bottom:2px solid #F2F2F2;
+=09=09}
+=09=09.headerContainer .mcnTextContent=2C.headerContainer .mcnTextContent=
+ p{
+=09=09=09color:#606060;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:15px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.headerContainer .mcnTextContent a{
+=09=09=09color:#6DC6DD;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateBody{
+=09=09=09background-color:#87888a;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09.bodyContainer .mcnTextContent=2C.bodyContainer .mcnTextContent p{
+=09=09=09color:#606060;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:15px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.bodyContainer .mcnTextContent a{
+=09=09=09color:#6DC6DD;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateFooter{
+=09=09=09background-color:#FFFFFF;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09}
+=09=09.footerContainer .mcnTextContent=2C.footerContainer .mcnTextContent=
+ p{
+=09=09=09color:#606060;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:11px;
+=09=09=09line-height:125%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.footerContainer .mcnTextContent a{
+=09=09=09color:#606060;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09@media only screen and (max-width: 480px){
+=09=09body=2Ctable=2Ctd=2Cp=2Ca=2Cli=2Cblockquote{
+=09=09=09-webkit-text-size-adjust:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09body{
+=09=09=09width:100% !important;
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[id=3DbodyCell]{
+=09=09=09padding:10px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnTextContentContainer]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnBoxedTextContentContainer]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3Dmcpreview-image-uploader]{
+=09=09=09width:100% !important;
+=09=09=09display:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09img[class=3DmcnImage]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnImageGroupContentContainer]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageGroupContent]{
+=09=09=09padding:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageGroupBlockInner]{
+=09=09=09padding-bottom:0 !important;
+=09=09=09padding-top:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09tbody[class=3DmcnImageGroupBlockOuter]{
+=09=09=09padding-bottom:9px !important;
+=09=09=09padding-top:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnCaptionTopContent]=2Ctable[class=3DmcnCaptionBott=
+omContent]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnCaptionLeftTextContentContainer]=2Ctable[class=3D=
+mcnCaptionRightTextContentContainer]=2Ctable[class=3DmcnCaptionLeftImageC=
+ontentContainer]=2Ctable[class=3DmcnCaptionRightImageContentContainer]=2C=
+table[class=3DmcnImageCardLeftTextContentContainer]=2Ctable[class=3DmcnI=
+mageCardRightTextContentContainer]{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardLeftImageContent]=2Ctd[class=3DmcnImageCard=
+RightImageContent]{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09=09padding-bottom:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardBottomImageContent]{
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardTopImageContent]{
+=09=09=09padding-top:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardLeftImageContent]=2Ctd[class=3DmcnImageCard=
+RightImageContent]{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09=09padding-bottom:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardBottomImageContent]{
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnImageCardTopImageContent]{
+=09=09=09padding-top:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnCaptionLeftContentOuter] td[class=3DmcnTextConten=
+t]=2Ctable[class=3DmcnCaptionRightContentOuter] td[class=3DmcnTextConten=
+t]{
+=09=09=09padding-top:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnCaptionBlockInner] table[class=3DmcnCaptionTopConten=
+t]:last-child td[class=3DmcnTextContent]{
+=09=09=09padding-top:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DmcnBoxedTextContentColumn]{
+=09=09=09padding-left:18px !important;
+=09=09=09padding-right:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[id=3DtemplateContainer]=2Ctable[id=3DtemplatePreheader]=2Cta=
+ble[id=3DtemplateHeader]=2Ctable[id=3DtemplateBody]=2Ctable[id=3Dtempla=
+teFooter]{
+=09=09=09max-width:600px !important;
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h1{
+=09=09=09font-size:24px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h2{
+=09=09=09font-size:20px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h3{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h4{
+=09=09=09font-size:16px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[class=3DmcnBoxedTextContentContainer] td[class=3DmcnTextCont=
+ent]{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09table[id=3DtemplatePreheader]{
+=09=09=09display:block !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DpreheaderContainer] td[class=3DmcnTextContent]{
+=09=09=09font-size:14px !important;
+=09=09=09line-height:115% !important;
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DheaderContainer] td[class=3DmcnTextContent]{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DbodyContainer] td[class=3DmcnTextContent]{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:125% !important;
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DfooterContainer] td[class=3DmcnTextContent]{
+=09=09=09font-size:14px !important;
+=09=09=09line-height:115% !important;
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09td[class=3DfooterContainer] a[class=3DutilityLink]{
+=09=09=09display:block !important;
+=09=09}
+
+}</style></head>
+    <body leftmargin=3D"0" marginwidth=3D"0" topmargin=3D"0" marginheight=
+=3D"0" offset=3D"0" style=3D"margin: 0;padding: 0;background-color: #f2f1f=
+1;">
+        <center>
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable" style=3D"border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;=
+padding: 0;background-color: #f2f1f1;height: 100% !important;width: 100% !=
+important;">
+                <tr>
+                    <td align=3D"center" valign=3D"top" id=3D"bodyCell" st=
+yle=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0=
+pt;margin: 0;padding: 20px;border-top: 0;height: 100% !important;width: 10=
+0% !important;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"600" id=3D"templateContainer" style=3D"border-collapse: co=
+llapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border: 0;">
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+                                    <!-- BEGIN PREHEADER // -->
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"600" id=3D"templatePreheader" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-=
+color: #FFFFFF;border-top: 0;border-bottom: 2px solid #F2F2F2;">
+                                        <tr>
+                                        =09<td valign=3D"top" class=3D"pre=
+headerContainer" style=3D"padding-top: 9px;border-collapse: collapse;mso-t=
+able-lspace: 0pt;mso-table-rspace: 0pt;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" style=3D"mi=
+n-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rs=
+pace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"390" style=3D"width:390px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 390px;border-collapse: collapse;mso-table=
+-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=3D"mcnTextConten=
+tContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            Nya tights och toppar fr=C3=A5n OGNX=2C tips f=
+=C3=B6r att komma ig=C3=A5ng med yoga och tr=C3=A4ning=2C rekommenderade p=
+laylists &amp; program och annan matnyttig l=C3=A4sning.
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"210" style=3D"width:210px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 210px;border-collapse: collapse;mso-table=
+-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=3D"mcnTextConten=
+tContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <a href=3D"http://mailchi.mp/yogobe/f-en-grati=
+s-yogamatta-388653?e=3Dbac7c839f0" target=3D"_blank" style=3D"color: #606060=
+;font-weight: normal;text-decoration: underline;word-wrap: break-word !imp=
+ortant;">View this email in your browser</a>
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END PREHEADER -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+                                    <!-- BEGIN HEADER // -->
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"600" id=3D"templateHeader" style=3D"border-col=
+lapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-col=
+or: #FFFFFF;border-top: 0;border-bottom: 2px solid #F2F2F2;">
+                                        <tr>
+                                            <td valign=3D"top" class=3D"he=
+aderContainer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;ms=
+o-table-rspace: 0pt;"></td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END HEADER -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+                                    <!-- BEGIN BODY // -->
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"600" id=3D"templateBody" style=3D"border-colla=
+pse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-color=
+: #87888a;border-top: 0;border-bottom: 0;">
+                                        <tr>
+                                            <td valign=3D"top" class=3D"bo=
+dyContainer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-=
+table-rspace: 0pt;"></td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END BODY -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+                                    <!-- BEGIN FOOTER // -->
+                                    <table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" width=3D"600" id=3D"templateFooter" style=3D"border-col=
+lapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;background-col=
+or: #FFFFFF;border-top: 0;border-bottom: 0;">
+                                        <tr>
+                                            <td valign=3D"top" class=3D"fo=
+oterContainer" style=3D"padding-bottom: 9px;border-collapse: collapse;mso-=
+table-lspace: 0pt;mso-table-rspace: 0pt;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnImageBlock" style=3D"m=
+in-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-r=
+space: 0pt;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnImageB=
+lockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" valign=3D"top" s=
+tyle=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom=
+: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+
+
+                                        <img align=3D"left" alt=3D"" src=
+=3D"https://gallery.mailchimp.com/b8e441aa3092d5bb894f88808/images/f735fd4=
+1-50dc-4e13-bf40-5ac0643409f2.jpg" width=3D"564" style=3D"max-width: 727px=
+;padding-bottom: 0;display: inline !important;vertical-align: bottom;borde=
+r: 0;line-height: 100%;outline: none;text-decoration: none;height: auto !i=
+mportant;" class=3D"mcnImage">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 5px 18px 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-t=
+able-rspace: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <h2 class=3D"null" style=3D"text-align: center=
+;display: block;font-family: Helvetica;font-size: 22px;font-style: normal;=
+font-weight: bold;line-height: 125%;letter-spacing: -.75px;margin: 0;color=
+: #404040 !important;"><font color=3D"#696969"><strong>INTERNATIONELLA YOG=
+ADAGEN 2017 - en dag att fira</strong></font></h2>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnImageBlock" style=3D"min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnImageB=
+lockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" valign=3D"top" s=
+tyle=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom=
+: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+
+
+                                        <img align=3D"left" alt=3D"" src=
+=3D"https://gallery.mailchimp.com/b8e441aa3092d5bb894f88808/images/561930b=
+3-9d89-455e-bde9-14eadee58f26.jpg" width=3D"564" style=3D"max-width: 727px=
+;padding-bottom: 0;display: inline !important;vertical-align: bottom;borde=
+r: 0;line-height: 100%;outline: none;text-decoration: none;height: auto !i=
+mportant;" class=3D"mcnImage">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <p style=3D"color: #606060;font-family: Helvet=
+ica;font-size: 11px;line-height: 125%;text-align: left;">F=C3=B6r tredje=
+ =C3=A5ret i rad arrangeras International Day of Yoga=2C IDY=2C runt om i=
+ v=C3=A4rlden.&nbsp;Yogobe och Epicenter Stockholm bjuder in till en h=C3=
+=A4rlig kv=C3=A4ll den 21 juni. P=C3=A5 Epicenters h=C3=A4rliga inomhuster=
+ass&nbsp;samlas vi f=C3=B6r en sk=C3=B6n&nbsp;yogastund och klass tillsamm=
+ans med&nbsp;Josefine Bengtsson=2C Anna Gordh Humlesj=C3=B6 och Sara Str=
+=C3=B6m fr=C3=A5n Team Yogobe. <a href=3D"http://yogobe.us7.list-manage2.c=
+om/track/click?u=3Db8e441aa3092d5bb894f88808&id=3D9fcd3b87b4&e=3D=
+bac7c839f0" target=3D"_blank" style=3D"color: #606060;font-weight: normal;text-dec=
+oration: underline;word-wrap: break-word !important;"><span style=3D"color=
+:#0000CD">L=C3=A4s mer om eventet och hur du anm=C3=A4ler dig h=C3=A4r!</s=
+pan></a><span style=3D"color:#0000CD">&nbsp;</span><em>OBS! Det finns bara=
+ 100 platser till detta exklusiva event i =C3=A5r.&nbsp;F=C3=B6rst till kv=
+arn g=C3=A4ller! Kom och sprid din k=C3=A4rlek f=C3=B6r yogan. Alla kan va=
+ra med!</em></p>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 5px 18px 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-t=
+able-rspace: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <h2 class=3D"null" style=3D"text-align: center=
+;display: block;font-family: Helvetica;font-size: 22px;font-style: normal;=
+font-weight: bold;line-height: 125%;letter-spacing: -.75px;margin: 0;color=
+: #404040 !important;"><font color=3D"#696969"><strong>WEBSHOPSNYTT -&nbsp=
+;Tights och toppar fr=C3=A5n OGNX</strong></font></h2>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnImageBlock" style=3D"min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnImageB=
+lockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" valign=3D"top" s=
+tyle=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom=
+: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+
+
+                                        <img align=3D"left" alt=3D"" src=
+=3D"https://gallery.mailchimp.com/b8e441aa3092d5bb894f88808/images/5910b1b=
+7-052e-4c1c-99eb-a2cf98991dee.jpg" width=3D"564" style=3D"max-width: 727px=
+;padding-bottom: 0;display: inline !important;vertical-align: bottom;borde=
+r: 0;line-height: 100%;outline: none;text-decoration: none;height: auto !i=
+mportant;" class=3D"mcnImage">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <p style=3D"color: #606060;font-family: Helvet=
+ica;font-size: 11px;line-height: 125%;text-align: left;">Sommaren n=C3=A4r=
+mar sig och vi har passat p=C3=A5 att fylla p=C3=A5 webbshoppen med n=C3=
+=A5gra nya toppar och tights fr=C3=A5n<br>
+varum=C3=A4rket OGNX!&nbsp;Vi =C3=A4r glada att kunna erbjuda ett kl=C3=A4=
+dm=C3=A4rke som erbjuder snygga och funktionella yogakl=C3=A4der som&nbsp;=
+samtidigt =C3=A4r producerade p=C3=A5 ett s=C3=A4tt som tar hand om milj=
+=C3=B6n. <a href=3D"http://yogobe.us7.list-manage1.com/track/click?u=3Db8e=
+441aa3092d5bb894f88808&id=3D9a8090e4db&e=3Dbac7c839f0" target=3D"_blank"=
+ style=3D"color: #606060;font-weight: normal;text-decoration: underline;wo=
+rd-wrap: break-word !important;"><span style=3D"color:#0000CD">L=C3=A4s me=
+r och spana in nyheterna h=C3=A4r.</span></a></p>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 5px 18px 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-t=
+able-rspace: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <h2 class=3D"null" style=3D"text-align: center=
+;display: block;font-family: Helvetica;font-size: 22px;font-style: normal;=
+font-weight: bold;line-height: 125%;letter-spacing: -.75px;margin: 0;color=
+: #404040 !important;"><span style=3D"color:#696969"><strong>Nya videor oc=
+h rekommenderade program&nbsp;i biblioteket</strong></span></h2>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnCaptionBlock" style=3D"border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnCaptionBlockOuter">
+        <tr>
+            <td class=3D"mcnCaptionBlockInner" valign=3D"top" style=3D"pad=
+ding: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace=
+: 0pt;">
+
+
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cla=
+ss=3D"mcnCaptionBottomContent" width=3D"282" style=3D"border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" valign=
+=3D"top" style=3D"padding: 0 9px 9px 9px;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;">
+
+
+            <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db=
+8e441aa3092d5bb894f88808&id=3Daaeadf722d&e=3Dbac7c839f0" title=3D"" class=
+=3D"" target=3D"_blank" style=3D"word-wrap: break-word !important;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/b8e441aa309=
+2d5bb894f88808/images/da1fed62-ba8d-46c6-99f0-f251a9ddaaf7.jpg" width=3D"2=
+64" style=3D"max-width: 1200px;border: 0;line-height: 100%;outline: none;t=
+ext-decoration: none;vertical-align: bottom;height: auto !important;" clas=
+s=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: 0 9p=
+x 0 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 12=
+5%;text-align: left;" width=3D"264">
+            <div style=3D"text-align: center;"><span style=3D"font-size:11=
+px"><strong>REKOMMENDERAD PLAYLIST</strong></span><br>
+- Bli stark inifr=C3=A5n och ut -<br>
+<em>5 Videor - 28&nbsp;min</em><br>
+&nbsp;</div>
+
+        </td>
+    </tr>
+</tbody></table>
+
+<table align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"mcnCaptionBottomContent" width=3D"282" style=3D"border-collapse: co=
+llapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" valign=
+=3D"top" style=3D"padding: 0 9px 9px 9px;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;">
+
+
+            <a href=3D"http://yogobe.us7.list-manage1.com/track/click?u=3D=
+b8e441aa3092d5bb894f88808&id=3D2625fee670&e=3Dbac7c839f0" title=3D"" clas=
+s=3D"" target=3D"_blank" style=3D"word-wrap: break-word !important;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/b8e441aa309=
+2d5bb894f88808/images/f05ad808-fa76-4cae-b045-9650c947821f.jpg" width=3D"2=
+64" style=3D"max-width: 1200px;border: 0;line-height: 100%;outline: none;t=
+ext-decoration: none;vertical-align: bottom;height: auto !important;" clas=
+s=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: 0 9p=
+x 0 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 12=
+5%;text-align: left;" width=3D"264">
+            <div style=3D"text-align: center;"><span style=3D"font-size:11=
+px"><strong>REKOMMENDERAT PROGRAM</strong></span><br>
+- St=C3=A4rk din core fr=C3=A5n grunden -<br>
+<em>10 videor - 2-3 veckor</em></div>
+
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnCaptionBlock" style=3D"border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnCaptionBlockOuter">
+        <tr>
+            <td class=3D"mcnCaptionBlockInner" valign=3D"top" style=3D"pad=
+ding: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace=
+: 0pt;">
+
+
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cla=
+ss=3D"mcnCaptionBottomContent" width=3D"282" style=3D"border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" valign=
+=3D"top" style=3D"padding: 0 9px 9px 9px;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;">
+
+
+            <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db=
+8e441aa3092d5bb894f88808&id=3D9e007634dc&e=3Dbac7c839f0" title=3D"" class=
+=3D"" target=3D"_blank" style=3D"word-wrap: break-word !important;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/b8e441aa309=
+2d5bb894f88808/images/1ad1ba9e-53c3-443a-88ed-e2b22bb29a5d.jpg" width=3D"2=
+64" style=3D"max-width: 1200px;border: 0;line-height: 100%;outline: none;t=
+ext-decoration: none;vertical-align: bottom;height: auto !important;" clas=
+s=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: 0 9p=
+x 0 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 12=
+5%;text-align: left;" width=3D"264">
+            <div style=3D"text-align: center;"><span style=3D"font-size:11=
+px"><strong>BODYCHECK: HEART</strong></span><br>
+<em>Josefine Bengtsson&nbsp;- 60&nbsp;min</em><br>
+&nbsp;</div>
+
+        </td>
+    </tr>
+</tbody></table>
+
+<table align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"mcnCaptionBottomContent" width=3D"282" style=3D"border-collapse: co=
+llapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" valign=
+=3D"top" style=3D"padding: 0 9px 9px 9px;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;">
+
+
+            <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db=
+8e441aa3092d5bb894f88808&id=3De2c3da7e4f&e=3Dbac7c839f0" title=3D"" class=
+=3D"" target=3D"_blank" style=3D"word-wrap: break-word !important;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/b8e441aa309=
+2d5bb894f88808/images/ae7eec6d-c86d-47b3-92de-7fd2a89d6112.jpg" width=3D"2=
+64" style=3D"max-width: 1200px;border: 0;line-height: 100%;outline: none;t=
+ext-decoration: none;vertical-align: bottom;height: auto !important;" clas=
+s=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: 0 9p=
+x 0 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 12=
+5%;text-align: left;" width=3D"264">
+            <div style=3D"text-align: center;"><span style=3D"font-size:11=
+px"><strong>V=C3=84CK KROPPEN - SUN CELEBRATIONS</strong></span><br>
+<em>Elaine De Souza&nbsp;- &nbsp;20&nbsp;min</em><br>
+&nbsp;</div>
+
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 5px 18px 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-t=
+able-rspace: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <h2 class=3D"null" style=3D"text-align: center=
+;display: block;font-family: Helvetica;font-size: 22px;font-style: normal;=
+font-weight: bold;line-height: 125%;letter-spacing: -.75px;margin: 0;color=
+: #404040 !important;"><font color=3D"#696969"><strong>TIPS: S=C3=A5 komme=
+r du ig=C3=A5ng med yoga &amp; tr=C3=A4ning i sommar!</strong></font></h2>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnImageBlock" style=3D"min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnImageB=
+lockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" valign=3D"top" s=
+tyle=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom=
+: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+
+
+                                        <img align=3D"left" alt=3D"" src=
+=3D"https://gallery.mailchimp.com/b8e441aa3092d5bb894f88808/images/9453070=
+b-ac73-4f97-a02b-88b82fd0a24e.jpg" width=3D"564" style=3D"max-width: 727px=
+;padding-bottom: 0;display: inline !important;vertical-align: bottom;borde=
+r: 0;line-height: 100%;outline: none;text-decoration: none;height: auto !i=
+mportant;" class=3D"mcnImage">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <p style=3D"color: #606060;font-family: Helvet=
+ica;font-size: 11px;line-height: 125%;text-align: left;">Visst vore det sk=
+=C3=B6nt att komma ig=C3=A5ng med yoga och&nbsp;tr=C3=A4ning hemma nu n=C3=
+=A4r sommaren n=C3=A4rmar sig? Det beh=C3=B6ver inte vara mycket - att pri=
+oritera dig sj=C3=A4lv och&nbsp;ditt v=C3=A4lm=C3=A5ende en kvart om dagen=
+ ger dig&nbsp;91 timmar=2C och s=C3=A5 mycket mer=2C p=C3=A5 ett =C3=A5r.=
+ En bra investering tycker Yogobe! <a href=3D"http://yogobe.us7.list-manag=
+e.com/track/click?u=3Db8e441aa3092d5bb894f88808&id=3Dc6467825a7&e=3D=
+bac7c839f0" target=3D"_blank" style=3D"color: #606060;font-weight: normal;text-=
+decoration: underline;word-wrap: break-word !important;"><span style=3D"co=
+lor:#0000CD">H=C3=A4r delar vi tips f=C3=B6r att du ska komma ig=C3=A5ng.<=
+/span></a></p>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 5px 18px 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-t=
+able-rspace: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <h2 class=3D"null" style=3D"text-align: center=
+;display: block;font-family: Helvetica;font-size: 22px;font-style: normal;=
+font-weight: bold;line-height: 125%;letter-spacing: -.75px;margin: 0;color=
+: #404040 !important;"><font color=3D"#696969"><strong>SISTA CHANSEN: Vill=
+ du ocks=C3=A5 f=C3=A5&nbsp;en Yogobematta?</strong></font></h2>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnImageBlock" style=3D"min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnImageB=
+lockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" valign=3D"top" s=
+tyle=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom=
+: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+
+
+                                        <img align=3D"left" alt=3D"" src=
+=3D"https://gallery.mailchimp.com/b8e441aa3092d5bb894f88808/images/da1a4bf=
+b-bb44-4f2e-b671-09755de0c8e5.jpg" width=3D"564" style=3D"max-width: 727px=
+;padding-bottom: 0;display: inline !important;vertical-align: bottom;borde=
+r: 0;line-height: 100%;outline: none;text-decoration: none;height: auto !i=
+mportant;" class=3D"mcnImage">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <p style=3D"color: #606060;font-family: Helvet=
+ica;font-size: 11px;line-height: 125%;text-align: left;">PASSA P=C3=85: F=
+=C3=A5 v=C3=A5r nya Yogobe Studio Mat (v=C3=A4rde 449 kr ink. frakt) n=C3=
+=A4r du inleder en =C3=A5rsprenumeration innan den 31&nbsp;maj <em>(p=C3=
+=A5 efterfr=C3=A5gan fr=C3=A5n v=C3=A5ra medlemmar f=C3=B6rl=C3=A4nger vi=
+ erbjudandet m=C3=A5naden ut).&nbsp;</em>Detta =C3=A4r ett erbjudande&nbsp=
+;f=C3=B6r b=C3=A5de nya och befintliga medlemmar och g=C3=A4ller&nbsp;n=C3=
+=A4r du inleder en =C3=A5rsprenumeration hos Yogobe till&nbsp;ord. pris 18=
+99 kr f=C3=B6re midnatt den 31&nbsp;maj.&nbsp;<a href=3D"http://yogobe.us7=
+=2Elist-manage.com/track/click?u=3Db8e441aa3092d5bb894f88808&id=3D5507e89d13=
+&e=3Dbac7c839f0" target=3D"_blank" style=3D"color: #606060;font-weight: n=
+ormal;text-decoration: underline;word-wrap: break-word !important;"><span=
+ style=3D"color:#0000CD">L=C3=A4s mer om erbjudandet och hur du kan ta del=
+ av det h=C3=A4r.</span></a></p>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 5px 18px 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-t=
+able-rspace: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <h2 class=3D"null" style=3D"text-align: center=
+;display: block;font-family: Helvetica;font-size: 22px;font-style: normal;=
+font-weight: bold;line-height: 125%;letter-spacing: -.75px;margin: 0;color=
+: #404040 !important;"><font color=3D"#696969"><strong>VIDEONYTT: Chakrayo=
+gavideor med Josephine Selander</strong></font></h2>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnImageBlock" style=3D"min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnImageB=
+lockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" valign=3D"top" s=
+tyle=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom=
+: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+
+
+                                        <img align=3D"left" alt=3D"" src=
+=3D"https://gallery.mailchimp.com/b8e441aa3092d5bb894f88808/images/a07b0fb=
+5-1df2-4c22-b025-3e39eefd6981.jpg" width=3D"564" style=3D"max-width: 727px=
+;padding-bottom: 0;display: inline !important;vertical-align: bottom;borde=
+r: 0;line-height: 100%;outline: none;text-decoration: none;height: auto !i=
+mportant;" class=3D"mcnImage">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <p style=3D"color: #606060;font-family: Helvet=
+ica;font-size: 11px;line-height: 125%;text-align: left;">=C3=84r du nyfike=
+n p=C3=A5 chakran och hur du kan arbeta med dessa i din praktik? Med hela=
+ sju nya videor guidar Josephine Selander dig genom chakra f=C3=B6r chakra=
+ - utforska hur olika positioner kan hj=C3=A4lpa dig att st=C3=A5 stadigar=
+e=2C eller andas lugnare. <a href=3D"http://yogobe.us7.list-manage.com/tra=
+ck/click?u=3Db8e441aa3092d5bb894f88808&id=3D6eacab8b5f&e=3Dbac7c839f0" ta=
+rget=3D"_blank" style=3D"color: #606060;font-weight: normal;text-decoratio=
+n: underline;word-wrap: break-word !important;"><span style=3D"color:#0000=
+CD">Ta del av alla Josephines chakrayogavideor h=C3=A4r.</span></a>&nbsp;<=
+/p>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 5px 18px 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-t=
+able-rspace: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <h2 class=3D"null" style=3D"text-align: center=
+;display: block;font-family: Helvetica;font-size: 22px;font-style: normal;=
+font-weight: bold;line-height: 125%;letter-spacing: -.75px;margin: 0;color=
+: #404040 !important;"><span style=3D"color:#666666"><strong>L=C3=A4sv=C3=
+=A4rda och uppskattade nyheter i bloggen</strong></span></h2>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnCaptionBlock" style=3D"border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnCaptionBlockOuter">
+        <tr>
+            <td class=3D"mcnCaptionBlockInner" valign=3D"top" style=3D"pad=
+ding: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace=
+: 0pt;">
+
+
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cla=
+ss=3D"mcnCaptionBottomContent" width=3D"282" style=3D"border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" valign=
+=3D"top" style=3D"padding: 0 9px 9px 9px;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;">
+
+
+            <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db=
+8e441aa3092d5bb894f88808&id=3Df3e36e798d&e=3Dbac7c839f0" title=3D"" class=
+=3D"" target=3D"_blank" style=3D"word-wrap: break-word !important;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/b8e441aa309=
+2d5bb894f88808/images/b492500d-c390-4d00-b56e-a9af9bd17311.jpg" width=3D"2=
+64" style=3D"max-width: 1200px;border: 0;line-height: 100%;outline: none;t=
+ext-decoration: none;vertical-align: bottom;height: auto !important;" clas=
+s=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: 0 9p=
+x 0 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 12=
+5%;text-align: left;" width=3D"264">
+            <strong>FORSKNING - Varf=C3=B6r du =C3=A4r som du =C3=A4r</str=
+ong><br>
+N=C3=A4r Pia Wallberg l=C3=A4rde sig hur anknytningsteorin fungerar=2C att=
+ mycket av v=C3=A5rt beteende formas redan som ett=C3=A5ring=2C kunde hon=
+ med insikt och f=C3=B6rst=C3=A5else f=C3=B6r=C3=A4ndra o=C3=B6nskade bete=
+enden hos sig sj=C3=A4lv.<br>
+&nbsp;
+        </td>
+    </tr>
+</tbody></table>
+
+<table align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"mcnCaptionBottomContent" width=3D"282" style=3D"border-collapse: co=
+llapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" valign=
+=3D"top" style=3D"padding: 0 9px 9px 9px;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;">
+
+
+            <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db=
+8e441aa3092d5bb894f88808&id=3Dfb82a06156&e=3Dbac7c839f0" title=3D"" class=
+=3D"" target=3D"_blank" style=3D"word-wrap: break-word !important;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/b8e441aa309=
+2d5bb894f88808/images/d19c9d02-66b9-4471-891c-a4ea6c228e21.jpg" width=3D"2=
+64" style=3D"max-width: 650px;border: 0;line-height: 100%;outline: none;te=
+xt-decoration: none;vertical-align: bottom;height: auto !important;" class=
+=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: 0 9p=
+x 0 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 12=
+5%;text-align: left;" width=3D"264">
+            <strong>RECEPT =E2=80=93 en helt fantastisk indisk curry</stro=
+ng><br>
+Vegansk=2C m=C3=A4ttande och smarrig. Perfekt som vardagsr=C3=A4tt och s=
+=C3=A5 god och vacker att den =C3=A4ven funkar som bjudr=C3=A4tt :) Recept=
+et =C3=A4r fr=C3=A5n Nilla's Kitchen och du hittar det i bloggen. Smaklig=
+ spis!
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnCaptionBlock" style=3D"border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnCaptionBlockOuter">
+        <tr>
+            <td class=3D"mcnCaptionBlockInner" valign=3D"top" style=3D"pad=
+ding: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace=
+: 0pt;">
+
+
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cla=
+ss=3D"mcnCaptionBottomContent" width=3D"282" style=3D"border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" valign=
+=3D"top" style=3D"padding: 0 9px 9px 9px;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;">
+
+
+            <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db=
+8e441aa3092d5bb894f88808&id=3Df4239cdce9&e=3Dbac7c839f0" title=3D"" class=
+=3D"" target=3D"_blank" style=3D"word-wrap: break-word !important;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/b8e441aa309=
+2d5bb894f88808/images/ef4ff0a3-879c-49b7-8d17-42f7ebb29538.jpg" width=3D"2=
+64" style=3D"max-width: 1200px;border: 0;line-height: 100%;outline: none;t=
+ext-decoration: none;vertical-align: bottom;height: auto !important;" clas=
+s=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: 0 9p=
+x 0 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 12=
+5%;text-align: left;" width=3D"264">
+            <strong>Att v=C3=A4lja ljuset - V=C3=A5ga blomma ut</strong><b=
+r>
+"Att g=C3=B6ra val h=C3=B6r livet till=2C men ibland kan det k=C3=A4nnas s=
+v=C3=A5rt. N=C3=A4r m=C3=B6rkret ligger tungt i och runt oss. Men ljuset f=
+inns d=C3=A4r=2C ibland beh=C3=B6ver vi bara lite hj=C3=A4lp att se det=2C=
+ att kunna v=C3=A4lja det ljusa." - Sofia Sivertsdotter.&nbsp;<br>
+&nbsp;
+        </td>
+    </tr>
+</tbody></table>
+
+<table align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"mcnCaptionBottomContent" width=3D"282" style=3D"border-collapse: co=
+llapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td class=3D"mcnCaptionBottomImageContent" align=3D"center" valign=
+=3D"top" style=3D"padding: 0 9px 9px 9px;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;">
+
+
+            <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db=
+8e441aa3092d5bb894f88808&id=3D107fac7184&e=3Dbac7c839f0" title=3D"" class=
+=3D"" target=3D"_blank" style=3D"word-wrap: break-word !important;">
+
+
+            <img alt=3D"" src=3D"https://gallery.mailchimp.com/b8e441aa309=
+2d5bb894f88808/images/ed38cd1c-37e8-4e0e-89e6-8ac39589ca59.jpg" width=3D"2=
+64" style=3D"max-width: 1200px;border: 0;line-height: 100%;outline: none;t=
+ext-decoration: none;vertical-align: bottom;height: auto !important;" clas=
+s=3D"mcnImage">
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class=3D"mcnTextContent" valign=3D"top" style=3D"padding: 0 9p=
+x 0 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;color: #606060;font-family: Helvetica;font-size: 11px;line-height: 12=
+5%;text-align: left;" width=3D"264">
+            <strong>Yoga p=C3=A5 och utanf=C3=B6r mattan&nbsp;</strong><br=
+>
+Att f=C3=A5 in sm=C3=A5 pauser i form av andnings=C3=B6vningar eller avsla=
+ppning kan hj=C3=A4lpa b=C3=A5de kropp och sinne till =C3=A5terh=C3=A4mtni=
+ng och nytt fokus. H=C3=A4r ber=C3=A4ttar Yogobe om hur du kan f=C3=A5 til=
+l det som en del av din vardag.
+        </td>
+    </tr>
+</tbody></table>
+
+
+
+
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspa=
+ce: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <h2 class=3D"null" style=3D"text-align: center=
+;display: block;font-family: Helvetica;font-size: 22px;font-style: normal;=
+font-weight: bold;line-height: 125%;letter-spacing: -.75px;margin: 0;color=
+: #404040 !important;"><font color=3D"#696969"><strong>PRANA FESTIVAL: Yog=
+a- &amp; musikmagi mitt i G=C3=B6teborg</strong></font></h2>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnImageBlock" style=3D"min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnImageBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnImageB=
+lockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-ta=
+ble-rspace: 0pt;">
+                        <tbody><tr>
+                            <td class=3D"mcnImageContent" valign=3D"top" s=
+tyle=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom=
+: 0;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+
+
+                                        <img align=3D"left" alt=3D"" src=
+=3D"https://gallery.mailchimp.com/b8e441aa3092d5bb894f88808/images/23ee50c=
+1-a806-4731-886f-5780b589cb1b.jpg" width=3D"564" style=3D"max-width: 727px=
+;padding-bottom: 0;display: inline !important;vertical-align: bottom;borde=
+r: 0;line-height: 100%;outline: none;text-decoration: none;height: auto !i=
+mportant;" class=3D"mcnImage">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <p style=3D"color: #606060;font-family: Helvet=
+ica;font-size: 11px;line-height: 125%;text-align: left;">Den 9-10 septembe=
+r =C3=A4r Prana Festival&nbsp;tillbaks efter den lyckade premi=C3=A4ren f=
+=C3=B6rra =C3=A5ret!&nbsp;I dagarna tv=C3=A5 f=C3=A5r du m=C3=B6jlighet at=
+t njuta av yoga och musik med internationella=2C nationella och lokala yog=
+al=C3=A4rare och artister i yogat=C3=A4lt och fr=C3=A5n musikscener. K=C3=
+=B6p din biljett redan nu f=C3=B6r att vara s=C3=A4ker p=C3=A5 att du f=C3=
+=A5r g=C3=A5 p=C3=A5 de klasser du =C3=B6nskar! Uppge koden "YOGOBE" och f=
+=C3=A5 200 kr i rabatt n=C3=A4r du bokar b=C3=A5de l=C3=B6rdag och s=C3=B6=
+ndag. Dansa och yoga loss tillsammans med oss p=C3=A5 =C3=A5rets h=C3=A4rl=
+igaste kalas! <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=
+=3Db8e441aa3092d5bb894f88808&id=3D2b85743505&e=3Dbac7c839f0" target=3D"_b=
+lank" style=3D"color: #606060;font-weight: normal;text-decoration: underli=
+ne;word-wrap: break-word !important;"><span style=3D"color:#0000CD">L=C3=
+=A4s mer h=C3=A4r.</span></a>&nbsp;&nbsp;</p>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspa=
+ce: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op: 1px dotted #BBB9B9;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;color: #C2C2C2;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;font-family: Helvetica;font-size: 11p=
+x;line-height: 125%;text-align: left;">
+
+                            <div style=3D"text-align: center; "><span styl=
+e=3D"font-size:11px"><span style=3D"font-family:tahoma=2Cverdana=2Csegoe=
+=2Csans-serif"><em>Yogobe =C3=A4r en m=C3=B6tesplats mellan instrukt=C3=B6=
+rer och ut=C3=B6vare=2C l=C3=A4rare och elever. Det =C3=A4r en community &=
+amp;&nbsp;destination f=C3=B6r den nyfikna och kunskapst=C3=B6rstiga=2C f=
+=C3=B6r tr=C3=A4ningsfreaks=2C yogan=C3=B6rdar=2C livsnjutare och alla d=
+=C3=A4remellan. Vi finns till f=C3=B6r alla=2C f=C3=B6r de balanserade=2C=
+ obalanserade=2C glada=2C stabila=2C vilsna och varma. Yogobe =C3=A4r ett=
+ verktyg=2C en guide och en samlingspunkt f=C3=B6r alla som vill leva fysi=
+skt=2C mentalt och sj=C3=A4lsligt balanserade liv. Sprid yoga och livsgl=
+=C3=A4dje med oss!</em><br>
+<br>
+TACK F=C3=96R ATT DU =C3=84R EN DEL AV YOGOBE!<br>
+<br>
+Varma h=C3=A4lsningar=2C<br>
+Yogobe Crew</span></span></div>
+
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnDividerBlockOuter">
+        <tr>
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 18px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspa=
+ce: 0pt;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border-t=
+op-width: 1px;border-top-style: solid;border-top-color: #87888A;border-col=
+lapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                    <tbody><tr>
+                        <td style=3D"border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;">
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnShareBlock" style=3D"border-collapse: collapse;mso-table-=
+lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnShareBlockOuter">
+            <tr>
+                <td valign=3D"top" style=3D"padding: 9px;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnShareB=
+lockInner">
+                    <table width=3D"100%" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" class=3D"mcnShareContentContainer" style=3D"border-collap=
+se: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td align=3D"center" style=3D"padding-top: 9px;padding-left: 9px;p=
+adding-bottom: 0;padding-right: 9px;border-collapse: collapse;mso-table-ls=
+pace: 0pt;mso-table-rspace: 0pt;">
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnShareContent" style=3D"border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;">
+                <tbody><tr>
+                    <td valign=3D"top" class=3D"mcnShareContentItemContain=
+er" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rsp=
+ace: 0pt;">
+
+                            <table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse;mso-table-lspa=
+ce: 0pt;mso-table-rspace: 0pt;">
+                                <tbody><tr>
+                                    <td valign=3D"top" style=3D"padding-ri=
+ght: 10px;padding-bottom: 9px;border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;" class=3D"mcnShareContentItemContainer">
+                                        <table border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"" class=3D"mcnShareContentItem" style=3D"bo=
+rder-collapse: separate;background-color: #FFFFFF;border: 1px solid #CCCCC=
+C;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-r=
+ight-radius: 5px;border-bottom-left-radius: 5px;mso-table-lspace: 0pt;mso-=
+table-rspace: 0pt;">
+                                            <tbody><tr>
+                                                <td align=3D"left" valign=
+=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;padding-bottom:=
+ 5px;padding-left: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                                                    <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"bord=
+er-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody><tr>
+                                                            <td align=3D"c=
+enter" valign=3D"middle" width=3D"18" class=3D"mcnShareIconContent" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+                                                                <a href=3D=
+"http://us7.forward-to-friend.com/forward?u=3Db8e441aa3092d5bb894f88808&id=
+=3Dcb07b4d1a8&e=3Dbac7c839f0" target=3D"_blank" style=3D"word-wrap: break-wo=
+rd !important;"><img src=3D"http://cdn-images.mailchimp.com/icons/social-b=
+lock/gray-forwardtofriend-128.png" style=3D"display: block;border: 0;line-=
+height: 100%;outline: none;text-decoration: none;height: auto !important;"=
+ height=3D"18" width=3D"18" class=3D""></a>
+                                                            </td>
+                                                            <td align=3D"l=
+eft" valign=3D"middle" class=3D"mcnShareTextContent" style=3D"padding-left=
+: 5px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0p=
+t;">
+                                                                <a href=3D=
+"http://us7.forward-to-friend.com/forward?u=3Db8e441aa3092d5bb894f88808&id=
+=3Dcb07b4d1a8&e=3Dbac7c839f0" target=3D"" style=3D"color: #505050;font-famil=
+y: Arial;font-size: 12px;text-decoration: none;font-weight: normal;line-he=
+ight: 100%;text-align: center;word-wrap: break-word !important;">Forward t=
+o Friend</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+
+                            <table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse;mso-table-lspa=
+ce: 0pt;mso-table-rspace: 0pt;">
+                                <tbody><tr>
+                                    <td valign=3D"top" style=3D"padding-ri=
+ght: 10px;padding-bottom: 9px;border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;" class=3D"mcnShareContentItemContainer">
+                                        <table border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"" class=3D"mcnShareContentItem" style=3D"bo=
+rder-collapse: separate;background-color: #FFFFFF;border: 1px solid #CCCCC=
+C;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-r=
+ight-radius: 5px;border-bottom-left-radius: 5px;mso-table-lspace: 0pt;mso-=
+table-rspace: 0pt;">
+                                            <tbody><tr>
+                                                <td align=3D"left" valign=
+=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;padding-bottom:=
+ 5px;padding-left: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                                                    <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"bord=
+er-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody><tr>
+                                                            <td align=3D"c=
+enter" valign=3D"middle" width=3D"18" class=3D"mcnShareIconContent" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+                                                                <a href=3D=
+"http://yogobe.us7.list-manage.com/track/click?u=3Db8e441aa3092d5bb894f888=
+08&id=3Dae809e27d2&e=3Dbac7c839f0" target=3D"_blank" style=3D"word-wrap:=
+ break-word !important;"><img src=3D"http://cdn-images.mailchimp.com/icons=
+/social-block/gray-facebook-128.png" style=3D"display: block;border: 0;lin=
+e-height: 100%;outline: none;text-decoration: none;height: auto !important=
+;" height=3D"18" width=3D"18" class=3D""></a>
+                                                            </td>
+                                                            <td align=3D"l=
+eft" valign=3D"middle" class=3D"mcnShareTextContent" style=3D"padding-left=
+: 5px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0p=
+t;">
+                                                                <a href=3D=
+"http://yogobe.us7.list-manage2.com/track/click?u=3Db8e441aa3092d5bb894f88=
+808&id=3D609e25ac9b&e=3Dbac7c839f0" target=3D"" style=3D"color: #505050;f=
+ont-family: Arial;font-size: 12px;text-decoration: none;font-weight: norma=
+l;line-height: 100%;text-align: center;word-wrap: break-word !important;">=
+Share</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+
+                            <table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse;mso-table-lspa=
+ce: 0pt;mso-table-rspace: 0pt;">
+                                <tbody><tr>
+                                    <td valign=3D"top" style=3D"padding-ri=
+ght: 0;padding-bottom: 9px;border-collapse: collapse;mso-table-lspace: 0pt=
+;mso-table-rspace: 0pt;" class=3D"mcnShareContentItemContainer">
+                                        <table border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"" class=3D"mcnShareContentItem" style=3D"bo=
+rder-collapse: separate;background-color: #FFFFFF;border: 1px solid #CCCCC=
+C;border-top-left-radius: 5px;border-top-right-radius: 5px;border-bottom-r=
+ight-radius: 5px;border-bottom-left-radius: 5px;mso-table-lspace: 0pt;mso-=
+table-rspace: 0pt;">
+                                            <tbody><tr>
+                                                <td align=3D"left" valign=
+=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;padding-bottom:=
+ 5px;padding-left: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso=
+-table-rspace: 0pt;">
+                                                    <table align=3D"left"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" style=3D"bord=
+er-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                        <tbody><tr>
+                                                            <td align=3D"c=
+enter" valign=3D"middle" width=3D"18" class=3D"mcnShareIconContent" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+                                                                <a href=3D=
+"http://yogobe.us7.list-manage.com/track/click?u=3Db8e441aa3092d5bb894f888=
+08&id=3Dae947699ae&e=3Dbac7c839f0" target=3D"_blank" style=3D"word-wrap:=
+ break-word !important;"><img src=3D"http://cdn-images.mailchimp.com/icons=
+/social-block/gray-googleplus-128.png" style=3D"display: block;border: 0;l=
+ine-height: 100%;outline: none;text-decoration: none;height: auto !importa=
+nt;" height=3D"18" width=3D"18" class=3D""></a>
+                                                            </td>
+                                                            <td align=3D"l=
+eft" valign=3D"middle" class=3D"mcnShareTextContent" style=3D"padding-left=
+: 5px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0p=
+t;">
+                                                                <a href=3D=
+"http://yogobe.us7.list-manage1.com/track/click?u=3Db8e441aa3092d5bb894f88=
+808&id=3Dca29796973&e=3Dbac7c839f0" target=3D"" style=3D"color: #505050;f=
+ont-family: Arial;font-size: 12px;text-decoration: none;font-weight: norma=
+l;line-height: 100%;text-align: center;word-wrap: break-word !important;">=
++1</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+                </td>
+            </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnFollowBlock" style=3D"min-width: 100%;border-collapse: co=
+llapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnFollowBlockOuter">
+        <tr>
+            <td align=3D"center" valign=3D"top" style=3D"padding: 9px;bord=
+er-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" class=
+=3D"mcnFollowBlockInner">
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%" class=3D"mcnFollowContentContainer" style=3D"min-width: 100%;=
+border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody><tr>
+        <td align=3D"center" style=3D"padding-left: 9px;padding-right: 9px=
+;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" style=3D"min-width: 100%;border-collapse: collapse;mso-table-lsp=
+ace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnFollowContent">
+                <tbody><tr>
+                    <td align=3D"center" valign=3D"top" style=3D"padding-t=
+op: 9px;padding-right: 9px;padding-left: 9px;border-collapse: collapse;mso=
+-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                        <table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse;mso-table-lspa=
+ce: 0pt;mso-table-rspace: 0pt;">
+                            <tbody><tr>
+                                <td align=3D"center" valign=3D"top" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+">
+                                    <!--[if mso]>
+                                    <table align=3D"center" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+                                    <tr>
+                                    <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                <tbody><tr>
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 10px;padding-bottom: 9px;border-collapse: collapse;ms=
+o-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnFollowContentItemC=
+ontainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;">
+                                                            <tbody><tr>
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;border-collapse: collapse;mso-table-=
+lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+                                                                        <t=
+body><tr>
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;">
+                                                                         =
+           <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db8=
+e441aa3092d5bb894f88808&id=3D7f0a8844d2&e=3Dbac7c839f0" target=3D"_blank"=
+ style=3D"word-wrap: break-word !important;"><img src=3D"https://cdn-image=
+s.mailchimp.com/icons/social-block-v2/gray-facebook-48.png" style=3D"displ=
+ay: block;border: 0;line-height: 100%;outline: none;text-decoration: none;=
+height: auto !important;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                <tbody><tr>
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 10px;padding-bottom: 9px;border-collapse: collapse;ms=
+o-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnFollowContentItemC=
+ontainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;">
+                                                            <tbody><tr>
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;border-collapse: collapse;mso-table-=
+lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+                                                                        <t=
+body><tr>
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;">
+                                                                         =
+           <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db8=
+e441aa3092d5bb894f88808&id=3Db722b661ec&e=3Dbac7c839f0" target=3D"_blank"=
+ style=3D"word-wrap: break-word !important;"><img src=3D"https://cdn-image=
+s.mailchimp.com/icons/social-block-v2/gray-instagram-48.png" style=3D"disp=
+lay: block;border: 0;line-height: 100%;outline: none;text-decoration: none=
+;height: auto !important;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                <tbody><tr>
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 10px;padding-bottom: 9px;border-collapse: collapse;ms=
+o-table-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnFollowContentItemC=
+ontainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;">
+                                                            <tbody><tr>
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;border-collapse: collapse;mso-table-=
+lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+                                                                        <t=
+body><tr>
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;">
+                                                                         =
+           <a href=3D"http://yogobe.us7.list-manage1.com/track/click?u=3Db=
+8e441aa3092d5bb894f88808&id=3Dd3e010d177&e=3Dbac7c839f0" target=3D"_blank=
+" style=3D"word-wrap: break-word !important;"><img src=3D"https://cdn-imag=
+es.mailchimp.com/icons/social-block-v2/gray-link-48.png" style=3D"display:=
+ block;border: 0;line-height: 100%;outline: none;text-decoration: none;hei=
+ght: auto !important;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                                <tbody><tr>
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 0;padding-bottom: 9px;border-collapse: collapse;mso-t=
+able-lspace: 0pt;mso-table-rspace: 0pt;" class=3D"mcnFollowContentItemCont=
+ainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;">
+                                                            <tbody><tr>
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;border-collapse: collapse;mso-table-=
+lspace: 0pt;mso-table-rspace: 0pt;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+                                                                        <t=
+body><tr>
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;">
+                                                                         =
+           <a href=3D"http://yogobe.us7.list-manage.com/track/click?u=3Db8=
+e441aa3092d5bb894f88808&id=3D6f888f7e8b&e=3Dbac7c839f0" target=3D"_blank"=
+ style=3D"word-wrap: break-word !important;"><img src=3D"https://cdn-image=
+s.mailchimp.com/icons/social-block-v2/gray-youtube-48.png" style=3D"displa=
+y: block;border: 0;line-height: 100%;outline: none;text-decoration: none;h=
+eight: auto !important;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                    <!--[if mso]>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+    <tbody class=3D"mcnTextBlockOuter">
+        <tr>
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspac=
+e: 0pt;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;" width=3D"100%" class=
+=3D"mcnTextContentContainer">
+                    <tbody><tr>
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding: 0px 18px 9px;text-align: center;border-collapse: collapse;mso=
+-table-lspace: 0pt;mso-table-rspace: 0pt;color: #606060;font-family: Helve=
+tica;font-size: 11px;line-height: 125%;">
+
+                            Copyright =C2=A9 2016 YOGOBE AB=2C All rights=
+ reserved.<br>
+<br>
+<strong>Tveka inte att skriva till oss p=C3=A5:</strong><br>
+info@yogobe.com<br>
+<br>
+<a class=3D"utilityLink" href=3D"http://yogobe.us7.list-manage1.com/unsubs=
+cribe?u=3Db8e441aa3092d5bb894f88808&id=3Dbf6eed9f81&e=3Dbac7c839f0&c=3Dcb07b=
+4d1a8" style=3D"color: #606060;font-weight: normal;text-decoration: underl=
+ine;word-wrap: break-word !important;">Jag vill inte f=C3=A5 fler nyhetsbr=
+ev fr=C3=A5n Yogobe</a>&nbsp; &nbsp;&nbsp;<a class=3D"utilityLink" href=3D=
+"http://yogobe.us7.list-manage.com/profile?u=3Db8e441aa3092d5bb894f88808&i=
+d=3Dbf6eed9f81&e=3Dbac7c839f0" style=3D"color: #606060;font-weight: normal;t=
+ext-decoration: underline;word-wrap: break-word !important;">Uppdatera din=
+a nyhetsbrevsregler</a><br>
+&nbsp;
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END FOOTER -->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // END TEMPLATE -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    <img src=3D"http://yogobe.us7.list-manage.com/track/open.php?u=3Db8e44=
+1aa3092d5bb894f88808&id=3Dcb07b4d1a8&e=3Dbac7c839f0" height=3D"1" width=
+=3D"1"></body>
+</html>
+--_----------=_MCPart_1999748599--

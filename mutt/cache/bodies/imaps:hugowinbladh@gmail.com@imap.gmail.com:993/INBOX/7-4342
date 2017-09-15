@@ -1,0 +1,1486 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.15 with SMTP id o15csp590442ioe;
+        Fri, 26 May 2017 20:37:29 -0700 (PDT)
+X-Received: by 10.25.207.195 with SMTP id f186mr1483358lfg.7.1495856248883;
+        Fri, 26 May 2017 20:37:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495856248; cv=none;
+        d=google.com; s=arc-20160816;
+        b=UXVG6Cj0sM/26nyqHfBo/tEmMFbOIZrDnpzlPiOvLYI1LJORZ1hwAGPRRaG+SIN9kI
+         vxOG+Xbn+QWHuYRkqp8dZQRFGA7WAm2P9w5Yn7Ti3iYSD7++2622qPUBRmGOwlghAItt
+         ipC+Yw6m32ELFf3ZYmtBux7bz3zN7aK4HLsIKWpzI6p4iPQkSz5dEBa/V6IsfhQOmlDt
+         JCMApjMSKe1y24dnxWEos8Juw/UPLWdlR5LFoNL7GR+HZQDk3EDgN/+DqEAtwvfX7H78
+         vVjkZTJLat/GdPupncENiR4DHmVrFRMz9WgXyuYXnuMXQg+xT2snhooKjePWi5eAhRWw
+         hdCg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:to:from:subject:date:message-id:dkim-signature
+         :dkim-filter:arc-authentication-results;
+        bh=edHghbi9LmK+HH4ekTWjsH6YbXYGV33rBVMQoM0Wr0c=;
+        b=Wh1FuucTeZnVLBvfasta4Y13XOnA03TBCQgv2sJNQ68gtzPYTODzsZFH9dVnisNlif
+         ccNqUm9092Vxn27kzAqOdsKvHu9OjSA+T0jITkAyH+wvwbBicMS/WdWqJEJ5Djn3thdP
+         lJPzl5s9yAlO/S9cE5BxQRCHkxv1p0d7Tt3EkBmczc5MBobzoAzIZCZfq2I8nzeUwFyx
+         /IfNg3hCMvNbPaTXdA5YEBO6HRbirHarIhQE9n8Lt5BICUuUQyx2oL2MBTtI7++s3SoU
+         PhGFBd/eQUnMAKzrCDD0RtGGgvfPjpGcZ7D9V/aA0SFxwCn+qNhmFPbfKz1CjQnK3Y73
+         OVFQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.gog.com;
+       spf=pass (google.com: domain of newsletter@email.gog.com designates 195.167.152.43 as permitted sender) smtp.mailfrom=newsletter@email.gog.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=email.gog.com
+Return-Path: <newsletter@email.gog.com>
+Received: from gogcom-smtp-out-5.email.gog.com (gogcom-smtp-out-5.email.gog.com. [195.167.152.43])
+        by mx.google.com with ESMTPS id p192si1630534lfp.255.2017.05.26.20.37.28
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 26 May 2017 20:37:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of newsletter@email.gog.com designates 195.167.152.43 as permitted sender) client-ip=195.167.152.43;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.gog.com;
+       spf=pass (google.com: domain of newsletter@email.gog.com designates 195.167.152.43 as permitted sender) smtp.mailfrom=newsletter@email.gog.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=email.gog.com
+Received: from [127.0.0.1] (gogcom-batch-1.atm [172.16.200.79])
+	by gogcom-smtp-out-5.email.gog.com (Postfix) with ESMTP id E03856678A
+	for <hugowinbladh@gmail.com>; Sat, 27 May 2017 05:37:27 +0200 (CEST)
+Authentication-Results: email.gog.com; dmarc=none header.from=email.gog.com
+DKIM-Filter: OpenDKIM Filter v2.9.2 gogcom-smtp-out-5.email.gog.com E03856678A
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=email.gog.com;
+	s=email; t=1495856247;
+	bh=edHghbi9LmK+HH4ekTWjsH6YbXYGV33rBVMQoM0Wr0c=;
+	h=Date:Subject:From:To:Sender:From;
+	z=Date:=20Sat,=2027=20May=202017=2006:37:27=20+0300|Subject:=20Up=2
+	 0to=20-85%=20on=20juicy=20RPGs,=20including=20The=20Witcher=203:=2
+	 0Wild=20Hunt=20GOTY,=0D=0A=20VtM:=20Bloodlines,=20Pillars=20of=20E
+	 ternity,=20and=20more|From:=20"GOG.com=20Team"=20<newsletter@email
+	 .gog.com>|To:=20""=20<hugowinbladh@gmail.com>;
+	b=QQE+l6pt3l/AaFJDZngnzcZJTejJKze63oVSl9u/LPaXqvQTR9mb4enF0xJzksDxp
+	 1WR2vz37t9mSxlAVMoLaZHOIMMOlokN9qUpYngpmWJmLaEa69udTmVcc3AAz89HnOz
+	 DBaaSi1Er5ljt9iperNHPdxB4Jq/vYKPZwMzF2PUGzll3SxMem6cfT2jR3N121FZYT
+	 n56ab2ZuX6ZsntynBZQto9Cbew+jbJpDACPOUAOIf/kA0PFvqusxHSTvnaXfby5OVH
+	 0YnVXSvCzLKc7lelNVS9ybLAZn9LHOMDOfuWMjWBkSWcJYFHmtUBwtcVQ48yYvzgGP
+	 fq005B+tl+8zg==
+Message-ID: <1495856247.5928f477deff7@swift.generated>
+Date: Sat, 27 May 2017 06:37:27 +0300
+Subject: Up to -85% on juicy RPGs, including The Witcher 3: Wild Hunt GOTY,
+ VtM: Bloodlines, Pillars of Eternity, and more
+From: "GOG.com Team" <newsletter@email.gog.com>
+To: "" <hugowinbladh@gmail.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_14958562475928f477df417_=_"
+
+
+--_=_swift_v4_14958562475928f477df417_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+If you can see this text it means that your email client couldn't display o=
+ur newsletter properly.=0APlease visit this link to view the newsletter on =
+our website: http://www.gog.com/newsletter/20170526_weekly_sale_EN=0A=0A- G=
+OG.com Team=0A
+
+--_=_swift_v4_14958562475928f477df417_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www=
+.w3.org/TR/html4/loose.dtd"><html><head><meta http-equiv=3D"Content-Type" c=
+ontent=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D"wi=
+dth=3Ddevice-width, initial-scale=3D1"><meta http-equiv=3D"X-UA-Compatible"=
+ content=3D"IE=3Dedge"><meta name=3D"format-detection" content=3D"telephone=
+=3Dno"><style type=3D"text/css">body{height:100% !important;width:100% !imp=
+ortant;margin:0px !important;padding:0px !important}#emBodyTable{height:aut=
+o !important;width:100% !important;margin:0px !important;padding:0px !impor=
+tant}table,td{border-collapse:collapse}img,a img{border-style:none;border-w=
+idth:0px;outline:none;text-decoration:none}.ReadMsgBody{width:100%}.Externa=
+lClass{width:100%}.ExternalClass,.ExternalClass p,.ExternalClass span,.Exte=
+rnalClass font,.ExternalClass td,.ExternalClass div{line-height:100%}table,=
+td{mso-table-lspace:0pt;mso-table-rspace:0pt}img{-ms-interpolation-mode:bic=
+ubic}body,table,td,p,a,li,blockquote{-ms-text-size-adjust:100%;-webkit-text=
+-size-adjust:100%}table a,table a:link,table a:visited{color:#9fbf00;border=
+:none;cursor:pointer;text-decoration:none;font-weight:100}td[class~=3D"em_b=
+utton"] a:link,td[class~=3D"em_button"] a:visited,td[class~=3D"em_tag"] a:l=
+ink,td[class~=3D"em_tag"] a:visited{color:#FFF;font-weight:600;text-decorat=
+ion:none;text-transform:uppercase}span[class~=3D"em_link_fix_808080"] a{col=
+or:#808080 !important;text-decoration:none !important}span[class~=3D"em_lin=
+k_fix_262626"] a{color:#262626 !important;text-decoration:none !important}i=
+mg[class~=3D"em_image_fix"]{display:block}@media only screen and (max-width=
+: 480px){td[class~=3D"em_main_section"]{padding-left:6px !important;padding=
+-right:6px !important}table[class~=3D"em_content_wrapper"],td[class~=3D"em_=
+content_600"]{width:100% !important;max-width:480px !important}td[class~=3D=
+"em_content_297"]{width:49% !important;max-width:237px !important}td[class~=
+=3D"em_content_196"]{width:32% !important;max-width:156px !important}td[cla=
+ss~=3D"em_tile_space_col"]{width:2% !important}td[class~=3D"em_bg_image"]{b=
+ackground-size: 150% !important}img[class~=3D"em_image"]{height:auto !impor=
+tant;width:100% !important}img[class~=3D"em_image_600"]{max-width:600px !im=
+portant}img[class~=3D"em_image_297"]{max-width:297px !important}img[class~=
+=3D"em_image_196"]{max-width:196px !important}div[class~=3D"em_text_12"],p[=
+class~=3D"em_text_12"],a[class~=3D"em_text_12"],li[class~=3D"em_text_12"],t=
+d[class~=3D"em_text_12"]{-webkit-text-size-adjust:none}}</style></head><bod=
+y topmargin=3D"0" rightmargin=3D"0" bottommargin=3D"0" leftmargin=3D"0" mar=
+ginwidth=3D"0" marginheight=3D"0"><!-- preview text --><div class=3D"em_pre=
+view_text" style=3D"color:#FFF;display:none;font-size:1px;line-height:1px;m=
+ax-height:0px;max-width:0px;opacity:0;overflow:hidden;"> Plus our Weekly Sa=
+le featuring Septerra Core, Alone in the Dark 1+2+3, Momodora and more up t=
+o -90% </div><!-- /preview text --><!-- WRAPPER --><table bgcolor=3D"#f2f2f=
+2" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%" width=
+=3D"100%" id=3D"emBodyTable" class=3D"em_main_wrapper em_bg_f2f2f2" style=
+=3D"border-style:none;border-width:0px;min-width:100%;width:100%;background=
+-color:#f2f2f2"><!-- logo/language selection --><tr class=3D"wwwno"><td bgc=
+olor=3D"#262626" align=3D"center" valign=3D"top" class=3D"em_main_section e=
+m_bg_262626" style=3D"border-style:none;border-width:0px;margin-top:0px;mar=
+gin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-rig=
+ht:12px;padding-bottom:0px;padding-left:12px;background-color:#262626"><tab=
+le border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"em_content_wra=
+pper" style=3D"border-style:none;border-width:0px;margin-top:0px;margin-bot=
+tom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px=
+;padding-right:0px;padding-left:0px"><tr><td align=3D"center" valign=3D"top=
+" width=3D"600" class=3D"em_content_600 em_padding_6" style=3D"width:600px;=
+max-width:600px;vertical-align:top;padding-top:6px;padding-right:0px;paddin=
+g-bottom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-sty=
+le:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;=
+margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;paddin=
+g-left:0px"><tr><!-- logo --><td align=3D"left" valign=3D"middle" height=3D=
+"32" width=3D"34" class=3D"em_image_wrapper" style=3D"font-size:0px;line-he=
+ight:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;=
+padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><a h=
+ref=3D"https://www.gog.com/" class=3D"em_image_wrapper" style=3D"font-size:=
+0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margi=
+n-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-lef=
+t:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"32" width=3D"3=
+4" class=3D"em_image em_image_fix" src=3D"https://static.gog.com/upload/new=
+sletters/img_common/logo_gogcom_white_2x.png" alt=3D"GOG.com" style=3D"marg=
+in-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0=
+px;padding-bottom:0px;padding-right:0px;padding-left:0px"></a></td><!-- /lo=
+go --><!-- view in browser --><td align=3D"right" valign=3D"middle"><div cl=
+ass=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-family:Helv=
+etica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;mar=
+gin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bot=
+tom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;lin=
+e-height:16px;"> View in browser: <a href=3D"https://www.gog.com/newsletter=
+/20170526_weekly_sale_en" class=3D"em_text_9fbf00" style=3D"color:#9fbf00">=
+EN</a> &bull; <a href=3D"https://www.gog.com/newsletter/20170526_weekly_sal=
+e_de" class=3D"em_text_9fbf00" style=3D"color:#9fbf00">DE</a> &bull; <a hre=
+f=3D"https://www.gog.com/newsletter/20170526_weekly_sale_fr" class=3D"em_te=
+xt_9fbf00" style=3D"color:#9fbf00">FR</a> &bull; <a href=3D"https://www.gog=
+.com/newsletter/20170526_weekly_sale_ru" class=3D"em_text_9fbf00" style=3D"=
+color:#9fbf00">RU</a> &bull; <a href=3D"https://www.gog.com/newsletter/2017=
+0526_weekly_sale_br" class=3D"em_text_9fbf00" style=3D"color:#9fbf00">PT-BR=
+</a></div></td><!-- view in browser --></tr></table></td></tr></table></td>=
+</tr><!-- /logo/language selection --><!-- BODY (actual content) --><tr><td=
+ bgcolor=3D"#f2f2f2" align=3D"center" valign=3D"top" class=3D"em_main_secti=
+on em_bg_f2f2f2 em_bg_image" style=3D"border-style:none;border-width:0px;ma=
+rgin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top=
+:0px;padding-right:12px;padding-bottom:0px;padding-left:12px;background-col=
+or:#f2f2f2;background-image:url('https://static.gog.com/upload/newsletters/=
+img_common/bg_default_f2f2f2.jpg');background-position:center top;backgroun=
+d-repeat:no-repeat;background-attachment:scroll;background-size:100%"><tabl=
+e border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"em_content_wrap=
+per" style=3D"border-style:none;border-width:0px;margin-top:0px;margin-bott=
+om:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;=
+padding-right:0px;padding-left:0px"><!-- HEADER (main content) --><tr><td a=
+lign=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_600 em_pad=
+ding_48_12" style=3D"width:600px;max-width:600px;vertical-align:top;padding=
+-top:48px;padding-right:0px;padding-bottom:12px;padding-left:0px"><div clas=
+s=3D"em_text_wrapper em_text_262626 em_text_24 em_header" style=3D"font-fam=
+ily:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top=
+:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pad=
+ding-bottom:0px;padding-right:0px;padding-left:0px;color:#262626;font-size:=
+24px;line-height:32px;text-transform:uppercase;"><span class=3D"em_link_fix=
+_262626"> ROLE-PLAYING WEEK, UP TO -85% </span></div><div class=3D"em_text_=
+wrapper em_text_262626 em_text_18" style=3D"font-family:Helvetica,Arial,san=
+s-serif;font-style:normal;font-weight:100;margin-top:0px;margin-bottom:0px;=
+margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding=
+-right:0px;padding-left:0px;color:#262626;font-size:18px;line-height:26px;"=
+><span class=3D"em_link_fix_262626"> Plus recent releases and notable promo=
+tions </span></div></td></tr><tr><td align=3D"center" valign=3D"top" width=
+=3D"600" class=3D"em_content_600 em_padding_0_24" style=3D"width:600px;max-=
+width:600px;vertical-align:top;padding-top:0px;padding-right:0px;padding-bo=
+ttom:24px;padding-left:0px"><table border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0"><tr><td align=3D"center" bgcolor=3D"#9fbf00" class=3D"em_button em=
+_bg_9fbf00" style=3D"background-color:#9fbf00;-webkit-border-radius:3px;-mo=
+z-border-radius:3px;border-radius:3px"><a href=3D"https://www.gog.com/promo=
+/20170522_special_sale_rpg_week?utm_medium=3Demail&amp;utm_source=3Dnewslet=
+ter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_=
+button_a em_text_14 em_text_ffffff em_border_9fbf00" style=3D"border-color:=
+#9fbf00;font-size:14px;line-height:20px;color:#FFF;font-family:Helvetica,Ar=
+ial,sans-serif;font-weight:bold;text-decoration:none;text-transform:upperca=
+se;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;borde=
+r-width:1px;border-style:solid;padding-left:13px;padding-right:13px;padding=
+-top:12px;padding-bottom:11px;display:inline-block;"> SHOP NOW </a></td></t=
+r></table></td></tr><!-- /HEADER --><!-- SECTION (weekend promo) --><!-- he=
+ader --><!-- /header --><!-- tiles --><!-- medium tiles --><!-- /big tile -=
+-><!-- medium tiles --><tr><td align=3D"center" valign=3D"top" width=3D"600=
+" class=3D"em_content_600 em_padding_0_6" style=3D"width:600px;max-width:60=
+0px;vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:6px=
+;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:none;bord=
+er-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:=
+0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px">=
+<tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_2=
+97" style=3D"width:297px;max-width:297px;vertical-align:top"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D"=
+center" valign=3D"top" width=3D"297" class=3D"em_content_297 em_border_bott=
+om_2 em_border_ec721b em_image_wrapper" style=3D"width:297px;max-width:297p=
+x;vertical-align:top;font-size:0px;line-height:0px;margin-top:0px;margin-bo=
+ttom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0p=
+x;padding-right:0px;padding-left:0px;border-color:#ec721b;border-bottom-sty=
+le:solid;border-bottom-width:2px"><a href=3D"https://www.gog.com/game/pilla=
+rs_of_eternity_hero_edition?utm_medium=3Demail&amp;utm_source=3Dnewsletter&=
+amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_imag=
+e_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bot=
+tom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px=
+;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspace=
+=3D"0" height=3D"160" class=3D"em_image em_image_297 em_image_fix" src=3D"h=
+ttps://images.gog.com/64cbd0fc16d49e84f873bf821bc07e0c9cab96c558e023e631f8b=
+079ac61e541_email_297_2x.jpg" alt=3D"Pillars of Eternity: Hero Edition" sty=
+le=3D"margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;pad=
+ding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"></a></t=
+d></tr><!-- tile caption --><tr><td align=3D"center" valign=3D"top" width=
+=3D"297" class=3D"em_content_297" style=3D"width:297px;max-width:297px;vert=
+ical-align:top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:none;border-=
+width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px=
+;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><tr=
+><td align=3D"left" valign=3D"top"><!-- tile description --><table border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"left" class=3D"=
+em_padding_6" style=3D"padding-top:6px;padding-right:0px;padding-bottom:6px=
+;padding-left:0px"><div class=3D"em_text_wrapper em_text_808080 em_text_12"=
+ style=3D"font-family:Helvetica,Arial,sans-serif;font-style:normal;font-wei=
+ght:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;p=
+adding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;color:=
+#808080;font-size:12px;line-height:16px;"> Role-playing, Adventure, Fantasy=
+ </div></td></tr></table><!-- /tile description --></td><td align=3D"right"=
+ valign=3D"top"><!-- price tag --><table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"#ec721b" class=3D"em_tag=
+ em_bg_ec721b" style=3D"background-color:#ec721b"><a href=3D"https://www.go=
+g.com/game/pillars_of_eternity_hero_edition?utm_medium=3Demail&amp;utm_sour=
+ce=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" =
+class=3D"em_tag_a em_text_14 em_text_ffffff em_border_ec721b" style=3D"bord=
+er-color:#ec721b;font-size:14px;line-height:20px;color:#FFF;font-family:Hel=
+vetica,Arial,sans-serif;font-weight:bold;text-decoration:none;text-transfor=
+m:uppercase;border-width:1px;border-style:solid;padding-left:9px;padding-ri=
+ght:5px;padding-top:3px;padding-bottom:5px;display:inline-block;"> -60% </a=
+></td></tr></table><!-- /price tag --></td></tr></table></td></tr><!-- /til=
+e caption --></table></td><td class=3D"em_tile_space_col" style=3D"font-siz=
+e:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;mar=
+gin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-l=
+eft:0px;height:100%;width:6px"></td><td align=3D"center" valign=3D"top" wid=
+th=3D"297" class=3D"em_content_297" style=3D"width:297px;max-width:297px;ve=
+rtical-align:top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%"><tr><td align=3D"center" valign=3D"top" width=3D"297" class=
+=3D"em_content_297 em_border_bottom_2 em_border_ec721b em_image_wrapper" st=
+yle=3D"width:297px;max-width:297px;vertical-align:top;font-size:0px;line-he=
+ight:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;=
+padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;borde=
+r-color:#ec721b;border-bottom-style:solid;border-bottom-width:2px"><a href=
+=3D"https://www.gog.com/game/vampire_the_masquerade_bloodlines?utm_medium=
+=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sal=
+e&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0px;line=
+-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0=
+px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><=
+img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=3D"em_image=
+ em_image_297 em_image_fix" src=3D"https://images.gog.com/8bbb356c33d8a97cd=
+6ec70793c81aa29d55680f38e93688d61d69fe3fa831719_email_297_2x.jpg" alt=3D"Va=
+mpire=C2=AE: The Masquerade - Bloodlines=E2=84=A2" style=3D"margin-top:0px;=
+margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-=
+bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile capt=
+ion --><tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_co=
+ntent_297" style=3D"width:297px;max-width:297px;vertical-align:top"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em=
+_content_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0p=
+x;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;paddin=
+g-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"left" val=
+ign=3D"top"><!-- tile description --><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" style=3D"pa=
+dding-top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"><div c=
+lass=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-family:Hel=
+vetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;ma=
+rgin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bo=
+ttom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;li=
+ne-height:16px;"> Action, Role-playing, Horror </div></td></tr></table><!--=
+ /tile description --></td><td align=3D"right" valign=3D"top"><!-- price ta=
+g --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=
+=3D"center" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" style=3D"back=
+ground-color:#ec721b"><a href=3D"https://www.gog.com/game/vampire_the_masqu=
+erade_bloodlines?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_cam=
+paign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_1=
+4 em_text_ffffff em_border_ec721b" style=3D"border-color:#ec721b;font-size:=
+14px;line-height:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;fon=
+t-weight:bold;text-decoration:none;text-transform:uppercase;border-width:1p=
+x;border-style:solid;padding-left:9px;padding-right:5px;padding-top:3px;pad=
+ding-bottom:5px;display:inline-block;"> -75% </a></td></tr></table><!-- /pr=
+ice tag --></td></tr></table></td></tr><!-- /tile caption --></table></td><=
+/tr></table></td></tr><!-- /medium tiles --><!-- big tile --><!-- /big tile=
+ --><!-- medium tiles --><tr><td align=3D"center" valign=3D"top" width=3D"6=
+00" class=3D"em_content_600 em_padding_0_6" style=3D"width:600px;max-width:=
+600px;vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:6=
+px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:none;bo=
+rder-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-lef=
+t:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px=
+"><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_content=
+_600 em_border_bottom_2 em_border_d4a800 em_image_wrapper" style=3D"width:6=
+00px;max-width:600px;vertical-align:top;font-size:0px;line-height:0px;margi=
+n-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0p=
+x;padding-bottom:0px;padding-right:0px;padding-left:0px;border-color:#d4a80=
+0;border-bottom-style:solid;border-bottom-width:2px"><a href=3D"https://www=
+.gog.com/game/the_witcher_3_wild_hunt_game_of_the_year_edition?utm_medium=
+=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sal=
+e&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0px;line=
+-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0=
+px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><=
+img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"278" class=3D"em_image=
+ em_image_600 em_image_fix" src=3D"https://images.gog.com/e34b4189894110990=
+510f1334151555bd1c0ed45926c5c8cbc7e9b80aa6744d1_email_600_2x.jpg" alt=3D"Wi=
+tcher 3: Wild Hunt, The - Game of the Year Edition" style=3D"margin-top:0px=
+;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding=
+-bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile cap=
+tion --><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_c=
+ontent_600" style=3D"width:600px;max-width:600px;vertical-align:top"><table=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"e=
+m_content_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0=
+px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;paddi=
+ng-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"left" va=
+lign=3D"top"><!-- tile description --><table border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" style=3D"p=
+adding-top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"><div =
+class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-family:He=
+lvetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;m=
+argin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-b=
+ottom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;l=
+ine-height:16px;"> Role-playing, Adventure, Fantasy </div></td></tr></table=
+><!-- /tile description --></td><td align=3D"right" valign=3D"top"><!-- pri=
+ce tag --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td a=
+lign=3D"center" bgcolor=3D"#d4a800" class=3D"em_tag em_bg_d4a800" style=3D"=
+background-color:#d4a800"><a href=3D"https://www.gog.com/game/the_witcher_3=
+_wild_hunt_game_of_the_year_edition?utm_medium=3Demail&amp;utm_source=3Dnew=
+sletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D=
+"em_tag_a em_text_14 em_text_ffffff em_border_d4a800" style=3D"border-color=
+:#d4a800;font-size:14px;line-height:20px;color:#FFF;font-family:Helvetica,A=
+rial,sans-serif;font-weight:bold;text-decoration:none;text-transform:upperc=
+ase;border-width:1px;border-style:solid;padding-left:9px;padding-right:5px;=
+padding-top:3px;padding-bottom:5px;display:inline-block;"> -50% </a></td></=
+tr></table><!-- /price tag --></td></tr></table></td></tr><!-- /tile captio=
+n --></table></td></tr><!-- /big tile --><!-- medium tiles --><!-- /big til=
+e --><!-- medium tiles --><tr><td align=3D"center" valign=3D"top" width=3D"=
+600" class=3D"em_content_600 em_padding_0_6" style=3D"width:600px;max-width=
+:600px;vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:=
+6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:none;b=
+order-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-le=
+ft:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0p=
+x"><tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_conten=
+t_297" style=3D"width:297px;max-width:297px;vertical-align:top"><table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=
+=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_297 em_border_=
+bottom_2 em_border_ec721b em_image_wrapper" style=3D"width:297px;max-width:=
+297px;vertical-align:top;font-size:0px;line-height:0px;margin-top:0px;margi=
+n-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-botto=
+m:0px;padding-right:0px;padding-left:0px;border-color:#ec721b;border-bottom=
+-style:solid;border-bottom-width:2px"><a href=3D"https://www.gog.com/game/s=
+hadowrun_dragonfall?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_=
+campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_image_wrappe=
+r" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;=
+margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding=
+-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" he=
+ight=3D"160" class=3D"em_image em_image_297 em_image_fix" src=3D"https://im=
+ages.gog.com/d73a8ebb000838dae5bf111205a5fee7818997eb201cd8182f7affd4c21cb6=
+80_email_297_2x.jpg" alt=3D"DLC: Shadowrun: Dragonfall" style=3D"margin-top=
+:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pad=
+ding-bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile=
+ caption --><tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"=
+em_content_297" style=3D"width:297px;max-width:297px;vertical-align:top"><t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=
+=3D"em_content_wrapper" style=3D"border-style:none;border-width:0px;margin-=
+top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;=
+padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"lef=
+t" valign=3D"top"><!-- tile description --><table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" styl=
+e=3D"padding-top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"=
+><div class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-fam=
+ily:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top=
+:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pad=
+ding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:=
+12px;line-height:16px;"> Role-playing, Turn-based, Sci-fi </div></td></tr><=
+/table><!-- /tile description --></td><td align=3D"right" valign=3D"top"><!=
+-- price tag --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr=
+><td align=3D"center" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" sty=
+le=3D"background-color:#ec721b"><a href=3D"https://www.gog.com/game/shadowr=
+un_dragonfall?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campai=
+gn=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 e=
+m_text_ffffff em_border_ec721b" style=3D"border-color:#ec721b;font-size:14p=
+x;line-height:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;font-w=
+eight:bold;text-decoration:none;text-transform:uppercase;border-width:1px;b=
+order-style:solid;padding-left:9px;padding-right:5px;padding-top:3px;paddin=
+g-bottom:5px;display:inline-block;"> -80% </a></td></tr></table><!-- /price=
+ tag --></td></tr></table></td></tr><!-- /tile caption --></table></td><td =
+class=3D"em_tile_space_col" style=3D"font-size:0px;line-height:0px;margin-t=
+op:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;p=
+adding-bottom:0px;padding-right:0px;padding-left:0px;height:100%;width:6px"=
+></td><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content=
+_297" style=3D"width:297px;max-width:297px;vertical-align:top"><table borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D=
+"center" valign=3D"top" width=3D"297" class=3D"em_content_297 em_border_bot=
+tom_2 em_border_ec721b em_image_wrapper" style=3D"width:297px;max-width:297=
+px;vertical-align:top;font-size:0px;line-height:0px;margin-top:0px;margin-b=
+ottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0=
+px;padding-right:0px;padding-left:0px;border-color:#ec721b;border-bottom-st=
+yle:solid;border-bottom-width:2px"><a href=3D"https://www.gog.com/game/deus=
+_ex?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170=
+526_weekly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font=
+-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px=
+;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;paddi=
+ng-left:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" cla=
+ss=3D"em_image em_image_297 em_image_fix" src=3D"https://images.gog.com/794=
+29e097ac499290497415f13c0a1747a07659fc7b53f8cc07f1b0afd569333_email_297_2x.=
+jpg" alt=3D"Deus Ex=E2=84=A2 GOTY Edition" style=3D"margin-top:0px;margin-b=
+ottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0=
+px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile caption --><=
+tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_29=
+7" style=3D"width:297px;max-width:297px;vertical-align:top"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_conte=
+nt_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0px;marg=
+in-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bott=
+om:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"left" valign=3D=
+"top"><!-- tile description --><table border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" style=3D"padding-=
+top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"><div class=
+=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-family:Helveti=
+ca,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;margin=
+-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom=
+:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;line-h=
+eight:16px;"> Role-playing, FPP, Sci-fi </div></td></tr></table><!-- /tile =
+description --></td><td align=3D"right" valign=3D"top"><!-- price tag --><t=
+able border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"cent=
+er" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" style=3D"background-c=
+olor:#ec721b"><a href=3D"https://www.gog.com/game/deus_ex?utm_medium=3Demai=
+l&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp;u=
+tm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff em_border_ec721b"=
+ style=3D"border-color:#ec721b;font-size:14px;line-height:20px;color:#FFF;f=
+ont-family:Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none=
+;text-transform:uppercase;border-width:1px;border-style:solid;padding-left:=
+9px;padding-right:5px;padding-top:3px;padding-bottom:5px;display:inline-blo=
+ck;"> -75% </a></td></tr></table><!-- /price tag --></td></tr></table></td>=
+</tr><!-- /tile caption --></table></td></tr></table></td></tr><!-- /medium=
+ tiles --><!-- big tile --><!-- /big tile --><!-- medium tiles --><tr><td a=
+lign=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_600 em_pad=
+ding_0_6" style=3D"width:600px;max-width:600px;vertical-align:top;padding-t=
+op:0px;padding-right:0px;padding-bottom:6px;padding-left:0px"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_conte=
+nt_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0px;marg=
+in-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bott=
+om:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"em_content_600 em_border_bottom_2 em_border=
+_ec721b em_image_wrapper" style=3D"width:600px;max-width:600px;vertical-ali=
+gn:top;font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margi=
+n-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-righ=
+t:0px;padding-left:0px;border-color:#ec721b;border-bottom-style:solid;borde=
+r-bottom-width:2px"><a href=3D"https://www.gog.com/game/system_shock_2?utm_=
+medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_week=
+ly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0p=
+x;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-=
+left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:=
+0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"278" class=3D"em=
+_image em_image_600 em_image_fix" src=3D"https://images.gog.com/5256f14e991=
+169a1d50abf30b35fa99b2afe3d5e807a99aa1d9d3c4327741a84_email_600_2x.jpg" alt=
+=3D"System Shock=E2=84=A2 2" style=3D"margin-top:0px;margin-bottom:0px;marg=
+in-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-rig=
+ht:0px;padding-left:0px"></a></td></tr><!-- tile caption --><tr><td align=
+=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_600" style=3D"=
+width:600px;max-width:600px;vertical-align:top"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" st=
+yle=3D"border-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;=
+margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding=
+-right:0px;padding-left:0px"><tr><td align=3D"left" valign=3D"top"><!-- til=
+e description --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><t=
+r><td align=3D"left" class=3D"em_padding_6" style=3D"padding-top:6px;paddin=
+g-right:0px;padding-bottom:6px;padding-left:0px"><div class=3D"em_text_wrap=
+per em_text_808080 em_text_12" style=3D"font-family:Helvetica,Arial,sans-se=
+rif;font-style:normal;font-weight:100;margin-top:0px;margin-bottom:0px;marg=
+in-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-rig=
+ht:0px;padding-left:0px;color:#808080;font-size:12px;line-height:16px;"> Ro=
+le-playing, FPP, Sci-fi </div></td></tr></table><!-- /tile description --><=
+/td><td align=3D"right" valign=3D"top"><!-- price tag --><table border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"#=
+ec721b" class=3D"em_tag em_bg_ec721b" style=3D"background-color:#ec721b"><a=
+ href=3D"https://www.gog.com/game/system_shock_2?utm_medium=3Demail&amp;utm=
+_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=
+=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff em_border_ec721b" style=
+=3D"border-color:#ec721b;font-size:14px;line-height:20px;color:#FFF;font-fa=
+mily:Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;text-=
+transform:uppercase;border-width:1px;border-style:solid;padding-left:9px;pa=
+dding-right:5px;padding-top:3px;padding-bottom:5px;display:inline-block;"> =
+-85% </a></td></tr></table><!-- /price tag --></td></tr></table></td></tr><=
+!-- /tile caption --></table></td></tr><!-- /big tile --><!-- medium tiles =
+--><!-- /big tile --><!-- medium tiles --><tr><td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"wid=
+th:600px;max-width:600px;vertical-align:top;padding-top:0px;padding-right:0=
+px;padding-bottom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"b=
+order-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-r=
+ight:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0=
+px;padding-left:0px"><tr><td align=3D"center" valign=3D"top" width=3D"297" =
+class=3D"em_content_297" style=3D"width:297px;max-width:297px;vertical-alig=
+n:top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100=
+%"><tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_conten=
+t_297 em_border_bottom_2 em_border_d4a800 em_image_wrapper" style=3D"width:=
+297px;max-width:297px;vertical-align:top;font-size:0px;line-height:0px;marg=
+in-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0=
+px;padding-bottom:0px;padding-right:0px;padding-left:0px;border-color:#d4a8=
+00;border-bottom-style:solid;border-bottom-width:2px"><a href=3D"https://ww=
+w.gog.com/game/starcrawlers?utm_medium=3Demail&amp;utm_source=3Dnewsletter&=
+amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_imag=
+e_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bot=
+tom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px=
+;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspace=
+=3D"0" height=3D"160" class=3D"em_image em_image_297 em_image_fix" src=3D"h=
+ttps://images.gog.com/2584d41c505bcfd0b166685d72cd6249d2275ac314c9190fa1ba6=
+806170da8b7_email_297_2x.jpg" alt=3D"StarCrawlers" style=3D"margin-top:0px;=
+margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-=
+bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile capt=
+ion --><tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_co=
+ntent_297" style=3D"width:297px;max-width:297px;vertical-align:top"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em=
+_content_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0p=
+x;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;paddin=
+g-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"left" val=
+ign=3D"top"><!-- tile description --><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" style=3D"pa=
+dding-top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"><div c=
+lass=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-family:Hel=
+vetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;ma=
+rgin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bo=
+ttom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;li=
+ne-height:16px;"> Role-playing, Turn-based, Sci-fi </div></td></tr></table>=
+<!-- /tile description --></td><td align=3D"right" valign=3D"top"><!-- pric=
+e tag --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td al=
+ign=3D"center" bgcolor=3D"#d4a800" class=3D"em_tag em_bg_d4a800" style=3D"b=
+ackground-color:#d4a800"><a href=3D"https://www.gog.com/game/starcrawlers?u=
+tm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_w=
+eekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff e=
+m_border_d4a800" style=3D"border-color:#d4a800;font-size:14px;line-height:2=
+0px;color:#FFF;font-family:Helvetica,Arial,sans-serif;font-weight:bold;text=
+-decoration:none;text-transform:uppercase;border-width:1px;border-style:sol=
+id;padding-left:9px;padding-right:5px;padding-top:3px;padding-bottom:5px;di=
+splay:inline-block;"> -25% </a></td></tr></table><!-- /price tag --></td></=
+tr></table></td></tr><!-- /tile caption --></table></td><td class=3D"em_til=
+e_space_col" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-b=
+ottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0=
+px;padding-right:0px;padding-left:0px;height:100%;width:6px"></td><td align=
+=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"=
+width:297px;max-width:297px;vertical-align:top"><table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D"center" valign=
+=3D"top" width=3D"297" class=3D"em_content_297 em_border_bottom_2 em_border=
+_808080 em_image_wrapper" style=3D"width:297px;max-width:297px;vertical-ali=
+gn:top;font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margi=
+n-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-righ=
+t:0px;padding-left:0px;border-color:#808080;border-bottom-style:solid;borde=
+r-bottom-width:2px"><a href=3D"https://www.gog.com/game/throne_of_darkness?=
+utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_=
+weekly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-siz=
+e:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;mar=
+gin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-l=
+eft:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=
+=3D"em_image em_image_297 em_image_fix" src=3D"https://images.gog.com/26f00=
+2ff717e9c6012d571ce5c64940b0fc8b8d93125874b7c4e54946118a5d9_email_297_2x.jp=
+g" alt=3D"Throne of Darkness" style=3D"margin-top:0px;margin-bottom:0px;mar=
+gin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-ri=
+ght:0px;padding-left:0px"></a></td></tr><!-- tile caption --><tr><td align=
+=3D"left" valign=3D"top" width=3D"297" class=3D"em_content_297 em_padding_6=
+" style=3D"width:297px;max-width:297px;vertical-align:top;padding-top:6px;p=
+adding-right:0px;padding-bottom:6px;padding-left:0px"><div class=3D"em_text=
+_wrapper em_text_808080 em_text_12" style=3D"font-family:Helvetica,Arial,sa=
+ns-serif;font-style:normal;font-weight:100;margin-top:0px;margin-bottom:0px=
+;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;paddin=
+g-right:0px;padding-left:0px;color:#808080;font-size:12px;line-height:16px;=
+"> Action, Role-playing, Fantasy </div></td></tr><!-- /tile caption --></ta=
+ble></td></tr></table></td></tr><!-- /medium tiles --><!-- big tile --><!--=
+ /big tile --><!-- medium tiles --><tr><td align=3D"center" valign=3D"top" =
+width=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"width:600px;=
+max-width:600px;vertical-align:top;padding-top:0px;padding-right:0px;paddin=
+g-bottom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-sty=
+le:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;=
+margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;paddin=
+g-left:0px"><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"=
+em_content_600 em_border_bottom_2 em_border_808080 em_image_wrapper" style=
+=3D"width:600px;max-width:600px;vertical-align:top;font-size:0px;line-heigh=
+t:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;pad=
+ding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;border-c=
+olor:#808080;border-bottom-style:solid;border-bottom-width:2px"><a href=3D"=
+https://www.gog.com/game/everspace?utm_medium=3Demail&amp;utm_source=3Dnews=
+letter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"=
+em_image_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;mar=
+gin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bot=
+tom:0px;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" =
+vspace=3D"0" height=3D"278" class=3D"em_image em_image_600 em_image_fix" sr=
+c=3D"https://images.gog.com/e5aa16043bc1434164e51299695d6802909228943005f7c=
+331bbe746db1845ac_email_600_2x.jpg" alt=3D"EVERSPACE" style=3D"margin-top:0=
+px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;paddi=
+ng-bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile c=
+aption --><tr><td align=3D"left" valign=3D"top" width=3D"600" class=3D"em_c=
+ontent_600 em_padding_6" style=3D"width:600px;max-width:600px;vertical-alig=
+n:top;padding-top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px=
+"><div class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-fa=
+mily:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-to=
+p:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pa=
+dding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size=
+:12px;line-height:16px;"> Action, Simulation, Sci-fi </div></td></tr><!-- /=
+tile caption --></table></td></tr><!-- /big tile --><!-- medium tiles --><!=
+-- /big tile --><!-- medium tiles --><tr><td align=3D"center" valign=3D"top=
+" width=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"width:600p=
+x;max-width:600px;vertical-align:top;padding-top:0px;padding-right:0px;padd=
+ing-bottom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-s=
+tyle:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0p=
+x;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padd=
+ing-left:0px"><tr><td align=3D"center" valign=3D"top" width=3D"297" class=
+=3D"em_content_297" style=3D"width:297px;max-width:297px;vertical-align:top=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><t=
+r><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_297=
+ em_border_bottom_2 em_border_808080 em_image_wrapper" style=3D"width:297px=
+;max-width:297px;vertical-align:top;font-size:0px;line-height:0px;margin-to=
+p:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pa=
+dding-bottom:0px;padding-right:0px;padding-left:0px;border-color:#808080;bo=
+rder-bottom-style:solid;border-bottom-width:2px"><a href=3D"https://www.gog=
+.com/game/starpoint_gemini_warlords?utm_medium=3Demail&amp;utm_source=3Dnew=
+sletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D=
+"em_image_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;ma=
+rgin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bo=
+ttom:0px;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0"=
+ vspace=3D"0" height=3D"160" class=3D"em_image em_image_297 em_image_fix" s=
+rc=3D"https://images.gog.com/e22d9f5782adbd07a17aa4df7694648ec8ef88c7882f3c=
+39409692d7a62d7c43_email_297_2x.jpg" alt=3D"Starpoint Gemini Warlords" styl=
+e=3D"margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padd=
+ing-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"></a></td=
+></tr><!-- tile caption --><tr><td align=3D"left" valign=3D"top" width=3D"2=
+97" class=3D"em_content_297 em_padding_6" style=3D"width:297px;max-width:29=
+7px;vertical-align:top;padding-top:6px;padding-right:0px;padding-bottom:6px=
+;padding-left:0px"><div class=3D"em_text_wrapper em_text_808080 em_text_12"=
+ style=3D"font-family:Helvetica,Arial,sans-serif;font-style:normal;font-wei=
+ght:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;p=
+adding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;color:=
+#808080;font-size:12px;line-height:16px;"> Role-playing, Simulation, Sci-fi=
+ </div></td></tr><!-- /tile caption --></table></td><td class=3D"em_tile_sp=
+ace_col" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-botto=
+m:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;p=
+adding-right:0px;padding-left:0px;height:100%;width:6px"></td><td align=3D"=
+center" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"widt=
+h:297px;max-width:297px;vertical-align:top"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D"center" valign=3D"=
+top" width=3D"297" class=3D"em_content_297 em_border_bottom_2 em_border_d4a=
+800 em_image_wrapper" style=3D"width:297px;max-width:297px;vertical-align:t=
+op;font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-ri=
+ght:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0p=
+x;padding-left:0px;border-color:#d4a800;border-bottom-style:solid;border-bo=
+ttom-width:2px"><a href=3D"https://www.gog.com/game/descent_underground?utm=
+_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_wee=
+kly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0=
+px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin=
+-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left=
+:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=3D"e=
+m_image em_image_297 em_image_fix" src=3D"https://images.gog.com/249138b1bd=
+f66dc34cf09a0f85e702429b7da68711cb897464fa52bb979792b1_email_297_2x.jpg" al=
+t=3D"Descent: Underground" style=3D"margin-top:0px;margin-bottom:0px;margin=
+-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right=
+:0px;padding-left:0px"></a></td></tr><!-- tile caption --><tr><td align=3D"=
+center" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"widt=
+h:297px;max-width:297px;vertical-align:top"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=
+=3D"border-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;mar=
+gin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-ri=
+ght:0px;padding-left:0px"><tr><td align=3D"left" valign=3D"top"><!-- tile d=
+escription --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><=
+td align=3D"left" class=3D"em_padding_6" style=3D"padding-top:6px;padding-r=
+ight:0px;padding-bottom:6px;padding-left:0px"><div class=3D"em_text_wrapper=
+ em_text_808080 em_text_12" style=3D"font-family:Helvetica,Arial,sans-serif=
+;font-style:normal;font-weight:100;margin-top:0px;margin-bottom:0px;margin-=
+right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:=
+0px;padding-left:0px;color:#808080;font-size:12px;line-height:16px;"> Shoot=
+er, Simulation, Sci-fi <br><span class=3D"em_emphasis" style=3D"font-weight=
+:bold"> In development </span></div></td></tr></table><!-- /tile descriptio=
+n --></td><td align=3D"right" valign=3D"top"><!-- price tag --><table borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center" bgcolo=
+r=3D"#d4a800" class=3D"em_tag em_bg_d4a800" style=3D"background-color:#d4a8=
+00"><a href=3D"https://www.gog.com/game/descent_underground?utm_medium=3Dem=
+ail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp=
+;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff em_border_d4a80=
+0" style=3D"border-color:#d4a800;font-size:14px;line-height:20px;color:#FFF=
+;font-family:Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:no=
+ne;text-transform:uppercase;border-width:1px;border-style:solid;padding-lef=
+t:9px;padding-right:5px;padding-top:3px;padding-bottom:5px;display:inline-b=
+lock;"> -50% </a></td></tr></table><!-- /price tag --></td></tr></table></t=
+d></tr><!-- /tile caption --></table></td></tr></table></td></tr><!-- /medi=
+um tiles --><!-- big tile --><!-- /big tile --><!-- medium tiles --><tr><td=
+ align=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_600 em_p=
+adding_0_6" style=3D"width:600px;max-width:600px;vertical-align:top;padding=
+-top:0px;padding-right:0px;padding-bottom:6px;padding-left:0px"><table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_con=
+tent_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0px;ma=
+rgin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bo=
+ttom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"center" valig=
+n=3D"top" width=3D"600" class=3D"em_content_600 em_border_bottom_2 em_borde=
+r_ec721b em_image_wrapper" style=3D"width:600px;max-width:600px;vertical-al=
+ign:top;font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;marg=
+in-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-rig=
+ht:0px;padding-left:0px;border-color:#ec721b;border-bottom-style:solid;bord=
+er-bottom-width:2px"><a href=3D"https://www.gog.com/game/wing_commander_3_h=
+eart_of_the_tiger?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_ca=
+mpaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper"=
+ style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;ma=
+rgin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-r=
+ight:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" heig=
+ht=3D"278" class=3D"em_image em_image_600 em_image_fix" src=3D"https://imag=
+es.gog.com/d9de56125d8001cb24fd1a94d97e691af7aa76c1880b7e7aaf0a104d8fbe083a=
+_email_600_2x.jpg" alt=3D"Wing Commander=E2=84=A2 3 Heart of the Tiger=
+=E2=84=A2" style=3D"margin-top:0px;margin-bottom:0px;margin-right:0px;margi=
+n-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-lef=
+t:0px"></a></td></tr><!-- tile caption --><tr><td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"em_content_600" style=3D"width:600px;max-wi=
+dth:600px;vertical-align:top"><table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-styl=
+e:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;m=
+argin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding=
+-left:0px"><tr><td align=3D"left" valign=3D"top"><!-- tile description --><=
+table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"lef=
+t" class=3D"em_padding_6" style=3D"padding-top:6px;padding-right:0px;paddin=
+g-bottom:6px;padding-left:0px"><div class=3D"em_text_wrapper em_text_808080=
+ em_text_12" style=3D"font-family:Helvetica,Arial,sans-serif;font-style:nor=
+mal;font-weight:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margi=
+n-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-lef=
+t:0px;color:#808080;font-size:12px;line-height:16px;"> Shooter, Action, Sci=
+-fi </div></td></tr></table><!-- /tile description --></td><td align=3D"rig=
+ht" valign=3D"top"><!-- price tag --><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"#ec721b" class=3D"em_=
+tag em_bg_ec721b" style=3D"background-color:#ec721b"><a href=3D"https://www=
+.gog.com/game/wing_commander_3_heart_of_the_tiger?utm_medium=3Demail&amp;ut=
+m_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=
+=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff em_border_ec721b" style=
+=3D"border-color:#ec721b;font-size:14px;line-height:20px;color:#FFF;font-fa=
+mily:Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;text-=
+transform:uppercase;border-width:1px;border-style:solid;padding-left:9px;pa=
+dding-right:5px;padding-top:3px;padding-bottom:5px;display:inline-block;"> =
+-75% </a></td></tr></table><!-- /price tag --></td></tr></table></td></tr><=
+!-- /tile caption --></table></td></tr><!-- /big tile --><!-- medium tiles =
+--><!-- /big tile --><!-- medium tiles --><tr><td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"wid=
+th:600px;max-width:600px;vertical-align:top;padding-top:0px;padding-right:0=
+px;padding-bottom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"b=
+order-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-r=
+ight:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0=
+px;padding-left:0px"><tr><td align=3D"center" valign=3D"top" width=3D"297" =
+class=3D"em_content_297" style=3D"width:297px;max-width:297px;vertical-alig=
+n:top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100=
+%"><tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_conten=
+t_297 em_border_bottom_2 em_border_ec721b em_image_wrapper" style=3D"width:=
+297px;max-width:297px;vertical-align:top;font-size:0px;line-height:0px;marg=
+in-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0=
+px;padding-bottom:0px;padding-right:0px;padding-left:0px;border-color:#ec72=
+1b;border-bottom-style:solid;border-bottom-width:2px"><a href=3D"https://ww=
+w.gog.com/game/last_door_collectors_edition_the?utm_medium=3Demail&amp;utm_=
+source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3D=
+EN" class=3D"em_image_wrapper" style=3D"font-size:0px;line-height:0px;margi=
+n-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0p=
+x;padding-bottom:0px;padding-right:0px;padding-left:0px"><img border=3D"0" =
+hspace=3D"0" vspace=3D"0" height=3D"160" class=3D"em_image em_image_297 em_=
+image_fix" src=3D"https://images.gog.com/7d6c71f0936c9b63d592c688eb67cebba6=
+332089002cddfc8b5bc0e8102095d3_email_297_2x.jpg" alt=3D"Last Door: Collecto=
+r&#039;s Edition, The" style=3D"margin-top:0px;margin-bottom:0px;margin-rig=
+ht:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px=
+;padding-left:0px"></a></td></tr><!-- tile caption --><tr><td align=3D"cent=
+er" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"width:29=
+7px;max-width:297px;vertical-align:top"><table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"b=
+order-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;margin-r=
+ight:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0=
+px;padding-left:0px"><tr><td align=3D"left" valign=3D"top"><!-- tile descri=
+ption --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td al=
+ign=3D"left" class=3D"em_padding_6" style=3D"padding-top:6px;padding-right:=
+0px;padding-bottom:6px;padding-left:0px"><div class=3D"em_text_wrapper em_t=
+ext_808080 em_text_12" style=3D"font-family:Helvetica,Arial,sans-serif;font=
+-style:normal;font-weight:100;margin-top:0px;margin-bottom:0px;margin-right=
+:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;p=
+adding-left:0px;color:#808080;font-size:12px;line-height:16px;"> Adventure,=
+ Point-and-click, Horror </div></td></tr></table><!-- /tile description -->=
+</td><td align=3D"right" valign=3D"top"><!-- price tag --><table border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"=
+#ec721b" class=3D"em_tag em_bg_ec721b" style=3D"background-color:#ec721b"><=
+a href=3D"https://www.gog.com/game/last_door_collectors_edition_the?utm_med=
+ium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_=
+sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff em_bord=
+er_ec721b" style=3D"border-color:#ec721b;font-size:14px;line-height:20px;co=
+lor:#FFF;font-family:Helvetica,Arial,sans-serif;font-weight:bold;text-decor=
+ation:none;text-transform:uppercase;border-width:1px;border-style:solid;pad=
+ding-left:9px;padding-right:5px;padding-top:3px;padding-bottom:5px;display:=
+inline-block;"> -66% </a></td></tr></table><!-- /price tag --></td></tr></t=
+able></td></tr><!-- /tile caption --></table></td><td class=3D"em_tile_spac=
+e_col" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bottom:=
+0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;pad=
+ding-right:0px;padding-left:0px;height:100%;width:6px"></td><td align=3D"ce=
+nter" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"width:=
+297px;max-width:297px;vertical-align:top"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D"center" valign=3D"=
+top" width=3D"297" class=3D"em_content_297 em_border_bottom_2 em_border_d4a=
+800 em_image_wrapper" style=3D"width:297px;max-width:297px;vertical-align:t=
+op;font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-ri=
+ght:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0p=
+x;padding-left:0px;border-color:#d4a800;border-bottom-style:solid;border-bo=
+ttom-width:2px"><a href=3D"https://www.gog.com/game/army_men?utm_medium=3De=
+mail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&am=
+p;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0px;line-hei=
+ght:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;p=
+adding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><img =
+border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=3D"em_image em_=
+image_297 em_image_fix" src=3D"https://images.gog.com/fa499be0cbc7fb9ac568b=
+ac761b959becfe29b7851c1591eeb4fe6b9e25c7e97_email_297_2x.jpg" alt=3D"Army M=
+en" style=3D"margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:=
+0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px">=
+</a></td></tr><!-- tile caption --><tr><td align=3D"center" valign=3D"top" =
+width=3D"297" class=3D"em_content_297" style=3D"width:297px;max-width:297px=
+;vertical-align:top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:none;bo=
+rder-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-lef=
+t:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px=
+"><tr><td align=3D"left" valign=3D"top"><!-- tile description --><table bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"left" class=
+=3D"em_padding_6" style=3D"padding-top:6px;padding-right:0px;padding-bottom=
+:6px;padding-left:0px"><div class=3D"em_text_wrapper em_text_808080 em_text=
+_12" style=3D"font-family:Helvetica,Arial,sans-serif;font-style:normal;font=
+-weight:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0=
+px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;co=
+lor:#808080;font-size:12px;line-height:16px;"> Strategy, Real-time, Tactica=
+l </div></td></tr></table><!-- /tile description --></td><td align=3D"right=
+" valign=3D"top"><!-- price tag --><table border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"#d4a800" class=3D"em_ta=
+g em_bg_d4a800" style=3D"background-color:#d4a800"><a href=3D"https://www.g=
+og.com/game/army_men?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm=
+_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_te=
+xt_14 em_text_ffffff em_border_d4a800" style=3D"border-color:#d4a800;font-s=
+ize:14px;line-height:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif=
+;font-weight:bold;text-decoration:none;text-transform:uppercase;border-widt=
+h:1px;border-style:solid;padding-left:9px;padding-right:5px;padding-top:3px=
+;padding-bottom:5px;display:inline-block;"> -50% </a></td></tr></table><!--=
+ /price tag --></td></tr></table></td></tr><!-- /tile caption --></table></=
+td></tr></table></td></tr><!-- /medium tiles --><!-- big tile --><!-- /big =
+tile --><!-- medium tiles --><tr><td align=3D"center" valign=3D"top" width=
+=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"width:600px;max-w=
+idth:600px;vertical-align:top;padding-top:0px;padding-right:0px;padding-bot=
+tom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:no=
+ne;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margi=
+n-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-lef=
+t:0px"><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_co=
+ntent_600 em_border_bottom_2 em_border_d4a800 em_image_wrapper" style=3D"wi=
+dth:600px;max-width:600px;vertical-align:top;font-size:0px;line-height:0px;=
+margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-t=
+op:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;border-color:#=
+d4a800;border-bottom-style:solid;border-bottom-width:2px"><a href=3D"https:=
+//www.gog.com/game/planet_nomads?utm_medium=3Demail&amp;utm_source=3Dnewsle=
+tter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em=
+_image_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;margi=
+n-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-botto=
+m:0px;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vs=
+pace=3D"0" height=3D"278" class=3D"em_image em_image_600 em_image_fix" src=
+=3D"https://images.gog.com/e68ad32985e1b1a7bf7b98ce71df4240974d6e158c3a5813=
+ebeb43d99f48d704_email_600_2x.jpg" alt=3D"Planet Nomads" style=3D"margin-to=
+p:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pa=
+dding-bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- til=
+e caption --><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D=
+"em_content_600" style=3D"width:600px;max-width:600px;vertical-align:top"><=
+table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=
+=3D"em_content_wrapper" style=3D"border-style:none;border-width:0px;margin-=
+top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;=
+padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"lef=
+t" valign=3D"top"><!-- tile description --><table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" styl=
+e=3D"padding-top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"=
+><div class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-fam=
+ily:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top=
+:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pad=
+ding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:=
+12px;line-height:16px;"> Action, Adventure, Survival <br><span class=3D"em_=
+emphasis" style=3D"font-weight:bold"> In development </span></div></td></tr=
+></table><!-- /tile description --></td><td align=3D"right" valign=3D"top">=
+<!-- price tag --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><=
+tr><td align=3D"center" bgcolor=3D"#d4a800" class=3D"em_tag em_bg_d4a800" s=
+tyle=3D"background-color:#d4a800"><a href=3D"https://www.gog.com/game/plane=
+t_nomads?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D=
+20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_tex=
+t_ffffff em_border_d4a800" style=3D"border-color:#d4a800;font-size:14px;lin=
+e-height:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;font-weight=
+:bold;text-decoration:none;text-transform:uppercase;border-width:1px;border=
+-style:solid;padding-left:9px;padding-right:5px;padding-top:3px;padding-bot=
+tom:5px;display:inline-block;"> -10% </a></td></tr></table><!-- /price tag =
+--></td></tr></table></td></tr><!-- /tile caption --></table></td></tr><!--=
+ /big tile --><!-- /tiles --><!-- footer --><tr><td align=3D"center" valign=
+=3D"top" width=3D"600" class=3D"em_content_600 em_padding_6" style=3D"width=
+:600px;max-width:600px;vertical-align:top;padding-top:6px;padding-right:0px=
+;padding-bottom:6px;padding-left:0px"><table border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"#ec721b" class=3D"em=
+_button em_bg_ec721b" style=3D"background-color:#ec721b;-webkit-border-radi=
+us:3px;-moz-border-radius:3px;border-radius:3px"><a href=3D"https://www.gog=
+.com/promo/20170522_special_sale_rpg_week?utm_medium=3Demail&amp;utm_source=
+=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" cl=
+ass=3D"em_button_a em_text_12 em_text_ffffff em_border_ec721b" style=3D"bor=
+der-color:#ec721b;font-size:12px;line-height:16px;color:#FFF;font-family:He=
+lvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;text-transfo=
+rm:uppercase;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius=
+:3px;border-width:1px;border-style:solid;padding-left:13px;padding-right:13=
+px;padding-top:12px;padding-bottom:11px;display:inline-block;"> up to -85% =
+</a></td><td width=3D"2" class=3D"em_button_space" style=3D"font-size:0px;l=
+ine-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-lef=
+t:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px=
+;height:100%;width:2px"></td><td align=3D"center" bgcolor=3D"#9fbf00" class=
+=3D"em_button em_bg_9fbf00" style=3D"background-color:#9fbf00;-webkit-borde=
+r-radius:3px;-moz-border-radius:3px;border-radius:3px"><a href=3D"https://w=
+ww.gog.com/promo/20170522_special_sale_rpg_week?utm_medium=3Demail&amp;utm_=
+source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3D=
+EN" class=3D"em_button_a em_text_12 em_text_ffffff em_border_9fbf00" style=
+=3D"border-color:#9fbf00;font-size:12px;line-height:16px;color:#FFF;font-fa=
+mily:Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;text-=
+transform:uppercase;-webkit-border-radius:3px;-moz-border-radius:3px;border=
+-radius:3px;border-width:1px;border-style:solid;padding-left:13px;padding-r=
+ight:13px;padding-top:12px;padding-bottom:11px;display:inline-block;"> SHOP=
+ NOW </a></td></tr></table></td></tr><tr><td align=3D"center" valign=3D"top=
+" width=3D"600" class=3D"em_content_600 em_padding_0_24" style=3D"width:600=
+px;max-width:600px;vertical-align:top;padding-top:0px;padding-right:0px;pad=
+ding-bottom:24px;padding-left:0px"><div class=3D"em_text_wrapper em_text_80=
+8080 em_text_14" style=3D"font-family:Helvetica,Arial,sans-serif;font-style=
+:normal;font-weight:100;margin-top:0px;margin-bottom:0px;margin-right:0px;m=
+argin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding=
+-left:0px;color:#808080;font-size:14px;line-height:20px;"><span class=3D"em=
+_link_fix_808080"> Visit GOG.com for details on individual discounts. </spa=
+n></div></td></tr><!-- /footer --><!-- /SECTION --><!-- SECTION (new) --><!=
+-- header --><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D=
+"em_content_600 em_padding_24_12" style=3D"width:600px;max-width:600px;vert=
+ical-align:top;padding-top:24px;padding-right:0px;padding-bottom:12px;paddi=
+ng-left:0px"><div class=3D"em_text_wrapper em_text_262626 em_text_18 em_hea=
+der" style=3D"font-family:Helvetica,Arial,sans-serif;font-style:normal;font=
+-weight:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0=
+px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;co=
+lor:#262626;font-size:18px;line-height:26px;text-transform:uppercase;"><spa=
+n class=3D"em_link_fix_262626"> WEEKLY DEALS UP TO -90% </span></div><div c=
+lass=3D"em_text_wrapper em_text_808080 em_text_14" style=3D"font-family:Hel=
+vetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;ma=
+rgin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bo=
+ttom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:14px;li=
+ne-height:20px;"><span class=3D"em_link_fix_808080"> Survival horror, strat=
+egy, enchanting metroidvania </span></div></td></tr><!-- /header --><!-- ti=
+les --><!-- medium tiles --><tr><td align=3D"center" valign=3D"top" width=
+=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"width:600px;max-w=
+idth:600px;vertical-align:top;padding-top:0px;padding-right:0px;padding-bot=
+tom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:no=
+ne;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margi=
+n-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-lef=
+t:0px"><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_co=
+ntent_600 em_border_bottom_2 em_border_ec721b em_image_wrapper" style=3D"wi=
+dth:600px;max-width:600px;vertical-align:top;font-size:0px;line-height:0px;=
+margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-t=
+op:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;border-color:#=
+ec721b;border-bottom-style:solid;border-bottom-width:2px"><a href=3D"https:=
+//www.gog.com/game/la_mulana?utm_medium=3Demail&amp;utm_source=3Dnewsletter=
+&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_ima=
+ge_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bo=
+ttom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0p=
+x;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspace=
+=3D"0" height=3D"278" class=3D"em_image em_image_600 em_image_fix" src=3D"h=
+ttps://images.gog.com/d2deba2d034f5bb5dfb124e543f101caee00ead80b7d472d25244=
+28316466c6a_email_600_2x.jpg" alt=3D"La-Mulana" style=3D"margin-top:0px;mar=
+gin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bot=
+tom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile caption=
+ --><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_conte=
+nt_600" style=3D"width:600px;max-width:600px;vertical-align:top"><table bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_co=
+ntent_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0px;m=
+argin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-b=
+ottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"left" valign=
+=3D"top"><!-- tile description --><table border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" style=3D"paddi=
+ng-top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"><div clas=
+s=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-family:Helvet=
+ica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;margi=
+n-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-botto=
+m:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;line-=
+height:16px;"> Action, Adventure, Platformer </div></td></tr></table><!-- /=
+tile description --></td><td align=3D"right" valign=3D"top"><!-- price tag =
+--><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D=
+"center" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" style=3D"backgro=
+und-color:#ec721b"><a href=3D"https://www.gog.com/game/la_mulana?utm_medium=
+=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sal=
+e&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff em_border_=
+ec721b" style=3D"border-color:#ec721b;font-size:14px;line-height:20px;color=
+:#FFF;font-family:Helvetica,Arial,sans-serif;font-weight:bold;text-decorati=
+on:none;text-transform:uppercase;border-width:1px;border-style:solid;paddin=
+g-left:9px;padding-right:5px;padding-top:3px;padding-bottom:5px;display:inl=
+ine-block;"> -66% </a></td></tr></table><!-- /price tag --></td></tr></tabl=
+e></td></tr><!-- /tile caption --></table></td></tr><!-- /big tile --><!-- =
+medium tiles --><!-- /big tile --><!-- medium tiles --><tr><td align=3D"cen=
+ter" valign=3D"top" width=3D"600" class=3D"em_content_600 em_padding_0_6" s=
+tyle=3D"width:600px;max-width:600px;vertical-align:top;padding-top:0px;padd=
+ing-right:0px;padding-bottom:6px;padding-left:0px"><table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper"=
+ style=3D"border-style:none;border-width:0px;margin-top:0px;margin-bottom:0=
+px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padd=
+ing-right:0px;padding-left:0px"><tr><td align=3D"center" valign=3D"top" wid=
+th=3D"297" class=3D"em_content_297" style=3D"width:297px;max-width:297px;ve=
+rtical-align:top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%"><tr><td align=3D"center" valign=3D"top" width=3D"297" class=
+=3D"em_content_297 em_border_bottom_2 em_border_d4a800 em_image_wrapper" st=
+yle=3D"width:297px;max-width:297px;vertical-align:top;font-size:0px;line-he=
+ight:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;=
+padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;borde=
+r-color:#d4a800;border-bottom-style:solid;border-bottom-width:2px"><a href=
+=3D"https://www.gog.com/game/momodora_reverie_under_the_moonlight?utm_mediu=
+m=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sa=
+le&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0px;lin=
+e-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:=
+0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px">=
+<img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=3D"em_imag=
+e em_image_297 em_image_fix" src=3D"https://images.gog.com/5d9dd90e9a946f2f=
+f14ae0df17b02a6675d972668164454a370da641beb8f3f7_email_297_2x.jpg" alt=3D"M=
+omodora: Reverie Under the Moonlight" style=3D"margin-top:0px;margin-bottom=
+:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;pa=
+dding-right:0px;padding-left:0px"></a></td></tr><!-- tile caption --><tr><t=
+d align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_297" st=
+yle=3D"width:297px;max-width:297px;vertical-align:top"><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrap=
+per" style=3D"border-style:none;border-width:0px;margin-top:0px;margin-bott=
+om:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;=
+padding-right:0px;padding-left:0px"><tr><td align=3D"left" valign=3D"top"><=
+!-- tile description --><table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" style=3D"padding-top:6=
+px;padding-right:0px;padding-bottom:6px;padding-left:0px"><div class=3D"em_=
+text_wrapper em_text_808080 em_text_12" style=3D"font-family:Helvetica,Aria=
+l,sans-serif;font-style:normal;font-weight:100;margin-top:0px;margin-bottom=
+:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;pa=
+dding-right:0px;padding-left:0px;color:#808080;font-size:12px;line-height:1=
+6px;"> Action, Adventure, Metroidvania </div></td></tr></table><!-- /tile d=
+escription --></td><td align=3D"right" valign=3D"top"><!-- price tag --><ta=
+ble border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"cente=
+r" bgcolor=3D"#d4a800" class=3D"em_tag em_bg_d4a800" style=3D"background-co=
+lor:#d4a800"><a href=3D"https://www.gog.com/game/momodora_reverie_under_the=
+_moonlight?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=
+=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_=
+text_ffffff em_border_d4a800" style=3D"border-color:#d4a800;font-size:14px;=
+line-height:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;font-wei=
+ght:bold;text-decoration:none;text-transform:uppercase;border-width:1px;bor=
+der-style:solid;padding-left:9px;padding-right:5px;padding-top:3px;padding-=
+bottom:5px;display:inline-block;"> -30% </a></td></tr></table><!-- /price t=
+ag --></td></tr></table></td></tr><!-- /tile caption --></table></td><td cl=
+ass=3D"em_tile_space_col" style=3D"font-size:0px;line-height:0px;margin-top=
+:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pad=
+ding-bottom:0px;padding-right:0px;padding-left:0px;height:100%;width:6px"><=
+/td><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_2=
+97" style=3D"width:297px;max-width:297px;vertical-align:top"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D"=
+center" valign=3D"top" width=3D"297" class=3D"em_content_297 em_border_bott=
+om_2 em_border_ec721b em_image_wrapper" style=3D"width:297px;max-width:297p=
+x;vertical-align:top;font-size:0px;line-height:0px;margin-top:0px;margin-bo=
+ttom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0p=
+x;padding-right:0px;padding-left:0px;border-color:#ec721b;border-bottom-sty=
+le:solid;border-bottom-width:2px"><a href=3D"https://www.gog.com/game/alone=
+_in_the_dark?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaig=
+n=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" styl=
+e=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-=
+right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:=
+0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D=
+"160" class=3D"em_image em_image_297 em_image_fix" src=3D"https://images.go=
+g.com/7e5cc0b8aa522dc57c3aa87dc7bd61f7a11f095df2e2eeb4baf3fcb1f386d941_emai=
+l_297_2x.jpg" alt=3D"Alone in the Dark: The Trilogy 1+2+3" style=3D"margin-=
+top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;=
+padding-bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- t=
+ile caption --><tr><td align=3D"center" valign=3D"top" width=3D"297" class=
+=3D"em_content_297" style=3D"width:297px;max-width:297px;vertical-align:top=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" cl=
+ass=3D"em_content_wrapper" style=3D"border-style:none;border-width:0px;marg=
+in-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0=
+px;padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"=
+left" valign=3D"top"><!-- tile description --><table border=3D"0" cellspaci=
+ng=3D"0" cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" st=
+yle=3D"padding-top:6px;padding-right:0px;padding-bottom:6px;padding-left:0p=
+x"><div class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-f=
+amily:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-t=
+op:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;p=
+adding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;font-siz=
+e:12px;line-height:16px;"> Action, Adventure, Horror </div></td></tr></tabl=
+e><!-- /tile description --></td><td align=3D"right" valign=3D"top"><!-- pr=
+ice tag --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td =
+align=3D"center" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" style=3D=
+"background-color:#ec721b"><a href=3D"https://www.gog.com/game/alone_in_the=
+_dark?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D201=
+70526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_f=
+fffff em_border_ec721b" style=3D"border-color:#ec721b;font-size:14px;line-h=
+eight:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;font-weight:bo=
+ld;text-decoration:none;text-transform:uppercase;border-width:1px;border-st=
+yle:solid;padding-left:9px;padding-right:5px;padding-top:3px;padding-bottom=
+:5px;display:inline-block;"> -65% </a></td></tr></table><!-- /price tag -->=
+</td></tr></table></td></tr><!-- /tile caption --></table></td></tr></table=
+></td></tr><!-- /medium tiles --><!-- big tile --><!-- /big tile --><!-- me=
+dium tiles --><tr><td align=3D"center" valign=3D"top" width=3D"600" class=
+=3D"em_content_600 em_padding_0_6" style=3D"width:600px;max-width:600px;ver=
+tical-align:top;padding-top:0px;padding-right:0px;padding-bottom:6px;paddin=
+g-left:0px"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:none;border-wi=
+dth:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;p=
+adding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><=
+td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_600 em=
+_border_bottom_2 em_border_ec721b em_image_wrapper" style=3D"width:600px;ma=
+x-width:600px;vertical-align:top;font-size:0px;line-height:0px;margin-top:0=
+px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;paddi=
+ng-bottom:0px;padding-right:0px;padding-left:0px;border-color:#ec721b;borde=
+r-bottom-style:solid;border-bottom-width:2px"><a href=3D"https://www.gog.co=
+m/game/one_unit_whole_blood?utm_medium=3Demail&amp;utm_source=3Dnewsletter&=
+amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_imag=
+e_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bot=
+tom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px=
+;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspace=
+=3D"0" height=3D"278" class=3D"em_image em_image_600 em_image_fix" src=3D"h=
+ttps://images.gog.com/7bd1c31a3af60f9fc0c411b8ed609121377f74f27d9dcb33889f1=
+1efd0665e00_email_600_2x.jpg" alt=3D"Blood: One Unit Whole Blood" style=3D"=
+margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-t=
+op:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr=
+><!-- tile caption --><tr><td align=3D"center" valign=3D"top" width=3D"600"=
+ class=3D"em_content_600" style=3D"width:600px;max-width:600px;vertical-ali=
+gn:top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"10=
+0%" class=3D"em_content_wrapper" style=3D"border-style:none;border-width:0p=
+x;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding=
+-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><td ali=
+gn=3D"left" valign=3D"top"><!-- tile description --><table border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding=
+_6" style=3D"padding-top:6px;padding-right:0px;padding-bottom:6px;padding-l=
+eft:0px"><div class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"=
+font-family:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;ma=
+rgin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top=
+:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;fo=
+nt-size:12px;line-height:16px;"> Shooter, FPP, Horror </div></td></tr></tab=
+le><!-- /tile description --></td><td align=3D"right" valign=3D"top"><!-- p=
+rice tag --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td=
+ align=3D"center" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" style=
+=3D"background-color:#ec721b"><a href=3D"https://www.gog.com/game/one_unit_=
+whole_blood?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=
+=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_=
+text_ffffff em_border_ec721b" style=3D"border-color:#ec721b;font-size:14px;=
+line-height:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;font-wei=
+ght:bold;text-decoration:none;text-transform:uppercase;border-width:1px;bor=
+der-style:solid;padding-left:9px;padding-right:5px;padding-top:3px;padding-=
+bottom:5px;display:inline-block;"> -75% </a></td></tr></table><!-- /price t=
+ag --></td></tr></table></td></tr><!-- /tile caption --></table></td></tr><=
+!-- /big tile --><!-- medium tiles --><!-- /big tile --><!-- medium tiles -=
+-><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_content=
+_600 em_padding_0_6" style=3D"width:600px;max-width:600px;vertical-align:to=
+p;padding-top:0px;padding-right:0px;padding-bottom:6px;padding-left:0px"><t=
+able border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=
+=3D"em_content_wrapper" style=3D"border-style:none;border-width:0px;margin-=
+top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;=
+padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"cen=
+ter" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"width:2=
+97px;max-width:297px;vertical-align:top"><table border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D"center" valign=3D"top=
+" width=3D"297" class=3D"em_content_297 em_border_bottom_2 em_border_ec721b=
+ em_image_wrapper" style=3D"width:297px;max-width:297px;vertical-align:top;=
+font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right=
+:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;p=
+adding-left:0px;border-color:#ec721b;border-bottom-style:solid;border-botto=
+m-width:2px"><a href=3D"https://www.gog.com/game/krush_kill_n_destroy_xtrem=
+e?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D2017052=
+6_weekly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-s=
+ize:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;m=
+argin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding=
+-left:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=
+=3D"em_image em_image_297 em_image_fix" src=3D"https://images.gog.com/2918e=
+4ffcfd0605413290ee935f11c50dd5dc59a5edcc0ba446faddb9b63b797_email_297_2x.jp=
+g" alt=3D"Krush Kill &#039;N Destroy Xtreme" style=3D"margin-top:0px;margin=
+-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom=
+:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile caption --=
+><tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_=
+297" style=3D"width:297px;max-width:297px;vertical-align:top"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_conte=
+nt_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0px;marg=
+in-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bott=
+om:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"left" valign=3D=
+"top"><!-- tile description --><table border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" style=3D"padding-=
+top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"><div class=
+=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-family:Helveti=
+ca,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;margin=
+-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom=
+:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;line-h=
+eight:16px;"> Strategy, Real-time, Sci-fi </div></td></tr></table><!-- /til=
+e description --></td><td align=3D"right" valign=3D"top"><!-- price tag -->=
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"ce=
+nter" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" style=3D"background=
+-color:#ec721b"><a href=3D"https://www.gog.com/game/krush_kill_n_destroy_xt=
+reme?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D2017=
+0526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_ff=
+ffff em_border_ec721b" style=3D"border-color:#ec721b;font-size:14px;line-he=
+ight:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;font-weight:bol=
+d;text-decoration:none;text-transform:uppercase;border-width:1px;border-sty=
+le:solid;padding-left:9px;padding-right:5px;padding-top:3px;padding-bottom:=
+5px;display:inline-block;"> -75% </a></td></tr></table><!-- /price tag --><=
+/td></tr></table></td></tr><!-- /tile caption --></table></td><td class=3D"=
+em_tile_space_col" style=3D"font-size:0px;line-height:0px;margin-top:0px;ma=
+rgin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bo=
+ttom:0px;padding-right:0px;padding-left:0px;height:100%;width:6px"></td><td=
+ align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_297" sty=
+le=3D"width:297px;max-width:297px;vertical-align:top"><table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td align=3D"center" =
+valign=3D"top" width=3D"297" class=3D"em_content_297 em_border_bottom_2 em_=
+border_ec721b em_image_wrapper" style=3D"width:297px;max-width:297px;vertic=
+al-align:top;font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px=
+;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;paddin=
+g-right:0px;padding-left:0px;border-color:#ec721b;border-bottom-style:solid=
+;border-bottom-width:2px"><a href=3D"https://www.gog.com/game/rollercoaster=
+_tycoon_2?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=
+=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=
+=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-r=
+ight:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0=
+px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"=
+160" class=3D"em_image em_image_297 em_image_fix" src=3D"https://images.gog=
+.com/6995619d621f4b1f616449b664357a9f1ab89749ee3c182f43089a245ca9a2ef_email=
+_297_2x.jpg" alt=3D"RollerCoaster Tycoon 2: Triple Thrill Pack" style=3D"ma=
+rgin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top=
+:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><=
+!-- tile caption --><tr><td align=3D"center" valign=3D"top" width=3D"297" c=
+lass=3D"em_content_297" style=3D"width:297px;max-width:297px;vertical-align=
+:top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" class=3D"em_content_wrapper" style=3D"border-style:none;border-width:0px;=
+margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-t=
+op:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=
+=3D"left" valign=3D"top"><!-- tile description --><table border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6=
+" style=3D"padding-top:6px;padding-right:0px;padding-bottom:6px;padding-lef=
+t:0px"><div class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"fo=
+nt-family:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;marg=
+in-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0=
+px;padding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;font=
+-size:12px;line-height:16px;"> Simulation, Building, Managerial </div></td>=
+</tr></table><!-- /tile description --></td><td align=3D"right" valign=3D"t=
+op"><!-- price tag --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0"><tr><td align=3D"center" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721=
+b" style=3D"background-color:#ec721b"><a href=3D"https://www.gog.com/game/r=
+ollercoaster_tycoon_2?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;ut=
+m_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_t=
+ext_14 em_text_ffffff em_border_ec721b" style=3D"border-color:#ec721b;font-=
+size:14px;line-height:20px;color:#FFF;font-family:Helvetica,Arial,sans-seri=
+f;font-weight:bold;text-decoration:none;text-transform:uppercase;border-wid=
+th:1px;border-style:solid;padding-left:9px;padding-right:5px;padding-top:3p=
+x;padding-bottom:5px;display:inline-block;"> -65% </a></td></tr></table><!-=
+- /price tag --></td></tr></table></td></tr><!-- /tile caption --></table><=
+/td></tr></table></td></tr><!-- /medium tiles --><!-- big tile --><!-- /big=
+ tile --><!-- medium tiles --><tr><td align=3D"center" valign=3D"top" width=
+=3D"600" class=3D"em_content_600 em_padding_0_6" style=3D"width:600px;max-w=
+idth:600px;vertical-align:top;padding-top:0px;padding-right:0px;padding-bot=
+tom:6px;padding-left:0px"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=3D"border-style:no=
+ne;border-width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margi=
+n-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-lef=
+t:0px"><tr><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_co=
+ntent_600 em_border_bottom_2 em_border_ec721b em_image_wrapper" style=3D"wi=
+dth:600px;max-width:600px;vertical-align:top;font-size:0px;line-height:0px;=
+margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-t=
+op:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;border-color:#=
+ec721b;border-bottom-style:solid;border-bottom-width:2px"><a href=3D"https:=
+//www.gog.com/game/two_worlds?utm_medium=3Demail&amp;utm_source=3Dnewslette=
+r&amp;utm_campaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_im=
+age_wrapper" style=3D"font-size:0px;line-height:0px;margin-top:0px;margin-b=
+ottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0=
+px;padding-right:0px;padding-left:0px"><img border=3D"0" hspace=3D"0" vspac=
+e=3D"0" height=3D"278" class=3D"em_image em_image_600 em_image_fix" src=3D"=
+https://images.gog.com/30fb125072e2bde261106686569392e8cb62b9000a3eee0184b2=
+17e43bd20981_email_600_2x.jpg" alt=3D"Two Worlds Epic Edition" style=3D"mar=
+gin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:=
+0px;padding-bottom:0px;padding-right:0px;padding-left:0px"></a></td></tr><!=
+-- tile caption --><tr><td align=3D"center" valign=3D"top" width=3D"600" cl=
+ass=3D"em_content_600" style=3D"width:600px;max-width:600px;vertical-align:=
+top"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ class=3D"em_content_wrapper" style=3D"border-style:none;border-width:0px;m=
+argin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-to=
+p:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=
+=3D"left" valign=3D"top"><!-- tile description --><table border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6=
+" style=3D"padding-top:6px;padding-right:0px;padding-bottom:6px;padding-lef=
+t:0px"><div class=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"fo=
+nt-family:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;marg=
+in-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0=
+px;padding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;font=
+-size:12px;line-height:16px;"> Action, Role-playing, Fantasy </div></td></t=
+r></table><!-- /tile description --></td><td align=3D"right" valign=3D"top"=
+><!-- price tag --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tr><td align=3D"center" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" =
+style=3D"background-color:#ec721b"><a href=3D"https://www.gog.com/game/two_=
+worlds?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20=
+170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text_14 em_text_=
+ffffff em_border_ec721b" style=3D"border-color:#ec721b;font-size:14px;line-=
+height:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;font-weight:b=
+old;text-decoration:none;text-transform:uppercase;border-width:1px;border-s=
+tyle:solid;padding-left:9px;padding-right:5px;padding-top:3px;padding-botto=
+m:5px;display:inline-block;"> -90% </a></td></tr></table><!-- /price tag --=
+></td></tr></table></td></tr><!-- /tile caption --></table></td></tr><!-- /=
+big tile --><!-- medium tiles --><!-- /big tile --><!-- medium tiles --><tr=
+><td align=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_600 =
+em_padding_0_6" style=3D"width:600px;max-width:600px;vertical-align:top;pad=
+ding-top:0px;padding-right:0px;padding-bottom:6px;padding-left:0px"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em=
+_content_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0p=
+x;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;paddin=
+g-bottom:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"center" v=
+align=3D"top" width=3D"297" class=3D"em_content_297" style=3D"width:297px;m=
+ax-width:297px;vertical-align:top"><table border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%"><tr><td align=3D"center" valign=3D"top" widt=
+h=3D"297" class=3D"em_content_297 em_border_bottom_2 em_border_ec721b em_im=
+age_wrapper" style=3D"width:297px;max-width:297px;vertical-align:top;font-s=
+ize:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;m=
+argin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding=
+-left:0px;border-color:#ec721b;border-bottom-style:solid;border-bottom-widt=
+h:2px"><a href=3D"https://www.gog.com/game/independence_war_deluxe?utm_medi=
+um=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_s=
+ale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size:0px;li=
+ne-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left=
+:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"=
+><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=3D"em_ima=
+ge em_image_297 em_image_fix" src=3D"https://images.gog.com/6b980eb890c700b=
+49dab354d88263d3558c212e17ce01a78a69aab0d01b6429c_email_297_2x.jpg" alt=3D"=
+Independence War Deluxe" style=3D"margin-top:0px;margin-bottom:0px;margin-r=
+ight:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0=
+px;padding-left:0px"></a></td></tr><!-- tile caption --><tr><td align=3D"ce=
+nter" valign=3D"top" width=3D"297" class=3D"em_content_297" style=3D"width:=
+297px;max-width:297px;vertical-align:top"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_content_wrapper" style=
+=3D"border-style:none;border-width:0px;margin-top:0px;margin-bottom:0px;mar=
+gin-right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-ri=
+ght:0px;padding-left:0px"><tr><td align=3D"left" valign=3D"top"><!-- tile d=
+escription --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><=
+td align=3D"left" class=3D"em_padding_6" style=3D"padding-top:6px;padding-r=
+ight:0px;padding-bottom:6px;padding-left:0px"><div class=3D"em_text_wrapper=
+ em_text_808080 em_text_12" style=3D"font-family:Helvetica,Arial,sans-serif=
+;font-style:normal;font-weight:100;margin-top:0px;margin-bottom:0px;margin-=
+right:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:=
+0px;padding-left:0px;color:#808080;font-size:12px;line-height:16px;"> Simul=
+ation, Combat, Sci-fi </div></td></tr></table><!-- /tile description --></t=
+d><td align=3D"right" valign=3D"top"><!-- price tag --><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0"><tr><td align=3D"center" bgcolor=3D"#ec=
+721b" class=3D"em_tag em_bg_ec721b" style=3D"background-color:#ec721b"><a h=
+ref=3D"https://www.gog.com/game/independence_war_deluxe?utm_medium=3Demail&=
+amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_weekly_sale&amp;utm=
+_term=3DEN" class=3D"em_tag_a em_text_14 em_text_ffffff em_border_ec721b" s=
+tyle=3D"border-color:#ec721b;font-size:14px;line-height:20px;color:#FFF;fon=
+t-family:Helvetica,Arial,sans-serif;font-weight:bold;text-decoration:none;t=
+ext-transform:uppercase;border-width:1px;border-style:solid;padding-left:9p=
+x;padding-right:5px;padding-top:3px;padding-bottom:5px;display:inline-block=
+;"> -75% </a></td></tr></table><!-- /price tag --></td></tr></table></td></=
+tr><!-- /tile caption --></table></td><td class=3D"em_tile_space_col" style=
+=3D"font-size:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-r=
+ight:0px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0=
+px;padding-left:0px;height:100%;width:6px"></td><td align=3D"center" valign=
+=3D"top" width=3D"297" class=3D"em_content_297" style=3D"width:297px;max-wi=
+dth:297px;vertical-align:top"><table border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%"><tr><td align=3D"center" valign=3D"top" width=3D"=
+297" class=3D"em_content_297 em_border_bottom_2 em_border_ec721b em_image_w=
+rapper" style=3D"width:297px;max-width:297px;vertical-align:top;font-size:0=
+px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin=
+-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left=
+:0px;border-color:#ec721b;border-bottom-style:solid;border-bottom-width:2px=
+"><a href=3D"https://www.gog.com/game/septerra_core_legacy_of_the_creator?u=
+tm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_campaign=3D20170526_w=
+eekly_sale&amp;utm_term=3DEN" class=3D"em_image_wrapper" style=3D"font-size=
+:0px;line-height:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;marg=
+in-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-le=
+ft:0px"><img border=3D"0" hspace=3D"0" vspace=3D"0" height=3D"160" class=3D=
+"em_image em_image_297 em_image_fix" src=3D"https://images.gog.com/3226aaf0=
+2bef74be2e2e04ff376c36053c032b71a7cf332af335fff48ee63a2e_email_297_2x.jpg" =
+alt=3D"Septerra Core: Legacy of the Creator" style=3D"margin-top:0px;margin=
+-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom=
+:0px;padding-right:0px;padding-left:0px"></a></td></tr><!-- tile caption --=
+><tr><td align=3D"center" valign=3D"top" width=3D"297" class=3D"em_content_=
+297" style=3D"width:297px;max-width:297px;vertical-align:top"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"em_conte=
+nt_wrapper" style=3D"border-style:none;border-width:0px;margin-top:0px;marg=
+in-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bott=
+om:0px;padding-right:0px;padding-left:0px"><tr><td align=3D"left" valign=3D=
+"top"><!-- tile description --><table border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0"><tr><td align=3D"left" class=3D"em_padding_6" style=3D"padding-=
+top:6px;padding-right:0px;padding-bottom:6px;padding-left:0px"><div class=
+=3D"em_text_wrapper em_text_808080 em_text_12" style=3D"font-family:Helveti=
+ca,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;margin=
+-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bottom=
+:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;line-h=
+eight:16px;"> Role-playing, Adventure, Sci-fi </div></td></tr></table><!-- =
+/tile description --></td><td align=3D"right" valign=3D"top"><!-- price tag=
+ --><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td align=
+=3D"center" bgcolor=3D"#ec721b" class=3D"em_tag em_bg_ec721b" style=3D"back=
+ground-color:#ec721b"><a href=3D"https://www.gog.com/game/septerra_core_leg=
+acy_of_the_creator?utm_medium=3Demail&amp;utm_source=3Dnewsletter&amp;utm_c=
+ampaign=3D20170526_weekly_sale&amp;utm_term=3DEN" class=3D"em_tag_a em_text=
+_14 em_text_ffffff em_border_ec721b" style=3D"border-color:#ec721b;font-siz=
+e:14px;line-height:20px;color:#FFF;font-family:Helvetica,Arial,sans-serif;f=
+ont-weight:bold;text-decoration:none;text-transform:uppercase;border-width:=
+1px;border-style:solid;padding-left:9px;padding-right:5px;padding-top:3px;p=
+adding-bottom:5px;display:inline-block;"> -80% </a></td></tr></table><!-- /=
+price tag --></td></tr></table></td></tr><!-- /tile caption --></table></td=
+></tr></table></td></tr><!-- /medium tiles --><!-- big tile --><!-- /big ti=
+le --><!-- /tiles --><!-- footer --><tr><td align=3D"center" valign=3D"top"=
+ width=3D"600" class=3D"em_content_600 em_padding_12_24" style=3D"width:600=
+px;max-width:600px;vertical-align:top;padding-top:12px;padding-right:0px;pa=
+dding-bottom:24px;padding-left:0px"><div class=3D"em_text_wrapper em_text_8=
+08080 em_text_14" style=3D"font-family:Helvetica,Arial,sans-serif;font-styl=
+e:normal;font-weight:100;margin-top:0px;margin-bottom:0px;margin-right:0px;=
+margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;paddin=
+g-left:0px;color:#808080;font-size:14px;line-height:20px;"><span class=3D"e=
+m_link_fix_808080"> The Weekly Sale ends on May 29, 4PM UTC. </span></div><=
+/td></tr><!-- /footer --></table></td></tr><!-- /BODY --><!-- FOOTER (discl=
+aimers, etc.) --><tr><td bgcolor=3D"#e6e6e6" align=3D"center" valign=3D"top=
+" class=3D"em_main_section em_bg_e6e6e6" style=3D"border-style:none;border-=
+width:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px=
+;padding-top:0px;padding-right:12px;padding-bottom:0px;padding-left:12px;ba=
+ckground-color:#e6e6e6"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"em_content_wrapper" style=3D"border-style:none;border-width=
+:0px;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padd=
+ing-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px"><tr><td =
+align=3D"center" valign=3D"top" width=3D"600" class=3D"em_content_600 em_pa=
+dding_24" style=3D"width:600px;max-width:600px;vertical-align:top;padding-t=
+op:24px;padding-right:0px;padding-bottom:24px;padding-left:0px"><!-- EN -->=
+<div class=3D"em_text_wrapper em_text_808080 em_text_12 www_newsletter_show=
+" style=3D"font-family:Helvetica, Arial, sans-serif;font-style:normal;font-=
+weight:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margin-left:0p=
+x;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-left:0px;col=
+or:#808080;font-size:12px;line-height:16px;display:none"> To manage your ne=
+wslettter subscriptions, log in to your account on GOG.com and navigate to =
+the Account> Orders & Settings> Subscriptions section of your profile.<br><=
+/div><br style=3D"display:none" class=3D"www_newsletter_show"><div class=3D=
+"em_text_wrapper em_text_808080 em_text_12 wwwno" style=3D"font-family:Helv=
+etica,Arial,sans-serif;font-style:normal;font-weight:100;margin-top:0px;mar=
+gin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;padding-bot=
+tom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size:12px;lin=
+e-height:16px;"> You&#8217;re receiving this email because your address is =
+on our subscriber list.<br> You can <a href=3D"https://www.gog.com/unsubscr=
+ibe/7N)9bJEOgWbc6Bfjps3P4VcxNt6urTg|" class=3D"em_text_9fbf00" style=3D"col=
+or:#9fbf00">unsubscribe</a> if you prefer not to receive newsletters from u=
+s. </div><br class=3D"wwwno"><div class=3D"em_text_wrapper em_text_808080 e=
+m_text_12 em_header" style=3D"font-family:Helvetica,Arial,sans-serif;font-s=
+tyle:normal;font-weight:100;margin-top:0px;margin-bottom:0px;margin-right:0=
+px;margin-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;pad=
+ding-left:0px;color:#808080;font-size:12px;line-height:16px;text-transform:=
+uppercase;"><span class=3D"em_link_fix_808080">GOG.com &copy; 2017. Part of=
+ CD PROJEKT group.</span></div><div class=3D"em_text_wrapper em_text_808080=
+ em_text_12" style=3D"font-family:Helvetica,Arial,sans-serif;font-style:nor=
+mal;font-weight:100;margin-top:0px;margin-bottom:0px;margin-right:0px;margi=
+n-left:0px;padding-top:0px;padding-bottom:0px;padding-right:0px;padding-lef=
+t:0px;color:#808080;font-size:12px;line-height:16px;"> All other trademarks=
+ and copyrights are properties of their respective owners. </div><div class=
+=3D"em_text_wrapper em_text_808080 em_text_12 wwwno wwwno" style=3D"font-fa=
+mily:Helvetica,Arial,sans-serif;font-style:normal;font-weight:100;margin-to=
+p:0px;margin-bottom:0px;margin-right:0px;margin-left:0px;padding-top:0px;pa=
+dding-bottom:0px;padding-right:0px;padding-left:0px;color:#808080;font-size=
+:12px;line-height:16px;"> GOG Ltd, 7 Florinis Str., Greg Tower, 6th Floor, =
+1065 Nicosia, Cyprus </div><!-- DE --></td></tr></table></td></tr><!-- /FOO=
+TER --></table><!-- /WRAPPER --><img src=3D"https://www.google-analytics.co=
+m/collect?v=3D1&tid=3DUA-6605418-1&cid=3D7N)9bJEOgWbc6Bfjps3P4VcxNt6urTg|&t=
+=3Devent&ec=3Demail&ea=3Dopen&el=3D7N)9bJEOgWbc6Bfjps3P4VcxNt6urTg|&cs=3Dne=
+wsletter&cm=3Demail&cn=3D20170526_weekly_sale"><!-- Piwik Image Tracker -->=
+<img src=3D"https://bi-piwik-test.gog.com/piwik.php?idsite=3D19&rec=3D1&e_c=
+=3DWeekend-Newsletter&e_a=3DOpened&e_n=3D2017-05-12&dimension1=3Den" style=
+=3D"border:0" alt=3D"" /><!-- End Piwik --></body></html>
+
+--_=_swift_v4_14958562475928f477df417_=_--
+

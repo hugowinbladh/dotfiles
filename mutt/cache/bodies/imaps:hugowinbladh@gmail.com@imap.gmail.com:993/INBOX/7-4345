@@ -1,0 +1,318 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.15 with SMTP id o15csp1648022ioe;
+        Mon, 29 May 2017 07:57:16 -0700 (PDT)
+X-Received: by 10.25.211.212 with SMTP id k203mr4528641lfg.159.1496069836536;
+        Mon, 29 May 2017 07:57:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1496069836; cv=none;
+        d=google.com; s=arc-20160816;
+        b=JGRcBBZT2gcvuuLTvHK1WL66iv/9krevTB2Znkzl8p4koi6cKMnLMc5snUEfs4j+HI
+         AJjrZKvyoZryJp2cFbE5ULhrZzoQPdln5iYdezriBLUU5QMoEN0JXKXvzRVu9zagsbBn
+         c/USes4da/uqFKH3dWEsn2co/uEC42SLFK8WFthva1zLPh4exQ8IFMmEAC7DgQbYqDOB
+         9/oi4Q7eLquyZHDFRA/Xy0FnEnVbD8B6oG/TQTi0fxtSfedU0lkI9/d/WJgHCW8vZ6rF
+         8e9n2wQp11OOUALK62R0Y4DEoH6lIeoFkv4xWAghyCMmSUgyV5xd53PGBZAJ8AJC/ORw
+         Nhuw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:cc:to:from
+         :arc-authentication-results;
+        bh=KyBKLz2xR1AYUKOD2H/UPj6jXWWepRz05FME52CwAoE=;
+        b=YSzExZrXPrhG6wk6QNtxV4peFpeG6GxmInRcFHzvFfiZz8R15GDGr9wZjSMguXh3mQ
+         gsIm7aJk1IzxhxbTRJYRg5RrnndI9kzRn4nCubKjYalnfd1ue4PdTXDUfsQL0FaZDCum
+         Pyz6tOl2xc8R+uCyZsmQqHvtgFgfyWtA19VWfeS/SKnLrCQk34fp/sZhxHF/pEJy+5gZ
+         1rubDiaHR40qNBaTzrRvJrTXm50on81wpgy9HWtEOnMrsj3FFR0vQ+4AveJAbDuqswJo
+         z0+4NbARXgpLGH+agmXyHTdCjU+NFLTx5MlgDPMUpWeZwk2WnkuaUmAl2PtuhyuZDrgV
+         RwIw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of claes.sjokvist@tranas.se designates 193.180.229.244 as permitted sender) smtp.mailfrom=claes.sjokvist@tranas.se
+Return-Path: <claes.sjokvist@tranas.se>
+Received: from smtpout.tranas.se (smtpout.tranas.se. [193.180.229.244])
+        by mx.google.com with ESMTPS id s8si5978328lja.135.2017.05.29.07.57.15
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Mon, 29 May 2017 07:57:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of claes.sjokvist@tranas.se designates 193.180.229.244 as permitted sender) client-ip=193.180.229.244;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of claes.sjokvist@tranas.se designates 193.180.229.244 as permitted sender) smtp.mailfrom=claes.sjokvist@tranas.se
+Received: from EXCH-MBX.tnsaddom.local ([fe80::b5ed:97d9:9461:fb3]) by
+ Exch-Cas.tnsaddom.local ([fe80::3ca7:6481:2681:e409%15]) with mapi id
+ 14.03.0224.002; Mon, 29 May 2017 16:57:15 +0200
+From: =?iso-8859-1?Q?Claes_Sj=F6kvist?= <claes.sjokvist@tranas.se>
+To: "'hugowinbladh@gmail.com'" <hugowinbladh@gmail.com>,
+	"'alfred.petersson@gmail.com'" <alfred.petersson@gmail.com>,
+	"'axl.lidgren@gmail.com'" <axl.lidgren@gmail.com>, "'hedda_n@live.se'"
+	<hedda_n@live.se>, "'ebbaninnie@hotmail.com'" <ebbaninnie@hotmail.com>
+CC: "'william.k.r.thomas@gmail.com'" <william.k.r.thomas@gmail.com>, "Roger
+ Gustafsson" <roger.gustafsson@tranas.se>, Fredrik Bodin
+	<fredrik.bodin@tranas.se>
+Subject: Prel. schema Sommarensemblen
+Thread-Topic: Prel. schema Sommarensemblen
+Thread-Index: AdLYigy/DtZKm9z/RgS/X8aGLMYPSw==
+Date: Mon, 29 May 2017 14:57:14 +0000
+Message-ID: <27BFEB2FD2900B448276BC5DC88EC87A027546CDC3@Exch-MBX.tnsaddom.local>
+Accept-Language: sv-SE, en-US
+Content-Language: sv-SE
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+x-originating-ip: [172.16.30.215]
+Content-Type: multipart/related;
+	boundary="_004_27BFEB2FD2900B448276BC5DC88EC87A027546CDC3ExchMBXtnsadd_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+
+--_004_27BFEB2FD2900B448276BC5DC88EC87A027546CDC3ExchMBXtnsadd_
+Content-Type: multipart/alternative;
+	boundary="_000_27BFEB2FD2900B448276BC5DC88EC87A027546CDC3ExchMBXtnsadd_"
+
+--_000_27BFEB2FD2900B448276BC5DC88EC87A027546CDC3ExchMBXtnsadd_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hej alla!
+H=E4r kommer ett f=F6rsta utkast p=E5 schema d=E4r ni i grova drag ser vilk=
+a arbetsdagar som =E4r inbokade.
+Kort beskrivning:
+19 och 20 juni: Rep kl. 13.00-17.00 p=E5 Kulturskolan
+26 juni: repdag kl. 10.00-16.00 p=E5 Kulturskolan
+
+Turn=E9n p=E5g=E5r veckorna 26, 28 och 29.
+
+Har ni n=E5gra fr=E5gor, tveka inte att maila. Alla fr=E5gor gillas:).
+Jag vill ocks=E5 p=E5minna om att ni m=E5ste fixa en "hatt" d=E4r folk l=E4=
+tt kan l=E4gga i pengar. Tidigare =E5r s=E5 har det blivit en ganska bra su=
+mma att f=F6rdela mellan er musiker.
+Kolla =E4ven hemma om ni har ngn liten campingpall e.d. s=E5 ni slipper st=
+=E5 under arbetspassen.
+Notst=E4ll l=E5nar vi av Kulturskolan. Likas=E5 f=F6rst=E4rkare och keyboar=
+d. Kolla g=E4rna med er l=E4rare vad som =E4r ok att l=E5na.
+Vi ses den 19 juni!
+
+Med v=E4nlig h=E4lsning
+
+Claes Sj=F6kvist
+Kultur & Fritid
+Tfn: +46 (0)140-682 32
+E-post: claes.sjokvist@tranas.se<mailto:claes.sjokvist@tranas.se>
+Bes=F6ksadress: Storgatan 54
+573 32 Tran=E5s
+[cid:image001.jpg@01D2C574.C88D5730]
+Tran=E5s kommun
+SE 573 82
+Vxl Stadshuset 0140-681 00
+Servicekontoret Tran=E5s Direkt 0140-687 90
+www.tranas.se<http://www.tranas.se>
+
+
+--_000_27BFEB2FD2900B448276BC5DC88EC87A027546CDC3ExchMBXtnsadd_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 14 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-priority:99;
+	mso-style-link:"Ballongtext Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-language:EN-US;}
+span.E-postmall17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+span.BallongtextChar
+	{mso-style-name:"Ballongtext Char";
+	mso-style-priority:99;
+	mso-style-link:Ballongtext;
+	font-family:"Tahoma","sans-serif";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"SV" link=3D"blue" vlink=3D"purple">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Hej alla!<o:p></o:p></p>
+<p class=3D"MsoNormal">H=E4r kommer ett f=F6rsta utkast p=E5 schema d=E4r n=
+i i grova drag ser vilka arbetsdagar som =E4r inbokade.<o:p></o:p></p>
+<p class=3D"MsoNormal">Kort beskrivning: <o:p></o:p></p>
+<p class=3D"MsoNormal"><b>19 och 20 juni: Rep kl. 13.00-17.00 p=E5 Kultursk=
+olan<o:p></o:p></b></p>
+<p class=3D"MsoNormal"><b>26 juni: repdag kl. 10.00-16.00 p=E5 Kulturskolan=
+<o:p></o:p></b></p>
+<p class=3D"MsoNormal"><b><o:p>&nbsp;</o:p></b></p>
+<p class=3D"MsoNormal"><b>Turn=E9n p=E5g=E5r veckorna 26, 28 och 29. <o:p><=
+/o:p></b></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Har ni n=E5gra fr=E5gor, tveka inte att maila. Alla =
+fr=E5gor gillas<span style=3D"font-family:Wingdings">J</span>.<o:p></o:p></=
+p>
+<p class=3D"MsoNormal">Jag vill ocks=E5 p=E5minna om att ni m=E5ste fixa en=
+ &#8221;hatt&#8221; d=E4r folk l=E4tt kan l=E4gga i pengar. Tidigare =E5r s=
+=E5 har det blivit en ganska bra summa att f=F6rdela mellan er musiker.<o:p=
+></o:p></p>
+<p class=3D"MsoNormal">Kolla =E4ven hemma om ni har ngn liten campingpall e=
+.d. s=E5 ni slipper st=E5 under arbetspassen.<o:p></o:p></p>
+<p class=3D"MsoNormal">Notst=E4ll l=E5nar vi av Kulturskolan. Likas=E5 f=F6=
+rst=E4rkare och keyboard. Kolla g=E4rna med er l=E4rare vad som =E4r ok att=
+ l=E5na.<o:p></o:p></p>
+<p class=3D"MsoNormal">Vi ses den 19 juni! <o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:9.0pt;font-family:&quot;=
+Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-language:SV">Med v=E4nlig =
+h=E4lsning<br>
+</span></b><span style=3D"font-size:9.0pt;font-family:&quot;Verdana&quot;,&=
+quot;sans-serif&quot;;mso-fareast-language:SV"><br>
+Claes Sj=F6kvist<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:9.0pt;font-family:&quot;Ver=
+dana&quot;,&quot;sans-serif&quot;;mso-fareast-language:SV">Kultur &amp; Fri=
+tid<br>
+Tfn: &#43;46 (0)140-682 32<br>
+E-post: <a href=3D"mailto:claes.sjokvist@tranas.se"><span style=3D"color:bl=
+ue">claes.sjokvist@tranas.se</span></a>
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:9.0pt;font-family:&quot;Ver=
+dana&quot;,&quot;sans-serif&quot;;mso-fareast-language:SV">Bes=F6ksadress: =
+Storgatan 54<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:9.0pt;font-family:&quot;Ver=
+dana&quot;,&quot;sans-serif&quot;;mso-fareast-language:SV">573 32 Tran=E5s<=
+/span><span style=3D"font-size:12.0pt;font-family:&quot;Times New Roman&quo=
+t;,&quot;serif&quot;;mso-fareast-language:SV"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Ve=
+rdana&quot;,&quot;sans-serif&quot;;mso-fareast-language:SV"><img border=3D"=
+0" width=3D"131" height=3D"76" id=3D"Bildobjekt_x0020_1" src=3D"cid:image00=
+1.jpg@01D2D89B.3C53EFB0" alt=3D"cid:image001.jpg@01D2C574.C88D5730"><o:p></=
+o:p></span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:8.0pt;font-family:&quot;=
+Verdana&quot;,&quot;sans-serif&quot;;mso-fareast-language:SV">Tran=E5s komm=
+un</span></b><b><span style=3D"font-size:7.0pt;font-family:&quot;Verdana&qu=
+ot;,&quot;sans-serif&quot;;mso-fareast-language:SV"><br>
+</span></b><span style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,&=
+quot;sans-serif&quot;;mso-fareast-language:SV">SE 573 82
+<br>
+Vxl Stadshuset 0140-681 00<br>
+Servicekontoret Tran=E5s Direkt 0140-687 90<br>
+<b><a href=3D"http://www.tranas.se"><span style=3D"color:blue">www.tranas.s=
+e</span></a><o:p></o:p></b></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_27BFEB2FD2900B448276BC5DC88EC87A027546CDC3ExchMBXtnsadd_--
+
+--_004_27BFEB2FD2900B448276BC5DC88EC87A027546CDC3ExchMBXtnsadd_
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Description: image001.jpg
+Content-Disposition: inline; filename="image001.jpg"; size=2916;
+	creation-date="Mon, 29 May 2017 14:47:18 GMT";
+	modification-date="Mon, 29 May 2017 14:47:18 GMT"
+Content-ID: <image001.jpg@01D2D89B.3C53EFB0>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCABMAIMDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2R3WN
+SzsFUdSTgVVvtVs9NiWS6nVFf7o6lvoBya5DxoklvrVvLcS5s54tsYbokqnp6cg557rWJLJNdWVk
+rAMloHVAM7mVjzk556DArCdblbTRrGnzJM9BbxJpi6eb0XG6EOI+FO4seQMYzmksfEunX8czxyMg
+hTzJPMUrhfWvPljlks3i3lY2lEoiYcFlwFY988D9KSOOVLe4jjcwrPF5TIAMsvJIPtk9qz+sq6L9
+hoej2Wv6dqE3lW1yrSHorAqT9Mjmr6yK5IVlJXqAc4ry6wkns9QjvIUVZIckCUZBYjB4B/L8adoK
+Sz6xY21pMUuC4eZwclUGSxOO5Py8+pq4V+aytqTKlbU9RopB0pa6DEKKKKACiiigAooooAKKKKAC
+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
+oooAKKKKAP/Z
+
+--_004_27BFEB2FD2900B448276BC5DC88EC87A027546CDC3ExchMBXtnsadd_--

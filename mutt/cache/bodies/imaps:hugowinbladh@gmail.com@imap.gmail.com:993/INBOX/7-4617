@@ -1,0 +1,486 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.191.67 with SMTP id p64csp6369003iof;
+        Tue, 12 Sep 2017 11:12:49 -0700 (PDT)
+X-Google-Smtp-Source: AOwi7QAXB+o/BO/nXMkNHIgtxZHjIkdwrF+SSzj42W3TDjm3LTzu15RCEFFyzkH4RbFG/IcJqCkb
+X-Received: by 10.46.65.23 with SMTP id o23mr5656605lja.172.1505239969232;
+        Tue, 12 Sep 2017 11:12:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1505239969; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ATE8PRprFEXDWPAy5u8oxOQMYe6Koi6dwEn1wk4fh6Jz7Cv0thHHd0762jgqxG7gfD
+         bDWid7DGQdLQQgd4/BbOi8fK7oMGAqwISvy/6Q5kdDTv687qgXBrQ1Urqj4SmLc5T0Dg
+         H5cA75wYTAI2WhxL24xs04fK1qOeW3L9JCHO0mZR/UCQbL/i8+XyVsGD8W9DAy+1lIg7
+         zYj4RhufI4OK+NA34npswMpgaIlTIfGZffsjJlnEn4viazHgt4+5niskInhx1skqJu49
+         /aJe7IiDebcltbSlEQNn54h7NwnJNkU8iV081eV7cVmTLPUcog0sH97xnE6Cnb+GEQBr
+         I31w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:list-unsubscribe:mime-version:subject:message-id:to:reply-to
+         :from:domainkey-signature:dkim-signature:arc-authentication-results;
+        bh=cKdnXnoUfHtKQrsAxxUKg2G3dVQ0TgQIIzsw8aLzaVc=;
+        b=hO7ivIRfjSw0NszRHsilAmTw1osV64FHSNpziLvfWQ5rgPF40Q3DuwxE8nG7/yWbzi
+         WpwONN8x84wpQOjPbQK8oClPHQrA2T6b+V0Pg385duUBSXTxMpngiXzTta6ppljDmYED
+         3Mr7oQ3ZfmlafDhPGXOKyNmkJlC47b8OTpm2SAklcYYGyXNsjYieytYohw5iKukYPeoe
+         NkpGuweejvOtrGPI91doeNRGlO6Pe2MlddmPy50fRfunh1O/Pej3sDjT4Z19BmG5gDV7
+         JQHFYynp/mwmPa4B7mNhPGhm950nPDngQqrF5l/0ibbfigOVq1xYiVFogHLbcu1vcZO3
+         XGjQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@studentkortet.se header.s=k5 header.b=phfDY5Nr;
+       spf=pass (google.com: domain of a104_-1223990061_394@customer-394-a104.carmamail.com designates 81.201.223.106 as permitted sender) smtp.mailfrom=A104_-1223990061_394@customer-394-a104.carmamail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=studentkortet.se
+Return-Path: <A104_-1223990061_394@customer-394-a104.carmamail.com>
+Received: from secos-m101-i106.carmamail.com (secos-m101-i106.carmamail.com. [81.201.223.106])
+        by mx.google.com with ESMTPS id v26si4924907lja.160.2017.09.12.11.12.48
+        for <hugowinbladh@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 12 Sep 2017 11:12:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of a104_-1223990061_394@customer-394-a104.carmamail.com designates 81.201.223.106 as permitted sender) client-ip=81.201.223.106;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@studentkortet.se header.s=k5 header.b=phfDY5Nr;
+       spf=pass (google.com: domain of a104_-1223990061_394@customer-394-a104.carmamail.com designates 81.201.223.106 as permitted sender) smtp.mailfrom=A104_-1223990061_394@customer-394-a104.carmamail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=studentkortet.se
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k5; d=studentkortet.se;
+ h=From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe:Date; i=info@studentkortet.se;
+ bh=8GtCTcRkdWJ63eFRlElk2GIesa0=;
+ b=phfDY5NrttEZVtX8s1UN4D6lSk3nbfBw9tfSYZktcB25IQkUO50Jl4fw2lAeVaFnvnM8WEkKg0XC
+   tVTdTMMABMTLjOBffYr7CIiI3YAoAErUDeQW4sG9+BUIDklnnE/INgXt1mf1OWTqgiS5nr/4KqSu
+   CHJJ5CNUVRY5aJGyAf0=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=k5; d=studentkortet.se;
+ b=NiUbEnNCrQSCpr1vcqGmYUuxL1tXIfCoZlt8VTaED3L+KEo4YNZoQ0x6W4sXPoRqeTc+ZhSG9nR6
+   5DGmMUQul9uoLVo6ApFHS2Z3vBgBoVkdBovdLTOuWJIBgB+Lz22tjzsUeXGY16NfSXtYlozu5sF+
+   tjvi0JJPyVQgYKvPC8A=;
+Received: by secos-m101-i106.carmamail.com id hn0hq2296bsl for <hugowinbladh@gmail.com>; Tue, 12 Sep 2017 19:21:19 +0200 (envelope-from <A104_-1223990061_394@customer-394-A104.carmamail.com>)
+From: Studentkortet <info@studentkortet.se>
+Reply-To: Studentkortet <info@studentkortet.se>
+To: hugowinbladh@gmail.com
+Message-ID: <41159994.13415916.1505236879393.JavaMail.SECOS-117$@secos-117>
+Subject: =?UTF-8?Q?Obegr=C3=A4nsat_med_E-b=C3=B6cke?=
+ =?UTF-8?Q?r_&_ljudb=C3=B6cker_i_h=C3=B6st_?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_13415912_1995513685.1505236879393"
+List-Unsubscribe: <http://klick.studentkortet.se/mail/ISPUnregister?guid=60ay0002019NMcdZaDg&mid=-1223990061>,<mailto:-1223990061_60ay0002019NMcdZaDg_A104@listmanager.carmamail.com>
+X-Mailer: Compost Carma
+X-Carma-Version: 6.0
+X-Carma-MessageID: -1223990061
+X-campaignid: carma1148641
+X-serverid: A104
+x-vmta: studentkortet_auth
+x-envid: 394
+X-PVIQ: 000342-001069-170912-000394-be738f
+Date: Tue, 12 Sep 2017 19:21:19 +0200
+
+------=_Part_13415912_1995513685.1505236879393
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+https://s3-eu-west-1.amazonaws.com/mimgs/cdn/ONE/394/xZ8HnodXTvyPDdWiDPwg_s=
+tudentkortet_mall_carma.pnghttps://s3-eu-west-1.amazonaws.com/mimgs/cdn/ONE=
+/394/XOMhMa9cR4Ols0hBswhp_nonmember_1000x1000_170911px.jpgObegr=C3=A4nsat m=
+ed Ljudb=C3=B6cker och E-b=C3=B6cker=09
+=09
+=09
+Nextory och Studentkortet bjuder dig nu p=C3=A5 45 dagars kostnadsfritt abo=
+nnemang som ger dig m=C3=B6jlighet att l=C3=A4sa och lyssna p=C3=A5 obegr=
+=C3=A4nsat med e-b=C3=B6cker och ljudb=C3=B6cker. V=C3=A4lj bland marknaden=
+s st=C3=B6rsta utbud av e-b=C3=B6cker och tusentals ljudb=C3=B6cker, direkt=
+ i din surfplatta eller mobil. =09
+=09
+Missa inte h=C3=B6stens hetaste nyheter!  =09
+=09
+=09
+Prova gratis h=C3=A4r=09
+=09
+http://www.studentkortet.se/bounce?id=3D33329https://s3-eu-west-1.amazonaws=
+.com/mimgs/cdn/ONE/394/lLC4KKN1TFuWFZ04YFQZ_Stand%20Alone%20footer.pngStude=
+ntkortet nyhetsbrev =C3=A4r en tj=C3=A4nst f=C3=B6r dig med Studentkortet. =
+Det inneh=C3=A5ller information som =C3=A4r relevant f=C3=B6r dig som stude=
+nt, ofta en aktuell rabatt eller ett erbjudande som vi tror du kan ha nytta=
+ av.=09
+ =09
+=09
+  Ekonomi   (http://www.studentkortet.se/studentrabatt/ekonomi/) |  B=C3=B6=
+cker & tidskrifter   (http://www.studentkortet.se/rabatter/rabattkategori/b=
+ocker-tidskrifter/)  |  H=C3=A4lsa & sk=C3=B6nhet   (http://www.studentkort=
+et.se/studentrabatt/halsa-skonhet)  |  Sport & fritid   (http://www.student=
+kortet.se/studentrabatt/sport-fritid) =09
+ Mobil   (http://www.studentkortet.se/studentrabatt/mobil)  |  Teknik   (ht=
+tp://www.studentkortet.se/studentrabatt/teknik/)  |  Skor & kl=C3=A4der   (=
+http://www.studentkortet.se/studentrabatt/skor-klader)  |  Resor   (http://=
+www.studentkortet.se/studentrabatt/resor) =09
+=09
+ Om Studentkortet   (http://www.studentkortet.se/om-oss/)  |  Avregistrera =
+nyhetsbrev h=C3=A4r   (http://klick.studentkortet.se/Forms/Default.aspx?for=
+m=3D241_495bd5ed&muid=3D60ay0002019NMcdZaDg-1223990061)Kan du inte se inneh=
+=C3=A5llet i detta meddelande? V=C3=A4nligen klicka h=C3=A4r.=09
+http://klick.studentkortet.se/mail/OBS/60ay0002019NMcdZaDg-1223990061
+------=_Part_13415912_1995513685.1505236879393
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml"><head><title>Obegr=C3=A4nsa=
+t med E-b=C3=B6cker & ljudb=C3=B6cker i h=C3=B6st </title><meta name=3D"gen=
+erator" content=3D"Carma Email Application" /><meta name=3D"unsubscribe_url=
+" content=3D"http://klick.studentkortet.se/optout?mid=3D-1223990061&guid=3D=
+60ay0002019NMcdZaDg" /><meta name=3D"viewport" content=3D"width=3Ddevice-wi=
+dth, initial-scale =3D 1.0" /><meta property=3D"og:type" content=3D"article=
+" /><meta property=3D"og:title" content=3D"Obegr=C3=A4nsat med E-b=C3=B6cke=
+r & ljudb=C3=B6cker i h=C3=B6st " /><meta property=3D"og:description" conte=
+nt=3D"Obegr=C3=A4nsat med E-b=C3=B6cker & ljudb=C3=B6cker i h=C3=B6st " /><=
+meta property=3D"og:url" content=3D"http://klick.studentkortet.se/mail/OBS/=
+60ay0002019NMcdZaDg-1223990061" /><meta property=3D"article:published_time"=
+ content=3D"2017-09-12T19:21:19.393" /><style type=3D"text/css">
+=09=09=09=09* { margin: 0; padding: 0}
+=09=09=09=09
+=09=09=09=09body > img { display:inherit!important; }
+  body { margin: 0; padding: 0}
+  a:hover{ text-decoration:underline !important; }
+  a { margin-top: 0 !important; margin: 0 !important; }
+  div, p, a, li, td { -webkit-text-size-adjust:none; }
+  #ForceOutlook2010BrowserLink span { padding: 0px; }
+  #outlook a {padding: 0 0 0 0;}
+  v\:* { behavior: url(#default#VML); display:inline-block; }
+  p {margin-bottom:0; margin:0}
+  table td { border-collapse: collapse; }
+  .ExternalClass * {line-height: normal;}
+  .ExternalClass TD {line-height: normal !important;}
+ =20
+  span.preheader { display: none !important; }
+
+  a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  }
+ =20
+=09=09body, div { margin:0; padding:0; -webkit-text-size-adjust:100%; -ms-t=
+ext-size-adjust:100%; }
+=09=09table, table td { border-collapse:collapse; mso-table-lspace:0; mso-t=
+able-rspace:0; margin:0; padding:0;border:none; line-height: 0px; font-size=
+: 0px;}
+=09=09.image { width:100%; }
+=09=09@media screen and (max-device-width: 600px), screen and (max-width: 6=
+00px) {
+=09=09=09*[class=3Dthird] { width:33.333% !important; max-width: none !impo=
+rtant; }
+=09=09=09*[class=3Dthirded] { width:33.333% !important; max-width: none !im=
+portant; }
+=09=09=09*[class=3Dtwothirds] { width:66.667% !important; max-width: none !=
+important; }
+=09=09=09*[class=3Dhalf] { width:100% !important; max-width: none !importan=
+t; }
+=09=09=09*[class=3Dhalfed] { width:100% !important; max-width: none !import=
+ant; margin-top:10px; }
+=09=09}
+
+=09=09@media screen and (max-device-width: 480px), screen and (max-width: 4=
+80px) {
+=09=09=09*[class=3Dthird] { width:100% !important; max-width: none !importa=
+nt; }
+=09=09=09*[class=3Dthirded] { width:100% !important; max-width: none !impor=
+tant; margin-top:10px; }
+=09=09=09*[class=3Dtwothirds] { width:100% !important; max-width: none !imp=
+ortant; }
+=09=09=09*[class=3Dtwothirdsed] { width:100% !important; max-width: none !i=
+mportant; margin-top:10px; }
+=09=09=09font { font-size:1.25em !important; line-height:1.25em !important;=
+ }
+=09=09=09font font { font-size:inherit!important; line-height:inherit!impor=
+tant; }
+=09=09=09*[class=3DMeta] { font-size:13px !important; line-height:1.25em !i=
+mportant; }
+=09=09=09*[class~=3DNo] =09=09=09{ display:none;line-height:0;font-size:0;w=
+idth:0px;max-height:0px;overflow:hidden;float:left; }
+=09=09=09*[class~=3DNo] div =09=09{ white-space:nowrap;width:0px;height:0px=
+;display:none;visibility:hidden;line-height:0;mso-hide:all;font-size:0px; }
+=09=09}
+
+
+=09=09</style>
+=09=09<!--[if (gte mso 9)|(EI)]>
+=09=09<style>
+=09=09=09#outlookholder {
+=09=09=09=09width:600px;
+=09=09=09}
+=09=09</style>
+=09=09<![endif]-->
+=09=09<style>
+=09</style><!--[if gte mso 9]>
+  <style type=3D"text/css">
+  body {
+ =20
+
+=20
+  background-color: #F0F0F0;
+
+ =20
+=20
+  }
+  td.body{
+  background-image: none;
+  background-color: transparent;
+  }
+  table {border-collapse: collapse;}
+ =20
+=09=09  /* Outlook 2013 fix: */
+=09=09  td {
+=09=09  font-size: 1px;
+=09=09  }
+=09 =20
+=09=09=09=09</style>
+  <![endif]--></head><body margintop=3D"0" marginleft=3D"0" marginright=3D"=
+0" style=3D"min-width:100%; width:100%;margin:0;" xmlns:carma=3D"editor:fun=
+ctions" xmlns:e=3D"editor:elements" xmlns:theming=3D"editor:theming"><div c=
+lass=3D"preheader" style=3D"display:none;line-height:0;font-size:0;width:0p=
+x;max-height:0px;overflow:hidden;float:left;"><div style=3D"white-space:now=
+rap;width:0px;height:0px;display:none;visibility:hidden;line-height:0;mso-h=
+ide:all;font-size:0px;">Prova Nextory gratis i 45 dagar</div></div><img bor=
+der=3D"0" width=3D"1" height=3D"1" alt=3D"" src=3D"http://klick.studentkort=
+et.se/mail/MOS/-1223990061/60ay0002019NMcdZaDg.gif" style=3D"display:block;=
+ width :1px !important; height :1px !important" /><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" class=3D"" width=3D"100%"><tr><td class=3D"b=
+ody" align=3D"center" valign=3D"top" bgcolor=3D"#F0F0F0"><div class=3D"wrap=
+"><!--[if (gte mso 9)|(IE)]> <table id=3D"outlookholder" width=3D"600" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td> <![endif]--><table ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D"max-=
+width:600px;"><tr><td align=3D"left" valign=3D"top"><table cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" class=3D"" width=3D"100%"><tr><td><img sty=
+le=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.a=
+mazonaws.com/i.gif" width=3D"1" border=3D"0" alt=3D"" height=3D"10" /></td>=
+</tr><tr><td bgcolor=3D"#ffffff" align=3D"left" valign=3D"top" width=3D"100=
+%"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"width=
+:100%;" border=3D"0"><tr><td valign=3D"top" align=3D"center"><table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"" width=3D"240"><tr><td>=
+<img style=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-central-1.c=
+ompute.amazonaws.com/i.gif" width=3D"1" border=3D"0" alt=3D"" height=3D"20"=
+ /></td></tr><tr><td bgcolor=3D"#ffffff" align=3D"left" valign=3D"top" widt=
+h=3D"240" height=3D"52"><a target=3D"_blank" href=3D"http://klick.studentko=
+rtet.se/mail/RLS?mid=3D-1223990061&guid=3D60ay0002019NMcdZaDg&lid=3D6954323=
+9&s=3D1" clinkID=3D"69543239"><img style=3D"display:block" alt=3D"" border=
+=3D"0" class=3D"myimage" src=3D"https://s3-eu-west-1.amazonaws.com/mimgs/cd=
+n/ONE/394/xZ8HnodXTvyPDdWiDPwg_studentkortet_mall_carma.png" width=3D"240" =
+height=3D"52" /></a></td></tr></table></td></tr></table></td></tr></table><=
+/td></tr><tr><td align=3D"left" valign=3D"top"><table cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0" class=3D"" width=3D"100%"><tr><td bgcolor=3D"#F=
+FFFFF"><img style=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-cent=
+ral-1.compute.amazonaws.com/i.gif" height=3D"1" border=3D"0" alt=3D"" width=
+=3D"20" /></td><td bgcolor=3D"#FFFFFF" align=3D"left" valign=3D"top" width=
+=3D"100%"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=
+=3D"width:100%;" border=3D"0"><tr><td align=3D"center" valign=3D"top" class=
+=3D"Yes"><a target=3D"_blank" href=3D"http://klick.studentkortet.se/mail/RL=
+S?mid=3D-1223990061&guid=3D60ay0002019NMcdZaDg&lid=3D69543240&s=3D1" clinkI=
+D=3D"69543240"><img alt=3D"" border=3D"0" class=3D"myimage" src=3D"https://=
+s3-eu-west-1.amazonaws.com/mimgs/cdn/ONE/394/XOMhMa9cR4Ols0hBswhp_nonmember=
+_1000x1000_170911px.jpg" width=3D"570" style=3D"width:100%;display:block;" =
+/></a></td></tr></table></td><td bgcolor=3D"#FFFFFF"><img style=3D"display:=
+block" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i=
+.gif" height=3D"1" border=3D"0" alt=3D"" width=3D"20" /></td></tr><tr><td b=
+gcolor=3D"#FFFFFF"><img style=3D"display:block" src=3D"http://ec2-54-93-116=
+-216.eu-central-1.compute.amazonaws.com/i.gif" width=3D"1" height=3D"1" alt=
+=3D"" border=3D"0" /></td><td bgcolor=3D"#FFFFFF"><img style=3D"display:blo=
+ck" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gi=
+f" width=3D"1" border=3D"0" alt=3D"" height=3D"20" /></td><td bgcolor=3D"#F=
+FFFFF"><img style=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-cent=
+ral-1.compute.amazonaws.com/i.gif" width=3D"1" height=3D"1" alt=3D"" border=
+=3D"0" /></td></tr></table><table cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0" class=3D"" width=3D"100%"><tr><td bgcolor=3D"#FFFFFF"><img style=3D=
+"display:block" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazon=
+aws.com/i.gif" height=3D"1" border=3D"0" alt=3D"" width=3D"20" /></td><td b=
+gcolor=3D"#FFFFFF" align=3D"left" valign=3D"top" width=3D"100%"><table widt=
+h=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"width:100%;" border=
+=3D"0"><tr><td align=3D"center" valign=3D"top" class=3D"Yes"><table cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"" width=3D"100%"><tr><td=
+><img style=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-central-1.=
+compute.amazonaws.com/i.gif" width=3D"1" border=3D"0" alt=3D"" height=3D"20=
+" /></td></tr><tr><td align=3D"center" valign=3D"top" width=3D"100%"><span =
+style=3D"font-family:Arial, sans-serif;font-size:17px;font-weight:bold;text=
+-decoration:none;font-style:normal;mso-line-height-rule:exactly;line-height=
+:normal;color:#000000;" class=3D"text H3">Obegr=C3=A4nsat med Ljudb=C3=B6ck=
+er och E-b=C3=B6cker</span></td></tr></table><table cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" class=3D"" width=3D"100%"><tr><td><img style=3D"d=
+isplay:block" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaw=
+s.com/i.gif" width=3D"1" border=3D"0" alt=3D"" height=3D"20" /></td></tr><t=
+r><td align=3D"center" valign=3D"top" width=3D"100%"><span style=3D"font-fa=
+mily:Arial;font-size:13px;font-weight:normal;text-decoration:none;font-styl=
+e:normal;mso-line-height-rule:exactly;line-height:20px;color:#000000;" clas=
+s=3D"text P1">Nextory och Studentkortet bjuder dig nu p=C3=A5 <b>45 dagars =
+kostnadsfritt abonnemang</b> som ger dig m=C3=B6jlighet att l=C3=A4sa och l=
+yssna p=C3=A5 obegr=C3=A4nsat med e-b=C3=B6cker och ljudb=C3=B6cker. V=C3=
+=A4lj bland marknadens st=C3=B6rsta utbud av e-b=C3=B6cker och tusentals lj=
+udb=C3=B6cker, direkt i din surfplatta eller mobil. <br /><br />Missa inte =
+h=C3=B6stens hetaste nyheter!</span></td></tr></table><table width=3D"100%"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"width:100%;min-width:100%;"><=
+tr><td width=3D"100%" height=3D"20" style=3D"width:100%;min-width:100%;"><i=
+mg src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gif=
+" width=3D"1" height=3D"20" style=3D"display:block;" border=3D"0" /></td></=
+tr><tr><td width=3D"100%" align=3D"center" style=3D"width:100%;min-width:10=
+0%;"><table width=3D"160" cellpadding=3D"0" cellspacing=3D"0" style=3D"back=
+ground-color:#FF3366; border-top-left-radius:px; border-top-right-radius:px=
+; border-bottom-right-radius:px; border-bottom-left-radius:px;width:160;min=
+-width:160;"><tr><td style=3D"background-color:#FF3366; border-top-left-rad=
+ius:px; border-top-right-radius:px; border-bottom-right-radius:px; border-b=
+ottom-left-radius:px;"><table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:100%;min-width:100%;"><tr><td></td><td height=3D"9"><=
+img src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gi=
+f" width=3D"1" height=3D"9" style=3D"display:block;" /></td><td></td></tr><=
+tr><td width=3D"9"><img src=3D"http://ec2-54-93-116-216.eu-central-1.comput=
+e.amazonaws.com/i.gif" width=3D"9" height=3D"1" style=3D"display:block;" />=
+</td><td align=3D"center"><a target=3D"_blank" style=3D"text-decoration:non=
+e;" href=3D"http://klick.studentkortet.se/mail/RLS?mid=3D-1223990061&guid=
+=3D60ay0002019NMcdZaDg&lid=3D69543241&s=3D1" clinkID=3D"69543241"><span sty=
+le=3D"font-family:Arial;font-size:14px;font-weight:bold;text-decoration:non=
+e;font-style:normal;mso-line-height-rule:exactly;line-height:100%;color:#FF=
+FFFF;" class=3D"text Button2">Prova gratis h=C3=A4r<br /></span></a></td><t=
+d width=3D"9"><img src=3D"http://ec2-54-93-116-216.eu-central-1.compute.ama=
+zonaws.com/i.gif" width=3D"9" height=3D"1" style=3D"display:block;" /></td>=
+</tr><tr><td></td><td height=3D"9"><img src=3D"http://ec2-54-93-116-216.eu-=
+central-1.compute.amazonaws.com/i.gif" width=3D"1" height=3D"9" style=3D"di=
+splay:block;" /></td><td></td></tr></table></td></tr></table></td></tr></ta=
+ble></td></tr></table></td><td bgcolor=3D"#FFFFFF"><img style=3D"display:bl=
+ock" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.g=
+if" height=3D"1" border=3D"0" alt=3D"" width=3D"20" /></td></tr><tr><td bgc=
+olor=3D"#FFFFFF"><img style=3D"display:block" src=3D"http://ec2-54-93-116-2=
+16.eu-central-1.compute.amazonaws.com/i.gif" width=3D"1" height=3D"1" alt=
+=3D"" border=3D"0" /></td><td bgcolor=3D"#FFFFFF"><img style=3D"display:blo=
+ck" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gi=
+f" width=3D"1" border=3D"0" alt=3D"" height=3D"20" /></td><td bgcolor=3D"#F=
+FFFFF"><img style=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-cent=
+ral-1.compute.amazonaws.com/i.gif" width=3D"1" height=3D"1" alt=3D"" border=
+=3D"0" /></td></tr></table><table cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0" class=3D"" width=3D"100%"><tr><td bgcolor=3D"#FFFFFF"><img style=3D=
+"display:block" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazon=
+aws.com/i.gif" height=3D"1" border=3D"0" alt=3D"" width=3D"15" /></td><td b=
+gcolor=3D"#FFFFFF" align=3D"left" valign=3D"top" width=3D"100%"><table widt=
+h=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"width:100%;" border=
+=3D"0"><tr><td align=3D"center" valign=3D"top" class=3D""></td></tr></table=
+></td><td bgcolor=3D"#FFFFFF"><img style=3D"display:block" src=3D"http://ec=
+2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gif" height=3D"1" bord=
+er=3D"0" alt=3D"" width=3D"15" /></td></tr></table><table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"" width=3D"100%"><tr><td align=3D"=
+left" valign=3D"top" bgcolor=3D"#FFFFFF"><table width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"width:100%;" border=3D"0"><tr><td align=
+=3D"center" valign=3D"top" class=3D"No"><a target=3D"_blank" href=3D"http:/=
+/klick.studentkortet.se/mail/RLS?mid=3D-1223990061&guid=3D60ay0002019NMcdZa=
+Dg&lid=3D69543242&s=3D1" clinkID=3D"69543242"><img alt=3D"" border=3D"0" cl=
+ass=3D"myimage" src=3D"https://s3-eu-west-1.amazonaws.com/mimgs/cdn/ONE/394=
+/lLC4KKN1TFuWFZ04YFQZ_Stand%20Alone%20footer.png" width=3D"570" style=3D"wi=
+dth:100%;display:block;" /></a></td></tr></table></td></tr></table><table c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"" width=3D"100%"><=
+tr><td bgcolor=3D"transparent"><img style=3D"display:block" src=3D"http://e=
+c2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gif" height=3D"1" bor=
+der=3D"0" alt=3D"" width=3D"20" /></td><td bgcolor=3D"transparent" align=3D=
+"left" valign=3D"top" width=3D"100%"><table width=3D"100%" cellspacing=3D"0=
+" cellpadding=3D"0" style=3D"width:100%;" border=3D"0"><tr><td align=3D"cen=
+ter" valign=3D"top" class=3D""><table cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" class=3D"" width=3D"100%"><tr><td><img style=3D"display:block" =
+src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gif" w=
+idth=3D"1" border=3D"0" alt=3D"" height=3D"20" /></td></tr><tr><td align=3D=
+"center" valign=3D"top" width=3D"100%"><span style=3D"font-family:Arial;fon=
+t-size:10px;font-weight:normal;text-decoration:none;font-style:normal;mso-l=
+ine-height-rule:exactly;line-height:10px;color:#888888;" class=3D"text P1">=
+Studentkortet nyhetsbrev =C3=A4r en tj=C3=A4nst f=C3=B6r dig med Studentkor=
+tet. Det inneh=C3=A5ller information som =C3=A4r relevant f=C3=B6r dig som =
+student, ofta en aktuell rabatt eller ett erbjudande som vi tror du kan ha =
+nytta av.<br /></span></td></tr></table><table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" class=3D"" width=3D"100%"><tr><td><img style=3D"displa=
+y:block" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com=
+/i.gif" width=3D"1" border=3D"0" alt=3D"" height=3D"20" /></td></tr><tr><td=
+ align=3D"center" valign=3D"top" width=3D"100%"><span style=3D"font-family:=
+Arial;font-size:10px;font-weight:normal;text-decoration:none;font-style:nor=
+mal;mso-line-height-rule:exactly;line-height:10px;color:#7f7f7f;" class=3D"=
+text P1"><span style=3D"font-family:Arial;color:#000000;"><a href=3D"http:/=
+/klick.studentkortet.se/mail/RLS?mid=3D-1223990061&guid=3D60ay0002019NMcdZa=
+Dg&lid=3D69543243&s=3D1" style=3D"font-family:Arial, sans-serif;font-weight=
+:normal;text-decoration:none;font-style:normal;mso-line-height-rule:exactly=
+;line-height:100%;color:#AAAAAA;" target=3D"_blank" clinkID=3D"69543243"><s=
+pan style=3D"font-family:Arial;color:#7f7f7f;" color=3D"#7f7f7f">Ekonomi </=
+span></a><span style=3D"font-family:Arial;color:#000000;" color=3D"#000000"=
+>|&nbsp;</span><a href=3D"http://klick.studentkortet.se/mail/RLS?mid=3D-122=
+3990061&guid=3D60ay0002019NMcdZaDg&lid=3D69543244&s=3D1" style=3D"font-fami=
+ly:Arial, sans-serif;font-weight:normal;text-decoration:none;font-style:nor=
+mal;mso-line-height-rule:exactly;line-height:100%;color:#AAAAAA;" target=3D=
+"_blank" clinkID=3D"69543244"><span style=3D"font-family:Arial;color:#88888=
+8;" color=3D"#888888">B=C3=B6cker &amp; tidskrifter</span></a><span style=
+=3D"font-family:Arial;color:#000000;" color=3D"#000000">&nbsp;|&nbsp;</span=
+><a href=3D"http://klick.studentkortet.se/mail/RLS?mid=3D-1223990061&guid=
+=3D60ay0002019NMcdZaDg&lid=3D69543245&s=3D1" style=3D"font-family:Arial, sa=
+ns-serif;font-weight:normal;text-decoration:none;font-style:normal;mso-line=
+-height-rule:exactly;line-height:100%;color:#AAAAAA;" target=3D"_blank" cli=
+nkID=3D"69543245"><span style=3D"font-family:Arial;color:#888888;" color=3D=
+"#888888">H=C3=A4lsa &amp; sk=C3=B6nhet</span></a><span style=3D"font-famil=
+y:Arial;color:#000000;" color=3D"#000000">&nbsp;|&nbsp;</span><a href=3D"ht=
+tp://klick.studentkortet.se/mail/RLS?mid=3D-1223990061&guid=3D60ay0002019NM=
+cdZaDg&lid=3D69543246&s=3D1" style=3D"font-family:Arial, sans-serif;font-we=
+ight:normal;text-decoration:none;font-style:normal;mso-line-height-rule:exa=
+ctly;line-height:100%;color:#AAAAAA;" target=3D"_blank" clinkID=3D"69543246=
+"><span style=3D"font-family:Arial;color:#888888;" color=3D"#888888">Sport =
+&amp; fritid</span></a><br /><a href=3D"http://klick.studentkortet.se/mail/=
+RLS?mid=3D-1223990061&guid=3D60ay0002019NMcdZaDg&lid=3D69543247&s=3D1" styl=
+e=3D"font-family:Arial, sans-serif;font-weight:normal;text-decoration:none;=
+font-style:normal;mso-line-height-rule:exactly;line-height:100%;color:#AAAA=
+AA;" target=3D"_blank" clinkID=3D"69543247"><span style=3D"font-family:Aria=
+l;color:#888888;" color=3D"#888888">Mobil</span></a><span style=3D"font-fam=
+ily:Arial;color:#000000;" color=3D"#000000">&nbsp;|&nbsp;</span><a href=3D"=
+http://klick.studentkortet.se/mail/RLS?mid=3D-1223990061&guid=3D60ay0002019=
+NMcdZaDg&lid=3D69543248&s=3D1" style=3D"font-family:Arial, sans-serif;font-=
+weight:normal;text-decoration:none;font-style:normal;mso-line-height-rule:e=
+xactly;line-height:100%;color:#AAAAAA;" target=3D"_blank" clinkID=3D"695432=
+48"><span style=3D"font-family:Arial;color:#7f7f7f;" color=3D"#7f7f7f">Tekn=
+ik</span></a><span style=3D"font-family:Arial;color:#000000;" color=3D"#000=
+000">&nbsp;|&nbsp;</span><a href=3D"http://klick.studentkortet.se/mail/RLS?=
+mid=3D-1223990061&guid=3D60ay0002019NMcdZaDg&lid=3D69543249&s=3D1" style=3D=
+"font-family:Arial, sans-serif;font-weight:normal;text-decoration:none;font=
+-style:normal;mso-line-height-rule:exactly;line-height:100%;color:#AAAAAA;"=
+ target=3D"_blank" clinkID=3D"69543249"><span style=3D"font-family:Arial;co=
+lor:#888888;" color=3D"#888888">Skor &amp; kl=C3=A4der</span></a><span styl=
+e=3D"font-family:Arial;color:#000000;" color=3D"#000000">&nbsp;|&nbsp;</spa=
+n><a href=3D"http://klick.studentkortet.se/mail/RLS?mid=3D-1223990061&guid=
+=3D60ay0002019NMcdZaDg&lid=3D69543250&s=3D1" style=3D"font-family:Arial, sa=
+ns-serif;font-weight:normal;text-decoration:none;font-style:normal;mso-line=
+-height-rule:exactly;line-height:100%;color:#AAAAAA;" target=3D"_blank" cli=
+nkID=3D"69543250"><span style=3D"font-family:Arial;color:#888888;" color=3D=
+"#888888">Resor</span></a><br /><br /><a href=3D"http://klick.studentkortet=
+.se/mail/RLS?mid=3D-1223990061&guid=3D60ay0002019NMcdZaDg&lid=3D69543251&s=
+=3D1" style=3D"font-family:Arial, sans-serif;font-weight:normal;text-decora=
+tion:none;font-style:normal;mso-line-height-rule:exactly;line-height:100%;c=
+olor:#AAAAAA;" target=3D"_blank" clinkID=3D"69543251"><span style=3D"font-f=
+amily:Arial;color:#888888;" color=3D"#888888">Om Studentkortet</span></a><s=
+pan style=3D"font-family:Arial;color:#000000;" color=3D"#000000">&nbsp;|&nb=
+sp;</span></span><span style=3D"font-family:Arial;color:#888888;" color=3D"=
+#888888"><a target=3D"_blank" href=3D"http://klick.studentkortet.se/mail/RL=
+S?mid=3D-1223990061&guid=3D60ay0002019NMcdZaDg&lid=3D69543252&s=3D1" style=
+=3D"font-family:Arial, sans-serif;font-weight:normal;text-decoration:none;f=
+ont-style:normal;mso-line-height-rule:exactly;line-height:100%;color:#AAAAA=
+A;" clinkID=3D"69543252">Avregistrera nyhetsbrev h=C3=A4r</a></span></span>=
+</td></tr></table></td></tr></table></td><td bgcolor=3D"transparent"><img s=
+tyle=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-central-1.compute=
+.amazonaws.com/i.gif" height=3D"1" border=3D"0" alt=3D"" width=3D"20" /></t=
+d></tr><tr><td bgcolor=3D"transparent"><img style=3D"display:block" src=3D"=
+http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gif" width=3D=
+"1" height=3D"1" alt=3D"" border=3D"0" /></td><td bgcolor=3D"transparent"><=
+img style=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-central-1.co=
+mpute.amazonaws.com/i.gif" width=3D"1" border=3D"0" alt=3D"" height=3D"20" =
+/></td><td bgcolor=3D"transparent"><img style=3D"display:block" src=3D"http=
+://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/i.gif" width=3D"1" =
+height=3D"1" alt=3D"" border=3D"0" /></td></tr></table><table width=3D"100%=
+" cellspacing=3D"0" cellpadding=3D"0" style=3D"width:100%;" border=3D"0"><t=
+r><td align=3D"center" valign=3D"top"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" class=3D"" width=3D"100%"><tr><td><img style=3D"display=
+:block" src=3D"http://ec2-54-93-116-216.eu-central-1.compute.amazonaws.com/=
+i.gif" width=3D"1" border=3D"0" alt=3D"" height=3D"5" /></td></tr><tr><td a=
+lign=3D"center" valign=3D"top" width=3D"100%"><a target=3D"_blank" style=3D=
+"text-decoration:none;" href=3D"http://klick.studentkortet.se/mail/OBS/60ay=
+0002019NMcdZaDg-1223990061"><span style=3D"font-family:Arial, sans-serif;fo=
+nt-size:10px;font-weight:normal;text-decoration:none;font-style:normal;mso-=
+line-height-rule:exactly;line-height:100%;color:#888888;" class=3D"text Met=
+a">Kan du inte se inneh=C3=A5llet i detta meddelande?&nbsp;<span style=3D"f=
+ont-family:Arial, sans-serif;color:#888888; font-size:inherit;" color=3D"#8=
+88888">V=C3=A4nligen klicka h=C3=A4r.</span></span></a></td></tr><tr><td><i=
+mg style=3D"display:block" src=3D"http://ec2-54-93-116-216.eu-central-1.com=
+pute.amazonaws.com/i.gif" width=3D"1" border=3D"0" alt=3D"" height=3D"5" />=
+</td></tr></table></td></tr></table></td></tr></table><!--[if (gte mso 9)|(=
+IE)]> </td></tr></table> <![endif]--></div></td></tr></table></body>
+</html>
+------=_Part_13415912_1995513685.1505236879393--

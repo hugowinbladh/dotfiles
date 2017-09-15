@@ -1,0 +1,366 @@
+Delivered-To: hugowinbladh@gmail.com
+Received: by 10.107.165.6 with SMTP id o6csp864250ioe;
+        Thu, 18 May 2017 09:06:15 -0700 (PDT)
+X-Received: by 10.200.45.17 with SMTP id n17mr4548726qta.250.1495123575792;
+        Thu, 18 May 2017 09:06:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1495123575; cv=none;
+        d=google.com; s=arc-20160816;
+        b=rjuAXR0Qp9aSg1zJ6San9kkuZ4xM83+gr/wovFVYJPkJpwCV7R60YlwGt8WeXgy/5H
+         matcTmbiKU6qUSsXPUF4CRPXeEfbNgZtCrtsYqgA1qWWhI3VElxrCVAsab/HmfCy88Xd
+         7zn5XhJk68XTvm4f2aqNX7IzHVifhA7lb5ra83Pu39YVNGbQPtng/giJMosnJG10MRnd
+         +ynGuDLCvaGVThGGzCCNn4QZlKNHEhJyph6DeufbjArLVMzbEOEs/yBhmp8Bk26odlLK
+         vfcTUo5ZmJY7QVDB8GaMUDCsP5B4zo0/0LK8H2wG+Mo7HQKHpjB3g7qkxbHCS4wcqD2g
+         4VPA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:fb-message-id:mime-version:feedback-id:list-unsubscribe
+         :errors-to:reply-to:from:subject:to:date:dkim-signature
+         :arc-authentication-results;
+        bh=Tybne6vZIbpZvKUXtSqeJoklPkHGPLeKKg9/XlRfj9w=;
+        b=q+uUdaiXEg3qDmtTVopOdEUBiXjIDLwQ52JbLTJrrzCm/baqb5iUX4SPQ35eDf7Xd6
+         dkKea/R9+TQBHu2vBSXNzR3RJQueHQvnecmL+FiQScGxsnHPluCeAaJ0M3RNU95g2dcR
+         GKq+sgg7tPYUa2NSniOMfG+d7bepZ54im8jTz1lLZ0W2OB4OGezF9/1loh9I51mr5Er7
+         P/2g80i258IwC+b97uhCx7x/ORxnivn4/zqJsPnDrISYJuqsIMQPfbz5nk3m3kRKi+GO
+         /w0xgp1YyHehI23CtRkFV/7Ldx9cLUHNiFXKoAsc4VIrhXn2jKrv0oprUuIK5GdFswYQ
+         hA7A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@facebookmail.com;
+       spf=pass (google.com: domain of notification+zj4ozf4az_4y@facebookmail.com designates 69.171.232.175 as permitted sender) smtp.mailfrom=notification+zj4ozf4az_4y@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+Return-Path: <notification+zj4ozf4az_4y@facebookmail.com>
+Received: from mx-out.facebook.com (69-171-232-175.outappmail.facebook.com. [69.171.232.175])
+        by mx.google.com with ESMTPS id e5si5772205qtc.45.2017.05.18.09.06.15
+        for <hugowinbladh@gmail.com>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Thu, 18 May 2017 09:06:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of notification+zj4ozf4az_4y@facebookmail.com designates 69.171.232.175 as permitted sender) client-ip=69.171.232.175;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@facebookmail.com;
+       spf=pass (google.com: domain of notification+zj4ozf4az_4y@facebookmail.com designates 69.171.232.175 as permitted sender) smtp.mailfrom=notification+zj4ozf4az_4y@facebookmail.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=facebookmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=facebookmail.com;
+	s=s1024-2013-q3; t=1495123574;
+	bh=Tybne6vZIbpZvKUXtSqeJoklPkHGPLeKKg9/XlRfj9w=;
+	h=Date:To:Subject:From:MIME-Version:Content-Type;
+	b=BdQYmnLEzrjE7q8e3djXgVBUt/V3DKlCUxq8JqmZY1sSBM8mh/JM6NlcFIl187Cut
+	 oiexvOfJ6B5XGfRRtI2EEUzHcaHwWaUkPfieGj+f+AKS39zMymv4MKGSdAFHHn2hDw
+	 MMt/9bupHookv3fQ9TwjT2kJ5eWcki5XEquZ4J0Q=
+Received: from facebook.com (mCv0mYGg85NuU29jd8r58f03MgjirEO5Jc+GIBD5p9lPpdpyCbN3w57DtHJZKmwL 10.222.209.31)
+ by facebook.com with Thrift id eaf311e43be311e7a43024be058f0ba0-d35fc8f0;
+ Thu, 18 May 2017 09:06:14 -0700
+X-Facebook: from 2401:db00:2060:916b:face:0:94:0 ([MTI3LjAuMC4x]) 
+	by async.facebook.com with HTTP (ZuckMail);
+Date: Thu, 18 May 2017 09:06:14 -0700
+To: Hugo Winbladh <hugowinbladh@gmail.com>
+Subject: Se Malte Lindebergs nya foto i din grupp Te16F
+X-Priority: 3
+X-Mailer: ZuckMail [version 1.00]
+Return-Path: notification+zj4ozf4az_4y@facebookmail.com
+From: "Facebook" <notification+zj4ozf4az_4y@facebookmail.com>
+Reply-to: noreply <noreply@facebookmail.com>
+Errors-To: notification+zj4ozf4az_4y@facebookmail.com
+X-Facebook-Notify: group_nf_highlights; mailid=54fce4bd2bdcdG5af34a29475cG54fce9568c09fG47a
+List-Unsubscribe: <https://www.facebook.com/o.php?k=AS28dC0FtIAuxAkm&u=100000967771996&mid=54fce4bd2bdcdG5af34a29475cG54fce9568c09fG47a>
+Feedback-ID: 1:group_nf_highlights:Facebook
+X-FACEBOOK-PRIORITY: 0
+X-Auto-Response-Suppress: All
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_4d8571195a82de0a524e2f7515875e9c"
+FB-Message-ID: <4d8571195a82de0a524e2f7515875e9c@async.facebook.com>
+Message-ID: <eaf311e43be311e7a43024be058f0ba0-d35fc8f0@d8a0ef9ce3e7c7b5c6f3365ed6d9e7af9e0ac66bbf1f5d790eceba752ee1da0e>
+
+
+--b1_4d8571195a82de0a524e2f7515875e9c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Bes=C3=B6k gruppen
+https://www.facebook.com/n/?groups%2F492667337589876%2F612890785567530%2F&=
+medium=3Demail&mid=3D54fce4bd2bdcdG5af34a29475cG54fce9568c09fG47a&bcode=3D=
+1.1495123571.AblPdgLAOM7oxCxT&n_m=3Dhugowinbladh%40gmail.com
+
+
+Redigera e-postinst=C3=A4llningar
+https://www.facebook.com/n/?settings&medium=3Demail&mid=3D54fce4bd2bdcdG5a=
+f34a29475cG54fce9568c09fG47a&bcode=3D1.1495123571.AblPdgLAOM7oxCxT&n_m=3Dh=
+ugowinbladh%40gmail.com&tab=3Dnotifications&section=3Demail
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+
+Hej Hugo!
+
+Malte Lindeberg har lagt till ett foto i din grupp Te16F
+
+"=C2=A0"
+
+V=C3=A4nliga h=C3=A4lsningar,
+Facebook-teamet
+
+
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+Det h=C3=A4r meddelandet har skickats till hugowinbladh@gmail.com. Klicka =
+p=C3=A5 Klicka p=C3=A5 l=C3=A4nken nedan f=C3=B6r att avsluta =
+prenumerationen om du inte vill ha fler s=C3=A5dana h=C3=A4r =
+e-postmeddelanden fr=C3=A5n Facebook.
+https://www.facebook.com/o.php?k=3DAS28dC0FtIAuxAkm&u=3D100000967771996&mi=
+d=3D54fce4bd2bdcdG5af34a29475cG54fce9568c09fG47a
+Facebook, Inc., Attention: Community Support, 1 Hacker Way, Menlo Park, CA =
+94025
+
+
+--b1_4d8571195a82de0a524e2f7515875e9c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional =
+//EN"><html><head><title>Facebook</title><meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3Dutf-8" /><style>@media all and (max-width: =
+480px){*[class].ib_t{min-width:100% =
+!important}*[class].ib_row{display:block =
+!important}*[class].ib_ext{display:block !important;padding:10px 0 5px =
+0;vertical-align:top !important;width:100% =
+!important}*[class].ib_img,*[class].ib_mid{vertical-align:top =
+!important}*[class].mb_blk{display:block =
+!important;padding-bottom:10px;width:100% =
+!important}*[class].mb_hide{display:none =
+!important}*[class].mb_inl{display:inline !important}}.d_mb_show{display:n=
+one}.d_mb_show_center{display:table;margin:auto}@media only screen and =
+(max-device-width: 480px){.d_mb_hide{display:none =
+!important}.d_mb_show{display:block !important}}.mb_text h1,.mb_text =
+h2,.mb_text h3,.mb_text h4,.mb_text h5,.mb_text =
+h6{line-height:normal}.mb_work_text =
+h1{font-size:18px;line-height:normal;margin-top:4px}.mb_work_text =
+h2,.mb_work_text =
+h3{font-size:16px;line-height:normal;margin-top:4px}.mb_work_text =
+h4,.mb_work_text h5,.mb_work_text =
+h6{font-size:14px;line-height:normal}.mb_work_text =
+a{color:#1270e9}.mb_work_text p{margin-top:4px}</style></head><body =
+style=3D"margin:0;padding:0;" dir=3D"ltr" bgcolor=3D"#ffffff"><table =
+border=3D"0" width=3D"100%;" cellspacing=3D"0" cellpadding=3D"0" =
+id=3D"email_table" style=3D"border-collapse:collapse;"><tr><td =
+id=3D"email_content" style=3D"font-family:Helvetica Neue,Helvetica,Lucida =
+Grande,tahoma,verdana,arial,sans-serif;background:#ffffff;"><table =
+border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td height=3D"1" colspan=3D"3" =
+style=3D"line-height:1px;"><span style=3D"color:#FFFFFF;display:none =
+!important;font-size:1px;">=C2=A0 Malte Lindeberg har lagt till ett foto i =
+din grupp Te16F =C2=A0 =C2=A0=C2=A0=C2=A0 Malte Lindeberg den 18 maj kl. =
+09:20 =C2=A0 =C2=A0 =C2=A0 Gilla Kommentera =C2=A0 =
+=C2=A0</span></td></tr><tr><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td =
+height=3D"16" style=3D"line-height:16px;" =
+colspan=3D"3">&nbsp;</td></tr><tr><td width=3D"32" align=3D"left" =
+valign=3D"middle" style=3D"height:32;line-height:0px;"><a =
+href=3D"https://www.facebook.com/n/?groups%2F492667337589876%2F61289078556=
+7530%2F&amp;medium=3Demail&amp;mid=3D54fce4bd2bdcdG5af34a29475cG54fce9568c=
+09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7oxCxT&amp;n_m=3Dhugowinbladh%4=
+0gmail.com" style=3D"color:#3b5998;text-decoration:none;"><img =
+src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/_2faPUZhPI6.png" =
+width=3D"32" height=3D"32" style=3D"border:0;" /></a></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+width=3D"100%" style=3D""><a href=3D"https://www.facebook.com/n/?groups%2F=
+492667337589876%2F612890785567530%2F&amp;medium=3Demail&amp;mid=3D54fce4bd=
+2bdcdG5af34a29475cG54fce9568c09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7o=
+xCxT&amp;n_m=3Dhugowinbladh%40gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:19p=
+x;line-height:32px;">Facebook</a></td></tr><tr =
+style=3D"border-bottom:solid 1px #e5e5e5;"><td height=3D"16" =
+style=3D"line-height:16px;" colspan=3D"3">&nbsp;</td></tr></table></td><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td =
+height=3D"14" style=3D"line-height:14px;">&nbsp;</td></tr><tr><td =
+style=3D""><span class=3D"mb_text" style=3D"font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16p=
+x;line-height:21px;color:#141823;"><a href=3D"https://www.facebook.com/n/?=
+malte.lindeberg&amp;medium=3Demail&amp;mid=3D54fce4bd2bdcdG5af34a29475cG54=
+fce9568c09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7oxCxT&amp;n_m=3Dhugowi=
+nbladh%40gmail.com" style=3D"color:#3b5998;text-decoration:none;">Malte =
+Lindeberg</a> har lagt till ett foto i din grupp <a href=3D"https://www.fa=
+cebook.com/n/?groups%2F492667337589876%2F&amp;medium=3Demail&amp;mid=3D54f=
+ce4bd2bdcdG5af34a29475cG54fce9568c09fG47a&amp;bcode=3D1.1495123571.AblPdgL=
+AOM7oxCxT&amp;n_m=3Dhugowinbladh%40gmail.com" style=3D"color:#3b5998;text-=
+decoration:none;">Te16F</a></span></td></tr><tr style=3D""><td =
+height=3D"7" style=3D"line-height:7px;">&nbsp;</td></tr><tr><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;border:solid 1px #e5e5e5;border-radius:2px 2px 0 =
+0;padding:10px;display:block;"><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D""><a href=3D"https://www.facebook.com/malte.lindeberg" =
+style=3D"color:#3b5998;text-decoration:none;"><img src=3D"https://scontent=
+.xx.fbcdn.net/v/t1.0-1/p100x100/14034862_272153443168215_22303971817243029=
+01_n.jpg?oh=3Dd4258fcef43c5d52aadecb6f01a12b9f&amp;oe=3D59AC8E43" =
+width=3D"50" height=3D"50" style=3D"border:0;" /></a></td><td width=3D"10" =
+style=3D"display:block;width:10px;">&nbsp;&nbsp;&nbsp;</td><td =
+width=3D"100%" style=3D""><table border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr><td =
+style=3D""><a href=3D"https://www.facebook.com/malte.lindeberg" =
+style=3D"color:#141823;text-decoration:none;font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;font-size:16p=
+x;line-height:21px;font-weight:bold;">Malte Lindeberg</a></td></tr><tr><td =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:14px;line-height:19px;color:#898f9c;">den 18 =
+maj kl. 09:20</td></tr></table></td></tr><tr style=3D""><td height=3D"10" =
+style=3D"line-height:10px;">&nbsp;</td></tr><tr><td colspan=3D"3" =
+style=3D""><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D""><span =
+class=3D"mb_text" style=3D"font-family:Helvetica Neue,Helvetica,Lucida =
+Grande,tahoma,verdana,arial,sans-serif;font-size:16px;line-height:21px;col=
+or:#141823;"></span></td></tr><tr style=3D""><td height=3D"10" =
+style=3D"line-height:10px;">&nbsp;</td></tr><tr><td style=3D""><a =
+href=3D"https://www.facebook.com/n/?groups%2F492667337589876%2F61289078556=
+7530%2F&amp;medium=3Demail&amp;mid=3D54fce4bd2bdcdG5af34a29475cG54fce9568c=
+09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7oxCxT&amp;n_m=3Dhugowinbladh%4=
+0gmail.com" style=3D"color:#3b5998;text-decoration:none;"><img =
+src=3D"https://scontent.xx.fbcdn.net/v/t1.0-0/s200x200/18485920_4143076889=
+52789_2770695601947501888_n.jpg?oh=3Ddd6db4f3239744a6e4a3ddb19ebcf883&amp;=
+oe=3D59BFDD96" style=3D"border:0;" =
+/></a></td></tr></table></td></tr></table></td></tr><tr><td =
+style=3D"font-size:11px;font-family:LucidaGrande,tahoma,verdana,arial,sans=
+-serif;background:#f2f2f2;border:solid 1px =
+#e5e5e5;border-top:0;border-radius:0 0 2px 2px;padding:0px =
+10px;display:block;"><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td =
+height=3D"5" style=3D"line-height:5px;">&nbsp;</td></tr><tr><td =
+style=3D"padding:5px 10px;border-right:1px solid #e5e5e5;"><a =
+href=3D"https://www.facebook.com/n/?email%2Fufi%2Fclick&amp;action=3Dlike&=
+amp;target=3D612890785567530&amp;hash=3DAVI6ePxfiz-tns4z&amp;medium=3Demai=
+l&amp;mid=3D54fce4bd2bdcdG5af34a29475cG54fce9568c09fG47a&amp;bcode=3D1.149=
+5123571.AblPdgLAOM7oxCxT&amp;n_m=3Dhugowinbladh%40gmail.com&amp;lloc=3Dema=
+il_ufi_like&amp;sig_t=3D1495123574&amp;sig=3DAVL4VKyc_KoXkNuy" =
+style=3D"color:#3b5998;text-decoration:none;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td valign=3D"middle" =
+style=3D"padding:5px 0px 0px 8px;"><img =
+src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yM/r/aL-TjjYppK9.png" =
+width=3D"16" height=3D"16" style=3D"border:0;" /></td><td =
+valign=3D"middle" style=3D"padding:0px 8px;"><a href=3D"https://www.facebo=
+ok.com/n/?email%2Fufi%2Fclick&amp;action=3Dlike&amp;target=3D6128907855675=
+30&amp;hash=3DAVI6ePxfiz-tns4z&amp;medium=3Demail&amp;mid=3D54fce4bd2bdcdG=
+5af34a29475cG54fce9568c09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7oxCxT&a=
+mp;n_m=3Dhugowinbladh%40gmail.com&amp;lloc=3Demail_ufi_like&amp;sig_t=3D14=
+95123574&amp;sig=3DAVL4VKyc_KoXkNuy" =
+style=3D"color:#4c4c4c;text-decoration:none;font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;white-space:n=
+owrap;font-weight:bold;vertical-align:middle;font-size:14px;line-height:16=
+px;text-shadow:0 1px 0 #ffffff;">Gilla</a></td></tr></table></a></td><td =
+style=3D"padding:5px 10px;"><a href=3D"https://www.facebook.com/n/?email%2=
+Fufi%2Fclick&amp;action=3Dcomment&amp;target=3D612890785567530&amp;hash=3D=
+AVJLu02AebvyR8wP&amp;medium=3Demail&amp;mid=3D54fce4bd2bdcdG5af34a29475cG5=
+4fce9568c09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7oxCxT&amp;n_m=3Dhugow=
+inbladh%40gmail.com&amp;lloc=3Demail_ufi_comment&amp;sig_t=3D1495123574&am=
+p;sig=3DAVIL0PdMRlb_iEOF" =
+style=3D"color:#3b5998;text-decoration:none;"><table border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td valign=3D"middle" =
+style=3D"padding:5px 0px 0px 8px;"><img =
+src=3D"https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/pydUbhpFodk.png" =
+width=3D"16" height=3D"16" style=3D"border:0;" /></td><td =
+valign=3D"middle" style=3D"padding:0px 8px;"><a href=3D"https://www.facebo=
+ok.com/n/?email%2Fufi%2Fclick&amp;action=3Dcomment&amp;target=3D6128907855=
+67530&amp;hash=3DAVJLu02AebvyR8wP&amp;medium=3Demail&amp;mid=3D54fce4bd2bd=
+cdG5af34a29475cG54fce9568c09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7oxCx=
+T&amp;n_m=3Dhugowinbladh%40gmail.com&amp;lloc=3Demail_ufi_comment&amp;sig_=
+t=3D1495123574&amp;sig=3DAVIL0PdMRlb_iEOF" =
+style=3D"color:#4c4c4c;text-decoration:none;font-family:Helvetica =
+Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;white-space:n=
+owrap;font-weight:bold;vertical-align:middle;font-size:14px;line-height:16=
+px;text-shadow:0 1px 0 =
+#ffffff;">Kommentera</a></td></tr></table></a></td><td width=3D"100%" =
+style=3D""></td></tr><tr style=3D""><td height=3D"5" style=3D"line-height:=
+5px;">&nbsp;</td></tr></table></td></tr></table></td></tr><tr =
+style=3D""><td height=3D"7" =
+style=3D"line-height:7px;">&nbsp;</td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr style=3D""><td =
+height=3D"2" style=3D"line-height:2px;" =
+colspan=3D"3">&nbsp;</td></tr><tr><td class=3D"mb_blk" style=3D""><a =
+href=3D"https://www.facebook.com/n/?groups%2F492667337589876%2F61289078556=
+7530%2F&amp;medium=3Demail&amp;mid=3D54fce4bd2bdcdG5af34a29475cG54fce9568c=
+09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7oxCxT&amp;n_m=3Dhugowinbladh%4=
+0gmail.com" style=3D"color:#3b5998;text-decoration:none;"><table =
+border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-collapse:colla=
+pse;border-radius:2px;text-align:center;display:block;border:solid 1px =
+#344c80;box-shadow:inset 0 1px 1px rgba(255, 255, 255, 0.1),0 1px 0 =
+rgba(0, 0, 0, 0.1);background:#4c649b;padding:7px 16px 11px 16px;"><a =
+href=3D"https://www.facebook.com/n/?groups%2F492667337589876%2F61289078556=
+7530%2F&amp;medium=3Demail&amp;mid=3D54fce4bd2bdcdG5af34a29475cG54fce9568c=
+09fG47a&amp;bcode=3D1.1495123571.AblPdgLAOM7oxCxT&amp;n_m=3Dhugowinbladh%4=
+0gmail.com" =
+style=3D"color:#3b5998;text-decoration:none;display:block;"><center><font =
+size=3D"3"><span style=3D"font-family:Helvetica Neue,Helvetica,Lucida =
+Grande,tahoma,verdana,arial,sans-serif;white-space:nowrap;font-weight:bold=
+;vertical-align:middle;color:#ffffff;text-shadow:0 -1px 0 =
+#415686;font-size:14px;line-height:14px;">Bes=C3=B6k&nbsp;gruppen</span></=
+font></center></a></td></tr></table></a></td><td width=3D"10" =
+style=3D"display:block;width:10px;" =
+class=3D"mb_hide">&nbsp;&nbsp;&nbsp;</td><td class=3D"mb_blk" =
+style=3D""><a href=3D"https://www.facebook.com/n/?settings&amp;medium=3Dem=
+ail&amp;mid=3D54fce4bd2bdcdG5af34a29475cG54fce9568c09fG47a&amp;bcode=3D1.1=
+495123571.AblPdgLAOM7oxCxT&amp;n_m=3Dhugowinbladh%40gmail.com&amp;tab=3Dno=
+tifications&amp;section=3Demail" =
+style=3D"color:#3b5998;text-decoration:none;"><table border=3D"0" =
+width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"border-collapse:collapse;"><tr><td style=3D"border-collapse:colla=
+pse;border-radius:2px;text-align:center;display:block;border:solid 1px =
+#c9ccd1;box-shadow:0 1px 0 rgba(0, 0, 0, =
+0.04);background:#f6f7f8;padding:7px 16px 11px 16px;"><a =
+href=3D"https://www.facebook.com/n/?settings&amp;medium=3Demail&amp;mid=3D=
+54fce4bd2bdcdG5af34a29475cG54fce9568c09fG47a&amp;bcode=3D1.1495123571.AblP=
+dgLAOM7oxCxT&amp;n_m=3Dhugowinbladh%40gmail.com&amp;tab=3Dnotifications&am=
+p;section=3Demail" =
+style=3D"color:#3b5998;text-decoration:none;display:block;"><center><font =
+size=3D"3"><span style=3D"font-family:Helvetica Neue,Helvetica,Lucida =
+Grande,tahoma,verdana,arial,sans-serif;white-space:nowrap;font-weight:bold=
+;vertical-align:middle;color:#525252;text-shadow:0 1px 0 =
+#ffffff;font-size:14px;line-height:14px;">Redigera&nbsp;e-postinst=C3=A4ll=
+ningar</span></font></center></a></td></tr></table></a></td><td =
+width=3D"100%" class=3D"mb_hide" style=3D""></td></tr><tr style=3D""><td =
+height=3D"32" style=3D"line-height:32px;" =
+colspan=3D"3">&nbsp;</td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr><td =
+width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td><td =
+style=3D""><table border=3D"0" width=3D"100%" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"border-collapse:collapse;"><tr =
+style=3D"border-top:solid 1px #e5e5e5;"><td height=3D"16" =
+style=3D"line-height:16px;">&nbsp;</td></tr><tr><td =
+style=3D"font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana=
+,arial,sans-serif;font-size:11px;color:#aaaaaa;line-height:16px;">Det =
+h=C3=A4r meddelandet har skickats till <a =
+href=3D"mailto:hugowinbladh&#064;gmail.com" style=3D"color:#3b5998;text-de=
+coration:none;">hugowinbladh&#064;gmail.com</a>. Klicka p=C3=A5 <a =
+href=3D"https://www.facebook.com/o.php?k=3DAS28dC0FtIAuxAkm&amp;u=3D100000=
+967771996&amp;mid=3D54fce4bd2bdcdG5af34a29475cG54fce9568c09fG47a" =
+style=3D"color:#3b5998;text-decoration:none;">avsluta prenumerationen</a> =
+om du inte vill ha fler s=C3=A5dana h=C3=A4r e-postmeddelanden fr=C3=A5n =
+Facebook.<br />Facebook, Inc., Attention: Community Support, 1 Hacker Way, =
+Menlo Park, CA 94025</td></tr></table></td><td width=3D"15" =
+style=3D"display:block;width:15px;">&nbsp;&nbsp;&nbsp;</td></tr><tr =
+style=3D""><td height=3D"20" style=3D"line-height:20px;" =
+colspan=3D"3">&nbsp;</td></tr></table><span style=3D""><img =
+src=3D"https://www.facebook.com/email_open_log_pic.php?mid=3D54fce4bd2bdcd=
+G5af34a29475cG54fce9568c09fG47a" style=3D"border:0;width:1px;height:1px;" =
+/></span></td></tr></table></body></html>
+
+
+
+--b1_4d8571195a82de0a524e2f7515875e9c--
+
