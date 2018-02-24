@@ -1,6 +1,6 @@
-### My Amazing i3-gaps setup dotfiles
+# My Amazing i3-gaps setup dotfiles
 
-# configuration files for:
+### configuration files for:
 
 i3
 ranger
