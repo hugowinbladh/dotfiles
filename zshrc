@@ -100,6 +100,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/platform-tools:/us
 
 alias wal="wal -t -b black"
 alias emacs="emacs -nw"
+alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 
 (wal -r &)
 

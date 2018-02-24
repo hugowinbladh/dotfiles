@@ -21,9 +21,6 @@ if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file (restore to previous version)
-  if has('persistent_undo')
-    set undofile	" keep an undo file (undo changes after closing)
-  endif
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -117,12 +114,16 @@ Plugin 'dylanaraps/wal.vim'
 
 Plugin 'justinmk/sneak.vim'
 
+Plugin 'elixir-editors/vim-elixir'
+
 call vundle#end()
 let g:livepreview_previewer = 'evince'
 
 colorscheme wal
 
 """ Personal Keybindings
+
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
 
 set relativenumber

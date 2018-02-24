@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -60,13 +60,13 @@ bindsym $mod+z gaps outer current minus 5
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec termite --geometry=900x500 
+bindsym $mod+Return exec st 
 
 # start qutebrowser
-bindsym $mod+g exec qutebrowser 
-bindsym $mod+Shift+g exec firefox
+bindsym $mod+g exec google-chrome-stable
+bindsym $mod+Shift+g exec vivaldi-stable
 
-bindsym $mod+m exec termite -e ranger
+bindsym $mod+m exec termite -e ranger & wal -t -r &
 bindsym $mod+Shift+m exec thunar
 
 # kill focused window
@@ -75,6 +75,8 @@ bindsym $mod+Shift+q kill
 
 # toggle display output
 bindsym $mod+Shift+d exec --no-startup-id /home/hugo/bin/monitor
+
+# start dmenu (a program launcher)
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
@@ -88,7 +90,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id rofi -show run
 
 # change focus
 bindsym $mod+h focus left
@@ -96,11 +98,23 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left 20px
+bindsym $mod+Shift+j move down 20px
+bindsym $mod+Shift+k move up 20px
+bindsym $mod+Shift+l move right 20px
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+i split h
@@ -112,10 +126,10 @@ bindsym $mod+o split v
 bindsym $mod+f fullscreen toggle
 
 # resizing windows
-bindsym $mod+Shift+y resize shrink width 20 px or 10 ppt
-bindsym $mod+Shift+u resize shrink height 20 px or 10 ppt
-bindsym $mod+Shift+i resize grow width 20 px or 10 ppt
-bindsym $mod+Shift+o resize grow height 20 px or 10 ppt
+bindsym $mod+Shift+y resize shrink width 20 px or 5 ppt
+bindsym $mod+Shift+u resize shrink height 20 px or 5 ppt
+bindsym $mod+Shift+i resize grow width 20 px or 5 ppt
+bindsym $mod+Shift+o resize grow height 20 px or 5 ppt
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+q layout stacking
@@ -129,7 +143,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
 
 set $ws1 "1: "
 set $ws2 "2: "
@@ -166,6 +183,14 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+
+# Music player bindings
+
+bindsym $mod+a exec --no-startup-id termite -e ncmpcpp & wal -t -r &
+bindsym $mod+n mpc next
+bindsym $mod+Shift+n mpc prev
+bindsym $mod+p mpc toggle
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -174,10 +199,25 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym $mod+R exec i3lock-fancy
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+#bar {
+#	colors {
+#            background  #212121
+#            statusline  #DDDDDD
+#            separator   #666666
+#            # class             border  backgr. text
+#                         focused_workspace   #2B83A6 #2B83A6 #FFFFFF
+#                         active_workspace    #212121 #212121 #FFFFFF
+#                         inactive_workspace  #212121 #212121 #86888C
+#                         urgent_workspace    #2F343A #D64E4E #FFFFFF
+#            }
+#        #status_command /usr/bin/bumblebee-status -m battery nic pacman disk datetime -p disk.path=/home datetime.format="%a, %b %d, %Y at %I:%M %p" -t hugo
+#        status_command bumblebee-status -m amixer battery nic disk datetime -p  disk.path=/home datetime.format="%a, %b %d, %Y at %I:%M %p" -t solarized-powerline 
+#	position top
+#}
 
 exec --no-startup-id ~/.config/polybar/launch.sh
-
-exec source ~/.fehbg
 
 exec compton
 
